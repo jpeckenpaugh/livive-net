@@ -119,7 +119,12 @@ for (const project of live) {
       contentType: 'application/json',
     });
     try {
-      const shot = await page.screenshot({ fullPage: false });
+      // Write the PNG into the test's output dir (uploaded as an artifact) and
+      // also embed it in the HTML report.
+      const shot = await page.screenshot({
+        path: testInfo.outputPath('screenshot.png'),
+        fullPage: false,
+      });
       await testInfo.attach('screenshot', { body: shot, contentType: 'image/png' });
     } catch {
       // Page may be unreachable/closed; findings are the important artifact.

@@ -19,7 +19,7 @@ async function horizontalOverflow(page: Page): Promise<number> {
 }
 
 test.describe('hub', () => {
-  test('returns HTTP 200 with no runtime errors and one h1', async ({ page }) => {
+  test('returns HTTP 200 with no runtime errors and one h1', async ({ page }, testInfo) => {
     const errors = collectRuntimeErrors(page);
     const resp = await page.goto('/');
     expect(resp, 'no navigation response').toBeTruthy();
@@ -28,6 +28,12 @@ test.describe('hub', () => {
     await expect(page.locator('#main .card').first()).toBeVisible();
     await expect(page.locator('h1')).toHaveCount(1);
     expect(errors, 'runtime errors on hub').toEqual([]);
+
+    const shot = await page.screenshot({
+      path: testInfo.outputPath('screenshot.png'),
+      fullPage: false,
+    });
+    await testInfo.attach('screenshot', { body: shot, contentType: 'image/png' });
   });
 
   test('has no horizontal overflow', async ({ page }) => {
