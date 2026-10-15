@@ -1,0 +1,12 @@
+{
+  "name": "livive-bootstrap-thumbs",
+  "private": true,
+  "type": "module",
+  "description": "Thumbnail capture pipeline for the livive.net landing page.",
+  "scripts": {
+    "thumbs": "node thumbs.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "^1.48.0"
+  }
+}

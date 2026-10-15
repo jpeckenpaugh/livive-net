@@ -73,10 +73,19 @@
   .card {
     display: flex; flex-direction: column;
     background: var(--card); border: 1px solid var(--border); border-radius: 14px;
-    padding: 18px; box-shadow: var(--shadow);
+    overflow: hidden; box-shadow: var(--shadow);
     transition: transform .12s ease, border-color .12s ease;
   }
   .card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .card .thumb-link { display: block; }
+  .card .thumb { display: block; aspect-ratio: 16 / 10; background: var(--card); overflow: hidden; }
+  .card .thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .card .thumb.ph {
+    display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 1.5rem;
+    letter-spacing: .04em; background: linear-gradient(135deg,
+      hsl(var(--h) 55% 42%), hsl(calc(var(--h) + 40) 60% 32%));
+  }
+  .card .body { display: flex; flex-direction: column; flex: 1; padding: 16px 18px 18px; }
   .card .top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
   .card h3 { margin: 0; font-size: 1.02rem; line-height: 1.3; }
   .card h3 a { color: var(--fg); }
@@ -109,7 +118,7 @@
   <main id="main"><p class="empty">Loading projects…</p></main>
 
   <footer class="site">
-    <a href="https://github.com/jpeckenpaugh">More on GitHub &rarr;</a>
+    <a href="https://github.com/jpeckenpaugh" target="_blank" rel="noopener noreferrer">More on GitHub &rarr;</a>
   </footer>
 </div>
 
@@ -118,17 +127,32 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => (
   { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
 ));
 
+const initials = (s) => (String(s).match(/[A-Za-z0-9]+/g) || [])
+  .slice(0, 2).map(w => w[0]).join("").toUpperCase() || "?";
+const hue = (s) => {
+  let h = 0;
+  for (const ch of String(s)) h = (h * 31 + ch.charCodeAt(0)) % 360;
+  return h;
+};
+
 function card(p) {
   const title = esc(p.display_title);
   const href = p.has_live_demo ? p.live_url : p.repo_url;
+  const ext = ` target="_blank" rel="noopener noreferrer"`;
+  const thumb = p.thumb
+    ? `<div class="thumb"><img loading="lazy" src="${esc(p.thumb)}" alt="" width="640" height="400"></div>`
+    : `<div class="thumb ph" style="--h:${hue(p.key)}" aria-hidden="true">${esc(initials(p.display_title))}</div>`;
   const tags = (p.tags || []).slice(0, 5).map(t => `<li>${esc(t)}</li>`).join("");
   const live = p.has_live_demo ? `<span class="badge">Live</span>` : "";
-  const play = p.has_live_demo ? `<a href="${esc(p.live_url)}">Play &rarr;</a>` : "";
+  const play = p.has_live_demo ? `<a href="${esc(p.live_url)}"${ext}>Play &rarr;</a>` : "";
   return `<article class="card">
-    <div class="top"><h3><a href="${esc(href)}">${title}</a></h3>${live}</div>
-    <p class="tagline">${esc(p.tagline)}</p>
-    ${tags ? `<ul class="tags">${tags}</ul>` : ""}
-    <div class="links">${play}<a href="${esc(p.repo_url)}">GitHub</a></div>
+    <a class="thumb-link" href="${esc(href)}"${ext}>${thumb}</a>
+    <div class="body">
+      <div class="top"><h3><a href="${esc(href)}"${ext}>${title}</a></h3>${live}</div>
+      <p class="tagline">${esc(p.tagline)}</p>
+      ${tags ? `<ul class="tags">${tags}</ul>` : ""}
+      <div class="links">${play}<a href="${esc(p.repo_url)}"${ext}>GitHub</a></div>
+    </div>
   </article>`;
 }
 
@@ -150,7 +174,7 @@ async function load() {
   if (live.length) {
     document.getElementById("featured").hidden = false;
     document.getElementById("pills").innerHTML = live
-      .map(p => `<a class="pill" href="${esc(p.live_url)}"><span class="dot"></span>${esc(p.display_title)}</a>`)
+      .map(p => `<a class="pill" href="${esc(p.live_url)}" target="_blank" rel="noopener noreferrer"><span class="dot"></span>${esc(p.display_title)}</a>`)
       .join("");
   }
 

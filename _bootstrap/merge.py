@@ -52,7 +52,16 @@ def clean(d):
     d["tech"] = [t.strip() for t in d.get("tech", []) if t.strip()]
     if d.get("category") not in CATEGORY_ORDER:
         d["category"] = "Web Apps & Prototypes"
+    d["thumb"] = find_thumb(d.get("key"))
     return d
+
+
+def find_thumb(key):
+    for ext in ("webp", "png", "jpg"):
+        rel = f"thumbnails/{key}.{ext}"
+        if (ROOT.parent / rel).is_file():
+            return rel
+    return None
 
 
 def sort_key(d):
