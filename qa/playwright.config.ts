@@ -13,6 +13,9 @@ const hubURL = `http://127.0.0.1:${PORT}/`;
 export default defineConfig({
   testDir: path.join(qaDir, 'tests'),
   outputDir: path.join(qaDir, 'test-results'),
+  // Keep the per-test screenshot + findings.json for every test so the CI
+  // artifact is a complete visual record, not just the failures.
+  preserveOutput: 'always',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
