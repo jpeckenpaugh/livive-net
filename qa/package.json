@@ -1,0 +1,21 @@
+{
+  "name": "livive-net-qa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Playwright smoke + accessibility harness for livive.net and its live demos",
+  "scripts": {
+    "test": "playwright test",
+    "test:hub": "playwright test tests/hub.spec.ts",
+    "test:demos": "playwright test tests/demos.spec.ts",
+    "report": "playwright show-report",
+    "list": "playwright test --list"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.62.1"
+  },
+  "overrides": {
+    "playwright-core": "1.62.1"
+  }
+}

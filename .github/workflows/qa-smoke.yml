@@ -1,0 +1,75 @@
+name: qa-smoke
+
+# Continuous smoke + accessibility harness for the hub and every live demo.
+# Complements demo-monitor (HTTP uptime only) with a real browser: runtime
+# errors, layout overflow, headings, image alt text, search behaviour, and an
+# axe-core WCAG 2 A/AA pass across desktop + iPhone + Android viewports.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "projects.json"
+      - "thumbnails/**"
+      - "qa/**"
+      - ".github/workflows/qa-smoke.yml"
+  pull_request:
+    paths:
+      - "index.html"
+      - "projects.json"
+      - "thumbnails/**"
+      - "qa/**"
+  schedule:
+    - cron: "23 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: qa-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: qa
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: qa/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run smoke + axe harness
+        run: npx playwright test
+        env:
+          CI: "true"
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-smoke-report
+          path: qa/playwright-report
+          retention-days: 14
+
+      - name: Upload screenshots & traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-smoke-artifacts
+          path: qa/test-results
+          retention-days: 14
