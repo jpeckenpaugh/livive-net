@@ -19,11 +19,14 @@
     "pytest"
   ],
   "category": "Language Tools",
-  "live_url": null,
+  "live_url": "https://jpeckenpaugh.github.io/nexttext/",
+  "demos": [
+    { "label": "Play", "url": "https://jpeckenpaugh.github.io/nexttext/" }
+  ],
   "repo_url": "https://github.com/jpeckenpaugh/nexttext",
-  "has_live_demo": false,
+  "has_live_demo": true,
   "featured": true,
   "status": "active",
   "confidence": "high",
-  "notes": "No live demo (dossier live probe empty, has_pages false). Reusable pip-installable library (pyproject name=nexttext, v0.1.0) with MIT license, hence featured=true. No CNAME present."
+  "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/nexttext/ (HTTP 200); previously repo-only. Also a reusable pip-installable library (pyproject name=nexttext, v0.1.0) with MIT license."
 }
