@@ -8,11 +8,14 @@
   "tags": ["euchre", "card-game", "game-engine", "reinforcement-learning", "pyodide", "synthetic-data"],
   "tech": ["Python", "FastAPI", "uvicorn", "Pyodide", "WebLLM", "JavaScript", "TypeScript", "pytest"],
   "category": "Games",
-  "live_url": null,
+  "live_url": "https://jpeckenpaugh.github.io/EuchreGame/",
+  "demos": [
+    { "label": "Play", "url": "https://jpeckenpaugh.github.io/EuchreGame/" }
+  ],
   "repo_url": "https://github.com/jpeckenpaugh/EuchreGame",
-  "has_live_demo": false,
-  "featured": false,
+  "has_live_demo": true,
+  "featured": true,
   "status": "active",
   "confidence": "high",
-  "notes": "Live probe list is empty and has_pages is false, so no live demo URL exists; the html/ sandbox must be served locally. The bundled html/vendor/pyodide/package.json belongs to the vendored Pyodide runtime, not this project. No license declared."
+  "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/EuchreGame/ (HTTP 200), serving the Pyodide browser sandbox; previously repo-only. The bundled html/vendor/pyodide/package.json belongs to the vendored Pyodide runtime, not this project. No license declared."
 }

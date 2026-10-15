@@ -24,6 +24,7 @@ CATEGORY_ORDER = [
 EXCLUDE = {
     "jpeckenpaugh.github.io",  # account-root Pages site (currently serves the Lokarta demo)
     "sd-langtutor.github.io",  # empty on this account (real project lives under another org)
+    "ll-seekdepth-net",        # repo deleted; was an empty placeholder with a broken TLS cert
 }
 
 # Iterations of the same project -> collapse into a single listing (first key wins as primary).
@@ -44,9 +45,17 @@ def normalize_url(u):
 
 def clean(d):
     d["live_url"] = normalize_url(d.get("live_url"))
-    d["has_live_demo"] = bool(d.get("live_url")) and bool(d.get("has_live_demo", True))
-    if not d["live_url"]:
-        d["has_live_demo"] = False
+    demos = d.get("demos") or []
+    for dm in demos:
+        dm["url"] = normalize_url(dm["url"])
+    if not demos and d.get("live_url"):
+        demos = [{"label": "Play", "url": d["live_url"]}]
+    d["demos"] = [dm for dm in demos if dm.get("url")]
+    d["has_live_demo"] = bool(d["demos"]) or (
+        bool(d.get("live_url")) and bool(d.get("has_live_demo", True))
+    )
+    if not d["live_url"] and d["demos"]:
+        d["live_url"] = d["demos"][0]["url"]
     d["featured"] = bool(d.get("featured"))
     d["tags"] = sorted({t.strip().lower() for t in d.get("tags", []) if t.strip()})
     d["tech"] = [t.strip() for t in d.get("tech", []) if t.strip()]

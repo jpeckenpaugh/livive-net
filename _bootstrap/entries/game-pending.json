@@ -21,11 +21,14 @@
     "nginx"
   ],
   "category": "Games",
-  "live_url": null,
+  "live_url": "https://jpeckenpaugh.github.io/game-pending/",
+  "demos": [
+    { "label": "Play", "url": "https://jpeckenpaugh.github.io/game-pending/" }
+  ],
   "repo_url": "https://github.com/jpeckenpaugh/game-pending",
-  "has_live_demo": false,
-  "featured": false,
+  "has_live_demo": true,
+  "featured": true,
   "status": "prototype",
   "confidence": "high",
-  "notes": "No live probe results (live: []), has_pages false, and no CNAME, so no live URL. Described as a gaming prototype designed to be extended via AI/ML tooling. Runs locally via python3 -m http.server 8000 -d html or docker-compose."
+  "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/game-pending/ (HTTP 200); previously repo-only. Described as a gaming prototype designed to be extended via AI/ML tooling. Also runs locally via python3 -m http.server 8000 -d html or docker-compose."
 }

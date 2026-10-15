@@ -8,11 +8,14 @@
   "tags": ["hebrew", "language-learning", "vocabulary", "education", "fastapi", "sqlite"],
   "tech": ["FastAPI", "Uvicorn", "Python", "SQLite", "JavaScript", "Bootstrap", "HTML", "CSS"],
   "category": "Language Tools",
-  "live_url": null,
+  "live_url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/",
+  "demos": [
+    { "label": "Play", "url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/" }
+  ],
   "repo_url": "https://github.com/jpeckenpaugh/hebrew-language-tutor",
-  "has_live_demo": false,
-  "featured": false,
+  "has_live_demo": true,
+  "featured": true,
   "status": "experiment",
   "confidence": "high",
-  "notes": "Dossier live probe returned an empty list (no live URLs) and has_pages is false, so live_url is null and has_live_demo is false. No CNAME or hosting config found in the tree. Repo frames itself as two experiments; created and pushed the same day with 0 stars. Frontend verified by static review rather than browser automation."
+  "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/hebrew-language-tutor/ (HTTP 200); previously repo-only. GitHub Pages is static, so the live demo serves the static SPA proof-of-concept (hardcoded vocab) rather than the full FastAPI + SQLite client/server app. Repo frames itself as two experiments; 0 stars. Frontend verified by static review rather than browser automation."
 }

@@ -1,8 +1,8 @@
 {
   "source_user": "jpeckenpaugh",
-  "count": 37,
-  "live_count": 20,
-  "featured_count": 20,
+  "count": 36,
+  "live_count": 23,
+  "featured_count": 23,
   "category_order": [
     "Games",
     "AI/ML Experiments",
@@ -41,6 +41,12 @@
       "status": "active",
       "confidence": "high",
       "notes": "Live probe of https://jpeckenpaugh.github.io/aom/ returned HTTP 200 (title 'aom') and redirects to custom domain final_url http://aom.livive.net/, so live_url uses the custom domain. Description 'Age of Mycology'. Python 22 files, 141435 KB, 0 stars, no license, has_pages true. requirements.txt pins pygame-ce==2.5.7. README documents pygbag==0.9.3 and Python 3.14 build; contributions land directly on main with auto-deploy to Pages.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://aom.livive.net/"
+        }
+      ],
       "thumb": "thumbnails/aom.webp"
     },
     {
@@ -75,7 +81,92 @@
       "status": "active",
       "confidence": "high",
       "notes": "Custom domain chk.livive.net from CNAME; GitHub Pages also serves at jpeckenpaugh.github.io/chk-livive-net/. 100 tests via node --test. package.json name is 'godot-checkers'. MIT licensed per README/package.json.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://chk.livive.net/"
+        }
+      ],
       "thumb": "thumbnails/chk-livive-net.webp"
+    },
+    {
+      "key": "EuchreGame",
+      "repo": "EuchreGame",
+      "display_title": "EuchreGame",
+      "tagline": "Headless Python Euchre engine with AI data factory and browser sandbox",
+      "short_description": "A headless Python Euchre card game engine with deterministic simulation, AI/ML-friendly state export, a synthetic training-data factory, and a Pyodide browser sandbox.",
+      "long_description": "EuchreGame is a deterministic, headless Python package for simulating partnership Euchre with AI/ML-friendly state export. It builds a 24-card deck with seeded shuffling, runs a stateful engine covering round-one order-up and round-two trump calling, dealer pickup/discard, trick play with left/right bower handling, and legal move generation with effective-suit follow rules. State is JSON-friendly via to_dict/from_dict, and masked per-player views support hidden-information workflows. Beyond the engine, the repo includes a local Data Factory for generating, validating, benchmarking, and reviewing synthetic Euchre decision data for student-model distillation, backed by a FastAPI dashboard over JSONL artifacts. A browser-based sandbox under html/ runs the Python engine through Pyodide (with optional local Gemma/WebLLM AI play) and supports god-view or masked player views.",
+      "tags": [
+        "card-game",
+        "euchre",
+        "game-engine",
+        "pyodide",
+        "reinforcement-learning",
+        "synthetic-data"
+      ],
+      "tech": [
+        "Python",
+        "FastAPI",
+        "uvicorn",
+        "Pyodide",
+        "WebLLM",
+        "JavaScript",
+        "TypeScript",
+        "pytest"
+      ],
+      "category": "Games",
+      "live_url": "https://jpeckenpaugh.github.io/EuchreGame/",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/EuchreGame/"
+        }
+      ],
+      "repo_url": "https://github.com/jpeckenpaugh/EuchreGame",
+      "has_live_demo": true,
+      "featured": true,
+      "status": "active",
+      "confidence": "high",
+      "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/EuchreGame/ (HTTP 200), serving the Pyodide browser sandbox; previously repo-only. The bundled html/vendor/pyodide/package.json belongs to the vendored Pyodide runtime, not this project. No license declared.",
+      "thumb": "thumbnails/EuchreGame.webp"
+    },
+    {
+      "key": "game-pending",
+      "repo": "game-pending",
+      "display_title": "Game Pending",
+      "tagline": "Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling",
+      "short_description": "A small HTML5 Canvas side-scroller built with vanilla JavaScript and ES modules, featuring black-and-white line art, optional color themes, power-ups, and a Customize menu.",
+      "long_description": "Game Pending is a browser-based side-scroller built with vanilla JavaScript and ES modules on an HTML5 Canvas, with no build step or runtime package dependency. It defaults to a black-and-white line-art Classic presentation with optional color themes applied to the sky, terrain, opponents, gear, weapons, attacks, and drone. Gameplay includes multi-area levels with platforms, underground cave routes, ladders, and left/right wrap portals, plus power-ups such as Boots (mid-air jumps and rocket glide), Shield (hit-blocking and kinetic discharge), Drone strikes, Specs auto-aim, and Radar. A Customize menu adjusts the game name, tagline, starting level, target FPS, weapon (Gun, Club, Wand), opponent behavior, spawning, and world generation, along with template presets, color themes, drone styles, player and opponent head/face options, and starting power-up levels. The project is described as a prototype designed to be extended via AI/ML tooling, and ships a Docker/nginx setup plus OpenCode integration for development.",
+      "tags": [
+        "canvas",
+        "game",
+        "html5",
+        "javascript",
+        "side-scroller",
+        "vanilla-js"
+      ],
+      "tech": [
+        "JavaScript",
+        "HTML5 Canvas",
+        "ES Modules",
+        "Docker",
+        "nginx"
+      ],
+      "category": "Games",
+      "live_url": "https://jpeckenpaugh.github.io/game-pending/",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/game-pending/"
+        }
+      ],
+      "repo_url": "https://github.com/jpeckenpaugh/game-pending",
+      "has_live_demo": true,
+      "featured": true,
+      "status": "prototype",
+      "confidence": "high",
+      "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/game-pending/ (HTTP 200); previously repo-only. Described as a gaming prototype designed to be extended via AI/ML tooling. Also runs locally via python3 -m http.server 8000 -d html or docker-compose.",
+      "thumb": "thumbnails/game-pending.webp"
     },
     {
       "key": "lokarta",
@@ -115,6 +206,20 @@
       ],
       "category": "Games",
       "live_url": "https://lk.livive.net/",
+      "demos": [
+        {
+          "label": "Play v4 (latest)",
+          "url": "https://lk.livive.net/"
+        },
+        {
+          "label": "Play v3",
+          "url": "https://jpeckenpaugh.github.io/lokarta-v3/"
+        },
+        {
+          "label": "Play v2",
+          "url": "https://jpeckenpaugh.github.io/lokarta-v2/"
+        }
+      ],
       "repo_url": "https://github.com/jpeckenpaugh/lokarta-v4",
       "has_live_demo": true,
       "featured": true,
@@ -122,34 +227,6 @@
       "confidence": "high",
       "notes": "Four-repo lineage of one game. lokarta (Python, created 2026-01-26) is the original local terminal/BBS-style ASCII RPG proof of concept, no GitHub Pages, no live demo. lokarta-v2 (TypeScript browser edition, created 2026-09-08) splits a Vite frontend from a FastAPI+SQLite backend and has a live GitHub Pages demo. lokarta-v3 (JavaScript, created 2026-09-27) drops the backend for a fully client-side edition using Web Workers/IndexedDB/Web Audio, adding vocations and a tower ascent. lokarta-v4 (JavaScript, created 2026-10-06, pushed 2026-10-11) is the primary repo: the largest and most complete (528 files, ~16.9 MB, most recent commits), with an overworld, quest chain, NPCs, and expanded sprite/data catalogs. All of v2/v3/v4 have Pages enabled and probed HTTP 200; v4's probe redirected to the custom domain https://lk.livive.net/, used as the best working live URL. Repos have no license and 0 stars.",
       "thumb": "thumbnails/lokarta.webp"
-    },
-    {
-      "key": "ll-seekdepth-net",
-      "repo": "ll-seekdepth-net",
-      "display_title": "Lunar Lander Tournament",
-      "tagline": "The Lunar Lander tournament that no one was asking for!",
-      "short_description": "A Lunar Lander tournament site served at ll.seekdepth.net.",
-      "long_description": "ll-seekdepth-net is a small GitHub Pages project hosting a Lunar Lander tournament, custom-bound to the domain ll.seekdepth.net via its CNAME file. The repository itself contains only a README and the CNAME; the live tournament page is served from the custom domain.",
-      "tags": [
-        "games",
-        "leaderboard",
-        "lunar-lander",
-        "tournament"
-      ],
-      "tech": [
-        "github-pages",
-        "markdown",
-        "cname"
-      ],
-      "category": "Games",
-      "live_url": "https://ll.seekdepth.net/",
-      "repo_url": "https://github.com/jpeckenpaugh/ll-seekdepth-net",
-      "has_live_demo": true,
-      "featured": true,
-      "status": "active",
-      "confidence": "low",
-      "notes": "Repo contains only README.md and CNAME (2 files, 1KB). Live probe returned 200 and redirected to custom domain http://ll.seekdepth.net/ (CNAME value ll.seekdepth.net); https URL used. No source code present in repo, so tech limited to Pages/Markdown/CNAME and tournament format details unknown.",
-      "thumb": "thumbnails/ll-seekdepth-net.webp"
     },
     {
       "key": "rl-livive-net",
@@ -187,6 +264,12 @@
       "status": "active",
       "confidence": "high",
       "notes": "CNAME points to lunar.livive.net, which returns 200 (title 'Lunar Lander \u2014 Tournament Edition'); GitHub Pages URL also live. Setup is a web game demo plus an RL policy lab; filename/repo naming ('rl-', 'Policy Lab') is AI/ML-focused but the primary artifact is a playable arcade game. No license listed.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://lunar.livive.net/"
+        }
+      ],
       "thumb": "thumbnails/rl-livive-net.webp"
     },
     {
@@ -222,6 +305,12 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "No repo description or homepage; docs describe it as a local-first P2P Tic-Tac-Toe POC. Live GitHub Pages probe returned 200 (title 'P2P Tic-Tac-Toe'). No CNAME found, so the default Pages URL is used. License unknown.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/p2p-ttt/"
+        }
+      ],
       "thumb": "thumbnails/p2p-ttt.webp"
     },
     {
@@ -259,74 +348,13 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "GitHub Pages browser edition live and returns 200 with title 'Threat Sweep - Browser Edition'. Repo created and pushed the same day (2026-09-08), 0 stars. Verification report notes browser-edition Worker/IndexedDB runtime checks and server-backed Stage 08 live HTTP/API checks remain unverified in the build sandbox, so status is prototype rather than active.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/threat-sweep/"
+        }
+      ],
       "thumb": "thumbnails/threat-sweep.webp"
-    },
-    {
-      "key": "EuchreGame",
-      "repo": "EuchreGame",
-      "display_title": "EuchreGame",
-      "tagline": "Headless Python Euchre engine with AI data factory and browser sandbox",
-      "short_description": "A headless Python Euchre card game engine with deterministic simulation, AI/ML-friendly state export, a synthetic training-data factory, and a Pyodide browser sandbox.",
-      "long_description": "EuchreGame is a deterministic, headless Python package for simulating partnership Euchre with AI/ML-friendly state export. It builds a 24-card deck with seeded shuffling, runs a stateful engine covering round-one order-up and round-two trump calling, dealer pickup/discard, trick play with left/right bower handling, and legal move generation with effective-suit follow rules. State is JSON-friendly via to_dict/from_dict, and masked per-player views support hidden-information workflows. Beyond the engine, the repo includes a local Data Factory for generating, validating, benchmarking, and reviewing synthetic Euchre decision data for student-model distillation, backed by a FastAPI dashboard over JSONL artifacts. A browser-based sandbox under html/ runs the Python engine through Pyodide (with optional local Gemma/WebLLM AI play) and supports god-view or masked player views.",
-      "tags": [
-        "card-game",
-        "euchre",
-        "game-engine",
-        "pyodide",
-        "reinforcement-learning",
-        "synthetic-data"
-      ],
-      "tech": [
-        "Python",
-        "FastAPI",
-        "uvicorn",
-        "Pyodide",
-        "WebLLM",
-        "JavaScript",
-        "TypeScript",
-        "pytest"
-      ],
-      "category": "Games",
-      "live_url": null,
-      "repo_url": "https://github.com/jpeckenpaugh/EuchreGame",
-      "has_live_demo": false,
-      "featured": false,
-      "status": "active",
-      "confidence": "high",
-      "notes": "Live probe list is empty and has_pages is false, so no live demo URL exists; the html/ sandbox must be served locally. The bundled html/vendor/pyodide/package.json belongs to the vendored Pyodide runtime, not this project. No license declared.",
-      "thumb": "thumbnails/EuchreGame.webp"
-    },
-    {
-      "key": "game-pending",
-      "repo": "game-pending",
-      "display_title": "Game Pending",
-      "tagline": "Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling",
-      "short_description": "A small HTML5 Canvas side-scroller built with vanilla JavaScript and ES modules, featuring black-and-white line art, optional color themes, power-ups, and a Customize menu.",
-      "long_description": "Game Pending is a browser-based side-scroller built with vanilla JavaScript and ES modules on an HTML5 Canvas, with no build step or runtime package dependency. It defaults to a black-and-white line-art Classic presentation with optional color themes applied to the sky, terrain, opponents, gear, weapons, attacks, and drone. Gameplay includes multi-area levels with platforms, underground cave routes, ladders, and left/right wrap portals, plus power-ups such as Boots (mid-air jumps and rocket glide), Shield (hit-blocking and kinetic discharge), Drone strikes, Specs auto-aim, and Radar. A Customize menu adjusts the game name, tagline, starting level, target FPS, weapon (Gun, Club, Wand), opponent behavior, spawning, and world generation, along with template presets, color themes, drone styles, player and opponent head/face options, and starting power-up levels. The project is described as a prototype designed to be extended via AI/ML tooling, and ships a Docker/nginx setup plus OpenCode integration for development.",
-      "tags": [
-        "canvas",
-        "game",
-        "html5",
-        "javascript",
-        "side-scroller",
-        "vanilla-js"
-      ],
-      "tech": [
-        "JavaScript",
-        "HTML5 Canvas",
-        "ES Modules",
-        "Docker",
-        "nginx"
-      ],
-      "category": "Games",
-      "live_url": null,
-      "repo_url": "https://github.com/jpeckenpaugh/game-pending",
-      "has_live_demo": false,
-      "featured": false,
-      "status": "prototype",
-      "confidence": "high",
-      "notes": "No live probe results (live: []), has_pages false, and no CNAME, so no live URL. Described as a gaming prototype designed to be extended via AI/ML tooling. Runs locally via python3 -m http.server 8000 -d html or docker-compose.",
-      "thumb": "thumbnails/game-pending.webp"
     },
     {
       "key": "vibe-tic-tac-toe",
@@ -349,13 +377,19 @@
         "Python"
       ],
       "category": "Games",
-      "live_url": null,
+      "live_url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/"
+        }
+      ],
       "repo_url": "https://github.com/jpeckenpaugh/vibe-tic-tac-toe",
-      "has_live_demo": false,
-      "featured": false,
+      "has_live_demo": true,
+      "featured": true,
       "status": "prototype",
       "confidence": "high",
-      "notes": "No homepage or GitHub Pages, so no live URL. run.sh launches a Python HTTP server. README reports the project was built in one OpenCode session with DeepSeek V4 Flash.",
+      "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/vibe-tic-tac-toe/ (HTTP 200); previously repo-only. run.sh still launches a local Python HTTP server. README reports the project was built in one OpenCode session with DeepSeek V4 Flash.",
       "thumb": "thumbnails/vibe-tic-tac-toe.webp"
     },
     {
@@ -391,6 +425,12 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "Live probe returns HTTP 200 with title 'Northstar RAG POC'; no CNAME found so used the GitHub Pages URL. Self-described proof-of-concept; status set to prototype. Featured because it has a working live demo. All corpus organizations, people, and policies are fictional.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/rag-poc/"
+        }
+      ],
       "thumb": "thumbnails/rag-poc.webp"
     },
     {
@@ -423,6 +463,12 @@
       "status": "experiment",
       "confidence": "medium",
       "notes": "CNAME points to seekdepth.net and the live probe of https://jpeckenpaugh.github.io/sm3/ returned 200 with title 'sm3 | State Machine 3', redirecting to https://seekdepth.net/, so the custom https URL is used. Python standard library only per setup.py; ui/requirements.txt lists fastapi, uvicorn, jinja2. Repo is largely Markdown (182 files) documenting the agentic 'Trimurti' forked-context experiment; 0 stars, pushed 2026-07-10.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://seekdepth.net/"
+        }
+      ],
       "thumb": "thumbnails/sm3.webp"
     },
     {
@@ -452,6 +498,12 @@
       "status": "active",
       "confidence": "medium",
       "notes": "CNAME contains seekdepth.org and the Pages probe redirected to https://seekdepth.org/, so the custom domain is used as live_url. Repo is Markdown-only (16 .md files, 18 files total) with no build config, so tech is limited to GitHub Pages/Markdown/CNAME. Related to ll-seekdepth-net: both are jpeckenpaugh projects under the shared 'seekdepth' brand, but they use different domains (this repo binds seekdepth.org; ll-seekdepth-net binds ll.seekdepth.net). No shared source or dependency is evident between them.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://seekdepth.org/"
+        }
+      ],
       "thumb": "thumbnails/seekdepth.org.webp"
     },
     {
@@ -489,6 +541,7 @@
       "status": "experiment",
       "confidence": "high",
       "notes": "No GitHub Pages and no CNAME, so no live URL. Description and README self-describe this as an experimental proof-of-concept. Single initial commit window (created and last pushed 2026-01-11); 0 stars.",
+      "demos": [],
       "thumb": "thumbnails/ai_chat_distil_01.webp"
     },
     {
@@ -523,6 +576,7 @@
       "status": "experiment",
       "confidence": "high",
       "notes": "Dossier live probe list is empty; GitHub Pages disabled and homepage null, so no live demo. Primary artifact is an architectural specification (README) plus an algebra EKC workbench with a FastAPI/SQLAlchemy backend and React/Vite/Tailwind frontend. Apache-2.0 licensed, 0 stars, last pushed 2026-09-20.",
+      "demos": [],
       "thumb": "thumbnails/cde.webp"
     },
     {
@@ -557,6 +611,7 @@
       "status": "experiment",
       "confidence": "high",
       "notes": "No live probe results (dossier live: []); has_pages false and homepage null, so no live_url. Runs locally via docker compose on http://localhost:8000.",
+      "demos": [],
       "thumb": "thumbnails/qsbc.webp"
     },
     {
@@ -590,7 +645,49 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "No GitHub Pages, homepage, or live probe results in dossier; no CNAME observed. Category chosen as AI/ML Experiments since it is a data-synthesis toolset for RAG development. Single scenario completed; reusability and evaluation artifacts remain future work.",
+      "demos": [],
       "thumb": "thumbnails/rag-data-synthesizer.webp"
+    },
+    {
+      "key": "hebrew-language-tutor",
+      "repo": "hebrew-language-tutor",
+      "display_title": "English / Hebrew Language Tutor",
+      "tagline": "Study, quiz, and exam modes for English-Hebrew vocabulary",
+      "short_description": "A FastAPI + SQLite web app with five English/Hebrew vocabulary lessons, study/quiz/exam modes, saved scores, and a dummy-gated admin area for editing lessons and vocab.",
+      "long_description": "A simple web application for learning English <-> Hebrew vocabulary. It ships five seeded lessons (10 vocab items each) with study, quiz, and exam modes, persists quiz/exam attempts as per-lesson score history, and includes a dummy-gated admin area for adding and editing lessons and vocabulary. The frontend is a plain HTML/CSS/JS single-page app using locally hosted Bootstrap 5.3.3, and the backend is a FastAPI service backed by SQLite, which serves the SPA and owns all application state. The repository contains two experiments: the primary client/server app built via a 9-stage decomposed role pipeline, and a single-pass static SPA proof-of-concept with hardcoded vocabulary under proof-of-concept/. README status is PASS based on a curl-driven API verification and static frontend review; known limitations include a dummy admin gate and in-memory tokens that don't survive restarts.",
+      "tags": [
+        "education",
+        "fastapi",
+        "hebrew",
+        "language-learning",
+        "sqlite",
+        "vocabulary"
+      ],
+      "tech": [
+        "FastAPI",
+        "Uvicorn",
+        "Python",
+        "SQLite",
+        "JavaScript",
+        "Bootstrap",
+        "HTML",
+        "CSS"
+      ],
+      "category": "Language Tools",
+      "live_url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/"
+        }
+      ],
+      "repo_url": "https://github.com/jpeckenpaugh/hebrew-language-tutor",
+      "has_live_demo": true,
+      "featured": true,
+      "status": "experiment",
+      "confidence": "high",
+      "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/hebrew-language-tutor/ (HTTP 200); previously repo-only. GitHub Pages is static, so the live demo serves the static SPA proof-of-concept (hardcoded vocab) rather than the full FastAPI + SQLite client/server app. Repo frames itself as two experiments; 0 stars. Frontend verified by static review rather than browser automation.",
+      "thumb": "thumbnails/hebrew-language-tutor.webp"
     },
     {
       "key": "vibe-hindi-language-tutor",
@@ -623,6 +720,12 @@
       "status": "active",
       "confidence": "high",
       "notes": "GitHub Pages live demo returns HTTP 200. README describes project as v0.3, a work in progress. No license or homepage metadata found; built entirely by coding agents as a demonstration of agentic 'vibe coding'.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/"
+        }
+      ],
       "thumb": "thumbnails/vibe-hindi-language-tutor.webp"
     },
     {
@@ -653,6 +756,7 @@
       "status": "active",
       "confidence": "high",
       "notes": "No live demo (dossier live probe empty, has_pages false). Reusable pip-installable library (pyproject name=nexttext, v0.1.0) with MIT license, hence featured=true. No CNAME present.",
+      "demos": [],
       "thumb": "thumbnails/nexttext.webp"
     },
     {
@@ -688,6 +792,7 @@
       "status": "experiment",
       "confidence": "high",
       "notes": "Description calls it experimental. No GitHub Pages (has_pages false) and no CNAME, so no live URL; demo is served locally via scripts/stage4/serve-demo.sh. Repo has 0 stars and no license.",
+      "demos": [],
       "thumb": "thumbnails/apertiasm-en-es.webp"
     },
     {
@@ -720,42 +825,8 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "No homepage, no GitHub Pages, no CNAME. Language is Python; requirements.txt lists beautifulsoup4>=4.12.0 and spacy>=3.7.0. Ships install.sh and parse.sh plus a committed output/ directory of generated CSVs. Created and last pushed 2026-09-18 (single-day, 0 stars, no license).",
+      "demos": [],
       "thumb": "thumbnails/c3pa-sentence-label-parser.webp"
-    },
-    {
-      "key": "hebrew-language-tutor",
-      "repo": "hebrew-language-tutor",
-      "display_title": "English / Hebrew Language Tutor",
-      "tagline": "Study, quiz, and exam modes for English-Hebrew vocabulary",
-      "short_description": "A FastAPI + SQLite web app with five English/Hebrew vocabulary lessons, study/quiz/exam modes, saved scores, and a dummy-gated admin area for editing lessons and vocab.",
-      "long_description": "A simple web application for learning English <-> Hebrew vocabulary. It ships five seeded lessons (10 vocab items each) with study, quiz, and exam modes, persists quiz/exam attempts as per-lesson score history, and includes a dummy-gated admin area for adding and editing lessons and vocabulary. The frontend is a plain HTML/CSS/JS single-page app using locally hosted Bootstrap 5.3.3, and the backend is a FastAPI service backed by SQLite, which serves the SPA and owns all application state. The repository contains two experiments: the primary client/server app built via a 9-stage decomposed role pipeline, and a single-pass static SPA proof-of-concept with hardcoded vocabulary under proof-of-concept/. README status is PASS based on a curl-driven API verification and static frontend review; known limitations include a dummy admin gate and in-memory tokens that don't survive restarts.",
-      "tags": [
-        "education",
-        "fastapi",
-        "hebrew",
-        "language-learning",
-        "sqlite",
-        "vocabulary"
-      ],
-      "tech": [
-        "FastAPI",
-        "Uvicorn",
-        "Python",
-        "SQLite",
-        "JavaScript",
-        "Bootstrap",
-        "HTML",
-        "CSS"
-      ],
-      "category": "Language Tools",
-      "live_url": null,
-      "repo_url": "https://github.com/jpeckenpaugh/hebrew-language-tutor",
-      "has_live_demo": false,
-      "featured": false,
-      "status": "experiment",
-      "confidence": "high",
-      "notes": "Dossier live probe returned an empty list (no live URLs) and has_pages is false, so live_url is null and has_live_demo is false. No CNAME or hosting config found in the tree. Repo frames itself as two experiments; created and pushed the same day with 0 stars. Frontend verified by static review rather than browser automation.",
-      "thumb": "thumbnails/hebrew-language-tutor.webp"
     },
     {
       "key": "roblox-api-database",
@@ -787,6 +858,7 @@
       "status": "active",
       "confidence": "high",
       "notes": "No live probe results and no GitHub Pages/CNAME, so no live demo. Reusable CLI tooling and git-submodule design; recently pushed, not archived.",
+      "demos": [],
       "thumb": "thumbnails/roblox-api-database.webp"
     },
     {
@@ -817,6 +889,7 @@
       "status": "active",
       "confidence": "high",
       "notes": "No live probe results in dossier (live: []) and has_pages is false, so no live demo. Pure Markdown repo (5 .md files, no manifests); tech inferred from README references to Markdown, Gemini CLI and Git. MIT licensed, 0 stars.",
+      "demos": [],
       "thumb": "thumbnails/gemini_bootstrap.webp"
     },
     {
@@ -850,6 +923,7 @@
       "status": "active",
       "confidence": "high",
       "notes": "No homepage, no GitHub Pages, and empty live probe; no live demo. Repo is Markdown-only (37 .md files) with no manifests. License: MIT. Model- and agent-agnostic instructions validated in OpenCode; notable but not a library and has no live demo, so featured is false.",
+      "demos": [],
       "thumb": "thumbnails/open-code-workflows.webp"
     },
     {
@@ -881,6 +955,12 @@
       "status": "active",
       "confidence": "high",
       "notes": "CNAME file points to tc.livive.org, so the custom https domain is preferred over the jpeckenpaugh.github.io/tc-livive-org/ Pages URL (live probe returned 200). No README; evidence drawn from index.html title and the three spec markdown files (concept_specification.md, reframed.md, spec_rev_2.md). Zero external dependencies per specs.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://tc.livive.org/"
+        }
+      ],
       "thumb": "thumbnails/tc-livive-org.webp"
     },
     {
@@ -915,6 +995,7 @@
       "status": "active",
       "confidence": "high",
       "notes": "No description or homepage set on GitHub; no CNAME and Pages disabled, so no live URL. 18 files across two lessons; top-level docker-compose.yml runs the Lesson 1 monitor service. Uses psutil==6.1.0 pinned, other deps unpinned.",
+      "demos": [],
       "thumb": "thumbnails/docker-sql-lessons.webp"
     },
     {
@@ -950,6 +1031,7 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "No GitHub Pages and no CNAME, so live_url is null. Positioned by the README as a teaching tool for client/server concepts rather than a standalone game, hence Education & Teaching. Local-only server at 0.0.0.0:8000.",
+      "demos": [],
       "thumb": "thumbnails/fast-ttt.webp"
     },
     {
@@ -978,6 +1060,7 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "Dossier live probe list is empty and has_pages is false, so no live demo exists and live_url is null. No license declared and no manifests. Content is 11 Python files plus README.md (13 files total), a self-contained command-line teaching demo with no dependencies.",
+      "demos": [],
       "thumb": "thumbnails/python_classes.webp"
     },
     {
@@ -1013,6 +1096,12 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "Live probe returned HTTP 200 with title 'C3PA Dataset Explorer' on GitHub Pages. README self-describes the project as a proof-of-concept. No license field was present in the dossier metadata. Data and annotations remain under the C3PA dataset's terms.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/c3pa-explorer/"
+        }
+      ],
       "thumb": "thumbnails/c3pa-explorer.webp"
     },
     {
@@ -1037,17 +1126,17 @@
         "sqlite"
       ],
       "tech": [
-        "Bootstrap",
-        "Python",
-        "Docker",
-        "aiosqlite",
+        "SQLAlchemy",
         "JavaScript",
         "fpdf2",
-        "Alembic",
-        "fastapi-users",
+        "Python",
+        "Bootstrap",
         "SQLite",
-        "SQLAlchemy",
-        "FastAPI"
+        "fastapi-users",
+        "FastAPI",
+        "aiosqlite",
+        "Alembic",
+        "Docker"
       ],
       "category": "Web Apps & Prototypes",
       "live_url": "https://jpeckenpaugh.github.io/ch/",
@@ -1060,6 +1149,12 @@
       "repos": [
         "company-hub",
         "ch"
+      ],
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/ch/"
+        }
       ],
       "thumb": "thumbnails/company-hub.webp"
     },
@@ -1099,6 +1194,12 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Driver Hub Prototype \ud83d\ude97\ud83d\udca8'. Repo has no description, no license, 0 stars. README and docs (ARQUITECTURA.md, ESPECIFICACION_TECNICA.md) are in Spanish. Repo is an npm workspaces monorepo (shared/server/client).",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/driver-hub-prototype/"
+        }
+      ],
       "thumb": "thumbnails/driver-hub-prototype.webp"
     },
     {
@@ -1135,6 +1236,12 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Executive Assistant'. Repo has no description, no GitHub-reported license (README states MIT), and 0 stars. README notes the initial build is complete but formal verification has not finished; known items include reminder visibility on related detail pages and HTTP 422 validation response presentation. The live site appears to be the client-side poc-browser build (sql.js), while the main app is a FastAPI server intended to run locally on localhost:8000.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/executive-assistant/"
+        }
+      ],
       "thumb": "thumbnails/executive-assistant.webp"
     },
     {
@@ -1164,6 +1271,12 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "Live probe returned HTTP 200 with title \"Heron's Fountain\". No CNAME in the repo, so the jpeckenpaugh.github.io/<repo>/ URL is used. No license declared. Only four files (index.html, physics.js, render.js, README.md) and no build step or dependencies.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/herons-fountain/"
+        }
+      ],
       "thumb": "thumbnails/herons-fountain.webp"
     },
     {
@@ -1198,6 +1311,12 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Robot Motion Designer (Browser Edition)'. No CNAME in the repo, so the Pages URL jpeckenpaugh.github.io/robot-motion-studio/ is used; .github/workflows/deploy.yml publishes browser-edition/ to GitHub Pages. No repo description, homepage, license, or topics; 0 stars. Self-described proof-of-concept (POC) that does not talk to physical hardware. Two editions: server edition (FastAPI + SQLite + static Bootstrap SPA; pinned deps fastapi==0.115.6, uvicorn[standard]==0.34.0) and static browser edition (sql.js WASM SQLite in a Web Worker, OPFS persistence). Verification reports record v0.1 82/83 pass and Sprint-01 85/86 pass (one known FAIL each: preview staleness, fixed in Sprint 01 as I11/K8; stored step speed not recomputed on mutation as G7).",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/robot-motion-studio/"
+        }
+      ],
       "thumb": "thumbnails/robot-motion-studio.webp"
     },
     {
@@ -1236,6 +1355,12 @@
       "status": "prototype",
       "confidence": "high",
       "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Video Content Factory \u2014 Browser Workspace'. No CNAME found in the repo, so the Pages URL jpeckenpaugh.github.io/vid-factory/ is used; .github/workflows/deploy.yml publishes to GitHub Pages. No repo description, homepage, license, or topics; 1 star. Two runtimes: browser-native primary edition (sql.js WASM SQLite in a Web Worker, OPFS persistence, kokoro-js TTS, client-side Gemini/OpenAI/Ollama script generation) and an unchanged FastAPI + Bootstrap fallback reference. Sprint 02 verification result: Pass with sandbox environment limitations (kokoro-js execution and OPFS audio persistence verified only via static review because headless browser/WebGPU was unavailable; ./run.sh reload watcher failed under sandbox restrictions).",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://jpeckenpaugh.github.io/vid-factory/"
+        }
+      ],
       "thumb": "thumbnails/vid-factory.webp"
     },
     {
@@ -1268,6 +1393,12 @@
       "status": "active",
       "confidence": "high",
       "notes": "Live probe returned 200 with title 'tech.livive.net' and redirected to http://tech.livive.net/. CNAME declares tech.livive.net, so the custom https URL is used. No README; no package.json or build tooling. MIT license. Author entries in data/posts.json are labeled AI personas.",
+      "demos": [
+        {
+          "label": "Play",
+          "url": "https://tech.livive.net/"
+        }
+      ],
       "thumb": "thumbnails/tech-livive-net.webp"
     }
   ],
@@ -1304,6 +1435,12 @@
           "status": "active",
           "confidence": "high",
           "notes": "Live probe of https://jpeckenpaugh.github.io/aom/ returned HTTP 200 (title 'aom') and redirects to custom domain final_url http://aom.livive.net/, so live_url uses the custom domain. Description 'Age of Mycology'. Python 22 files, 141435 KB, 0 stars, no license, has_pages true. requirements.txt pins pygame-ce==2.5.7. README documents pygbag==0.9.3 and Python 3.14 build; contributions land directly on main with auto-deploy to Pages.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://aom.livive.net/"
+            }
+          ],
           "thumb": "thumbnails/aom.webp"
         },
         {
@@ -1338,7 +1475,92 @@
           "status": "active",
           "confidence": "high",
           "notes": "Custom domain chk.livive.net from CNAME; GitHub Pages also serves at jpeckenpaugh.github.io/chk-livive-net/. 100 tests via node --test. package.json name is 'godot-checkers'. MIT licensed per README/package.json.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://chk.livive.net/"
+            }
+          ],
           "thumb": "thumbnails/chk-livive-net.webp"
+        },
+        {
+          "key": "EuchreGame",
+          "repo": "EuchreGame",
+          "display_title": "EuchreGame",
+          "tagline": "Headless Python Euchre engine with AI data factory and browser sandbox",
+          "short_description": "A headless Python Euchre card game engine with deterministic simulation, AI/ML-friendly state export, a synthetic training-data factory, and a Pyodide browser sandbox.",
+          "long_description": "EuchreGame is a deterministic, headless Python package for simulating partnership Euchre with AI/ML-friendly state export. It builds a 24-card deck with seeded shuffling, runs a stateful engine covering round-one order-up and round-two trump calling, dealer pickup/discard, trick play with left/right bower handling, and legal move generation with effective-suit follow rules. State is JSON-friendly via to_dict/from_dict, and masked per-player views support hidden-information workflows. Beyond the engine, the repo includes a local Data Factory for generating, validating, benchmarking, and reviewing synthetic Euchre decision data for student-model distillation, backed by a FastAPI dashboard over JSONL artifacts. A browser-based sandbox under html/ runs the Python engine through Pyodide (with optional local Gemma/WebLLM AI play) and supports god-view or masked player views.",
+          "tags": [
+            "card-game",
+            "euchre",
+            "game-engine",
+            "pyodide",
+            "reinforcement-learning",
+            "synthetic-data"
+          ],
+          "tech": [
+            "Python",
+            "FastAPI",
+            "uvicorn",
+            "Pyodide",
+            "WebLLM",
+            "JavaScript",
+            "TypeScript",
+            "pytest"
+          ],
+          "category": "Games",
+          "live_url": "https://jpeckenpaugh.github.io/EuchreGame/",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/EuchreGame/"
+            }
+          ],
+          "repo_url": "https://github.com/jpeckenpaugh/EuchreGame",
+          "has_live_demo": true,
+          "featured": true,
+          "status": "active",
+          "confidence": "high",
+          "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/EuchreGame/ (HTTP 200), serving the Pyodide browser sandbox; previously repo-only. The bundled html/vendor/pyodide/package.json belongs to the vendored Pyodide runtime, not this project. No license declared.",
+          "thumb": "thumbnails/EuchreGame.webp"
+        },
+        {
+          "key": "game-pending",
+          "repo": "game-pending",
+          "display_title": "Game Pending",
+          "tagline": "Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling",
+          "short_description": "A small HTML5 Canvas side-scroller built with vanilla JavaScript and ES modules, featuring black-and-white line art, optional color themes, power-ups, and a Customize menu.",
+          "long_description": "Game Pending is a browser-based side-scroller built with vanilla JavaScript and ES modules on an HTML5 Canvas, with no build step or runtime package dependency. It defaults to a black-and-white line-art Classic presentation with optional color themes applied to the sky, terrain, opponents, gear, weapons, attacks, and drone. Gameplay includes multi-area levels with platforms, underground cave routes, ladders, and left/right wrap portals, plus power-ups such as Boots (mid-air jumps and rocket glide), Shield (hit-blocking and kinetic discharge), Drone strikes, Specs auto-aim, and Radar. A Customize menu adjusts the game name, tagline, starting level, target FPS, weapon (Gun, Club, Wand), opponent behavior, spawning, and world generation, along with template presets, color themes, drone styles, player and opponent head/face options, and starting power-up levels. The project is described as a prototype designed to be extended via AI/ML tooling, and ships a Docker/nginx setup plus OpenCode integration for development.",
+          "tags": [
+            "canvas",
+            "game",
+            "html5",
+            "javascript",
+            "side-scroller",
+            "vanilla-js"
+          ],
+          "tech": [
+            "JavaScript",
+            "HTML5 Canvas",
+            "ES Modules",
+            "Docker",
+            "nginx"
+          ],
+          "category": "Games",
+          "live_url": "https://jpeckenpaugh.github.io/game-pending/",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/game-pending/"
+            }
+          ],
+          "repo_url": "https://github.com/jpeckenpaugh/game-pending",
+          "has_live_demo": true,
+          "featured": true,
+          "status": "prototype",
+          "confidence": "high",
+          "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/game-pending/ (HTTP 200); previously repo-only. Described as a gaming prototype designed to be extended via AI/ML tooling. Also runs locally via python3 -m http.server 8000 -d html or docker-compose.",
+          "thumb": "thumbnails/game-pending.webp"
         },
         {
           "key": "lokarta",
@@ -1378,6 +1600,20 @@
           ],
           "category": "Games",
           "live_url": "https://lk.livive.net/",
+          "demos": [
+            {
+              "label": "Play v4 (latest)",
+              "url": "https://lk.livive.net/"
+            },
+            {
+              "label": "Play v3",
+              "url": "https://jpeckenpaugh.github.io/lokarta-v3/"
+            },
+            {
+              "label": "Play v2",
+              "url": "https://jpeckenpaugh.github.io/lokarta-v2/"
+            }
+          ],
           "repo_url": "https://github.com/jpeckenpaugh/lokarta-v4",
           "has_live_demo": true,
           "featured": true,
@@ -1385,34 +1621,6 @@
           "confidence": "high",
           "notes": "Four-repo lineage of one game. lokarta (Python, created 2026-01-26) is the original local terminal/BBS-style ASCII RPG proof of concept, no GitHub Pages, no live demo. lokarta-v2 (TypeScript browser edition, created 2026-09-08) splits a Vite frontend from a FastAPI+SQLite backend and has a live GitHub Pages demo. lokarta-v3 (JavaScript, created 2026-09-27) drops the backend for a fully client-side edition using Web Workers/IndexedDB/Web Audio, adding vocations and a tower ascent. lokarta-v4 (JavaScript, created 2026-10-06, pushed 2026-10-11) is the primary repo: the largest and most complete (528 files, ~16.9 MB, most recent commits), with an overworld, quest chain, NPCs, and expanded sprite/data catalogs. All of v2/v3/v4 have Pages enabled and probed HTTP 200; v4's probe redirected to the custom domain https://lk.livive.net/, used as the best working live URL. Repos have no license and 0 stars.",
           "thumb": "thumbnails/lokarta.webp"
-        },
-        {
-          "key": "ll-seekdepth-net",
-          "repo": "ll-seekdepth-net",
-          "display_title": "Lunar Lander Tournament",
-          "tagline": "The Lunar Lander tournament that no one was asking for!",
-          "short_description": "A Lunar Lander tournament site served at ll.seekdepth.net.",
-          "long_description": "ll-seekdepth-net is a small GitHub Pages project hosting a Lunar Lander tournament, custom-bound to the domain ll.seekdepth.net via its CNAME file. The repository itself contains only a README and the CNAME; the live tournament page is served from the custom domain.",
-          "tags": [
-            "games",
-            "leaderboard",
-            "lunar-lander",
-            "tournament"
-          ],
-          "tech": [
-            "github-pages",
-            "markdown",
-            "cname"
-          ],
-          "category": "Games",
-          "live_url": "https://ll.seekdepth.net/",
-          "repo_url": "https://github.com/jpeckenpaugh/ll-seekdepth-net",
-          "has_live_demo": true,
-          "featured": true,
-          "status": "active",
-          "confidence": "low",
-          "notes": "Repo contains only README.md and CNAME (2 files, 1KB). Live probe returned 200 and redirected to custom domain http://ll.seekdepth.net/ (CNAME value ll.seekdepth.net); https URL used. No source code present in repo, so tech limited to Pages/Markdown/CNAME and tournament format details unknown.",
-          "thumb": "thumbnails/ll-seekdepth-net.webp"
         },
         {
           "key": "rl-livive-net",
@@ -1450,6 +1658,12 @@
           "status": "active",
           "confidence": "high",
           "notes": "CNAME points to lunar.livive.net, which returns 200 (title 'Lunar Lander \u2014 Tournament Edition'); GitHub Pages URL also live. Setup is a web game demo plus an RL policy lab; filename/repo naming ('rl-', 'Policy Lab') is AI/ML-focused but the primary artifact is a playable arcade game. No license listed.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://lunar.livive.net/"
+            }
+          ],
           "thumb": "thumbnails/rl-livive-net.webp"
         },
         {
@@ -1485,6 +1699,12 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "No repo description or homepage; docs describe it as a local-first P2P Tic-Tac-Toe POC. Live GitHub Pages probe returned 200 (title 'P2P Tic-Tac-Toe'). No CNAME found, so the default Pages URL is used. License unknown.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/p2p-ttt/"
+            }
+          ],
           "thumb": "thumbnails/p2p-ttt.webp"
         },
         {
@@ -1522,74 +1742,13 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "GitHub Pages browser edition live and returns 200 with title 'Threat Sweep - Browser Edition'. Repo created and pushed the same day (2026-09-08), 0 stars. Verification report notes browser-edition Worker/IndexedDB runtime checks and server-backed Stage 08 live HTTP/API checks remain unverified in the build sandbox, so status is prototype rather than active.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/threat-sweep/"
+            }
+          ],
           "thumb": "thumbnails/threat-sweep.webp"
-        },
-        {
-          "key": "EuchreGame",
-          "repo": "EuchreGame",
-          "display_title": "EuchreGame",
-          "tagline": "Headless Python Euchre engine with AI data factory and browser sandbox",
-          "short_description": "A headless Python Euchre card game engine with deterministic simulation, AI/ML-friendly state export, a synthetic training-data factory, and a Pyodide browser sandbox.",
-          "long_description": "EuchreGame is a deterministic, headless Python package for simulating partnership Euchre with AI/ML-friendly state export. It builds a 24-card deck with seeded shuffling, runs a stateful engine covering round-one order-up and round-two trump calling, dealer pickup/discard, trick play with left/right bower handling, and legal move generation with effective-suit follow rules. State is JSON-friendly via to_dict/from_dict, and masked per-player views support hidden-information workflows. Beyond the engine, the repo includes a local Data Factory for generating, validating, benchmarking, and reviewing synthetic Euchre decision data for student-model distillation, backed by a FastAPI dashboard over JSONL artifacts. A browser-based sandbox under html/ runs the Python engine through Pyodide (with optional local Gemma/WebLLM AI play) and supports god-view or masked player views.",
-          "tags": [
-            "card-game",
-            "euchre",
-            "game-engine",
-            "pyodide",
-            "reinforcement-learning",
-            "synthetic-data"
-          ],
-          "tech": [
-            "Python",
-            "FastAPI",
-            "uvicorn",
-            "Pyodide",
-            "WebLLM",
-            "JavaScript",
-            "TypeScript",
-            "pytest"
-          ],
-          "category": "Games",
-          "live_url": null,
-          "repo_url": "https://github.com/jpeckenpaugh/EuchreGame",
-          "has_live_demo": false,
-          "featured": false,
-          "status": "active",
-          "confidence": "high",
-          "notes": "Live probe list is empty and has_pages is false, so no live demo URL exists; the html/ sandbox must be served locally. The bundled html/vendor/pyodide/package.json belongs to the vendored Pyodide runtime, not this project. No license declared.",
-          "thumb": "thumbnails/EuchreGame.webp"
-        },
-        {
-          "key": "game-pending",
-          "repo": "game-pending",
-          "display_title": "Game Pending",
-          "tagline": "Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling",
-          "short_description": "A small HTML5 Canvas side-scroller built with vanilla JavaScript and ES modules, featuring black-and-white line art, optional color themes, power-ups, and a Customize menu.",
-          "long_description": "Game Pending is a browser-based side-scroller built with vanilla JavaScript and ES modules on an HTML5 Canvas, with no build step or runtime package dependency. It defaults to a black-and-white line-art Classic presentation with optional color themes applied to the sky, terrain, opponents, gear, weapons, attacks, and drone. Gameplay includes multi-area levels with platforms, underground cave routes, ladders, and left/right wrap portals, plus power-ups such as Boots (mid-air jumps and rocket glide), Shield (hit-blocking and kinetic discharge), Drone strikes, Specs auto-aim, and Radar. A Customize menu adjusts the game name, tagline, starting level, target FPS, weapon (Gun, Club, Wand), opponent behavior, spawning, and world generation, along with template presets, color themes, drone styles, player and opponent head/face options, and starting power-up levels. The project is described as a prototype designed to be extended via AI/ML tooling, and ships a Docker/nginx setup plus OpenCode integration for development.",
-          "tags": [
-            "canvas",
-            "game",
-            "html5",
-            "javascript",
-            "side-scroller",
-            "vanilla-js"
-          ],
-          "tech": [
-            "JavaScript",
-            "HTML5 Canvas",
-            "ES Modules",
-            "Docker",
-            "nginx"
-          ],
-          "category": "Games",
-          "live_url": null,
-          "repo_url": "https://github.com/jpeckenpaugh/game-pending",
-          "has_live_demo": false,
-          "featured": false,
-          "status": "prototype",
-          "confidence": "high",
-          "notes": "No live probe results (live: []), has_pages false, and no CNAME, so no live URL. Described as a gaming prototype designed to be extended via AI/ML tooling. Runs locally via python3 -m http.server 8000 -d html or docker-compose.",
-          "thumb": "thumbnails/game-pending.webp"
         },
         {
           "key": "vibe-tic-tac-toe",
@@ -1612,13 +1771,19 @@
             "Python"
           ],
           "category": "Games",
-          "live_url": null,
+          "live_url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/"
+            }
+          ],
           "repo_url": "https://github.com/jpeckenpaugh/vibe-tic-tac-toe",
-          "has_live_demo": false,
-          "featured": false,
+          "has_live_demo": true,
+          "featured": true,
           "status": "prototype",
           "confidence": "high",
-          "notes": "No homepage or GitHub Pages, so no live URL. run.sh launches a Python HTTP server. README reports the project was built in one OpenCode session with DeepSeek V4 Flash.",
+          "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/vibe-tic-tac-toe/ (HTTP 200); previously repo-only. run.sh still launches a local Python HTTP server. README reports the project was built in one OpenCode session with DeepSeek V4 Flash.",
           "thumb": "thumbnails/vibe-tic-tac-toe.webp"
         }
       ]
@@ -1659,6 +1824,12 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "Live probe returns HTTP 200 with title 'Northstar RAG POC'; no CNAME found so used the GitHub Pages URL. Self-described proof-of-concept; status set to prototype. Featured because it has a working live demo. All corpus organizations, people, and policies are fictional.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/rag-poc/"
+            }
+          ],
           "thumb": "thumbnails/rag-poc.webp"
         },
         {
@@ -1691,6 +1862,12 @@
           "status": "experiment",
           "confidence": "medium",
           "notes": "CNAME points to seekdepth.net and the live probe of https://jpeckenpaugh.github.io/sm3/ returned 200 with title 'sm3 | State Machine 3', redirecting to https://seekdepth.net/, so the custom https URL is used. Python standard library only per setup.py; ui/requirements.txt lists fastapi, uvicorn, jinja2. Repo is largely Markdown (182 files) documenting the agentic 'Trimurti' forked-context experiment; 0 stars, pushed 2026-07-10.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://seekdepth.net/"
+            }
+          ],
           "thumb": "thumbnails/sm3.webp"
         },
         {
@@ -1720,6 +1897,12 @@
           "status": "active",
           "confidence": "medium",
           "notes": "CNAME contains seekdepth.org and the Pages probe redirected to https://seekdepth.org/, so the custom domain is used as live_url. Repo is Markdown-only (16 .md files, 18 files total) with no build config, so tech is limited to GitHub Pages/Markdown/CNAME. Related to ll-seekdepth-net: both are jpeckenpaugh projects under the shared 'seekdepth' brand, but they use different domains (this repo binds seekdepth.org; ll-seekdepth-net binds ll.seekdepth.net). No shared source or dependency is evident between them.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://seekdepth.org/"
+            }
+          ],
           "thumb": "thumbnails/seekdepth.org.webp"
         },
         {
@@ -1757,6 +1940,7 @@
           "status": "experiment",
           "confidence": "high",
           "notes": "No GitHub Pages and no CNAME, so no live URL. Description and README self-describe this as an experimental proof-of-concept. Single initial commit window (created and last pushed 2026-01-11); 0 stars.",
+          "demos": [],
           "thumb": "thumbnails/ai_chat_distil_01.webp"
         },
         {
@@ -1791,6 +1975,7 @@
           "status": "experiment",
           "confidence": "high",
           "notes": "Dossier live probe list is empty; GitHub Pages disabled and homepage null, so no live demo. Primary artifact is an architectural specification (README) plus an algebra EKC workbench with a FastAPI/SQLAlchemy backend and React/Vite/Tailwind frontend. Apache-2.0 licensed, 0 stars, last pushed 2026-09-20.",
+          "demos": [],
           "thumb": "thumbnails/cde.webp"
         },
         {
@@ -1825,6 +2010,7 @@
           "status": "experiment",
           "confidence": "high",
           "notes": "No live probe results (dossier live: []); has_pages false and homepage null, so no live_url. Runs locally via docker compose on http://localhost:8000.",
+          "demos": [],
           "thumb": "thumbnails/qsbc.webp"
         },
         {
@@ -1858,6 +2044,7 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "No GitHub Pages, homepage, or live probe results in dossier; no CNAME observed. Category chosen as AI/ML Experiments since it is a data-synthesis toolset for RAG development. Single scenario completed; reusability and evaluation artifacts remain future work.",
+          "demos": [],
           "thumb": "thumbnails/rag-data-synthesizer.webp"
         }
       ]
@@ -1865,6 +2052,47 @@
     {
       "category": "Language Tools",
       "projects": [
+        {
+          "key": "hebrew-language-tutor",
+          "repo": "hebrew-language-tutor",
+          "display_title": "English / Hebrew Language Tutor",
+          "tagline": "Study, quiz, and exam modes for English-Hebrew vocabulary",
+          "short_description": "A FastAPI + SQLite web app with five English/Hebrew vocabulary lessons, study/quiz/exam modes, saved scores, and a dummy-gated admin area for editing lessons and vocab.",
+          "long_description": "A simple web application for learning English <-> Hebrew vocabulary. It ships five seeded lessons (10 vocab items each) with study, quiz, and exam modes, persists quiz/exam attempts as per-lesson score history, and includes a dummy-gated admin area for adding and editing lessons and vocabulary. The frontend is a plain HTML/CSS/JS single-page app using locally hosted Bootstrap 5.3.3, and the backend is a FastAPI service backed by SQLite, which serves the SPA and owns all application state. The repository contains two experiments: the primary client/server app built via a 9-stage decomposed role pipeline, and a single-pass static SPA proof-of-concept with hardcoded vocabulary under proof-of-concept/. README status is PASS based on a curl-driven API verification and static frontend review; known limitations include a dummy admin gate and in-memory tokens that don't survive restarts.",
+          "tags": [
+            "education",
+            "fastapi",
+            "hebrew",
+            "language-learning",
+            "sqlite",
+            "vocabulary"
+          ],
+          "tech": [
+            "FastAPI",
+            "Uvicorn",
+            "Python",
+            "SQLite",
+            "JavaScript",
+            "Bootstrap",
+            "HTML",
+            "CSS"
+          ],
+          "category": "Language Tools",
+          "live_url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/"
+            }
+          ],
+          "repo_url": "https://github.com/jpeckenpaugh/hebrew-language-tutor",
+          "has_live_demo": true,
+          "featured": true,
+          "status": "experiment",
+          "confidence": "high",
+          "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/hebrew-language-tutor/ (HTTP 200); previously repo-only. GitHub Pages is static, so the live demo serves the static SPA proof-of-concept (hardcoded vocab) rather than the full FastAPI + SQLite client/server app. Repo frames itself as two experiments; 0 stars. Frontend verified by static review rather than browser automation.",
+          "thumb": "thumbnails/hebrew-language-tutor.webp"
+        },
         {
           "key": "vibe-hindi-language-tutor",
           "repo": "vibe-hindi-language-tutor",
@@ -1896,6 +2124,12 @@
           "status": "active",
           "confidence": "high",
           "notes": "GitHub Pages live demo returns HTTP 200. README describes project as v0.3, a work in progress. No license or homepage metadata found; built entirely by coding agents as a demonstration of agentic 'vibe coding'.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/"
+            }
+          ],
           "thumb": "thumbnails/vibe-hindi-language-tutor.webp"
         },
         {
@@ -1926,6 +2160,7 @@
           "status": "active",
           "confidence": "high",
           "notes": "No live demo (dossier live probe empty, has_pages false). Reusable pip-installable library (pyproject name=nexttext, v0.1.0) with MIT license, hence featured=true. No CNAME present.",
+          "demos": [],
           "thumb": "thumbnails/nexttext.webp"
         },
         {
@@ -1961,6 +2196,7 @@
           "status": "experiment",
           "confidence": "high",
           "notes": "Description calls it experimental. No GitHub Pages (has_pages false) and no CNAME, so no live URL; demo is served locally via scripts/stage4/serve-demo.sh. Repo has 0 stars and no license.",
+          "demos": [],
           "thumb": "thumbnails/apertiasm-en-es.webp"
         },
         {
@@ -1993,42 +2229,8 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "No homepage, no GitHub Pages, no CNAME. Language is Python; requirements.txt lists beautifulsoup4>=4.12.0 and spacy>=3.7.0. Ships install.sh and parse.sh plus a committed output/ directory of generated CSVs. Created and last pushed 2026-09-18 (single-day, 0 stars, no license).",
+          "demos": [],
           "thumb": "thumbnails/c3pa-sentence-label-parser.webp"
-        },
-        {
-          "key": "hebrew-language-tutor",
-          "repo": "hebrew-language-tutor",
-          "display_title": "English / Hebrew Language Tutor",
-          "tagline": "Study, quiz, and exam modes for English-Hebrew vocabulary",
-          "short_description": "A FastAPI + SQLite web app with five English/Hebrew vocabulary lessons, study/quiz/exam modes, saved scores, and a dummy-gated admin area for editing lessons and vocab.",
-          "long_description": "A simple web application for learning English <-> Hebrew vocabulary. It ships five seeded lessons (10 vocab items each) with study, quiz, and exam modes, persists quiz/exam attempts as per-lesson score history, and includes a dummy-gated admin area for adding and editing lessons and vocabulary. The frontend is a plain HTML/CSS/JS single-page app using locally hosted Bootstrap 5.3.3, and the backend is a FastAPI service backed by SQLite, which serves the SPA and owns all application state. The repository contains two experiments: the primary client/server app built via a 9-stage decomposed role pipeline, and a single-pass static SPA proof-of-concept with hardcoded vocabulary under proof-of-concept/. README status is PASS based on a curl-driven API verification and static frontend review; known limitations include a dummy admin gate and in-memory tokens that don't survive restarts.",
-          "tags": [
-            "education",
-            "fastapi",
-            "hebrew",
-            "language-learning",
-            "sqlite",
-            "vocabulary"
-          ],
-          "tech": [
-            "FastAPI",
-            "Uvicorn",
-            "Python",
-            "SQLite",
-            "JavaScript",
-            "Bootstrap",
-            "HTML",
-            "CSS"
-          ],
-          "category": "Language Tools",
-          "live_url": null,
-          "repo_url": "https://github.com/jpeckenpaugh/hebrew-language-tutor",
-          "has_live_demo": false,
-          "featured": false,
-          "status": "experiment",
-          "confidence": "high",
-          "notes": "Dossier live probe returned an empty list (no live URLs) and has_pages is false, so live_url is null and has_live_demo is false. No CNAME or hosting config found in the tree. Repo frames itself as two experiments; created and pushed the same day with 0 stars. Frontend verified by static review rather than browser automation.",
-          "thumb": "thumbnails/hebrew-language-tutor.webp"
         }
       ]
     },
@@ -2065,6 +2267,7 @@
           "status": "active",
           "confidence": "high",
           "notes": "No live probe results and no GitHub Pages/CNAME, so no live demo. Reusable CLI tooling and git-submodule design; recently pushed, not archived.",
+          "demos": [],
           "thumb": "thumbnails/roblox-api-database.webp"
         },
         {
@@ -2095,6 +2298,7 @@
           "status": "active",
           "confidence": "high",
           "notes": "No live probe results in dossier (live: []) and has_pages is false, so no live demo. Pure Markdown repo (5 .md files, no manifests); tech inferred from README references to Markdown, Gemini CLI and Git. MIT licensed, 0 stars.",
+          "demos": [],
           "thumb": "thumbnails/gemini_bootstrap.webp"
         },
         {
@@ -2128,6 +2332,7 @@
           "status": "active",
           "confidence": "high",
           "notes": "No homepage, no GitHub Pages, and empty live probe; no live demo. Repo is Markdown-only (37 .md files) with no manifests. License: MIT. Model- and agent-agnostic instructions validated in OpenCode; notable but not a library and has no live demo, so featured is false.",
+          "demos": [],
           "thumb": "thumbnails/open-code-workflows.webp"
         }
       ]
@@ -2164,6 +2369,12 @@
           "status": "active",
           "confidence": "high",
           "notes": "CNAME file points to tc.livive.org, so the custom https domain is preferred over the jpeckenpaugh.github.io/tc-livive-org/ Pages URL (live probe returned 200). No README; evidence drawn from index.html title and the three spec markdown files (concept_specification.md, reframed.md, spec_rev_2.md). Zero external dependencies per specs.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://tc.livive.org/"
+            }
+          ],
           "thumb": "thumbnails/tc-livive-org.webp"
         },
         {
@@ -2198,6 +2409,7 @@
           "status": "active",
           "confidence": "high",
           "notes": "No description or homepage set on GitHub; no CNAME and Pages disabled, so no live URL. 18 files across two lessons; top-level docker-compose.yml runs the Lesson 1 monitor service. Uses psutil==6.1.0 pinned, other deps unpinned.",
+          "demos": [],
           "thumb": "thumbnails/docker-sql-lessons.webp"
         },
         {
@@ -2233,6 +2445,7 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "No GitHub Pages and no CNAME, so live_url is null. Positioned by the README as a teaching tool for client/server concepts rather than a standalone game, hence Education & Teaching. Local-only server at 0.0.0.0:8000.",
+          "demos": [],
           "thumb": "thumbnails/fast-ttt.webp"
         },
         {
@@ -2261,6 +2474,7 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "Dossier live probe list is empty and has_pages is false, so no live demo exists and live_url is null. No license declared and no manifests. Content is 11 Python files plus README.md (13 files total), a self-contained command-line teaching demo with no dependencies.",
+          "demos": [],
           "thumb": "thumbnails/python_classes.webp"
         }
       ]
@@ -2301,6 +2515,12 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "Live probe returned HTTP 200 with title 'C3PA Dataset Explorer' on GitHub Pages. README self-describes the project as a proof-of-concept. No license field was present in the dossier metadata. Data and annotations remain under the C3PA dataset's terms.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/c3pa-explorer/"
+            }
+          ],
           "thumb": "thumbnails/c3pa-explorer.webp"
         },
         {
@@ -2325,17 +2545,17 @@
             "sqlite"
           ],
           "tech": [
-            "Bootstrap",
-            "Python",
-            "Docker",
-            "aiosqlite",
+            "SQLAlchemy",
             "JavaScript",
             "fpdf2",
-            "Alembic",
-            "fastapi-users",
+            "Python",
+            "Bootstrap",
             "SQLite",
-            "SQLAlchemy",
-            "FastAPI"
+            "fastapi-users",
+            "FastAPI",
+            "aiosqlite",
+            "Alembic",
+            "Docker"
           ],
           "category": "Web Apps & Prototypes",
           "live_url": "https://jpeckenpaugh.github.io/ch/",
@@ -2348,6 +2568,12 @@
           "repos": [
             "company-hub",
             "ch"
+          ],
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/ch/"
+            }
           ],
           "thumb": "thumbnails/company-hub.webp"
         },
@@ -2387,6 +2613,12 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Driver Hub Prototype \ud83d\ude97\ud83d\udca8'. Repo has no description, no license, 0 stars. README and docs (ARQUITECTURA.md, ESPECIFICACION_TECNICA.md) are in Spanish. Repo is an npm workspaces monorepo (shared/server/client).",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/driver-hub-prototype/"
+            }
+          ],
           "thumb": "thumbnails/driver-hub-prototype.webp"
         },
         {
@@ -2423,6 +2655,12 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Executive Assistant'. Repo has no description, no GitHub-reported license (README states MIT), and 0 stars. README notes the initial build is complete but formal verification has not finished; known items include reminder visibility on related detail pages and HTTP 422 validation response presentation. The live site appears to be the client-side poc-browser build (sql.js), while the main app is a FastAPI server intended to run locally on localhost:8000.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/executive-assistant/"
+            }
+          ],
           "thumb": "thumbnails/executive-assistant.webp"
         },
         {
@@ -2452,6 +2690,12 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "Live probe returned HTTP 200 with title \"Heron's Fountain\". No CNAME in the repo, so the jpeckenpaugh.github.io/<repo>/ URL is used. No license declared. Only four files (index.html, physics.js, render.js, README.md) and no build step or dependencies.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/herons-fountain/"
+            }
+          ],
           "thumb": "thumbnails/herons-fountain.webp"
         },
         {
@@ -2486,6 +2730,12 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Robot Motion Designer (Browser Edition)'. No CNAME in the repo, so the Pages URL jpeckenpaugh.github.io/robot-motion-studio/ is used; .github/workflows/deploy.yml publishes browser-edition/ to GitHub Pages. No repo description, homepage, license, or topics; 0 stars. Self-described proof-of-concept (POC) that does not talk to physical hardware. Two editions: server edition (FastAPI + SQLite + static Bootstrap SPA; pinned deps fastapi==0.115.6, uvicorn[standard]==0.34.0) and static browser edition (sql.js WASM SQLite in a Web Worker, OPFS persistence). Verification reports record v0.1 82/83 pass and Sprint-01 85/86 pass (one known FAIL each: preview staleness, fixed in Sprint 01 as I11/K8; stored step speed not recomputed on mutation as G7).",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/robot-motion-studio/"
+            }
+          ],
           "thumb": "thumbnails/robot-motion-studio.webp"
         },
         {
@@ -2524,6 +2774,12 @@
           "status": "prototype",
           "confidence": "high",
           "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Video Content Factory \u2014 Browser Workspace'. No CNAME found in the repo, so the Pages URL jpeckenpaugh.github.io/vid-factory/ is used; .github/workflows/deploy.yml publishes to GitHub Pages. No repo description, homepage, license, or topics; 1 star. Two runtimes: browser-native primary edition (sql.js WASM SQLite in a Web Worker, OPFS persistence, kokoro-js TTS, client-side Gemini/OpenAI/Ollama script generation) and an unchanged FastAPI + Bootstrap fallback reference. Sprint 02 verification result: Pass with sandbox environment limitations (kokoro-js execution and OPFS audio persistence verified only via static review because headless browser/WebGPU was unavailable; ./run.sh reload watcher failed under sandbox restrictions).",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://jpeckenpaugh.github.io/vid-factory/"
+            }
+          ],
           "thumb": "thumbnails/vid-factory.webp"
         },
         {
@@ -2556,6 +2812,12 @@
           "status": "active",
           "confidence": "high",
           "notes": "Live probe returned 200 with title 'tech.livive.net' and redirected to http://tech.livive.net/. CNAME declares tech.livive.net, so the custom https URL is used. No README; no package.json or build tooling. MIT license. Author entries in data/posts.json are labeled AI personas.",
+          "demos": [
+            {
+              "label": "Play",
+              "url": "https://tech.livive.net/"
+            }
+          ],
           "thumb": "thumbnails/tech-livive-net.webp"
         }
       ]

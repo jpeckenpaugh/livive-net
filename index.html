@@ -92,7 +92,7 @@
   .card .tagline { margin: 10px 0 0; color: var(--muted); font-size: .92rem; }
   .card .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 14px 0 0; }
   .card .tags li { background: var(--chip); color: var(--muted); font-size: .74rem; padding: 3px 9px; border-radius: 999px; }
-  .card .links { display: flex; gap: 16px; margin-top: auto; padding-top: 16px; font-weight: 600; font-size: .9rem; }
+  .card .links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: auto; padding-top: 16px; font-weight: 600; font-size: .9rem; }
 
   .badge {
     flex: 0 0 auto; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
@@ -144,7 +144,9 @@ function card(p) {
     : `<div class="thumb ph" style="--h:${hue(p.key)}" aria-hidden="true">${esc(initials(p.display_title))}</div>`;
   const tags = (p.tags || []).slice(0, 5).map(t => `<li>${esc(t)}</li>`).join("");
   const live = p.has_live_demo ? `<span class="badge">Live</span>` : "";
-  const play = p.has_live_demo ? `<a href="${esc(p.live_url)}"${ext}>Play &rarr;</a>` : "";
+  const demos = (p.demos && p.demos.length) ? p.demos
+    : (p.has_live_demo ? [{ label: "Play", url: p.live_url }] : []);
+  const play = demos.map(dm => `<a href="${esc(dm.url)}"${ext}>${esc(dm.label)} &rarr;</a>`).join("");
   return `<article class="card">
     <a class="thumb-link" href="${esc(href)}"${ext}>${thumb}</a>
     <div class="body">

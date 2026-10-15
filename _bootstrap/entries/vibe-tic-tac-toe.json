@@ -19,11 +19,14 @@
     "Python"
   ],
   "category": "Games",
-  "live_url": null,
+  "live_url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
+  "demos": [
+    { "label": "Play", "url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/" }
+  ],
   "repo_url": "https://github.com/jpeckenpaugh/vibe-tic-tac-toe",
-  "has_live_demo": false,
-  "featured": false,
+  "has_live_demo": true,
+  "featured": true,
   "status": "prototype",
   "confidence": "high",
-  "notes": "No homepage or GitHub Pages, so no live URL. run.sh launches a Python HTTP server. README reports the project was built in one OpenCode session with DeepSeek V4 Flash."
+  "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/vibe-tic-tac-toe/ (HTTP 200); previously repo-only. run.sh still launches a local Python HTTP server. README reports the project was built in one OpenCode session with DeepSeek V4 Flash."
 }

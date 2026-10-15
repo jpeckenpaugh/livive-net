@@ -31,6 +31,11 @@
   ],
   "category": "Games",
   "live_url": "https://lk.livive.net/",
+  "demos": [
+    { "label": "Play v4 (latest)", "url": "https://lk.livive.net/" },
+    { "label": "Play v3", "url": "https://jpeckenpaugh.github.io/lokarta-v3/" },
+    { "label": "Play v2", "url": "https://jpeckenpaugh.github.io/lokarta-v2/" }
+  ],
   "repo_url": "https://github.com/jpeckenpaugh/lokarta-v4",
   "has_live_demo": true,
   "featured": true,
