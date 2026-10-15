@@ -1,0 +1,96 @@
+name: demo-monitor
+
+# Scheduled live-demo uptime + recency monitor.
+# Probes every published live URL, records status/recency into projects.json and
+# status.json, and opens/updates a GitHub issue when any demo is not HTTP 200.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "_bootstrap/monitor.py"
+      - "projects.json"
+      - ".github/workflows/monitor.yml"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: demo-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Probe demos and refresh recency
+        id: monitor
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 _bootstrap/monitor.py
+
+      - name: Commit status/recency changes
+        run: |
+          if git diff --quiet -- projects.json status.json; then
+            echo "No status or recency change to commit."
+            exit 0
+          fi
+          git config user.name "livive-monitor[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects.json status.json
+          git commit -m "chore(monitor): refresh demo health and recency [skip ci]"
+          for i in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "push failed (attempt $i), rebasing and retrying"
+            git pull --rebase --autostash
+          done
+          echo "::error::could not push monitor update"
+          exit 1
+
+      - name: Open or update uptime alert
+        if: steps.monitor.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh label create uptime --color B60205 \
+            --description "Automated live-demo uptime alert" --force >/dev/null 2>&1 || true
+          BODY="$(python3 - <<'PY'
+          import json, os
+          s = json.load(open("status.json"))
+          lines = [f"**{s['live_down']} of {s['live_total']} live demos are not returning HTTP 200.**",
+                   f"Checked {s['checked_at']}.", "", "| project | role | url | status | detail |", "| --- | --- | --- | --- | --- |"]
+          for f in s.get("failed", []):
+              lines.append(f"| `{f['key']}` | {f.get('role') or ''} | {f['url']} | {f['status']} | {f.get('error') or ''} |")
+          lines += ["", f"Run: {os.environ['RUN_URL']}"]
+          print("\n".join(lines))
+          PY
+          )"
+          NUM="$(gh issue list --label uptime --state open --json number --jq '.[0].number' || true)"
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "$BODY"
+          else
+            gh issue create --label uptime --title "Demo uptime: live demo(s) not returning HTTP 200" --body "$BODY"
+          fi
+
+      - name: Close recovered alert
+        if: steps.monitor.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          NUM="$(gh issue list --label uptime --state open --json number --jq '.[0].number' || true)"
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "All live demos are returning HTTP 200 again. Closing."
+            gh issue close "$NUM"
+          fi

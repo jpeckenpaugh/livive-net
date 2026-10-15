@@ -1,0 +1,328 @@
+{
+  "checked_at": "2026-10-15T17:45:50Z",
+  "status": "ok",
+  "live_total": 26,
+  "live_ok": 26,
+  "live_down": 0,
+  "down_keys": [],
+  "failed": [],
+  "projects": {
+    "aom": {
+      "title": "Age of Mycology",
+      "url": "https://aom.livive.net/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 87,
+      "final_url": "https://aom.livive.net/",
+      "error": null,
+      "demos": []
+    },
+    "chk-livive-net": {
+      "title": "Classic Checkers & AI Arena",
+      "url": "https://chk.livive.net/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 85,
+      "final_url": "https://chk.livive.net/",
+      "error": null,
+      "demos": []
+    },
+    "EuchreGame": {
+      "title": "EuchreGame",
+      "url": "https://jpeckenpaugh.github.io/EuchreGame/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 82,
+      "final_url": "https://jpeckenpaugh.github.io/EuchreGame/",
+      "error": null,
+      "demos": []
+    },
+    "game-pending": {
+      "title": "Game Pending",
+      "url": "https://jpeckenpaugh.github.io/game-pending/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 80,
+      "final_url": "https://jpeckenpaugh.github.io/game-pending/",
+      "error": null,
+      "demos": []
+    },
+    "lokarta": {
+      "title": "Lokarta",
+      "url": "https://lk.livive.net/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 89,
+      "final_url": "https://lk.livive.net/",
+      "error": null,
+      "demos": [
+        {
+          "url": "https://jpeckenpaugh.github.io/lokarta-v3/",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://jpeckenpaugh.github.io/lokarta-v3/",
+          "latency_ms": 56,
+          "error": null,
+          "role": "demo"
+        },
+        {
+          "url": "https://jpeckenpaugh.github.io/lokarta-v2/",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://jpeckenpaugh.github.io/lokarta-v2/",
+          "latency_ms": 68,
+          "error": null,
+          "role": "demo"
+        }
+      ]
+    },
+    "rl-livive-net": {
+      "title": "LunarLander Policy Lab",
+      "url": "https://lunar.livive.net/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 83,
+      "final_url": "https://lunar.livive.net/",
+      "error": null,
+      "demos": []
+    },
+    "p2p-ttt": {
+      "title": "Peer-to-peer Tic-Tac-Toe",
+      "url": "https://jpeckenpaugh.github.io/p2p-ttt/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 77,
+      "final_url": "https://jpeckenpaugh.github.io/p2p-ttt/",
+      "error": null,
+      "demos": []
+    },
+    "threat-sweep": {
+      "title": "Threat Sweep",
+      "url": "https://jpeckenpaugh.github.io/threat-sweep/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 80,
+      "final_url": "https://jpeckenpaugh.github.io/threat-sweep/",
+      "error": null,
+      "demos": []
+    },
+    "vibe-tic-tac-toe": {
+      "title": "Vibe Tic-Tac-Toe",
+      "url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 67,
+      "final_url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
+      "error": null,
+      "demos": []
+    },
+    "rag-poc": {
+      "title": "Northstar RAG POC",
+      "url": "https://jpeckenpaugh.github.io/rag-poc/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 61,
+      "final_url": "https://jpeckenpaugh.github.io/rag-poc/",
+      "error": null,
+      "demos": []
+    },
+    "sm3": {
+      "title": "State Machine 3",
+      "url": "https://seekdepth.net/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 61,
+      "final_url": "https://seekdepth.net/",
+      "error": null,
+      "demos": []
+    },
+    "seekdepth.org": {
+      "title": "Seekdepth.org",
+      "url": "https://seekdepth.org/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 61,
+      "final_url": "https://seekdepth.org/",
+      "error": null,
+      "demos": []
+    },
+    "hebrew-language-tutor": {
+      "title": "English / Hebrew Language Tutor",
+      "url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 60,
+      "final_url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/",
+      "error": null,
+      "demos": []
+    },
+    "vibe-hindi-language-tutor": {
+      "title": "English \u00b7 Hindi & Kannada Language Tutor",
+      "url": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 63,
+      "final_url": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/",
+      "error": null,
+      "demos": []
+    },
+    "nexttext": {
+      "title": "nexttext",
+      "url": "https://jpeckenpaugh.github.io/nexttext/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 59,
+      "final_url": "https://jpeckenpaugh.github.io/nexttext/",
+      "error": null,
+      "demos": []
+    },
+    "sprites-livive-net": {
+      "title": "Sprites \u00b7 Model-to-Sprite Workshop",
+      "url": "https://sprites.livive.net/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 93,
+      "final_url": "https://sprites.livive.net/",
+      "error": null,
+      "demos": [
+        {
+          "url": "https://oblique.livive.net/",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://oblique.livive.net/",
+          "latency_ms": 70,
+          "error": null,
+          "role": "demo"
+        }
+      ]
+    },
+    "tc-livive-org": {
+      "title": "Training vs. Inference",
+      "url": "https://tc.livive.org/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 69,
+      "final_url": "https://tc.livive.org/",
+      "error": null,
+      "demos": []
+    },
+    "c3pa-explorer": {
+      "title": "C3PA Explorer",
+      "url": "https://jpeckenpaugh.github.io/c3pa-explorer/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 63,
+      "final_url": "https://jpeckenpaugh.github.io/c3pa-explorer/",
+      "error": null,
+      "demos": []
+    },
+    "company-hub": {
+      "title": "Company Hub",
+      "url": "https://jpeckenpaugh.github.io/ch/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 67,
+      "final_url": "https://jpeckenpaugh.github.io/ch/",
+      "error": null,
+      "demos": []
+    },
+    "driver-hub-prototype": {
+      "title": "Driver Hub Prototype",
+      "url": "https://jpeckenpaugh.github.io/driver-hub-prototype/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 66,
+      "final_url": "https://jpeckenpaugh.github.io/driver-hub-prototype/",
+      "error": null,
+      "demos": []
+    },
+    "executive-assistant": {
+      "title": "Executive Assistant",
+      "url": "https://jpeckenpaugh.github.io/executive-assistant/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 70,
+      "final_url": "https://jpeckenpaugh.github.io/executive-assistant/",
+      "error": null,
+      "demos": []
+    },
+    "herons-fountain": {
+      "title": "Heron's Fountain \u2014 2D Simulation",
+      "url": "https://jpeckenpaugh.github.io/herons-fountain/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 67,
+      "final_url": "https://jpeckenpaugh.github.io/herons-fountain/",
+      "error": null,
+      "demos": []
+    },
+    "oblique-livive-net": {
+      "title": "Oblique \u00b7 2.5D World Sandbox",
+      "url": "https://oblique.livive.net/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 60,
+      "final_url": "https://oblique.livive.net/",
+      "error": null,
+      "demos": [
+        {
+          "url": "https://oblique.livive.net/sandbox.html",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://oblique.livive.net/sandbox.html",
+          "latency_ms": 59,
+          "error": null,
+          "role": "demo"
+        },
+        {
+          "url": "https://oblique.livive.net/terrain-layers.html",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://oblique.livive.net/terrain-layers.html",
+          "latency_ms": 54,
+          "error": null,
+          "role": "demo"
+        },
+        {
+          "url": "https://oblique.livive.net/beach-camp.html",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://oblique.livive.net/beach-camp.html",
+          "latency_ms": 53,
+          "error": null,
+          "role": "demo"
+        }
+      ]
+    },
+    "robot-motion-studio": {
+      "title": "Robot Motion Studio",
+      "url": "https://jpeckenpaugh.github.io/robot-motion-studio/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 56,
+      "final_url": "https://jpeckenpaugh.github.io/robot-motion-studio/",
+      "error": null,
+      "demos": []
+    },
+    "vid-factory": {
+      "title": "Video Content Factory",
+      "url": "https://jpeckenpaugh.github.io/vid-factory/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 58,
+      "final_url": "https://jpeckenpaugh.github.io/vid-factory/",
+      "error": null,
+      "demos": []
+    },
+    "tech-livive-net": {
+      "title": "tech.livive.net",
+      "url": "https://tech.livive.net/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 58,
+      "final_url": "https://tech.livive.net/",
+      "error": null,
+      "demos": []
+    }
+  }
+}

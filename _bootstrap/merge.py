@@ -73,6 +73,31 @@ def find_thumb(key):
     return None
 
 
+# Volatile live-status and recency fields are owned by monitor.py. A plain
+# entries re-merge must not drop them from an already-generated projects.json.
+PRESERVE_FIELDS = (
+    "updated_at",
+    "live_ok",
+    "live_status",
+    "live_checked_at",
+    "live_latency_ms",
+    "live_final_url",
+    "live_error",
+)
+
+
+def load_existing():
+    """Prior projects.json, for carrying over monitor-owned enrichment fields."""
+    if not OUT.is_file():
+        return {}, None
+    try:
+        prev = json.loads(OUT.read_text())
+    except (OSError, ValueError):
+        return {}, None
+    by_key = {p.get("key"): p for p in prev.get("projects", []) if p.get("key")}
+    return by_key, prev.get("health")
+
+
 def sort_key(d):
     # grouped by category order, then live/featured first, then title
     return (
@@ -112,6 +137,13 @@ def main():
     collapse(raw)
     projects = [clean(d) for k, d in raw.items() if k not in EXCLUDE]
 
+    prev_projects, prev_health = load_existing()
+    for p in projects:
+        old = prev_projects.get(p["key"], {})
+        for field in PRESERVE_FIELDS:
+            if field in old:
+                p[field] = old[field]
+
     projects.sort(key=lambda d: (CATEGORY_ORDER.index(d["category"]),) + sort_key(d))
 
     groups = []
@@ -129,6 +161,8 @@ def main():
         "projects": projects,
         "groups": groups,
     }
+    if prev_health:
+        out["health"] = prev_health
     OUT.write_text(json.dumps(out, indent=2) + "\n")
     print(f"wrote {OUT} ({out['count']} projects, {out['live_count']} live)")
     for g in groups:

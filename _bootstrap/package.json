@@ -7,6 +7,7 @@
     "thumbs": "node thumbs.mjs"
   },
   "dependencies": {
-    "playwright-core": "^1.48.0"
+    "playwright-core": "^1.48.0",
+    "sharp": "^0.33.5"
   }
 }

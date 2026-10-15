@@ -6,21 +6,20 @@
  *   - live demo  -> Playwright screenshot of the live URL (1200x750 viewport)
  *   - repo only  -> GitHub's auto-generated social preview image
  *   - fallbacks  -> live capture falls back to the GitHub OG image
- * Output is resized to 640px wide WebP at thumbnails/<key>.webp.
+ * Output is normalized with sharp to 640px wide WebP at thumbnails/<key>.webp.
+ * Every project emits WebP; legacy PNG/JPG siblings for a processed key are removed.
  *
  * Usage:  node _bootstrap/thumbs.mjs            (all projects)
  *         node _bootstrap/thumbs.mjs lokarta sm3 (subset by key)
  */
 
 import { chromium } from "playwright-core";
-import { execFile } from "node:child_process";
-import { promisify } from "node:util";
-import { mkdir, readFile, writeFile, rename, rm } from "node:fs/promises";
+import sharp from "sharp";
+import { mkdir, readFile, writeFile, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const execFileP = promisify(execFile);
 const BOOT = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(BOOT, "..");
 const PROJECTS = path.join(ROOT, "projects.json");
@@ -42,15 +41,6 @@ const WAIT_OVERRIDES = {
 };
 // Per-project pre-shot click selectors (dismiss splash / start).
 const CLICK_OVERRIDES = {};
-
-async function haveCwebp() {
-  try {
-    await execFileP("cwebp", ["-version"]);
-    return true;
-  } catch {
-    return false;
-  }
-}
 
 function ogUrl(repo) {
   const name = Array.isArray(repo) ? repo[0] : repo;
@@ -104,7 +94,10 @@ async function captureLive(page, project) {
 }
 
 async function toWebp(src, dest) {
-  await execFileP("cwebp", ["-quiet", "-q", String(QUALITY), "-resize", String(OUT_W), "0", src, "-o", dest]);
+  await sharp(src)
+    .resize({ width: OUT_W, withoutEnlargement: true })
+    .webp({ quality: QUALITY, effort: 6 })
+    .toFile(dest);
 }
 
 async function main() {
@@ -112,9 +105,6 @@ async function main() {
   await mkdir(THUMBS, { recursive: true });
   const data = JSON.parse(await readFile(PROJECTS, "utf8"));
   const projects = data.projects.filter((p) => !only.length || only.includes(p.key));
-
-  const useWebp = await haveCwebp();
-  if (!useWebp) console.warn("! cwebp not found; falling back to PNG output");
 
   const browser = await chromium.launch({ channel: "chrome", headless: true });
   const context = await browser.newContext({ viewport: VIEW, deviceScaleFactor: 1, ignoreHTTPSErrors: true });
@@ -125,16 +115,15 @@ async function main() {
   let ok = 0;
   const total = projects.length;
 
-  async function extFor(key) {
-    return useWebp ? `${key}.webp` : `${key}.png`;
-  }
-
   async function finish(key, rawPath) {
-    const finalName = await extFor(key);
+    const finalName = `${key}.webp`;
     const finalPath = path.join(THUMBS, finalName);
-    if (useWebp) await toWebp(rawPath, finalPath);
-    else await rename(rawPath, finalPath);
+    await toWebp(rawPath, finalPath);
     usedThumb.set(key, `thumbnails/${finalName}`);
+    // Normalize: drop any legacy non-WebP sibling so the repo stays all-WebP.
+    await Promise.all(
+      ["png", "jpg", "jpeg"].map((ext) => rm(path.join(THUMBS, `${key}.${ext}`), { force: true })),
+    );
   }
 
   function report(line, good) {

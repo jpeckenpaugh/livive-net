@@ -2,3 +2,5 @@ _bootstrap/clones/
 _bootstrap/dossiers/
 _bootstrap/repos.json
 _bootstrap/node_modules/
+__pycache__/
+*.pyc
