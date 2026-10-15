@@ -1,0 +1,47 @@
+{
+  "key": "oblique-livive-net",
+  "repo": "oblique-livive-net",
+  "display_title": "Oblique · 2.5D World Sandbox",
+  "tagline": "A browser-based workbench for building and exploring layered 2.5D game worlds",
+  "short_description": "A collection of browser-based experiments for testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.",
+  "long_description": "Oblique is a static, browser-based workbench for exploring 2.5D game worlds on an orthogonal square grid. Its standalone experiments include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.",
+  "tags": [
+    "2.5d",
+    "game-assets",
+    "game-development",
+    "procedural-terrain",
+    "sandbox"
+  ],
+  "tech": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Canvas"
+  ],
+  "category": "Web Apps & Prototypes",
+  "live_url": "https://oblique.livive.net/",
+  "demos": [
+    {
+      "label": "Explore Oblique",
+      "url": "https://oblique.livive.net/"
+    },
+    {
+      "label": "2.5D Model Sandbox",
+      "url": "https://oblique.livive.net/sandbox.html"
+    },
+    {
+      "label": "Terrain Layers",
+      "url": "https://oblique.livive.net/terrain-layers.html"
+    },
+    {
+      "label": "Beach Camp",
+      "url": "https://oblique.livive.net/beach-camp.html"
+    }
+  ],
+  "repo_url": "https://github.com/jpeckenpaugh/oblique-livive-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active experiments",
+  "confidence": "high",
+  "notes": "Repository README describes a browser-based 2.5D game-world workbench with three featured live prototypes. Static HTML, CSS, and vanilla JavaScript; GitHub Pages deploys the repository root. The related Sprites model-to-sprite workshop is hosted at sprites.livive.net."
+}

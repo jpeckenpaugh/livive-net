@@ -1,0 +1,40 @@
+{
+  "key": "sprites-livive-net",
+  "repo": "sprites-livive-net",
+  "display_title": "Sprites · Model-to-Sprite Workshop",
+  "tagline": "Turn 3D GLB/glTF models into sprite sheets and single sprites in your browser",
+  "short_description": "A browser-based 3D-to-sprite workshop for previewing turntable views and animation frames, then exporting sprite sheets or cropped single sprites.",
+  "long_description": "Sprites is a static, browser-based 3D-to-sprite workshop. Select a GLB/glTF model and animation clip, preview sampled views and frames, configure camera pitch, view count, output dimensions, and background, then render and export a row-major PNG or adaptive-palette WebP sprite sheet. It also supports capturing a single angle with automatic bounds cropping, optional JSON metadata, and optional derived diagonal animation directions. The project is a companion asset-preparation tool for the Oblique 2.5D scene sandbox.",
+  "tags": [
+    "3d-models",
+    "game-assets",
+    "sprite-sheets",
+    "web-tool",
+    "glb"
+  ],
+  "tech": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Three.js",
+    "WebGL"
+  ],
+  "category": "Dev Tools",
+  "live_url": "https://sprites.livive.net/",
+  "demos": [
+    {
+      "label": "Open the sprite workshop",
+      "url": "https://sprites.livive.net/"
+    },
+    {
+      "label": "Oblique Sandbox",
+      "url": "https://oblique.livive.net/"
+    }
+  ],
+  "repo_url": "https://github.com/jpeckenpaugh/sprites-livive-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Live site title is 'Model Browser · Turntable'. README describes a browser-based 3D-to-sprite workshop and links to the companion Oblique sandbox. Static site; Three.js is loaded from jsDelivr."
+}

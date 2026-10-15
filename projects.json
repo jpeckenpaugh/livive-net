@@ -1,8 +1,8 @@
 {
   "source_user": "jpeckenpaugh",
-  "count": 36,
-  "live_count": 24,
-  "featured_count": 23,
+  "count": 38,
+  "live_count": 26,
+  "featured_count": 25,
   "category_order": [
     "Games",
     "AI/ML Experiments",
@@ -834,6 +834,47 @@
       "thumb": "thumbnails/c3pa-sentence-label-parser.webp"
     },
     {
+      "key": "sprites-livive-net",
+      "repo": "sprites-livive-net",
+      "display_title": "Sprites \u00b7 Model-to-Sprite Workshop",
+      "tagline": "Turn 3D GLB/glTF models into sprite sheets and single sprites in your browser",
+      "short_description": "A browser-based 3D-to-sprite workshop for previewing turntable views and animation frames, then exporting sprite sheets or cropped single sprites.",
+      "long_description": "Sprites is a static, browser-based 3D-to-sprite workshop. Select a GLB/glTF model and animation clip, preview sampled views and frames, configure camera pitch, view count, output dimensions, and background, then render and export a row-major PNG or adaptive-palette WebP sprite sheet. It also supports capturing a single angle with automatic bounds cropping, optional JSON metadata, and optional derived diagonal animation directions. The project is a companion asset-preparation tool for the Oblique 2.5D scene sandbox.",
+      "tags": [
+        "3d-models",
+        "game-assets",
+        "glb",
+        "sprite-sheets",
+        "web-tool"
+      ],
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Three.js",
+        "WebGL"
+      ],
+      "category": "Dev Tools",
+      "live_url": "https://sprites.livive.net/",
+      "demos": [
+        {
+          "label": "Open the sprite workshop",
+          "url": "https://sprites.livive.net/"
+        },
+        {
+          "label": "Oblique Sandbox",
+          "url": "https://oblique.livive.net/"
+        }
+      ],
+      "repo_url": "https://github.com/jpeckenpaugh/sprites-livive-net",
+      "has_live_demo": true,
+      "featured": true,
+      "status": "active",
+      "confidence": "high",
+      "notes": "Live site title is 'Model Browser \u00b7 Turntable'. README describes a browser-based 3D-to-sprite workshop and links to the companion Oblique sandbox. Static site; Three.js is loaded from jsDelivr.",
+      "thumb": "thumbnails/sprites-livive-net.png"
+    },
+    {
       "key": "roblox-api-database",
       "repo": "roblox-api-database",
       "display_title": "Roblox API Database",
@@ -1283,6 +1324,55 @@
         }
       ],
       "thumb": "thumbnails/herons-fountain.webp"
+    },
+    {
+      "key": "oblique-livive-net",
+      "repo": "oblique-livive-net",
+      "display_title": "Oblique \u00b7 2.5D World Sandbox",
+      "tagline": "A browser-based workbench for building and exploring layered 2.5D game worlds",
+      "short_description": "A collection of browser-based experiments for testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.",
+      "long_description": "Oblique is a static, browser-based workbench for exploring 2.5D game worlds on an orthogonal square grid. Its standalone experiments include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.",
+      "tags": [
+        "2.5d",
+        "game-assets",
+        "game-development",
+        "procedural-terrain",
+        "sandbox"
+      ],
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Canvas",
+        "Web Audio API"
+      ],
+      "category": "Web Apps & Prototypes",
+      "live_url": "https://oblique.livive.net/",
+      "demos": [
+        {
+          "label": "Explore Oblique",
+          "url": "https://oblique.livive.net/"
+        },
+        {
+          "label": "2.5D Model Sandbox",
+          "url": "https://oblique.livive.net/sandbox.html"
+        },
+        {
+          "label": "Terrain Layers",
+          "url": "https://oblique.livive.net/terrain-layers.html"
+        },
+        {
+          "label": "Beach Camp",
+          "url": "https://oblique.livive.net/beach-camp.html"
+        }
+      ],
+      "repo_url": "https://github.com/jpeckenpaugh/oblique-livive-net",
+      "has_live_demo": true,
+      "featured": true,
+      "status": "active experiments",
+      "confidence": "high",
+      "notes": "Repository README describes a browser-based 2.5D game-world workbench with three featured live prototypes. Static HTML, CSS, and vanilla JavaScript; GitHub Pages deploys the repository root. The related Sprites model-to-sprite workshop is hosted at sprites.livive.net.",
+      "thumb": "thumbnails/oblique-livive-net.png"
     },
     {
       "key": "robot-motion-studio",
@@ -2248,6 +2338,47 @@
       "category": "Dev Tools",
       "projects": [
         {
+          "key": "sprites-livive-net",
+          "repo": "sprites-livive-net",
+          "display_title": "Sprites \u00b7 Model-to-Sprite Workshop",
+          "tagline": "Turn 3D GLB/glTF models into sprite sheets and single sprites in your browser",
+          "short_description": "A browser-based 3D-to-sprite workshop for previewing turntable views and animation frames, then exporting sprite sheets or cropped single sprites.",
+          "long_description": "Sprites is a static, browser-based 3D-to-sprite workshop. Select a GLB/glTF model and animation clip, preview sampled views and frames, configure camera pitch, view count, output dimensions, and background, then render and export a row-major PNG or adaptive-palette WebP sprite sheet. It also supports capturing a single angle with automatic bounds cropping, optional JSON metadata, and optional derived diagonal animation directions. The project is a companion asset-preparation tool for the Oblique 2.5D scene sandbox.",
+          "tags": [
+            "3d-models",
+            "game-assets",
+            "glb",
+            "sprite-sheets",
+            "web-tool"
+          ],
+          "tech": [
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Three.js",
+            "WebGL"
+          ],
+          "category": "Dev Tools",
+          "live_url": "https://sprites.livive.net/",
+          "demos": [
+            {
+              "label": "Open the sprite workshop",
+              "url": "https://sprites.livive.net/"
+            },
+            {
+              "label": "Oblique Sandbox",
+              "url": "https://oblique.livive.net/"
+            }
+          ],
+          "repo_url": "https://github.com/jpeckenpaugh/sprites-livive-net",
+          "has_live_demo": true,
+          "featured": true,
+          "status": "active",
+          "confidence": "high",
+          "notes": "Live site title is 'Model Browser \u00b7 Turntable'. README describes a browser-based 3D-to-sprite workshop and links to the companion Oblique sandbox. Static site; Three.js is loaded from jsDelivr.",
+          "thumb": "thumbnails/sprites-livive-net.png"
+        },
+        {
           "key": "roblox-api-database",
           "repo": "roblox-api-database",
           "display_title": "Roblox API Database",
@@ -2707,6 +2838,54 @@
             }
           ],
           "thumb": "thumbnails/herons-fountain.webp"
+        },
+        {
+          "key": "oblique-livive-net",
+          "repo": "oblique-livive-net",
+          "display_title": "Oblique \u00b7 2.5D World Sandbox",
+          "tagline": "A browser-based workbench for building and exploring layered 2.5D game worlds",
+          "short_description": "A collection of browser-based experiments for testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.",
+          "long_description": "Oblique is a static, browser-based workbench for exploring 2.5D game worlds on an orthogonal square grid. Its standalone experiments include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.",
+          "tags": [
+            "2.5d",
+            "game-assets",
+            "game-development",
+            "procedural-terrain",
+            "sandbox"
+          ],
+          "tech": [
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Canvas"
+          ],
+          "category": "Web Apps & Prototypes",
+          "live_url": "https://oblique.livive.net/",
+          "demos": [
+            {
+              "label": "Explore Oblique",
+              "url": "https://oblique.livive.net/"
+            },
+            {
+              "label": "2.5D Model Sandbox",
+              "url": "https://oblique.livive.net/sandbox.html"
+            },
+            {
+              "label": "Terrain Layers",
+              "url": "https://oblique.livive.net/terrain-layers.html"
+            },
+            {
+              "label": "Beach Camp",
+              "url": "https://oblique.livive.net/beach-camp.html"
+            }
+          ],
+          "repo_url": "https://github.com/jpeckenpaugh/oblique-livive-net",
+          "has_live_demo": true,
+          "featured": true,
+          "status": "active experiments",
+          "confidence": "high",
+          "notes": "Repository README describes a browser-based 2.5D game-world workbench with three featured live prototypes. Static HTML, CSS, and vanilla JavaScript; GitHub Pages deploys the repository root. The related Sprites model-to-sprite workshop is hosted at sprites.livive.net.",
+          "thumb": "thumbnails/oblique-livive-net.png"
         },
         {
           "key": "robot-motion-studio",
