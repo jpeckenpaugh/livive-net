@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/favicon.ico">
+<title>Page not found — livive.net</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #f7f7f5; --fg: #1a1a1a; --muted: #6b6b6b; --card: #ffffff;
+    --border: #e4e4df; --accent: #2563eb;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 6px 18px rgba(0,0,0,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101014; --fg: #ececec; --muted: #9a9aa2; --card: #17171c;
+      --border: #26262e; --accent: #7aa2ff;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 48px 20px; }
+  .code { font-size: .8rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  h1 { margin: 8px 0 12px; font-size: clamp(1.8rem, 4.5vw, 2.6rem); letter-spacing: -.02em; }
+  p { margin: 0 0 8px; color: var(--muted); max-width: 55ch; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 26px; font-weight: 600; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .home {
+    display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    color: var(--fg); box-shadow: var(--shadow);
+  }
+  .home:hover { text-decoration: none; border-color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404 — Not found</div>
+    <h1>This page wandered off.</h1>
+    <p>The project or page you were looking for isn&rsquo;t here. It may have been renamed, moved, or never existed.</p>
+    <div class="links">
+      <a class="home" href="/">&larr; Back to Livive Projects</a>
+      <a href="https://github.com/jpeckenpaugh" target="_blank" rel="noopener noreferrer">Browse on GitHub &rarr;</a>
+    </div>
+  </div>
+</body>
+</html>
