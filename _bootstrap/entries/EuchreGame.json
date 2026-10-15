@@ -1,0 +1,18 @@
+{
+  "key": "EuchreGame",
+  "repo": "EuchreGame",
+  "display_title": "EuchreGame",
+  "tagline": "Headless Python Euchre engine with AI data factory and browser sandbox",
+  "short_description": "A headless Python Euchre card game engine with deterministic simulation, AI/ML-friendly state export, a synthetic training-data factory, and a Pyodide browser sandbox.",
+  "long_description": "EuchreGame is a deterministic, headless Python package for simulating partnership Euchre with AI/ML-friendly state export. It builds a 24-card deck with seeded shuffling, runs a stateful engine covering round-one order-up and round-two trump calling, dealer pickup/discard, trick play with left/right bower handling, and legal move generation with effective-suit follow rules. State is JSON-friendly via to_dict/from_dict, and masked per-player views support hidden-information workflows. Beyond the engine, the repo includes a local Data Factory for generating, validating, benchmarking, and reviewing synthetic Euchre decision data for student-model distillation, backed by a FastAPI dashboard over JSONL artifacts. A browser-based sandbox under html/ runs the Python engine through Pyodide (with optional local Gemma/WebLLM AI play) and supports god-view or masked player views.",
+  "tags": ["euchre", "card-game", "game-engine", "reinforcement-learning", "pyodide", "synthetic-data"],
+  "tech": ["Python", "FastAPI", "uvicorn", "Pyodide", "WebLLM", "JavaScript", "TypeScript", "pytest"],
+  "category": "Games",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/EuchreGame",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Live probe list is empty and has_pages is false, so no live demo URL exists; the html/ sandbox must be served locally. The bundled html/vendor/pyodide/package.json belongs to the vendored Pyodide runtime, not this project. No license declared."
+}

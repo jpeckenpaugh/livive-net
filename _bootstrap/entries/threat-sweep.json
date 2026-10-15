@@ -1,0 +1,18 @@
+{
+  "key": "threat-sweep",
+  "repo": "threat-sweep",
+  "display_title": "Threat Sweep",
+  "tagline": "Mobile-first cyber-security puzzle: scan a compromised grid for threats",
+  "short_description": "A mobile-first mine-clearing style puzzle where you play a Security Operator scanning a compromised system for viruses, hackers, rogue AI, malware, and bugs across five missions.",
+  "long_description": "Threat Sweep is a mobile-first cyber-security puzzle game that turns mine-clearing tension into a security-operator fantasy: instead of bombs you scan a compromised grid for viruses, hackers, software bugs, rogue AI bots, and malware, each with its own icon and scan-time behavior. The recommended experience is a standalone static browser edition with a Worker-owned game engine and IndexedDB local saves for sound preference, progression, results, and one resumable mission; it needs no API port. The original React single-page app backed by FastAPI and SQLite remains included as a fallback/reference runtime. Both editions offer a portrait dark command-center presentation, touch-friendly tactical controls, scan/clear/mark actions, nearby-threat signals, scoring, results and attempt history, five seeded missions with progressive unlocking (Signal Breach to Blackout Protocol), and brief Web Audio feedback for scan, mark, clear, warning, success, and failure events.",
+  "tags": ["puzzle-game", "cybersecurity", "mobile-first", "offline", "browser-game", "grid"],
+  "tech": ["JavaScript", "React", "Vite", "Bootstrap", "Python", "FastAPI", "SQLAlchemy", "SQLite", "IndexedDB", "Web Audio"],
+  "category": "Games",
+  "live_url": "https://jpeckenpaugh.github.io/threat-sweep/",
+  "repo_url": "https://github.com/jpeckenpaugh/threat-sweep",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "GitHub Pages browser edition live and returns 200 with title 'Threat Sweep - Browser Edition'. Repo created and pushed the same day (2026-09-08), 0 stars. Verification report notes browser-edition Worker/IndexedDB runtime checks and server-backed Stage 08 live HTTP/API checks remain unverified in the build sandbox, so status is prototype rather than active."
+}

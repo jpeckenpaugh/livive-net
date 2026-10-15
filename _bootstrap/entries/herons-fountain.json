@@ -1,0 +1,18 @@
+{
+  "key": "herons-fountain",
+  "repo": "herons-fountain",
+  "display_title": "Heron's Fountain — 2D Simulation",
+  "tagline": "Interactive browser simulation of a pump-less Heron's fountain",
+  "short_description": "An interactive, browser-based 2D approximation of a Heron's fountain that shows how falling water compresses trapped air to drive a fountain jet without a pump.",
+  "long_description": "Heron's Fountain is a zero-dependency, browser-based 2D simulation of a Heron's fountain. It models three water regions (a fixed top Basin, sealed Chamber A, and sealed Chamber B) connected by pipes P1, P2, and P3, treating the two sealed air spaces as one shared volume at a single pressure. Physics uses a polytropic pressure-volume relation (P = P0 (V0 / V)^k, default isothermal k = 1) and an orifice flow approximation (Q = Cd A sqrt(2 dP / rho)) accounting for hydrostatic head, with water conserved as transferred volumes. The animated side view draws the apparatus, liquid flow, airflow, and a horizontal particle jet, with live readouts of elapsed time, jet velocity, flow rate, vessel volumes, and fill percentages. Controls include Invert (exchanging chamber elevations and reversing flow), Auto Invert with selectable triggers (jet speed, flow rate, chamber fill, elapsed cycle time, or settled condition) plus threshold and dwell, simulation Speed of 1x-16x, and Reset. It is a deliberate lumped approximation that omits turbulence, surface tension, viscosity, temperature change, and detailed inversion mechanics. No build step or external dependency is required; serve the directory as static files.",
+  "tags": ["physics", "simulation", "fluid-dynamics", "canvas", "interactive"],
+  "tech": ["JavaScript", "HTML5", "Canvas"],
+  "category": "Web Apps & Prototypes",
+  "live_url": "https://jpeckenpaugh.github.io/herons-fountain/",
+  "repo_url": "https://github.com/jpeckenpaugh/herons-fountain",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "Live probe returned HTTP 200 with title \"Heron's Fountain\". No CNAME in the repo, so the jpeckenpaugh.github.io/<repo>/ URL is used. No license declared. Only four files (index.html, physics.js, render.js, README.md) and no build step or dependencies."
+}

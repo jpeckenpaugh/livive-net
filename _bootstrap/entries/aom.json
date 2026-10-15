@@ -1,0 +1,30 @@
+{
+  "key": "aom",
+  "repo": "aom",
+  "display_title": "Age of Mycology",
+  "tagline": "Playable browser build of the Age of Mycology game",
+  "short_description": "Age of Mycology is a Python/pygame game packaged with pygbag and deployed to the browser via GitHub Pages.",
+  "long_description": "Age of Mycology (AoM) is a game whose playable browser demo is served from GitHub Pages. This repository holds the game's runtime build inputs: the game package (AoM/, Python source plus compiled runtime assets under AoM/assets/), the pinned pygbag build configuration, and a small atlas build helper (tools/pack_web_atlas.py). The GitHub Action pages.yml builds the bundle server-side with a pinned toolchain (pygbag==0.9.3, Python 3.14) and deploys the generated web/ output to GitHub Pages. Before building, the workflow applies a locked web-10fps asset profile that repacks per-frame sprite directories into lossless grid atlases, shrinking aom.tar.gz from ~143 MB to ~63 MB, with a size gate that fails the deploy if the profile was not applied. The large aom.tar.gz bundle is produced in CI and deployed as a Pages artifact and is never committed to git. Raw/authoring assets, Blender/GLB source, render tooling, and tests live in a private aom-internal repository.",
+  "tags": [
+    "game",
+    "mycology",
+    "pygame",
+    "browser",
+    "pygbag"
+  ],
+  "tech": [
+    "Python",
+    "pygame-ce",
+    "pygbag",
+    "GitHub Pages",
+    "GitHub Actions"
+  ],
+  "category": "Games",
+  "live_url": "http://aom.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/aom",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Live probe of https://jpeckenpaugh.github.io/aom/ returned HTTP 200 (title 'aom') and redirects to custom domain final_url http://aom.livive.net/, so live_url uses the custom domain. Description 'Age of Mycology'. Python 22 files, 141435 KB, 0 stars, no license, has_pages true. requirements.txt pins pygame-ce==2.5.7. README documents pygbag==0.9.3 and Python 3.14 build; contributions land directly on main with auto-deploy to Pages."
+}

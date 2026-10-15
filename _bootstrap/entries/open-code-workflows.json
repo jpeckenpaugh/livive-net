@@ -1,0 +1,32 @@
+{
+  "key": "open-code-workflows",
+  "repo": "open-code-workflows",
+  "display_title": "Open Code Workflows",
+  "tagline": "Role-based agent pipelines that turn a seed concept into a web app",
+  "short_description": "Reusable Markdown-defined agent pipelines (build, enhancements, debug) that drive a staged, human-checkpointed build of a web app from a seed concept via stage-managed sub-agents.",
+  "long_description": "Open Code Workflows is a reusable set of role-based pipelines for building web apps with an agentic coding assistant. Given a short seed concept, the workflows drive a staged build with human checkpoints through clearly separated roles: concept (human-supplied), feature decomposition, feature briefs, system engineering, architecture, backend, frontend, verification, and documentation. Three pipelines are provided: build (stages 01-09), enhancements (stages 01-10), and debug (stages 01-03). A meta Stage Manager role sequences, dispatches, gates, and audits each stage, spawning and resuming sub-agents per role. The repo includes ready-made seed concepts such as a language tutor, job tracker, client project tracker, sales/inventory tracker, plant nursery, and capstone project tracker. Each generation follows a fixed artifact chain (concept to features to briefs to env scripts to architecture to backend to frontend to verification to README); stages commit and push as their final step. It was designed and validated in OpenCode with DeepSeek V4 Flash but is model- and agent-agnostic, written as plain Markdown instructions.",
+  "tags": [
+    "agent-workflows",
+    "sub-agents",
+    "code-generation",
+    "pipelines",
+    "web-apps",
+    "opencode"
+  ],
+  "tech": [
+    "Markdown",
+    "OpenCode",
+    "DeepSeek V4 Flash",
+    "FastAPI",
+    "SQLite",
+    "Bootstrap"
+  ],
+  "category": "Dev Tools",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/open-code-workflows",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "active",
+  "confidence": "high",
+  "notes": "No homepage, no GitHub Pages, and empty live probe; no live demo. Repo is Markdown-only (37 .md files) with no manifests. License: MIT. Model- and agent-agnostic instructions validated in OpenCode; notable but not a library and has no live demo, so featured is false."
+}

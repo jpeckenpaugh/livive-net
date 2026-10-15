@@ -1,0 +1,18 @@
+{
+  "key": "sd-langtutor.github.io",
+  "repo": "sd-langtutor.github.io",
+  "display_title": "SD Lang Tutor",
+  "tagline": "Vibe Coded Language Tutor Demo",
+  "short_description": "Vibe Coded Language Tutor Demo.",
+  "long_description": "Repository for a vibe-coded language tutor demo. This repo on the jpeckenpaugh account is empty (no commits, no HEAD, zero files), and the description is the only available metadata.",
+  "tags": [],
+  "tech": [],
+  "category": "Education & Teaching",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/sd-langtutor.github.io",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "",
+  "confidence": "low",
+  "notes": "Repo is empty on this account: no commits, no HEAD, zero files, no README, no manifests, has_pages false. The real project likely lives under a separate org (sd-langtutor), so it should probably be linked to that org's GitHub Pages site if one exists."
+}

@@ -1,0 +1,37 @@
+{
+  "key": "vid-factory",
+  "repo": "vid-factory",
+  "display_title": "Video Content Factory",
+  "tagline": "Organize video content ideas and draft AI scripts with browser-native TTS",
+  "short_description": "A browser-centric web application for organizing early-stage video content ideas, managing catalogs of applications and companies, drafting scripts with client-side AI providers, and synthesizing dialogue with in-browser text-to-speech.",
+  "long_description": "Video Content Factory is a web application for organizing early-stage content ideas and drafts. Its primary local runtime is a browser-native standalone application (browser-edition/) that runs entirely client-side with no backend server: a dedicated Web Worker database layer uses vendored sql.js (SQLite compiled to WebAssembly) with persistence in the Origin Private File System (OPFS), communicating through an RPC message-passing protocol between the UI (app.js) and db-worker.js. It manages catalogs for applications (YouTube, TikTok, Instagram) and companies (Acme Studio, Northstar Media, Pine & Peak), content projects with optional application/company links, and one persisted script/prompt draft per project. Workspace settings store AI provider credentials (Gemini, OpenAI, Ollama) in a local SQLite ai_settings table with custom endpoint URLs and connectivity tests; API keys are stripped during export. A client-side AI script generator formulates formatted drafts from user prompts and confirms before overwriting manual drafts. A dedicated TTS worker (tts-worker.js) runs kokoro-js speech synthesis in WebAssembly/WebGPU, exposing voice selection (af_heart, af_bella, am_adam, am_michael), a 0.75x-1.25x speed slider, an inline HTML5 audio preview player, and local audio track persistence with metadata (voice_id, speed, script_snapshot, duration). Workspaces are portable via JSON export/import with structural validation and seed reset. The original FastAPI JSON API and Bootstrap browser UI (backend/ and frontend/, pinned fastapi==0.115.12 and uvicorn[standard]==0.34.0) remain available unchanged as a parity reference and fallback runtime, serving a seeded local SQLite database (backend/data/vid_factory.db). Multi-speaker timeline synchronization, cloud rendering pipelines, server-side audio processing, and cloud sync are explicitly deferred. Status: Sprint 02 complete (client-side AI & dialogue TTS), verified pass with sandbox environment limitations.",
+  "tags": [
+    "video",
+    "content-creation",
+    "text-to-speech",
+    "ai-script-generation",
+    "sqlite",
+    "web-app"
+  ],
+  "tech": [
+    "JavaScript",
+    "Python",
+    "FastAPI",
+    "SQLite",
+    "sql.js",
+    "WebAssembly",
+    "kokoro-js",
+    "OPFS",
+    "WebGPU",
+    "Bootstrap 5",
+    "HTML/CSS"
+  ],
+  "category": "Web Apps & Prototypes",
+  "live_url": "https://jpeckenpaugh.github.io/vid-factory/",
+  "repo_url": "https://github.com/jpeckenpaugh/vid-factory",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Video Content Factory \u2014 Browser Workspace'. No CNAME found in the repo, so the Pages URL jpeckenpaugh.github.io/vid-factory/ is used; .github/workflows/deploy.yml publishes to GitHub Pages. No repo description, homepage, license, or topics; 1 star. Two runtimes: browser-native primary edition (sql.js WASM SQLite in a Web Worker, OPFS persistence, kokoro-js TTS, client-side Gemini/OpenAI/Ollama script generation) and an unchanged FastAPI + Bootstrap fallback reference. Sprint 02 verification result: Pass with sandbox environment limitations (kokoro-js execution and OPFS audio persistence verified only via static review because headless browser/WebGPU was unavailable; ./run.sh reload watcher failed under sandbox restrictions)."
+}

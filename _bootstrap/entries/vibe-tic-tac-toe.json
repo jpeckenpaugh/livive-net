@@ -1,0 +1,29 @@
+{
+  "key": "vibe-tic-tac-toe",
+  "repo": "vibe-tic-tac-toe",
+  "display_title": "Vibe Tic-Tac-Toe",
+  "tagline": "Two-player tic-tac-toe in plain HTML, CSS, and JavaScript",
+  "short_description": "A single-page two-player tic-tac-toe game built with plain HTML, CSS, and JavaScript, with themes, sound, and a persistent leaderboard.",
+  "long_description": "A simple single-page tic-tac-toe game built with plain HTML, CSS, and JavaScript and no frameworks or build tools. Two players take turns placing X or O on a 3x3 grid, trying to line up three in a row; if the board fills with no winner it is a draw. It includes a title screen with Start Game, Leaderboard, Options, and About, a responsive layout, a local-storage persistent leaderboard tracking X wins, O wins, and draws, win-line highlighting, hover move preview, a game-over overlay, confetti on a win, sound effects, and an options menu for piece themes (Classic, Cats & Dogs, Stars & Moon), symbol colors, and a sound toggle. The game is a static site and can be opened directly or served with the included run.sh, which starts a Python HTTP server on port 8080. The project was built in a single OpenCode coding session using DeepSeek V4 Flash.",
+  "tags": [
+    "tic-tac-toe",
+    "browser-game",
+    "javascript",
+    "single-page",
+    "vanilla-js"
+  ],
+  "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Python"
+  ],
+  "category": "Games",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/vibe-tic-tac-toe",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "No homepage or GitHub Pages, so no live URL. run.sh launches a Python HTTP server. README reports the project was built in one OpenCode session with DeepSeek V4 Flash."
+}

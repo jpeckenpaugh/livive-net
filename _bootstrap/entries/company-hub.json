@@ -1,0 +1,37 @@
+{
+  "key": "company-hub",
+  "repo": "company-hub",
+  "display_title": "Company Hub",
+  "tagline": "Internal web app to view and maintain company profiles",
+  "short_description": "A lightweight internal web app for a small firm to browse, view and edit profiles of the companies it works with, manage related files, and generate PDF summaries.",
+  "long_description": "Company Hub is a self-contained internal web app for a small, globally distributed firm to view and maintain information about the companies it works with. It distinguishes structured company data (stored in a relational database) from files and generated artifacts (stored as object-like files on disk), and is meant as a lightweight backbone for other internal workflows rather than a full CRM. Features include browsing and searching companies, country filtering, editable company profiles, standardized industries and locations, per-company references, news and logos, file/artifact upload and download, and one-page PDF summary generation. Sprint 03 added role-based access (guest, read-only, user, admin), admin user management, and optional Google SSO. The backend is FastAPI on async SQLAlchemy 2.0 with SQLite and versioned Alembic migrations, auth via fastapi-users with cookie sessions, and a static Bootstrap SPA frontend served by the app. It also ships OpenCode tools and agents that use the same authenticated API.",
+  "tags": [
+    "company-management",
+    "crm",
+    "fastapi",
+    "spa",
+    "sqlite",
+    "internal-tools"
+  ],
+  "tech": [
+    "Python",
+    "FastAPI",
+    "SQLite",
+    "SQLAlchemy",
+    "Alembic",
+    "aiosqlite",
+    "fastapi-users",
+    "Bootstrap",
+    "fpdf2",
+    "Docker",
+    "JavaScript"
+  ],
+  "category": "Web Apps & Prototypes",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/company-hub",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "No homepage, no GitHub Pages, no CNAME, and no live URL in the dossier, so live_url is null. Self-hosted app run via ./run.sh (uvicorn on 127.0.0.1:8000); login required. No license specified. Actively developed through sprints 01-03 as of the last push (2026-09-06)."
+}

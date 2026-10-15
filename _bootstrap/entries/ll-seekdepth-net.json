@@ -1,0 +1,27 @@
+{
+  "key": "ll-seekdepth-net",
+  "repo": "ll-seekdepth-net",
+  "display_title": "Lunar Lander Tournament",
+  "tagline": "The Lunar Lander tournament that no one was asking for!",
+  "short_description": "A Lunar Lander tournament site served at ll.seekdepth.net.",
+  "long_description": "ll-seekdepth-net is a small GitHub Pages project hosting a Lunar Lander tournament, custom-bound to the domain ll.seekdepth.net via its CNAME file. The repository itself contains only a README and the CNAME; the live tournament page is served from the custom domain.",
+  "tags": [
+    "lunar-lander",
+    "tournament",
+    "leaderboard",
+    "games"
+  ],
+  "tech": [
+    "github-pages",
+    "markdown",
+    "cname"
+  ],
+  "category": "Games",
+  "live_url": "https://ll.seekdepth.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/ll-seekdepth-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "low",
+  "notes": "Repo contains only README.md and CNAME (2 files, 1KB). Live probe returned 200 and redirected to custom domain http://ll.seekdepth.net/ (CNAME value ll.seekdepth.net); https URL used. No source code present in repo, so tech limited to Pages/Markdown/CNAME and tournament format details unknown."
+}

@@ -1,0 +1,18 @@
+{
+  "key": "docker-sql-lessons",
+  "repo": "docker-sql-lessons",
+  "display_title": "Docker SQL Lessons",
+  "tagline": "Hands-on Docker lessons for support engineers moving into DevOps",
+  "short_description": "A two-part, self-contained lesson series that builds small Dockerized Python apps to teach containers, volumes, and SQLite-backed persistence.",
+  "long_description": "Docker Lessons is a hands-on teaching series aimed at support engineers transitioning into DevOps. Each numbered folder is an independent lesson that builds a small Dockerized Python app and ships with its own README covering goals, files, and exercises. Lesson 1 (01-monitor) runs a long-lived daemon that samples CPU/RAM/Disk on an interval, stores each snapshot in SQLite, and lets students query the history with the sqlite3 CLI, teaching images vs containers, Dockerfile basics, bind mounts vs named volumes, and env-var config. Lesson 2 (02-lesson-catalogue) containerizes a FastAPI JSON API with a SQLite (SQLAlchemy) backend that tracks lessons and notes, covering port exposure, hot-reload via bind mount, CRUD endpoints, and Pydantic schemas. Prerequisites are Docker Desktop and basic command-line familiarity.",
+  "tags": ["docker", "sqlite", "devops", "tutorial", "fastapi"],
+  "tech": ["Docker", "Docker Compose", "Python 3.12", "SQLite", "FastAPI", "SQLAlchemy", "Pydantic", "psutil"],
+  "category": "Education & Teaching",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/docker-sql-lessons",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "active",
+  "confidence": "high",
+  "notes": "No description or homepage set on GitHub; no CNAME and Pages disabled, so no live URL. 18 files across two lessons; top-level docker-compose.yml runs the Lesson 1 monitor service. Uses psutil==6.1.0 pinned, other deps unpinned."
+}

@@ -1,0 +1,18 @@
+{
+  "key": "ai_chat_distil_01",
+  "repo": "ai_chat_distil_01",
+  "display_title": "Closed-System Speech POC",
+  "tagline": "Reconstructing canonical speech waveforms for a closed phrase set with lightweight LiteRT-friendly models.",
+  "short_description": "An experimental proof-of-concept that reconstructs canonical speech waveforms for a closed set of phrases using lightweight Keras models and LiteRT-friendly ops, with a local dashboard for training and validation.",
+  "long_description": "This repo is a proof-of-concept for reconstructing canonical speech waveforms for a closed set of phrases using lightweight models and LiteRT-friendly ops. It provides a CLI (main.py) and scripts to generate training assets from macOS `say`, train a small banded Keras reconstruction model, evaluate MAE/MSE against targets, and convert the SavedModel to TFLite with an optional parity check. A local dashboard supports adding words via TTS or microphone, recording mic audio to replace targets (with denoise/filter options), populating phoneme entries, training banded models, running validation/postulate modes, and generating text-only postulates. The demo surfaces a LiteRT web runtime and HTML pages for speech and TFLite demos.",
+  "tags": ["speech-synthesis", "tensorflow", "litert", "signal-processing", "proof-of-concept"],
+  "tech": ["Python", "TensorFlow", "Keras", "ai_edge_litert", "TFLite", "LiteRT.js", "numpy", "pronouncing", "HTML", "JavaScript", "WASM"],
+  "category": "AI/ML Experiments",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/ai_chat_distil_01",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "experiment",
+  "confidence": "high",
+  "notes": "No GitHub Pages and no CNAME, so no live URL. Description and README self-describe this as an experimental proof-of-concept. Single initial commit window (created and last pushed 2026-01-11); 0 stars."
+}

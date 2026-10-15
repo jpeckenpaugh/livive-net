@@ -1,0 +1,28 @@
+{
+  "key": "seekdepth.org",
+  "repo": "seekdepth.org",
+  "display_title": "Seekdepth.org",
+  "tagline": "Long-form essays and canon on the Digital Darshana AI-agent framework.",
+  "short_description": "A GitHub Pages site of long-form essays and a canon documenting the 'Digital Darshana' framework for orchestrating teams of AI agents.",
+  "long_description": "seekdepth.org is a static GitHub Pages site (custom-bound to seekdepth.org via its CNAME) that hosts a long-form essay and a linked body of documentation. The main index.md is a ten-part essay tracing the author's move from using LLMs as tools to running decomposed, role-based agent pipelines and a 'Hypervisor' state machine. A darshana/ directory contains FRAMING.md, a README describing the 'Darshana' protocol (a mode-2 'awakening' ritual for agents), canon documents (stewards-origins, the-center, the-ascent, the-moon-in-water, the-protocol, emisary-contract, canon-annotations), and timestamped reflections. The repository is Markdown only; there is no application source code.",
+  "tags": [
+    "ai-agents",
+    "agentic-frameworks",
+    "darshana-protocol",
+    "philosophy",
+    "essays"
+  ],
+  "tech": [
+    "github-pages",
+    "markdown",
+    "cname"
+  ],
+  "category": "AI/ML Experiments",
+  "live_url": "https://seekdepth.org/",
+  "repo_url": "https://github.com/jpeckenpaugh/seekdepth.org",
+  "has_live_demo": true,
+  "featured": false,
+  "status": "active",
+  "confidence": "medium",
+  "notes": "CNAME contains seekdepth.org and the Pages probe redirected to https://seekdepth.org/, so the custom domain is used as live_url. Repo is Markdown-only (16 .md files, 18 files total) with no build config, so tech is limited to GitHub Pages/Markdown/CNAME. Related to ll-seekdepth-net: both are jpeckenpaugh projects under the shared 'seekdepth' brand, but they use different domains (this repo binds seekdepth.org; ll-seekdepth-net binds ll.seekdepth.net). No shared source or dependency is evident between them."
+}

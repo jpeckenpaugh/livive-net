@@ -1,0 +1,18 @@
+{
+  "key": "roblox-api-database",
+  "repo": "roblox-api-database",
+  "display_title": "Roblox API Database",
+  "tagline": "Git-tracked Roblox Client and Studio API dumps for offline schema lookup",
+  "short_description": "A git-tracked database of official Roblox Client and Studio API dumps, with Python CLI tools for offline schema lookup, static analysis, and CI/CD validation.",
+  "long_description": "Roblox API Database is a versioned, git-tracked collection of official Roblox Client and Studio API dumps fetched from Roblox CDN endpoints. It stores timestamped JSON API snapshots under versions/ with a current/ symlink to the latest dump, and ships lightweight self-contained Python CLI tools (query_api.py, validate_api.py, fetch_api_dump.sh) for looking up enums, classes, inheritance, properties, methods, and events without reading the multi-megabyte dump directly. It is designed for offline engine schema lookup, static analysis, and programmatic validation in CI/CD pipelines, and can be added to projects as a git submodule. Only Python 3.x and the standard library are required; a unittest suite and valid/invalid Lua sample folders support testing.",
+  "tags": ["roblox", "api", "database", "static-analysis", "cli", "ci-cd"],
+  "tech": ["Python", "Lua", "JSON", "Shell", "Git"],
+  "category": "Dev Tools",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/roblox-api-database",
+  "has_live_demo": false,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "No live probe results and no GitHub Pages/CNAME, so no live demo. Reusable CLI tooling and git-submodule design; recently pushed, not archived."
+}

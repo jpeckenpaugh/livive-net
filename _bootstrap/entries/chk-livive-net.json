@@ -1,0 +1,18 @@
+{
+  "key": "chk-livive-net",
+  "repo": "chk-livive-net",
+  "display_title": "Classic Checkers & AI Arena",
+  "tagline": "English Draughts with in-browser WebLLM AI, persona banter, and a spectator arena",
+  "short_description": "A zero-dependency, client-side Checkers (English Draughts) game with on-device WebLLM AI opponents, an alpha-beta Minimax engine, AI vs AI spectator arena, and pass-and-play.",
+  "long_description": "A modern, zero-dependency, client-side implementation of English Draughts (Checkers) featuring on-device WebLLM AI (Llama 3.2, SmolLM2) running in the browser via WebGPU, persona banter streaming, an AI vs AI Spectator Arena, offline Minimax AI, and a full rules engine. It offers four modes: Player vs Minimax, Player vs LLM AI, AI vs AI Arena, and local Pass & Play. The dual-session LLM architecture separates tactical move selection from personality banter, backed by a robust JSON move parser with corrective retries and heuristic fallbacks. It enforces strict English Draughts rules (mandatory captures, multi-jump locks, immediate crowning, 40-move draw) and includes a built-in prompt/engine debugger plus a preload hardware staging screen. A Godot 4 3D Web edition is also hosted under /godot/.",
+  "tags": ["checkers", "draughts", "webllm", "webgpu", "minimax", "game"],
+  "tech": ["JavaScript", "WebGPU", "WebLLM", "HTML5", "CSS", "Godot 4", "Web Workers"],
+  "category": "Games",
+  "live_url": "https://chk.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/chk-livive-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Custom domain chk.livive.net from CNAME; GitHub Pages also serves at jpeckenpaugh.github.io/chk-livive-net/. 100 tests via node --test. package.json name is 'godot-checkers'. MIT licensed per README/package.json."
+}

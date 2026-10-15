@@ -1,0 +1,18 @@
+{
+  "key": "ch",
+  "repo": "ch",
+  "display_title": "Company Hub",
+  "tagline": "Lightweight internal web app to browse and maintain company profiles",
+  "short_description": "Company Hub is a self-contained internal web app for browsing, viewing, and editing company information, managing locations, references, news, logos, and generating PDF summaries.",
+  "long_description": "Company Hub is a simple internal web app for a small, globally distributed firm to view and maintain information about the companies it works with, intended as a lightweight backbone for other internal workflows rather than a full CRM. Structured company data lives in a relational database while files and generated artifacts are handled through a simple object-storage capability, and it can generate a clean one-page PDF summary of a company profile. The backend is FastAPI on SQLite via async SQLAlchemy 2.0 with versioned Alembic migrations, serving a static client-side Bootstrap SPA with no build step. Authentication uses fastapi-users with cookie-based sessions, role-based access levels (guest, read-only, user, admin), admin user management, and optional config-driven Google SSO. It ships with OpenCode automation tools and agents that call the same authenticated API, plus Docker/Docker Compose for running the stack.",
+  "tags": ["company-profiles", "crm", "internal-tool", "fastapi", "spa", "document-generation"],
+  "tech": ["FastAPI", "Python", "SQLite", "SQLAlchemy", "Alembic", "fastapi-users", "Bootstrap", "JavaScript", "fpdf2", "Docker"],
+  "category": "Web Apps & Prototypes",
+  "live_url": "https://jpeckenpaugh.github.io/ch/",
+  "repo_url": "https://github.com/jpeckenpaugh/ch",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Live probe returned 200 with title 'Company Hub — Personal workspace'. Written in JavaScript by language stat but is primarily a Python/FastAPI app with a Bootstrap SPA frontend. No license or stars (0)."
+}

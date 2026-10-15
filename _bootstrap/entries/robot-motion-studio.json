@@ -1,0 +1,33 @@
+{
+  "key": "robot-motion-studio",
+  "repo": "robot-motion-studio",
+  "display_title": "Robot Motion Studio",
+  "tagline": "Design, simulate, and export PWM servo motion sequences for Arduino robots",
+  "short_description": "A web app for designing and managing PWM servo motor control sequences for Arduino-based robots, with configuration, reusable poses, a timeline editor, a Canvas simulator, and structured JSON export.",
+  "long_description": "Robot Motion Studio (Robot Servo Sequence Designer) is a local, single-user multi-robot motion designer for PWM servo robots. Users configure servo motors (PWM pin, angle limits, neutral angle, pulse calibration), create reusable poses, author ordered/timed motion sequences through a visual timeline editor (add/reorder/edit/duplicate steps, play/pause/scrub, per-step speed and easing), inspect resolved motion in a preview, watch it in a dependency-free browser Canvas simulator, and export robot-scoped JSON (schema_version 2) for Arduino firmware or other robot-control software. Motion timing supports easing curves, finite/forever sequence repeat, and contiguous step-group loops. A fresh database seeds a door-durability-tester rig (shoulder/elbow/wrist/gripper servos) plus demo robots: PickPlaceArm (6-DOF arm), QuadTrotter (quadruped), BipedWalker (biped), and GimbalCam (pan/tilt). The original edition pairs a FastAPI + SQLite backend with a static Bootstrap 5 SPA (no build toolchain); a browser-only edition replaces the backend with sql.js WebAssembly SQLite running in a Web Worker and OPFS persistence, making it fully static for GitHub Pages. It is a proof-of-concept and does not communicate with physical Arduino hardware or perform real-time control.",
+  "tags": [
+    "robotics",
+    "servo",
+    "arduino",
+    "motion-sequencing",
+    "web-app"
+  ],
+  "tech": [
+    "JavaScript",
+    "Python",
+    "FastAPI",
+    "SQLite",
+    "Bootstrap 5",
+    "sql.js",
+    "WebAssembly",
+    "HTML/CSS"
+  ],
+  "category": "Web Apps & Prototypes",
+  "live_url": "https://jpeckenpaugh.github.io/robot-motion-studio/",
+  "repo_url": "https://github.com/jpeckenpaugh/robot-motion-studio",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Robot Motion Designer (Browser Edition)'. No CNAME in the repo, so the Pages URL jpeckenpaugh.github.io/robot-motion-studio/ is used; .github/workflows/deploy.yml publishes browser-edition/ to GitHub Pages. No repo description, homepage, license, or topics; 0 stars. Self-described proof-of-concept (POC) that does not talk to physical hardware. Two editions: server edition (FastAPI + SQLite + static Bootstrap SPA; pinned deps fastapi==0.115.6, uvicorn[standard]==0.34.0) and static browser edition (sql.js WASM SQLite in a Web Worker, OPFS persistence). Verification reports record v0.1 82/83 pass and Sprint-01 85/86 pass (one known FAIL each: preview staleness, fixed in Sprint 01 as I11/K8; stored step speed not recomputed on mutation as G7)."
+}

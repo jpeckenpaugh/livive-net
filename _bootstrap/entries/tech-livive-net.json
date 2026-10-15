@@ -1,0 +1,31 @@
+{
+  "key": "tech-livive-net",
+  "repo": "tech-livive-net",
+  "display_title": "tech.livive.net",
+  "tagline": "A small static technical notebook on software, systems, and the web",
+  "short_description": "A hand-built, framework-free static blog whose content loads from a JSON data file and renders client-side with vanilla JavaScript.",
+  "long_description": "tech.livive.net is a small technical notebook published as a static site on GitHub Pages. It is built by hand with plain HTML and CSS (using Pico.css plus a custom stylesheet) and has no build step, trackers, or frameworks. The single index.html loads assets/app.js, which fetches data/posts.json and renders a hash-routed app with views for posts, authors, and an about page. Content includes posts, author personas (several marked as AI agents), categories, and inline SVG figures, with assets organized under assets/articles and assets/authors.",
+  "tags": [
+    "static-site",
+    "blog",
+    "vanilla-javascript",
+    "github-pages",
+    "no-build"
+  ],
+  "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "JSON",
+    "Pico.css",
+    "GitHub Pages"
+  ],
+  "category": "Web Apps & Prototypes",
+  "live_url": "https://tech.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/tech-livive-net",
+  "has_live_demo": true,
+  "featured": false,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Live probe returned 200 with title 'tech.livive.net' and redirected to http://tech.livive.net/. CNAME declares tech.livive.net, so the custom https URL is used. No README; no package.json or build tooling. MIT license. Author entries in data/posts.json are labeled AI personas."
+}

@@ -1,0 +1,29 @@
+{
+  "key": "gemini_bootstrap",
+  "repo": "gemini_bootstrap",
+  "display_title": "Gemini CLI Agent Bootstrap",
+  "tagline": "Persistent instructions, directives and memory for the Gemini CLI agent",
+  "short_description": "A Markdown-based framework that bootstraps Google Gemini Agent CLI sessions with persistent instructions, custom directives and session memory to reduce context decay, role drift and recall gaps.",
+  "long_description": "gemini_bootstrap is a framework for customizing interactive sessions with the Google Gemini Agent CLI. Its core is gemini_bootstrap.md, an operating manual the agent reads at the start of a session to configure behavior. It provides guiding principles, an extensible shorthand directive language, snapshot/undo for files, automatic 5-letter directory aliases for workspace folders, and session logging via templates. It targets problems like context decay, role drift, state desynchronization and directive sprawl, and uses Git as a persistence layer so the configuration and logs stay consistent across environments. Setup involves creating a ~/gemini/ workspace, cloning the repo, and optionally auto-loading the bootstrap on session start.",
+  "tags": [
+    "gemini",
+    "ai-agent",
+    "cli",
+    "prompt-engineering",
+    "context-management",
+    "llm"
+  ],
+  "tech": [
+    "Markdown",
+    "Google Gemini CLI",
+    "Git"
+  ],
+  "category": "Dev Tools",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/gemini_bootstrap",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "active",
+  "confidence": "high",
+  "notes": "No live probe results in dossier (live: []) and has_pages is false, so no live demo. Pure Markdown repo (5 .md files, no manifests); tech inferred from README references to Markdown, Gemini CLI and Git. MIT licensed, 0 stars."
+}

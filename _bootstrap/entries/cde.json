@@ -1,0 +1,33 @@
+{
+  "key": "cde",
+  "repo": "cde",
+  "display_title": "Compiled Domain Expertise (CDE)",
+  "tagline": "Compiling bounded AI reasoning into static, deterministic instruction sets",
+  "short_description": "Compiled Domain Expertise (CDE) is an architectural specification that compiles bounded AI reasoning into a static, language-agnostic Domain Instruction Set, replacing runtime neural nets with a deterministic, sub-megabyte relational graph.",
+  "long_description": "CDE proposes severing knowledge acquisition from knowledge execution. At build time, high-capacity models operate offline as an empirical knowledge compiler (Empirical Knowledge Compilation, EKC) to explore a closed domain, extract candidate reasoning structures, and surface inferential dependencies. At runtime, only surviving validated structures execute after being lowered into a Domain Instruction Set (DIS). The Quantized Semantic Bottleneck Architecture (QSBA) uses an hourglass topology that decouples continuous, high-dimensional linguistic transducers from a discrete, integer-only core, targeting exact attribution, loud syntax checks, and microsecond execution on standard CPUs within a sub-megabyte budget. The repo includes the specification, a CCPA reference instance (QSBC), an algebra domain with an ingest/review workbench (FastAPI backend + React frontend), supporting dialogues, docs, and generated slide decks.",
+  "tags": [
+    "ai",
+    "llm",
+    "knowledge-compilation",
+    "deterministic-inference",
+    "symbolic-ai"
+  ],
+  "tech": [
+    "python",
+    "fastapi",
+    "sqlalchemy",
+    "pymupdf",
+    "typescript",
+    "react",
+    "vite",
+    "tailwindcss"
+  ],
+  "category": "AI/ML Experiments",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/cde",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "experiment",
+  "confidence": "high",
+  "notes": "Dossier live probe list is empty; GitHub Pages disabled and homepage null, so no live demo. Primary artifact is an architectural specification (README) plus an algebra EKC workbench with a FastAPI/SQLAlchemy backend and React/Vite/Tailwind frontend. Apache-2.0 licensed, 0 stars, last pushed 2026-09-20."
+}

@@ -1,0 +1,33 @@
+{
+  "key": "qsbc",
+  "repo": "qsbc",
+  "display_title": "QSBC — Quantized Semantic Bottleneck Classifier",
+  "tagline": "Interpretable sentence classification via a semantic proposition bottleneck",
+  "short_description": "Infrastructure and experiments for QSBC, an interpretable sentence-classification architecture that inserts a human-meaningful semantic proposition bottleneck between input text and linear-probe prediction, applied to the CPRA subset of the C3PA privacy-policy dataset.",
+  "long_description": "QSBC replaces the direct text-to-label mapping of an uninterpretable transformer with a two-stage path: concept extraction, then a strictly linear probe, so concept attribution to class logits is analytically exact. This repo builds the data layer and experiments: a Dockerized PostgreSQL corpus of the parsed C3PA privacy policies matching the reference split, a chain-of-thought `cot` agent that generates atomic generalized rationales per sentence-label pair, the Phase 2 thoughts/ideas alphabet (statements clustered into canonical concepts), a FastAPI + Bootstrap SPA explorer, and Colab experiment notebooks (exp1-4) benchmarking the pipeline with a linear-probe ceiling reported at +9.8pt.",
+  "tags": [
+    "interpretability",
+    "classification",
+    "nlp",
+    "semantic-bottleneck",
+    "privacy-policies"
+  ],
+  "tech": [
+    "python",
+    "fastapi",
+    "uvicorn",
+    "postgresql",
+    "docker",
+    "scikit-learn",
+    "sentence-transformers",
+    "jupyter"
+  ],
+  "category": "AI/ML Experiments",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/qsbc",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "experiment",
+  "confidence": "high",
+  "notes": "No live probe results (dossier live: []); has_pages false and homepage null, so no live_url. Runs locally via docker compose on http://localhost:8000."
+}

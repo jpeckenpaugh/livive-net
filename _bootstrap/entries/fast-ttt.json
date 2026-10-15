@@ -1,0 +1,34 @@
+{
+  "key": "fast-ttt",
+  "repo": "fast-ttt",
+  "display_title": "fast-ttt",
+  "tagline": "ASCII tic-tac-toe over HTTP, played with curl to teach client/server",
+  "short_description": "A text-based tic-tac-toe game served by FastAPI that responds in pure plain text, playable by two players using curl or a browser.",
+  "long_description": "fast-ttt is a minimal teaching tool that demonstrates client/server principles using a game of tic-tac-toe. Two players interact over plain HTTP with curl or a web browser, and the FastAPI server replies with ASCII boards and text only \u2014 no HTML, JavaScript, CSS, or JSON (the sole exception being FastAPI's auto-generated Swagger UI at /docs). It supports creating games, viewing boards, playing numbered moves, random auto-moves, per-game move history, and home-page statistics, with winning lines highlighted. Game state is persisted in SQLite via SQLAlchemy, and moves commit atomically across board, turn, status, and history. Docs (OVERVIEW.md and FAST-API.md) are served by the app itself to explain how clients and servers communicate.",
+  "tags": [
+    "tic-tac-toe",
+    "game",
+    "plain-text",
+    "http",
+    "teaching",
+    "cli"
+  ],
+  "tech": [
+    "Python",
+    "FastAPI",
+    "uvicorn",
+    "SQLAlchemy",
+    "SQLite",
+    "pydantic",
+    "pytest",
+    "httpx"
+  ],
+  "category": "Education & Teaching",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/fast-ttt",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "No GitHub Pages and no CNAME, so live_url is null. Positioned by the README as a teaching tool for client/server concepts rather than a standalone game, hence Education & Teaching. Local-only server at 0.0.0.0:8000."
+}

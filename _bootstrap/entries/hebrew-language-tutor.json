@@ -1,0 +1,18 @@
+{
+  "key": "hebrew-language-tutor",
+  "repo": "hebrew-language-tutor",
+  "display_title": "English / Hebrew Language Tutor",
+  "tagline": "Study, quiz, and exam modes for English-Hebrew vocabulary",
+  "short_description": "A FastAPI + SQLite web app with five English/Hebrew vocabulary lessons, study/quiz/exam modes, saved scores, and a dummy-gated admin area for editing lessons and vocab.",
+  "long_description": "A simple web application for learning English <-> Hebrew vocabulary. It ships five seeded lessons (10 vocab items each) with study, quiz, and exam modes, persists quiz/exam attempts as per-lesson score history, and includes a dummy-gated admin area for adding and editing lessons and vocabulary. The frontend is a plain HTML/CSS/JS single-page app using locally hosted Bootstrap 5.3.3, and the backend is a FastAPI service backed by SQLite, which serves the SPA and owns all application state. The repository contains two experiments: the primary client/server app built via a 9-stage decomposed role pipeline, and a single-pass static SPA proof-of-concept with hardcoded vocabulary under proof-of-concept/. README status is PASS based on a curl-driven API verification and static frontend review; known limitations include a dummy admin gate and in-memory tokens that don't survive restarts.",
+  "tags": ["hebrew", "language-learning", "vocabulary", "education", "fastapi", "sqlite"],
+  "tech": ["FastAPI", "Uvicorn", "Python", "SQLite", "JavaScript", "Bootstrap", "HTML", "CSS"],
+  "category": "Language Tools",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/hebrew-language-tutor",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "experiment",
+  "confidence": "high",
+  "notes": "Dossier live probe returned an empty list (no live URLs) and has_pages is false, so live_url is null and has_live_demo is false. No CNAME or hosting config found in the tree. Repo frames itself as two experiments; created and pushed the same day with 0 stars. Frontend verified by static review rather than browser automation."
+}

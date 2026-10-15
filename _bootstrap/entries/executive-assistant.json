@@ -1,0 +1,35 @@
+{
+  "key": "executive-assistant",
+  "repo": "executive-assistant",
+  "display_title": "Executive Assistant",
+  "tagline": "Local, single-user web app for tasks, meetings, reminders, and follow-ups",
+  "short_description": "A local, single-user web app for organizing daily responsibilities, priorities, commitments, meetings, follow-ups, contacts, notes, reminders, and quick-capture items in one place.",
+  "long_description": "Executive Assistant is a local, single-user web app for organizing daily responsibilities, priorities, commitments, meetings, follow-ups, contacts, notes, reminders, and quick-capture items in one place. It offers a daily dashboard with priorities, overdue work, upcoming commitments, reminders, and quick actions; task management with low/medium/high priority, due dates, postponement, completion, and daily/weekly/monthly recurrence; meeting and commitment tracking with cancellation, completion, and advisory overlap warnings; meeting preparation and follow-up notes; contact and relationship tracking; a quick-capture inbox processed into tasks, notes, or reminders; unified case-insensitive search with record-type filtering; and in-app reminders with acknowledge, snooze, and dismiss actions. The backend is FastAPI with SQLAlchemy and SQLite, and the interface is server-rendered with Jinja2 and Bootstrap from a CDN. A separate browser proof-of-concept under poc-browser uses sql.js and includes an AI command bar. The app stores data in a local SQLite database and is designed for one local user; authentication, external calendar sync, email delivery, push notifications, and background workers are out of scope. The initial build is complete across the concept, feature, environment, architecture, backend, and frontend stages, but formal verification has not completed yet.",
+  "tags": [
+    "productivity",
+    "task-management",
+    "fastapi",
+    "sqlite",
+    "single-user",
+    "web-app"
+  ],
+  "tech": [
+    "Python",
+    "FastAPI",
+    "SQLAlchemy",
+    "SQLite",
+    "Jinja2",
+    "Bootstrap",
+    "JavaScript",
+    "SQL.js",
+    "Uvicorn"
+  ],
+  "category": "Web Apps & Prototypes",
+  "live_url": "https://jpeckenpaugh.github.io/executive-assistant/",
+  "repo_url": "https://github.com/jpeckenpaugh/executive-assistant",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Executive Assistant'. Repo has no description, no GitHub-reported license (README states MIT), and 0 stars. README notes the initial build is complete but formal verification has not finished; known items include reminder visibility on related detail pages and HTTP 422 validation response presentation. The live site appears to be the client-side poc-browser build (sql.js), while the main app is a FastAPI server intended to run locally on localhost:8000."
+}

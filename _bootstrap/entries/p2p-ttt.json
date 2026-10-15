@@ -1,0 +1,18 @@
+{
+  "key": "p2p-ttt",
+  "repo": "p2p-ttt",
+  "display_title": "Peer-to-peer Tic-Tac-Toe",
+  "tagline": "Serverless browser Tic-Tac-Toe played directly between two peers",
+  "short_description": "A local-first, static-web Tic-Tac-Toe proof of concept where two browsers connect directly over WebRTC after exchanging ordinary invitation and reply links, with no backend, accounts, or signaling service.",
+  "long_description": "p2p-ttt is a proof of concept for a local-first, peer-to-peer browser game. Two people start and play Tic-Tac-Toe without an application backend, account system, signaling service, or shared database. A host opens the static site, picks X or O, and shares an invitation link (or QR code); the friend opens it and returns a reply link; the two browsers then establish a direct WebRTC data-channel connection for live play. Each browser runs its own durable local workspace backed by a Web Worker, using sql.js (SQLite compiled to WebAssembly) to persist series, matches, ordered moves, outcomes, and replay history. QR codes are generated with qrcode-generator and scanned with jsQR via the camera. The project is documented with concept, architecture, plan, devops, backlog, and design specs, and includes a small Python static server for local development.",
+  "tags": ["tic-tac-toe", "peer-to-peer", "webrtc", "local-first", "browser-game"],
+  "tech": ["JavaScript", "WebRTC", "HTML", "CSS", "Web Workers", "SQLite (sql.js/WASM)", "jsQR", "qrcode-generator", "Python"],
+  "category": "Games",
+  "live_url": "https://jpeckenpaugh.github.io/p2p-ttt/",
+  "repo_url": "https://github.com/jpeckenpaugh/p2p-ttt",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "No repo description or homepage; docs describe it as a local-first P2P Tic-Tac-Toe POC. Live GitHub Pages probe returned 200 (title 'P2P Tic-Tac-Toe'). No CNAME found, so the default Pages URL is used. License unknown."
+}

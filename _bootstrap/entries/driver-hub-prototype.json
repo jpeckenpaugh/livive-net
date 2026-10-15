@@ -1,0 +1,37 @@
+{
+  "key": "driver-hub-prototype",
+  "repo": "driver-hub-prototype",
+  "display_title": "Driver Hub Prototype",
+  "tagline": "Uber-style ride-hailing prototype connecting drivers and passengers in real time",
+  "short_description": "A lightweight full-stack prototype of a ride-hailing platform (Uber/Cabify style) that pairs drivers and passengers in real time over an interactive map.",
+  "long_description": "Driver Hub Prototype is a functional, modern prototype of a ride-sharing platform connecting Drivers and Passengers in real time. It demonstrates the essential passenger-driver interaction: requesting a trip on an interactive map, real-time notification and acceptance by the driver, visual route tracking, and reactive trip status updates. The interface is designed for side-by-side demos (split screen or two devices). The stack is React 19 + TypeScript + Vite + Tailwind CSS on the frontend, Leaflet / React-Leaflet with OpenStreetMap for maps (no API keys needed), and Node.js + Express + Socket.io for real-time communication across browsers or devices on the same local network. The repository is an npm workspaces monorepo with shared, server, and client packages, and GitHub Pages workflows for deployment.",
+  "tags": [
+    "ride-hailing",
+    "real-time",
+    "maps",
+    "socket-io",
+    "react",
+    "prototype"
+  ],
+  "tech": [
+    "TypeScript",
+    "React 19",
+    "Vite",
+    "Tailwind CSS",
+    "Leaflet",
+    "React-Leaflet",
+    "OpenStreetMap",
+    "Node.js",
+    "Express",
+    "Socket.io",
+    "npm workspaces"
+  ],
+  "category": "Web Apps & Prototypes",
+  "live_url": "https://jpeckenpaugh.github.io/driver-hub-prototype/",
+  "repo_url": "https://github.com/jpeckenpaugh/driver-hub-prototype",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "Live GitHub Pages probe returned HTTP 200 with title 'Driver Hub Prototype 🚗💨'. Repo has no description, no license, 0 stars. README and docs (ARQUITECTURA.md, ESPECIFICACION_TECNICA.md) are in Spanish. Repo is an npm workspaces monorepo (shared/server/client)."
+}

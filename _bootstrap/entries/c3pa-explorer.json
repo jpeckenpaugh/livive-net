@@ -1,0 +1,34 @@
+{
+  "key": "c3pa-explorer",
+  "repo": "c3pa-explorer",
+  "display_title": "C3PA Explorer",
+  "tagline": "In-browser explorer for the C3PA privacy-policy dataset",
+  "short_description": "A proof-of-concept web app for exploring the C3PA Dataset (400 expert-annotated CCPA/CPRA privacy policies) at both the source level (verbatim annotator spans) and the deterministically re-extracted derived level.",
+  "long_description": "C3PA Explorer is a proof-of-concept web app for exploring the C3PA Dataset (400 expert-annotated privacy policies, CCPA/CPRA) at both the source level (verbatim annotator spans) and the derived level (deterministically re-extracted text units). It ships two runtimes sharing one SPA and SQLite schema: a FastAPI edition with a Python backend over a normalized SQLite database, and a browser edition running entirely in-browser on sql.js (SQLite compiled to WebAssembly) against a prebuilt, signed snapshot. The derived layer is produced by backend/extract.py, a fully deterministic rule-based pipeline (no trained models) that drops chrome, extracts leaf text blocks, merges lead-ins with lists, splits sentences with abbreviation/URL/email guards, classifies units as sentence or typed fragment, and performs 3-tier annotation re-alignment. A dashboard shows corpus stats and label distributions; documents can be browsed and searched, document detail has Source/Sentences/Fragments tabs with clickable alignment provenance, and a unit explorer supports filtering and exporting timestamped ZIP archives with partition files and meta.json. The browser edition auto-loads a signed snapshot (verified against envelope and db hashes in builds.json) and runs queries in a Web Worker with no server or network calls after download; a nav modal can switch to a FastAPI backend. Snapshots can be rebuilt on Google Colab via the included notebook, and tests cover backend API, frontend units, and FastAPI/ sql.js parity.",
+  "tags": [
+    "privacy-policies",
+    "dataset-explorer",
+    "nlp",
+    "annotation",
+    "sql.js",
+    "fastapi"
+  ],
+  "tech": [
+    "JavaScript",
+    "Python",
+    "FastAPI",
+    "sql.js",
+    "WebAssembly",
+    "Bootstrap 5",
+    "SQLite",
+    "Jupyter"
+  ],
+  "category": "Web Apps & Prototypes",
+  "live_url": "https://jpeckenpaugh.github.io/c3pa-explorer/",
+  "repo_url": "https://github.com/jpeckenpaugh/c3pa-explorer",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "Live probe returned HTTP 200 with title 'C3PA Dataset Explorer' on GitHub Pages. README self-describes the project as a proof-of-concept. No license field was present in the dossier metadata. Data and annotations remain under the C3PA dataset's terms."
+}

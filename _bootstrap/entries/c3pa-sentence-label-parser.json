@@ -1,0 +1,31 @@
+{
+  "key": "c3pa-sentence-label-parser",
+  "repo": "c3pa-sentence-label-parser",
+  "display_title": "C3PA Sentence-Level Candidate Parser",
+  "tagline": "Parse C3PA privacy-policy annotations into aligned sentence-level ML dataset candidates.",
+  "short_description": "A Python parser that extracts grammatical sentences from C3PA privacy-policy HTML and aligns the dataset's verbatim annotations back to those sentences, producing ready-to-use sentence-level ML dataset candidates.",
+  "long_description": "A Python parser for turning the C3PA Dataset (California Consumer Privacy Act annotations on privacy policies) into structured sentence-level dataset candidates for ML/AI training and evaluation. It extracts readable policy text from the original HTML documents, segments it into full grammatical sentences with spaCy, and aligns C3PA annotation evidence back to those reconstructed sentences using a three-tier algorithm (sub-sentence fragments, multi-sentence paragraph spans, and partial token-overlap matches). Annotation labels are preserved verbatim. Outputs are split into single-label, high-confidence single-label, multi-label, and unannotated sentence CSVs, plus unmatched and ambiguous annotation files, for use in sentence classification, policy auditing, retrieval, and negative sampling.",
+  "tags": [
+    "nlp",
+    "privacy-policy",
+    "dataset",
+    "sentence-segmentation",
+    "annotation",
+    "ccpa"
+  ],
+  "tech": [
+    "Python",
+    "spaCy",
+    "BeautifulSoup4",
+    "Bash",
+    "CSV"
+  ],
+  "category": "Language Tools",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/c3pa-sentence-label-parser",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "No homepage, no GitHub Pages, no CNAME. Language is Python; requirements.txt lists beautifulsoup4>=4.12.0 and spacy>=3.7.0. Ships install.sh and parse.sh plus a committed output/ directory of generated CSVs. Created and last pushed 2026-09-18 (single-day, 0 stars, no license)."
+}

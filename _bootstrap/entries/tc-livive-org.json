@@ -1,0 +1,30 @@
+{
+  "key": "tc-livive-org",
+  "repo": "tc-livive-org",
+  "display_title": "Training vs. Inference",
+  "tagline": "Interactive lab demystifying AI training vs. inference with zero black boxes.",
+  "short_description": "A browser-based interactive learning lab that teaches the difference between untrained inference, training, and trained inference through inspectable, hand-verifiable numbers.",
+  "long_description": "Training vs. Inference is a static single-page app that demystifies how AI actually works for non-technical learners. It walks through a multi-module curriculum covering hardware and memory (storage, RAM, inference), a 1-neuron binary classifier, a 3-neuron positive/negative/neutral spectrum, and a multi-task enterprise router, plus a sentiment-classification demo. Built with a zero-black-box philosophy: every weight, bias, tally, and calculation is rendered directly in the DOM in human-readable numbers. Implemented in vanilla HTML5, CSS3, and ES6+ JavaScript with zero external dependencies or build tools, and hosted on GitHub Pages.",
+  "tags": [
+    "ai",
+    "machine-learning",
+    "education",
+    "interactive",
+    "neural-networks",
+    "sentiment-analysis"
+  ],
+  "tech": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "GitHub Pages"
+  ],
+  "category": "Education & Teaching",
+  "live_url": "https://tc.livive.org/",
+  "repo_url": "https://github.com/jpeckenpaugh/tc-livive-org",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "CNAME file points to tc.livive.org, so the custom https domain is preferred over the jpeckenpaugh.github.io/tc-livive-org/ Pages URL (live probe returned 200). No README; evidence drawn from index.html title and the three spec markdown files (concept_specification.md, reframed.md, spec_rev_2.md). Zero external dependencies per specs."
+}

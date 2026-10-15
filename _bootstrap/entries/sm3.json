@@ -1,0 +1,31 @@
+{
+  "key": "sm3",
+  "repo": "sm3",
+  "display_title": "State Machine 3",
+  "tagline": "DB-driven state machine engine for agentic sprint orchestration.",
+  "short_description": "An experimental agentic development system built around a SQLite-backed state machine that drives sprints through plan, write, review, commit, and gate phases.",
+  "long_description": "sm3 (State Machine 3) packages genesis-sm, a standard-library-only, DB-driven state machine engine for agentic sprint orchestration. The CLI (sm) seeds a SQLite database, runs a phased state machine loop (PLAN, WRITE, REVIEW, COMMIT, GATE) over configurable profiles, dispatches OpenCode agents, and can render agent definitions and bootstrap new projects. It ships a FastAPI + Jinja2 operator dashboard for inspecting sprints, phases, dispatches, and profiles. The repository is also the artifact of a 'Trimurti' experiment in which a single model context was forked into three archetype roles — Saraswati (the swan, specification), Matsya (the fish, implementation), and Kurma (the tortoise, witnessing) — to study recursive role collapse and forked-context convergence across parallel agent sessions.",
+  "tags": [
+    "agents",
+    "orchestration",
+    "state-machine",
+    "sqlite",
+    "multi-agent"
+  ],
+  "tech": [
+    "python",
+    "sqlite",
+    "fastapi",
+    "jinja2",
+    "typescript",
+    "bash"
+  ],
+  "category": "AI/ML Experiments",
+  "live_url": "https://seekdepth.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/sm3",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "experiment",
+  "confidence": "medium",
+  "notes": "CNAME points to seekdepth.net and the live probe of https://jpeckenpaugh.github.io/sm3/ returned 200 with title 'sm3 | State Machine 3', redirecting to https://seekdepth.net/, so the custom https URL is used. Python standard library only per setup.py; ui/requirements.txt lists fastapi, uvicorn, jinja2. Repo is largely Markdown (182 files) documenting the agentic 'Trimurti' forked-context experiment; 0 stars, pushed 2026-07-10."
+}

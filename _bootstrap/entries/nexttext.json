@@ -1,0 +1,29 @@
+{
+  "key": "nexttext",
+  "repo": "nexttext",
+  "display_title": "nexttext",
+  "tagline": "Lightweight Python toolkit for neutralizing gendered language in AI text.",
+  "short_description": "A dependency-free Python library that debiases and rebias gendered terms in text labels using fast heuristics, for cleaning training data and filtering model outputs.",
+  "long_description": "nexttext is a lightweight Python toolkit for neutralizing and re-framing text to reduce noise, hidden skew, and unwanted artifacts in AI pipelines. It works on both human-annotated input labels and model-generated labels, using simple, fast heuristics to neutralise gendered or stereotypical language (debias) and optionally reintroduce controlled skew for testing and validation (rebias), including a context-aware strategy. It ships with no heavy dependencies, requires Python 3.9+, and is released under the MIT license, targeting tasks like training data cleanup, inference filtering, and standardization of labels across datasets.",
+  "tags": [
+    "nlp",
+    "debias",
+    "text-processing",
+    "python-library",
+    "ai-ethics",
+    "data-cleaning"
+  ],
+  "tech": [
+    "Python",
+    "hatchling",
+    "pytest"
+  ],
+  "category": "Language Tools",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/nexttext",
+  "has_live_demo": false,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "No live demo (dossier live probe empty, has_pages false). Reusable pip-installable library (pyproject name=nexttext, v0.1.0) with MIT license, hence featured=true. No CNAME present."
+}

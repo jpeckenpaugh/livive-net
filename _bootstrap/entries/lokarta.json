@@ -1,0 +1,40 @@
+{
+  "key": "lokarta",
+  "repo": ["lokarta", "lokarta-v2", "lokarta-v3", "lokarta-v4"],
+  "display_title": "Lokarta",
+  "tagline": "Come Into The Light — a retro 2D roguelike dungeon crawler in the browser",
+  "short_description": "A zero-backend, client-side 2D roguelike RPG with a real-time 10 Hz tick, dynamic light-and-darkness line-of-sight, and four playable vocations, evolved across four repositories from a Python terminal prototype to a native browser game.",
+  "long_description": "Lokarta: Come Into The Light is a retro-inspired, grid-based 2D roguelike RPG. The project exists as four iterations of the same game: the original lokarta is a local-first Python terminal proof of concept for a BBS-style ASCII RPG (fixed 100x30 screen, JSON-driven content packs, single-key input, engine/UI separation); lokarta-v2 is a browser edition built with TypeScript and Vite, rendered on an HTML5 2D Canvas with a companion FastAPI + SQLite backend for dungeon layout, loot seeding, and character state; lokarta-v3 rebuilds the game as a zero-backend, client-side application using native web standards (ES modules, Web Workers, Canvas 2D, Web Audio API, IndexedDB) with four vocations, a five-tier tower ascent, and a Havenreach town hub; lokarta-v4 is the most complete engine, adding a Dawnreach Isle overworld, an island quest chain, NPC actors, expanded sprite direction sets, and more Web Worker RPC handlers and data catalogs. Gameplay pillars include a light-versus-darkness mechanic where pitch-black chambers are only revealed within a torch or spell light radius, frictionless walkover auto-loot, a roguelike Fate Grant draft on level-up, and multi-modal inputs (tap, hold/charge, double-tap).",
+  "tags": [
+    "roguelike",
+    "dungeon-crawler",
+    "retro",
+    "browser-game",
+    "pixel-art",
+    "ascii"
+  ],
+  "tech": [
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "Vite",
+    "HTML5 Canvas",
+    "Web Workers",
+    "IndexedDB",
+    "Web Audio API",
+    "ES Modules",
+    "FastAPI",
+    "SQLite",
+    "Pyodide",
+    "Vitest",
+    "pytest"
+  ],
+  "category": "Games",
+  "live_url": "https://lk.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/lokarta-v4",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active development",
+  "confidence": "high",
+  "notes": "Four-repo lineage of one game. lokarta (Python, created 2026-01-26) is the original local terminal/BBS-style ASCII RPG proof of concept, no GitHub Pages, no live demo. lokarta-v2 (TypeScript browser edition, created 2026-09-08) splits a Vite frontend from a FastAPI+SQLite backend and has a live GitHub Pages demo. lokarta-v3 (JavaScript, created 2026-09-27) drops the backend for a fully client-side edition using Web Workers/IndexedDB/Web Audio, adding vocations and a tower ascent. lokarta-v4 (JavaScript, created 2026-10-06, pushed 2026-10-11) is the primary repo: the largest and most complete (528 files, ~16.9 MB, most recent commits), with an overworld, quest chain, NPCs, and expanded sprite/data catalogs. All of v2/v3/v4 have Pages enabled and probed HTTP 200; v4's probe redirected to the custom domain https://lk.livive.net/, used as the best working live URL. Repos have no license and 0 stars."
+}

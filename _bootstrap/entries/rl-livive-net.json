@@ -1,0 +1,37 @@
+{
+  "key": "rl-livive-net",
+  "repo": "rl-livive-net",
+  "display_title": "LunarLander Policy Lab",
+  "tagline": "Playable LunarLander arcade with trained RL policy pilots in the browser",
+  "short_description": "A browser-based LunarLander game and reinforcement-learning policy lab. Race against trained PPO pilots, or pilot solo, in a Pyodide-powered arcade cabinet, with an optional terminal launcher for local play.",
+  "long_description": "LunarLander Policy Lab is a playable LunarLander environment POC with a selectable trained-policy controller. The static browser page runs the Python environment in Pyodide 0.23.4 and renders on a JavaScript canvas inside an arcade-cabinet UI, offering Solo Flight and Tournament modes plus a 4 AI Simulations mode. A Stable-Baselines3 policy runs as a small ONNX actor via ONNX Runtime Web's WASM CPU backend, with Human Pilot, AI Pilot, and Autopilot with Override choices, and optional Sensor Fault and Thruster Fault controls. The project includes a deliberately small Gymnasium compatibility shim (not the full package) supporting gymnasium.make(\"LunarLander-v2\"), using PyPyBox2D for pure-Python physics. A terminal launcher supports local play and environment work using numpy and pygame, and a local exporter reproduces the ONNX model from the published Hugging Face PPO checkpoint.",
+  "tags": [
+    "lunar-lander",
+    "reinforcement-learning",
+    "onnx",
+    "pyodide",
+    "gymnasium",
+    "browser-game"
+  ],
+  "tech": [
+    "JavaScript",
+    "Python",
+    "Pyodide",
+    "ONNX Runtime Web",
+    "Stable-Baselines3",
+    "PyTorch",
+    "NumPy",
+    "Pygame",
+    "PyPyBox2D",
+    "HTML",
+    "CSS"
+  ],
+  "category": "Games",
+  "live_url": "https://lunar.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/rl-livive-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "CNAME points to lunar.livive.net, which returns 200 (title 'Lunar Lander — Tournament Edition'); GitHub Pages URL also live. Setup is a web game demo plus an RL policy lab; filename/repo naming ('rl-', 'Policy Lab') is AI/ML-focused but the primary artifact is a playable arcade game. No license listed."
+}

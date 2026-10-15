@@ -1,0 +1,18 @@
+{
+  "key": "jpeckenpaugh.github.io",
+  "repo": "jpeckenpaugh.github.io",
+  "display_title": "Lokarta Web Demo",
+  "tagline": "Retro BBS-style ASCII terminal RPG running Python in the browser via Pyodide",
+  "short_description": "Lokarta is a local-first, retro BBS-style ASCII RPG prototype with a fixed 100x30 terminal screen; the root GitHub Pages site serves a browser build that runs the Python game in-browser through Pyodide and xterm.js.",
+  "long_description": "The root repository hosts the user's GitHub Pages site, which serves the 'Lokarta Web Demo' at the domain root. Lokarta (also referred to as 'Lokarta - World Maker' and 'RPG Rebuild (OO Skeleton)') is a retro, BBS-style ASCII RPG prototype built in Python with an object-oriented architecture separating game logic from presentation. It targets a fixed-size 100x30 ASCII screen with deterministic rendering and single-key input. The game includes a title scene with Continue/New Game/Asset Explorer/Quit, a scrolling legacy panorama tilemap, JSON content packs (scenes, objects, colors, quests, opponents, abilities, items, npcs, music), JSON save/load slots, and data-driven synthesized audio. The docs/ folder contains the web build: an index.html that loads Pyodide (v0.29.2) to execute the Python game code inside JavaScript, xterm.js for the terminal UI, a virtual on-screen keyboard for mobile, and a quick-start modal. iOS browsers may freeze due to main-thread execution in WebKit. The repository also contains a legacy/ directory mirroring the web build and an app/ package implementing the newer OO skeleton.",
+  "tags": ["rpg", "ascii", "terminal", "pyodide", "game", "prototype"],
+  "tech": ["Python", "Pyodide", "xterm.js", "JavaScript", "HTML", "CSS"],
+  "category": "Games",
+  "live_url": "https://jpeckenpaugh.github.io/",
+  "repo_url": "https://github.com/jpeckenpaugh/jpeckenpaugh.github.io",
+  "has_live_demo": true,
+  "featured": false,
+  "status": "prototype",
+  "confidence": "medium",
+  "notes": "This is the account's root Pages site (jpeckenpaugh.github.io), not a standalone project repo. It serves the 'Lokarta Web Demo' from docs/index.html: a Pyodide-powered browser build of a retro ASCII terminal RPG written in Python. The repo doubles as the game's source (Python app/, legacy/, and many numbered prototype .py/.txt/.monojson files) and the web deployment. Because it is the root Pages site, the page author should decide whether to feature it as the Lokarta game demo or exclude it as a profile/site-root artifact. No description or topics are set on the repo; title comes from the served page. live_url is the real site (HTTP 200, title 'Lokarta Web Demo')."
+}

@@ -1,0 +1,31 @@
+{
+  "key": "game-pending",
+  "repo": "game-pending",
+  "display_title": "Game Pending",
+  "tagline": "Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling",
+  "short_description": "A small HTML5 Canvas side-scroller built with vanilla JavaScript and ES modules, featuring black-and-white line art, optional color themes, power-ups, and a Customize menu.",
+  "long_description": "Game Pending is a browser-based side-scroller built with vanilla JavaScript and ES modules on an HTML5 Canvas, with no build step or runtime package dependency. It defaults to a black-and-white line-art Classic presentation with optional color themes applied to the sky, terrain, opponents, gear, weapons, attacks, and drone. Gameplay includes multi-area levels with platforms, underground cave routes, ladders, and left/right wrap portals, plus power-ups such as Boots (mid-air jumps and rocket glide), Shield (hit-blocking and kinetic discharge), Drone strikes, Specs auto-aim, and Radar. A Customize menu adjusts the game name, tagline, starting level, target FPS, weapon (Gun, Club, Wand), opponent behavior, spawning, and world generation, along with template presets, color themes, drone styles, player and opponent head/face options, and starting power-up levels. The project is described as a prototype designed to be extended via AI/ML tooling, and ships a Docker/nginx setup plus OpenCode integration for development.",
+  "tags": [
+    "javascript",
+    "canvas",
+    "side-scroller",
+    "game",
+    "html5",
+    "vanilla-js"
+  ],
+  "tech": [
+    "JavaScript",
+    "HTML5 Canvas",
+    "ES Modules",
+    "Docker",
+    "nginx"
+  ],
+  "category": "Games",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/game-pending",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "No live probe results (live: []), has_pages false, and no CNAME, so no live URL. Described as a gaming prototype designed to be extended via AI/ML tooling. Runs locally via python3 -m http.server 8000 -d html or docker-compose."
+}

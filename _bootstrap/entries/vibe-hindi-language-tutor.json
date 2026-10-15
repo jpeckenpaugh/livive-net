@@ -1,0 +1,32 @@
+{
+  "key": "vibe-hindi-language-tutor",
+  "repo": "vibe-hindi-language-tutor",
+  "display_title": "English · Hindi & Kannada Language Tutor",
+  "tagline": "Client-side flashcards, quizzes, and glossary for Hindi and Kannada vocabulary",
+  "short_description": "A single-page, dependency-free language tutor for learning English-to-Hindi and English-to-Kannada vocabulary, with flashcards, quizzes, a searchable glossary, audio pronunciation, and progress tracking.",
+  "long_description": "A single-page, client-side language tutor for learning English/Hindi/Kannada vocabulary, built with no build tools and no dependencies — just HTML, CSS, and vanilla JavaScript. It covers two target languages: English to Hindi (Devanagari) or English to Kannada, selectable on the title screen or via a header dropdown. The curriculum spans 35 lessons and 700 words (20 per lesson), each with a phonetic transliteration. Learners get audio pronunciation via the Web Speech API using the correct voice per language (hi-IN / kn-IN), flip-to-reveal flashcards, per-lesson multiple-choice quizzes with instant feedback, a searchable glossary, and a dashboard with quiz score history, daily streaks, and per-word mastery tracked separately per language. Progress, language choice, and student name persist in localStorage, and the responsive layout adapts to any screen size. The README notably documents that the project was built entirely by three short-lived DeepSeek V4 Flash coding agents in OpenCode, with agent session screenshots included as evidence.",
+  "tags": [
+    "hindi",
+    "kannada",
+    "language-learning",
+    "flashcards",
+    "vocabulary",
+    "text-to-speech"
+  ],
+  "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Web Speech API",
+    "localStorage",
+    "Python"
+  ],
+  "category": "Language Tools",
+  "live_url": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/",
+  "repo_url": "https://github.com/jpeckenpaugh/vibe-hindi-language-tutor",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "GitHub Pages live demo returns HTTP 200. README describes project as v0.3, a work in progress. No license or homepage metadata found; built entirely by coding agents as a demonstration of agentic 'vibe coding'."
+}

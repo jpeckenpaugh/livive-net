@@ -1,0 +1,18 @@
+{
+  "key": "python_classes",
+  "repo": "python_classes",
+  "display_title": "Python Classes Demo",
+  "tagline": "Progressive Python OOP demos with a food domain: inheritance and composition.",
+  "short_description": "A small, progressive set of Python examples demonstrating classes, inheritance, composition, polymorphism, and simple stateful business rules using a food-themed domain.",
+  "long_description": "Python Classes Demo is a small, progressive demonstration of Python object-oriented programming built around a food-themed domain. Base classes and subclasses are defined in food.py (Food with Fruit, Meat, and Beverage) and person.py (Person with Vegetarian), while meal.py illustrates composition through a Meal that contains multiple Food items. The examples show inheritance and method overriding (Fruit.eat, Meat.eat, Beverage.drink), composition, polymorphism, and state and validation held inside methods. Simple domain rules are modeled, including mandatory hand-washing before eating or drinking, requiring fruit to be washed and ripe and meat to be cooked before eating, vegetarian restrictions, allergies, a one-fruit limit for diabetics, an age 21+ check for alcoholic beverages, and people only becoming full at the end of a meal. Eight numbered example scripts progress from a minimal Person and Food case (example01.py) through cooking, washing/ripening, allergies and dietary limits, beverages, and a full Meal demo (example.py). Each example runs directly with python example01.py, and no manifest or third-party dependencies are present.",
+  "tags": ["python", "oop", "inheritance", "composition", "education", "tutorial"],
+  "tech": ["Python"],
+  "category": "Education & Teaching",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/python_classes",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "Dossier live probe list is empty and has_pages is false, so no live demo exists and live_url is null. No license declared and no manifests. Content is 11 Python files plus README.md (13 files total), a self-contained command-line teaching demo with no dependencies."
+}

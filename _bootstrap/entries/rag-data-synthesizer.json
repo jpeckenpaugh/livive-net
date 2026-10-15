@@ -1,0 +1,18 @@
+{
+  "key": "rag-data-synthesizer",
+  "repo": "rag-data-synthesizer",
+  "display_title": "RAG Data Synthesizer",
+  "tagline": "Build realistic fictional document corpora for RAG development and testing",
+  "short_description": "An agentic workflow and Python toolset to draft, reconcile, visualize, and render realistic fictional document collections for developing and evaluating RAG pipelines.",
+  "long_description": "RAG Data Synthesizer is a workflow and toolset for building realistic fictional document collections for retrieval-augmented generation development and evaluation. It supports collection planning, staff-authored source documents, fact and relationship tracking, visual assets, PDF rendering, and release review. The repository does not automatically generate document prose; a coordinator uses bounded author and reviewer agents to draft and reconcile content, while scripts generate scenario visuals and render approved Markdown to searchable PDFs. Its first scenario is the Northstar Urgent Care Cooperative, a fictional three-site clinic network, with 21 approved Markdown documents, rendered PDFs totaling 64 pages, a staff registry, corpus plan, shared-fact ledger, visual assets, a generated PDF index, and rendering provenance. The Python tools are scenario-neutral enough to render another Markdown collection and generate configured visuals; a second scenario, validated evaluation set, full ingestion manifest, and automated corpus-wide validator remain future work. All organizations, people, policies, events, and records are fictional and intended as educational test material.",
+  "tags": ["rag", "synthetic-data", "data-generation", "evaluation", "pdf-rendering", "documents"],
+  "tech": ["Python", "WeasyPrint", "mistune", "PyYAML", "pypdf", "Pillow"],
+  "category": "AI/ML Experiments",
+  "live_url": null,
+  "repo_url": "https://github.com/jpeckenpaugh/rag-data-synthesizer",
+  "has_live_demo": false,
+  "featured": false,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "No GitHub Pages, homepage, or live probe results in dossier; no CNAME observed. Category chosen as AI/ML Experiments since it is a data-synthesis toolset for RAG development. Single scenario completed; reusability and evaluation artifacts remain future work."
+}
