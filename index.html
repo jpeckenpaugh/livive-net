@@ -799,7 +799,8 @@
   .back:hover { text-decoration: none; background: rgba(0,0,0,.6); }
   .detail-hero { position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border); background: #000; }
   .detail-hero .media { position: relative; aspect-ratio: 16 / 9; }
-  .detail-hero img, .detail-hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .detail-hero img, .detail-hero video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .detail-hero .media img, .detail-hero .media video { object-fit: cover; }
   .detail-hero video { z-index: 1; }
   .detail-hero .media.ph { display: grid; place-items: center; font-size: 3rem; font-weight: 900; color: #fff; background: linear-gradient(135deg, hsl(var(--h) 66% 40%), hsl(calc(var(--h) + 42) 62% 22%)); }
   /* ---- detail media carousel ---- */
