@@ -47,6 +47,11 @@ const esc = (s) =>
     { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
   ));
 
+// Asset URLs may be either site-relative ("previews/x.webm") or absolute
+// (a project's own published CI artifact). Keep absolute URLs untouched.
+const asset = (s) => (/^https?:\/\//i.test(String(s ?? "")) ? String(s) : "/" + String(s ?? ""));
+const absUrl = (s) => (/^https?:\/\//i.test(String(s ?? "")) ? String(s) : `${SITE}/${String(s ?? "")}`);
+
 const initials = (s) => (String(s).match(/[A-Za-z0-9]+/g) || [])
   .slice(0, 2).map((w) => w[0]).join("").toUpperCase() || "?";
 
@@ -96,7 +101,7 @@ function posterMedia(p, previews) {
   const img = `<img loading="lazy" src="/${esc(p.thumb)}" alt="${esc(thumbAlt(p))}"${thumbDims(p)}>`;
   // Preview <video> is created on demand client-side; the static page stays image-only.
   const attrs = pv && pv.video
-    ? ` data-preview="/${esc(pv.video)}" data-poster="/${esc(pv.poster || p.thumb)}"`
+    ? ` data-preview="${esc(asset(pv.video))}" data-poster="${esc(asset(pv.poster || p.thumb))}"`
     : "";
   return { html: img, ph: false, attrs, hasPreview: !!(pv && pv.video) };
 }
@@ -327,23 +332,24 @@ const CAR_ICON = {
 
 function carouselHtml(p, pv, gallery) {
   const total = gallery.length;
-  const poster = `/${esc(pv.poster || p.thumb)}`;
+  const poster = asset(pv.poster || p.thumb);
+  const aspect = `${pv.width || 16} / ${pv.height || 10}`;
   const secs = pv.duration_ms ? ` · ${Math.round(pv.duration_ms / 1000)}s` : "";
   const videoSlide = `<figure class="slide is-active" data-kind="video">
-      <img src="${poster}" alt="${esc(thumbAlt(p))}">
-      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="/${esc(pv.video)}" poster="${poster}"></video>
+      <img src="${esc(poster)}" alt="${esc(thumbAlt(p))}">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="${esc(asset(pv.video))}" poster="${esc(poster)}"></video>
       <button class="video-replay" type="button" aria-label="Replay the live-play demo">${CAR_ICON.replay}</button>
       <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo${secs}</span></figcaption>
     </figure>`;
   const imageSlides = gallery.map((g, i) => `<figure class="slide" data-kind="image">
-      <img loading="lazy" src="/${esc(g.src)}" alt="${esc(g.alt || g.label || p.display_title)}" width="960" height="720">
+      <img loading="lazy" src="${esc(asset(g.src))}" alt="${esc(g.alt || g.label || p.display_title)}" width="960" height="720">
       <figcaption class="slide-cap"><span class="cap-index">${String(i + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}</span><span class="cap-text">${esc(g.label || "")}</span></figcaption>
     </figure>`).join("");
   const dots = `<div class="dots" role="group" aria-label="Slide navigation">${Array.from(
     { length: total + 1 },
     (_, i) => `<button type="button" aria-label="Slide ${i + 1}${i === 0 ? " (demo)" : ""}"${i === 0 ? ' class="is-active" aria-current="true"' : ""}></button>`
   ).join("")}</div>`;
-  return `<div class="carousel is-video" data-carousel>
+  return `<div class="carousel is-video" data-carousel style="aspect-ratio:${esc(aspect)}">
       <div class="slides">${videoSlide}${imageSlides}</div>
       <button class="nav-arrow prev" type="button" aria-label="Previous slide">${CAR_ICON.prev}</button>
       <button class="nav-arrow next" type="button" aria-label="Next slide">${CAR_ICON.next}</button>
@@ -374,7 +380,7 @@ function detailPage(p, previews) {
     ? (pv && pv.video && gallery.length)
       ? carouselHtml(p, pv, gallery)
       : `<div class="media"><img src="/${esc(p.thumb)}" alt="${esc(thumbAlt(p))}"${thumbDims(p)}>${
-        pv && pv.video ? `<video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/${esc(pv.video)}" poster="/${esc(pv.poster || p.thumb)}"></video>` : ""
+        pv && pv.video ? `<video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="${esc(asset(pv.video))}" poster="${esc(asset(pv.poster || p.thumb))}"></video>` : ""
       }</div>`
     : `<div class="media ph" style="--h:${hue(p.key)}" aria-hidden="true">${esc(initials(p.display_title))}</div>`;
 
@@ -387,7 +393,7 @@ function detailPage(p, previews) {
     </li>`).join("");
 
   const shots = gallery.map((g) => `<figure class="shot">
-      <img loading="lazy" src="/${esc(g.src)}" alt="${esc(g.alt || g.label || title)}" width="960" height="720">
+      <img loading="lazy" src="${esc(asset(g.src))}" alt="${esc(g.alt || g.label || title)}" width="960" height="720">
       ${g.label ? `<figcaption>${esc(g.label)}</figcaption>` : ""}
     </figure>`).join("");
   const screenshots = shots
@@ -399,13 +405,13 @@ function detailPage(p, previews) {
     name: title,
     description: desc,
     url: pageUrl,
-    image: [image, ...gallery.map((g) => `${SITE}/${g.src}`)],
+    image: [image, ...gallery.map((g) => absUrl(g.src))],
     ...(p.category ? { genre: p.category } : {}),
     ...(p.tech && p.tech.length ? { keywords: p.tech.join(", ") } : {}),
     isPartOf: { "@type": "WebSite", "@id": `${SITE}/#website`, name: SITE_NAME, url: `${SITE}/` },
     author: { "@type": "Person", name: AUTHOR.name, url: AUTHOR.url },
     ...(sameAs.length ? { sameAs } : {}),
-    ...(pv && pv.video ? { video: { "@type": "VideoObject", contentUrl: `${SITE}/${pv.video}`, thumbnailUrl: `${SITE}/${pv.poster || p.thumb}`, ...(pv.duration_ms ? { duration: `PT${Math.round(pv.duration_ms / 1000)}S` } : {}) } } : {}),
+    ...(pv && pv.video ? { video: { "@type": "VideoObject", contentUrl: absUrl(pv.video), thumbnailUrl: absUrl(pv.poster || p.thumb), ...(pv.duration_ms ? { duration: `PT${Math.round(pv.duration_ms / 1000)}S` } : {}) } } : {}),
   };
 
   return `<!doctype html>
