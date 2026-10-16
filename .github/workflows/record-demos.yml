@@ -1,0 +1,90 @@
+name: record-demos
+
+# Records real ~30s screen-capture demos of the live sites (cursor movement,
+# scrolling, hover states and a curated interaction script per project) into
+# previews/<key>.webm + previews.json. Runs on ubuntu-latest where Chromium and
+# Playwright's ffmpeg are available; the resulting clips are uploaded as the
+# `demo-clips` artifact for a maintainer (or the agent) to commit and publish.
+
+on:
+  workflow_dispatch:
+    inputs:
+      category:
+        description: "Project category to record (used when keys is empty)"
+        required: false
+        default: "Web Apps & Prototypes"
+      keys:
+        description: "Optional space- or comma-separated project keys to record"
+        required: false
+        default: ""
+      ms:
+        description: "Clip length in milliseconds"
+        required: false
+        default: "30000"
+      force:
+        description: "Re-record even if a clip already exists"
+        type: boolean
+        required: false
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: record-demos-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: _bootstrap/package-lock.json
+
+      - name: Install recorder dependencies
+        working-directory: _bootstrap
+        run: npm ci
+
+      - name: Install matching Chromium + ffmpeg
+        working-directory: _bootstrap
+        run: |
+          PW_VERSION="$(node -p "require('playwright-core/package.json').version")"
+          echo "playwright-core $PW_VERSION"
+          npx -y playwright@"$PW_VERSION" install --with-deps chromium
+
+      - name: Record demo clips
+        working-directory: _bootstrap
+        env:
+          LIVIVE_DEMO_MS: ${{ inputs.ms }}
+          LIVIVE_DEMO_CONCURRENCY: "2"
+          IN_KEYS: ${{ inputs.keys }}
+          IN_CATEGORY: ${{ inputs.category }}
+          IN_FORCE: ${{ inputs.force }}
+        run: |
+          set -euo pipefail
+          ARGS=()
+          if [ -n "${IN_KEYS}" ]; then
+            ARGS+=(--keys "${IN_KEYS}")
+          else
+            ARGS+=(--category "${IN_CATEGORY}")
+          fi
+          if [ "${IN_FORCE}" = "true" ]; then ARGS+=(--force); fi
+          echo "Recording: ${ARGS[*]}"
+          node demo-clips.mjs "${ARGS[@]}"
+
+      - name: Upload demo clips artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-clips
+          path: |
+            previews/*.webm
+            previews/*.webp
+            previews.json
+          retention-days: 7
