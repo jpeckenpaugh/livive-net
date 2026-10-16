@@ -1,0 +1,54 @@
+{
+  "key": "snow-compliance-demo",
+  "repo": "snow-compliance-demo",
+  "display_title": "Snowflake Compliance Demo",
+  "tagline": "Board-review plan and working POC for a Snowflake legal-compliance platform",
+  "short_description": "A board-review site and working offline proof of concept for a Snowflake legal-compliance platform built on the public CUAD contract dataset plus synthetic law-firm records, covering the data model, row-access policies, column masking, risk views, and audit queries.",
+  "long_description": "The Snowflake Compliance Demo stages a proposed Snowflake integration for legal contract review. It pairs a board-facing static site — purpose, ten recommendations, delivery phases, architecture, data foundation, confidentiality model, risk analysis, audit verification, and a Snowflake-options comparison — with a working Python + SQLite proof of concept that enforces matter-level access control and records an audit log, designed to port directly to Snowflake. Contract data comes from the public Contract Understanding Atticus Dataset (CUAD, CC BY 4.0), normalized into RAW CSVs by ingest/load_cuad.py; clients, matters, staff, assignments, and approvals are synthetic data generated with Faker. The POC simulates Snowflake role context, row-access policies, masking, and query history offline (poc/snowflake_sim.py), so no Snowflake account is required. The repository also ships the target Snowflake DDL (sql/01-05: database and roles, data model, row access and masking, risk views, audit queries), a Python offline-SQL portability harness with CI, and a clickable interactive demo (demo/index.html) with role-based login. The Snowflake component is simulated for now: offline emulators run SQL but do not enforce governance, so row-access-policy and masking validation is deferred to a free trial. The contract-risk rubric is simulated and is not legal advice.",
+  "tags": [
+    "snowflake",
+    "data-governance",
+    "legal-tech",
+    "row-access-policy",
+    "audit",
+    "cuad",
+    "proof-of-concept"
+  ],
+  "tech": [
+    "Python",
+    "Snowflake",
+    "SQL",
+    "SQLite",
+    "Faker",
+    "HTML",
+    "CSS",
+    "GitHub Pages",
+    "GitHub Actions"
+  ],
+  "category": "Dev Tools",
+  "live_url": "https://jpeckenpaugh.github.io/snow-compliance-demo/",
+  "demos": [
+    {
+      "label": "Overview",
+      "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/"
+    },
+    {
+      "label": "Architecture",
+      "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/architecture.html"
+    },
+    {
+      "label": "POC & findings",
+      "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/poc.html"
+    },
+    {
+      "label": "Interactive demo",
+      "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/demo/index.html"
+    }
+  ],
+  "repo_url": "https://github.com/jpeckenpaugh/snow-compliance-demo",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "board review",
+  "confidence": "high",
+  "notes": "Repo snow-compliance-demo auto-publishes to GitHub Pages (legacy build from `/`) on every push to main; live at jpeckenpaugh.github.io/snow-compliance-demo/. Live probe returns HTTP 200 with title 'Overview · Snow Compliance Demo'. CUAD is CC BY 4.0 with attribution retained; all firm records are synthetic; the risk rubric is simulated, not legal advice. Built by the Paperclip team across AIA-21, AIA-22, and AIA-23."
+}

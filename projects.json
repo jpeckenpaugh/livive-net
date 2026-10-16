@@ -1,8 +1,8 @@
 {
   "source_user": "jpeckenpaugh",
-  "count": 38,
-  "live_count": 26,
-  "featured_count": 25,
+  "count": 40,
+  "live_count": 28,
+  "featured_count": 27,
   "category_order": [
     "Games",
     "AI/ML Experiments",
@@ -48,13 +48,13 @@
         }
       ],
       "thumb": "thumbnails/aom.webp",
+      "updated_at": "2026-10-10T11:25:52Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 377,
       "live_final_url": "https://aom.livive.net/",
-      "live_error": null,
-      "updated_at": "2026-10-10T11:25:52Z"
+      "live_error": null
     },
     {
       "key": "chk-livive-net",
@@ -95,13 +95,13 @@
         }
       ],
       "thumb": "thumbnails/chk-livive-net.webp",
+      "updated_at": "2026-10-11T17:17:55Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 307,
       "live_final_url": "https://chk.livive.net/",
-      "live_error": null,
-      "updated_at": "2026-10-11T17:17:55Z"
+      "live_error": null
     },
     {
       "key": "EuchreGame",
@@ -143,13 +143,13 @@
       "confidence": "high",
       "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/EuchreGame/ (HTTP 200), serving the Pyodide browser sandbox; previously repo-only. The bundled html/vendor/pyodide/package.json belongs to the vendored Pyodide runtime, not this project. No license declared.",
       "thumb": "thumbnails/EuchreGame.webp",
+      "updated_at": "2026-10-15T05:47:04Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 273,
       "live_final_url": "https://jpeckenpaugh.github.io/EuchreGame/",
-      "live_error": null,
-      "updated_at": "2026-10-15T05:47:04Z"
+      "live_error": null
     },
     {
       "key": "game-pending",
@@ -188,13 +188,13 @@
       "confidence": "high",
       "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/game-pending/ (HTTP 200); previously repo-only. Described as a gaming prototype designed to be extended via AI/ML tooling. Also runs locally via python3 -m http.server 8000 -d html or docker-compose.",
       "thumb": "thumbnails/game-pending.webp",
+      "updated_at": "2026-10-15T05:35:21Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 262,
       "live_final_url": "https://jpeckenpaugh.github.io/game-pending/",
-      "live_error": null,
-      "updated_at": "2026-10-15T05:35:21Z"
+      "live_error": null
     },
     {
       "key": "lokarta",
@@ -255,13 +255,13 @@
       "confidence": "high",
       "notes": "Four-repo lineage of one game. lokarta (Python, created 2026-01-26) is the original local terminal/BBS-style ASCII RPG proof of concept, no GitHub Pages, no live demo. lokarta-v2 (TypeScript browser edition, created 2026-09-08) splits a Vite frontend from a FastAPI+SQLite backend and has a live GitHub Pages demo. lokarta-v3 (JavaScript, created 2026-09-27) drops the backend for a fully client-side edition using Web Workers/IndexedDB/Web Audio, adding vocations and a tower ascent. lokarta-v4 (JavaScript, created 2026-10-06, pushed 2026-10-11) is the primary repo: the largest and most complete (528 files, ~16.9 MB, most recent commits), with an overworld, quest chain, NPCs, and expanded sprite/data catalogs. All of v2/v3/v4 have Pages enabled and probed HTTP 200; v4's probe redirected to the custom domain https://lk.livive.net/, used as the best working live URL. Repos have no license and 0 stars.",
       "thumb": "thumbnails/lokarta.webp",
+      "updated_at": "2026-10-15T18:10:26Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 393,
       "live_final_url": "https://lk.livive.net/",
-      "live_error": null,
-      "updated_at": "2026-10-15T18:10:26Z"
+      "live_error": null
     },
     {
       "key": "rl-livive-net",
@@ -306,13 +306,54 @@
         }
       ],
       "thumb": "thumbnails/rl-livive-net.webp",
+      "updated_at": "2026-10-15T17:51:37Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 371,
       "live_final_url": "https://lunar.livive.net/",
-      "live_error": null,
-      "updated_at": "2026-10-15T17:51:37Z"
+      "live_error": null
+    },
+    {
+      "key": "mines-livive-net",
+      "repo": "mines-livive-net",
+      "display_title": "Minesweeper RL Arcade",
+      "tagline": "Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper",
+      "short_description": "An in-browser retro arcade cabinet running ONNX-exported reinforcement-learning policies on a deterministic 8x8 Minesweeper engine. Play a seeded board, watch the AI reason with a live action mask and confidence heatmap, race a checkpoint on the same seed, or run the whole nine-model library in CONCURRENT mode.",
+      "long_description": "Minesweeper RL Arcade is an in-browser retro arcade cabinet built around a deterministic 8x8 Minesweeper engine and a library of ONNX-exported reinforcement-learning policies. It has five modes: PLAY, where you clear a seeded board with a guaranteed-safe first click; AI, where a selected checkpoint plays the same seed with live confidence, per-cell distributions, and a legal-action mask; RACE, a side-by-side human-vs-policy comparison on an identical seed; CONCURRENT, where every checkpoint in the library steps through one board in lockstep with a CLEARED/DETONATED/STUCK scoreboard and points-sorted leaderboard; and MODELS, a details panel for each manifest checkpoint (family, method, architecture, training recipe, file size, and fixed-seed evaluation). The v2 library ships nine documented checkpoints across four families \u2014 a uniform baseline, solver-imitation behaviour clones, REINFORCE policy-gradient models, and kernel/single-conv ablations \u2014 evaluated from 0% to 61.4% win rate. The app is a static ES-module bundle that fetches models/manifest.json and runs inference through the pinned onnxruntime-web CDN; the engine, featurization, and action-mask contract stay frozen so scores remain comparable across checkpoints. It deploys to GitHub Pages from main at mines.livive.net, guarded by a smoke workflow that asserts the app, the manifest, and every model file are served live.",
+      "tags": [
+        "arcade-cabinet",
+        "browser-game",
+        "minesweeper",
+        "onnx",
+        "onnxruntime",
+        "policy-imitation",
+        "reinforcement-learning"
+      ],
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "ONNX Runtime Web",
+        "Python",
+        "PyTorch",
+        "Stable-Baselines3"
+      ],
+      "category": "Games",
+      "live_url": "https://mines.livive.net/",
+      "demos": [
+        {
+          "label": "Play the arcade",
+          "url": "https://mines.livive.net/"
+        }
+      ],
+      "repo_url": "https://github.com/jpeckenpaugh/mines-livive-net",
+      "has_live_demo": true,
+      "featured": true,
+      "status": "active",
+      "confidence": "high",
+      "notes": "Repo mines-livive-net uses the GitHub Pages legacy build from main (`/`) with CNAME mines.livive.net. Live probe returns HTTP 200, title 'mines.livive.net \u2014 RL Minesweeper arcade cabinet'. The v2 manifest (version 2) ships nine ONNX checkpoints documented in docs/checkpoints.md and the in-app MODELS tab. Built by the Paperclip team across AIA-10 through AIA-19; deterministic boards support a `?seed=` query string.",
+      "thumb": "thumbnails/mines-livive-net.webp"
     },
     {
       "key": "p2p-ttt",
@@ -354,13 +395,13 @@
         }
       ],
       "thumb": "thumbnails/p2p-ttt.webp",
+      "updated_at": "2026-09-07T22:47:22Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 279,
       "live_final_url": "https://jpeckenpaugh.github.io/p2p-ttt/",
-      "live_error": null,
-      "updated_at": "2026-09-07T22:47:22Z"
+      "live_error": null
     },
     {
       "key": "threat-sweep",
@@ -404,13 +445,13 @@
         }
       ],
       "thumb": "thumbnails/threat-sweep.webp",
+      "updated_at": "2026-09-08T15:55:20Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 338,
       "live_final_url": "https://jpeckenpaugh.github.io/threat-sweep/",
-      "live_error": null,
-      "updated_at": "2026-09-08T15:55:20Z"
+      "live_error": null
     },
     {
       "key": "vibe-tic-tac-toe",
@@ -447,13 +488,13 @@
       "confidence": "high",
       "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/vibe-tic-tac-toe/ (HTTP 200); previously repo-only. run.sh still launches a local Python HTTP server. README reports the project was built in one OpenCode session with DeepSeek V4 Flash.",
       "thumb": "thumbnails/vibe-tic-tac-toe.webp",
+      "updated_at": "2026-08-18T22:00:01Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 137,
       "live_final_url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
-      "live_error": null,
-      "updated_at": "2026-08-18T22:00:01Z"
+      "live_error": null
     },
     {
       "key": "rag-poc",
@@ -495,13 +536,13 @@
         }
       ],
       "thumb": "thumbnails/rag-poc.webp",
+      "updated_at": "2026-10-08T20:55:49Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 145,
       "live_final_url": "https://jpeckenpaugh.github.io/rag-poc/",
-      "live_error": null,
-      "updated_at": "2026-10-08T20:55:49Z"
+      "live_error": null
     },
     {
       "key": "sm3",
@@ -540,13 +581,13 @@
         }
       ],
       "thumb": "thumbnails/sm3.webp",
+      "updated_at": "2026-07-10T10:30:49Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 212,
       "live_final_url": "https://seekdepth.net/",
-      "live_error": null,
-      "updated_at": "2026-07-10T10:30:49Z"
+      "live_error": null
     },
     {
       "key": "seekdepth.org",
@@ -582,13 +623,13 @@
         }
       ],
       "thumb": "thumbnails/seekdepth.org.webp",
+      "updated_at": "2026-07-05T06:37:26Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 385,
       "live_final_url": "https://seekdepth.org/",
-      "live_error": null,
-      "updated_at": "2026-07-05T06:37:26Z"
+      "live_error": null
     },
     {
       "key": "ai_chat_distil_01",
@@ -627,13 +668,13 @@
       "notes": "No GitHub Pages and no CNAME, so no live URL. Description and README self-describe this as an experimental proof-of-concept. Single initial commit window (created and last pushed 2026-01-11); 0 stars.",
       "demos": [],
       "thumb": "thumbnails/ai_chat_distil_01.webp",
+      "updated_at": "2026-01-11T12:06:52Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-01-11T12:06:52Z"
+      "live_error": null
     },
     {
       "key": "cde",
@@ -669,13 +710,13 @@
       "notes": "Dossier live probe list is empty; GitHub Pages disabled and homepage null, so no live demo. Primary artifact is an architectural specification (README) plus an algebra EKC workbench with a FastAPI/SQLAlchemy backend and React/Vite/Tailwind frontend. Apache-2.0 licensed, 0 stars, last pushed 2026-09-20.",
       "demos": [],
       "thumb": "thumbnails/cde.webp",
+      "updated_at": "2026-09-20T18:01:52Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-09-20T18:01:52Z"
+      "live_error": null
     },
     {
       "key": "qsbc",
@@ -711,13 +752,13 @@
       "notes": "No live probe results (dossier live: []); has_pages false and homepage null, so no live_url. Runs locally via docker compose on http://localhost:8000.",
       "demos": [],
       "thumb": "thumbnails/qsbc.webp",
+      "updated_at": "2026-09-11T02:05:01Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-09-11T02:05:01Z"
+      "live_error": null
     },
     {
       "key": "rag-data-synthesizer",
@@ -752,13 +793,13 @@
       "notes": "No GitHub Pages, homepage, or live probe results in dossier; no CNAME observed. Category chosen as AI/ML Experiments since it is a data-synthesis toolset for RAG development. Single scenario completed; reusability and evaluation artifacts remain future work.",
       "demos": [],
       "thumb": "thumbnails/rag-data-synthesizer.webp",
+      "updated_at": "2026-10-08T08:36:14Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-10-08T08:36:14Z"
+      "live_error": null
     },
     {
       "key": "hebrew-language-tutor",
@@ -800,13 +841,13 @@
       "confidence": "high",
       "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/hebrew-language-tutor/ (HTTP 200); previously repo-only. GitHub Pages is static, so the live demo serves the static SPA proof-of-concept (hardcoded vocab) rather than the full FastAPI + SQLite client/server app. Repo frames itself as two experiments; 0 stars. Frontend verified by static review rather than browser automation.",
       "thumb": "thumbnails/hebrew-language-tutor.webp",
+      "updated_at": "2026-10-15T05:56:09Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 138,
       "live_final_url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/",
-      "live_error": null,
-      "updated_at": "2026-10-15T05:56:09Z"
+      "live_error": null
     },
     {
       "key": "vibe-hindi-language-tutor",
@@ -846,13 +887,13 @@
         }
       ],
       "thumb": "thumbnails/vibe-hindi-language-tutor.webp",
+      "updated_at": "2026-08-19T07:06:38Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 142,
       "live_final_url": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/",
-      "live_error": null,
-      "updated_at": "2026-08-19T07:06:38Z"
+      "live_error": null
     },
     {
       "key": "nexttext",
@@ -889,13 +930,13 @@
       "confidence": "high",
       "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/nexttext/ (HTTP 200); previously repo-only. Also a reusable pip-installable library (pyproject name=nexttext, v0.1.0) with MIT license.",
       "thumb": "thumbnails/nexttext.webp",
+      "updated_at": "2026-10-15T06:04:39Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 153,
       "live_final_url": "https://jpeckenpaugh.github.io/nexttext/",
-      "live_error": null,
-      "updated_at": "2026-10-15T06:04:39Z"
+      "live_error": null
     },
     {
       "key": "apertiasm-en-es",
@@ -932,13 +973,13 @@
       "notes": "Description calls it experimental. No GitHub Pages (has_pages false) and no CNAME, so no live URL; demo is served locally via scripts/stage4/serve-demo.sh. Repo has 0 stars and no license.",
       "demos": [],
       "thumb": "thumbnails/apertiasm-en-es.webp",
+      "updated_at": "2026-03-03T02:50:51Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-03-03T02:50:51Z"
+      "live_error": null
     },
     {
       "key": "c3pa-sentence-label-parser",
@@ -972,13 +1013,68 @@
       "notes": "No homepage, no GitHub Pages, no CNAME. Language is Python; requirements.txt lists beautifulsoup4>=4.12.0 and spacy>=3.7.0. Ships install.sh and parse.sh plus a committed output/ directory of generated CSVs. Created and last pushed 2026-09-18 (single-day, 0 stars, no license).",
       "demos": [],
       "thumb": "thumbnails/c3pa-sentence-label-parser.webp",
+      "updated_at": "2026-09-18T21:15:58Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-09-18T21:15:58Z"
+      "live_error": null
+    },
+    {
+      "key": "snow-compliance-demo",
+      "repo": "snow-compliance-demo",
+      "display_title": "Snowflake Compliance Demo",
+      "tagline": "Board-review plan and working POC for a Snowflake legal-compliance platform",
+      "short_description": "A board-review site and working offline proof of concept for a Snowflake legal-compliance platform built on the public CUAD contract dataset plus synthetic law-firm records, covering the data model, row-access policies, column masking, risk views, and audit queries.",
+      "long_description": "The Snowflake Compliance Demo stages a proposed Snowflake integration for legal contract review. It pairs a board-facing static site \u2014 purpose, ten recommendations, delivery phases, architecture, data foundation, confidentiality model, risk analysis, audit verification, and a Snowflake-options comparison \u2014 with a working Python + SQLite proof of concept that enforces matter-level access control and records an audit log, designed to port directly to Snowflake. Contract data comes from the public Contract Understanding Atticus Dataset (CUAD, CC BY 4.0), normalized into RAW CSVs by ingest/load_cuad.py; clients, matters, staff, assignments, and approvals are synthetic data generated with Faker. The POC simulates Snowflake role context, row-access policies, masking, and query history offline (poc/snowflake_sim.py), so no Snowflake account is required. The repository also ships the target Snowflake DDL (sql/01-05: database and roles, data model, row access and masking, risk views, audit queries), a Python offline-SQL portability harness with CI, and a clickable interactive demo (demo/index.html) with role-based login. The Snowflake component is simulated for now: offline emulators run SQL but do not enforce governance, so row-access-policy and masking validation is deferred to a free trial. The contract-risk rubric is simulated and is not legal advice.",
+      "tags": [
+        "audit",
+        "cuad",
+        "data-governance",
+        "legal-tech",
+        "proof-of-concept",
+        "row-access-policy",
+        "snowflake"
+      ],
+      "tech": [
+        "Python",
+        "Snowflake",
+        "SQL",
+        "SQLite",
+        "Faker",
+        "HTML",
+        "CSS",
+        "GitHub Pages",
+        "GitHub Actions"
+      ],
+      "category": "Dev Tools",
+      "live_url": "https://jpeckenpaugh.github.io/snow-compliance-demo/",
+      "demos": [
+        {
+          "label": "Overview",
+          "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/"
+        },
+        {
+          "label": "Architecture",
+          "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/architecture.html"
+        },
+        {
+          "label": "POC & findings",
+          "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/poc.html"
+        },
+        {
+          "label": "Interactive demo",
+          "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/demo/index.html"
+        }
+      ],
+      "repo_url": "https://github.com/jpeckenpaugh/snow-compliance-demo",
+      "has_live_demo": true,
+      "featured": true,
+      "status": "board review",
+      "confidence": "high",
+      "notes": "Repo snow-compliance-demo auto-publishes to GitHub Pages (legacy build from `/`) on every push to main; live at jpeckenpaugh.github.io/snow-compliance-demo/. Live probe returns HTTP 200 with title 'Overview \u00b7 Snow Compliance Demo'. CUAD is CC BY 4.0 with attribution retained; all firm records are synthetic; the risk rubric is simulated, not legal advice. Built by the Paperclip team across AIA-21, AIA-22, and AIA-23.",
+      "thumb": "thumbnails/snow-compliance-demo.webp"
     },
     {
       "key": "sprites-livive-net",
@@ -1020,13 +1116,13 @@
       "confidence": "high",
       "notes": "Live site title is 'Model Browser \u00b7 Turntable'. README describes a browser-based 3D-to-sprite workshop and links to the companion Oblique sandbox. Static site; Three.js is loaded from jsDelivr.",
       "thumb": "thumbnails/sprites-livive-net.webp",
+      "updated_at": "2026-10-15T16:47:11Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 250,
       "live_final_url": "https://sprites.livive.net/",
-      "live_error": null,
-      "updated_at": "2026-10-15T16:47:11Z"
+      "live_error": null
     },
     {
       "key": "roblox-api-database",
@@ -1060,13 +1156,13 @@
       "notes": "No live probe results and no GitHub Pages/CNAME, so no live demo. Reusable CLI tooling and git-submodule design; recently pushed, not archived.",
       "demos": [],
       "thumb": "thumbnails/roblox-api-database.webp",
+      "updated_at": "2026-06-26T15:17:00Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-06-26T15:17:00Z"
+      "live_error": null
     },
     {
       "key": "gemini_bootstrap",
@@ -1098,13 +1194,13 @@
       "notes": "No live probe results in dossier (live: []) and has_pages is false, so no live demo. Pure Markdown repo (5 .md files, no manifests); tech inferred from README references to Markdown, Gemini CLI and Git. MIT licensed, 0 stars.",
       "demos": [],
       "thumb": "thumbnails/gemini_bootstrap.webp",
+      "updated_at": "2025-10-12T05:27:42Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2025-10-12T05:27:42Z"
+      "live_error": null
     },
     {
       "key": "open-code-workflows",
@@ -1139,13 +1235,13 @@
       "notes": "No homepage, no GitHub Pages, and empty live probe; no live demo. Repo is Markdown-only (37 .md files) with no manifests. License: MIT. Model- and agent-agnostic instructions validated in OpenCode; notable but not a library and has no live demo, so featured is false.",
       "demos": [],
       "thumb": "thumbnails/open-code-workflows.webp",
+      "updated_at": "2026-08-30T19:09:41Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-08-30T19:09:41Z"
+      "live_error": null
     },
     {
       "key": "tc-livive-org",
@@ -1183,13 +1279,13 @@
         }
       ],
       "thumb": "thumbnails/tc-livive-org.webp",
+      "updated_at": "2026-10-07T09:56:05Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 506,
       "live_final_url": "https://tc.livive.org/",
-      "live_error": null,
-      "updated_at": "2026-10-07T09:56:05Z"
+      "live_error": null
     },
     {
       "key": "docker-sql-lessons",
@@ -1225,13 +1321,13 @@
       "notes": "No description or homepage set on GitHub; no CNAME and Pages disabled, so no live URL. 18 files across two lessons; top-level docker-compose.yml runs the Lesson 1 monitor service. Uses psutil==6.1.0 pinned, other deps unpinned.",
       "demos": [],
       "thumb": "thumbnails/docker-sql-lessons.webp",
+      "updated_at": "2026-08-16T20:55:37Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-08-16T20:55:37Z"
+      "live_error": null
     },
     {
       "key": "fast-ttt",
@@ -1268,13 +1364,13 @@
       "notes": "No GitHub Pages and no CNAME, so live_url is null. Positioned by the README as a teaching tool for client/server concepts rather than a standalone game, hence Education & Teaching. Local-only server at 0.0.0.0:8000.",
       "demos": [],
       "thumb": "thumbnails/fast-ttt.webp",
+      "updated_at": "2026-08-18T20:31:40Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-08-18T20:31:40Z"
+      "live_error": null
     },
     {
       "key": "python_classes",
@@ -1304,13 +1400,13 @@
       "notes": "Dossier live probe list is empty and has_pages is false, so no live demo exists and live_url is null. No license declared and no manifests. Content is 11 Python files plus README.md (13 files total), a self-contained command-line teaching demo with no dependencies.",
       "demos": [],
       "thumb": "thumbnails/python_classes.webp",
+      "updated_at": "2026-02-08T02:42:39Z",
       "live_ok": null,
       "live_status": null,
       "live_checked_at": null,
       "live_latency_ms": null,
       "live_final_url": null,
-      "live_error": null,
-      "updated_at": "2026-02-08T02:42:39Z"
+      "live_error": null
     },
     {
       "key": "c3pa-explorer",
@@ -1352,13 +1448,13 @@
         }
       ],
       "thumb": "thumbnails/c3pa-explorer.webp",
+      "updated_at": "2026-09-22T02:24:58Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 133,
       "live_final_url": "https://jpeckenpaugh.github.io/c3pa-explorer/",
-      "live_error": null,
-      "updated_at": "2026-09-22T02:24:58Z"
+      "live_error": null
     },
     {
       "key": "company-hub",
@@ -1413,13 +1509,13 @@
         }
       ],
       "thumb": "thumbnails/company-hub.webp",
+      "updated_at": "2026-09-07T19:56:28Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 133,
       "live_final_url": "https://jpeckenpaugh.github.io/ch/",
-      "live_error": null,
-      "updated_at": "2026-09-07T19:56:28Z"
+      "live_error": null
     },
     {
       "key": "driver-hub-prototype",
@@ -1464,13 +1560,13 @@
         }
       ],
       "thumb": "thumbnails/driver-hub-prototype.webp",
+      "updated_at": "2026-10-07T16:52:13Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 138,
       "live_final_url": "https://jpeckenpaugh.github.io/driver-hub-prototype/",
-      "live_error": null,
-      "updated_at": "2026-10-07T16:52:13Z"
+      "live_error": null
     },
     {
       "key": "executive-assistant",
@@ -1513,13 +1609,13 @@
         }
       ],
       "thumb": "thumbnails/executive-assistant.webp",
+      "updated_at": "2026-09-08T05:47:32Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 143,
       "live_final_url": "https://jpeckenpaugh.github.io/executive-assistant/",
-      "live_error": null,
-      "updated_at": "2026-09-08T05:47:32Z"
+      "live_error": null
     },
     {
       "key": "herons-fountain",
@@ -1555,21 +1651,21 @@
         }
       ],
       "thumb": "thumbnails/herons-fountain.webp",
+      "updated_at": "2026-08-31T11:34:46Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 133,
       "live_final_url": "https://jpeckenpaugh.github.io/herons-fountain/",
-      "live_error": null,
-      "updated_at": "2026-08-31T11:34:46Z"
+      "live_error": null
     },
     {
       "key": "oblique-livive-net",
       "repo": "oblique-livive-net",
       "display_title": "Oblique \u00b7 2.5D World Sandbox",
       "tagline": "A browser-based workbench for building and exploring layered 2.5D game worlds",
-      "short_description": "A collection of browser-based experiments for testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.",
-      "long_description": "Oblique is a static, browser-based workbench for exploring 2.5D game worlds on an orthogonal square grid. Its standalone experiments include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.",
+      "short_description": "A collection of browser-based experiments for building scenes and testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.",
+      "long_description": "Oblique is a static, browser-based workbench for exploring and building 2.5D game worlds on an orthogonal square grid. Its standalone pages include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a Playground scene builder for composing 16x16 scenes with terrain and sprite painting, per-sprite scaling, NPC behavior, ordered events, and local save/import/export; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.",
       "tags": [
         "2.5d",
         "game-assets",
@@ -1581,8 +1677,7 @@
         "JavaScript",
         "HTML",
         "CSS",
-        "Canvas",
-        "Web Audio API"
+        "Canvas"
       ],
       "category": "Web Apps & Prototypes",
       "live_url": "https://oblique.livive.net/",
@@ -1594,6 +1689,10 @@
         {
           "label": "2.5D Model Sandbox",
           "url": "https://oblique.livive.net/sandbox.html"
+        },
+        {
+          "label": "Playground",
+          "url": "https://oblique.livive.net/playground.html"
         },
         {
           "label": "Terrain Layers",
@@ -1609,15 +1708,15 @@
       "featured": true,
       "status": "active experiments",
       "confidence": "high",
-      "notes": "Repository README describes a browser-based 2.5D game-world workbench with three featured live prototypes. Static HTML, CSS, and vanilla JavaScript; GitHub Pages deploys the repository root. The related Sprites model-to-sprite workshop is hosted at sprites.livive.net.",
+      "notes": "Repository README describes a browser-based 2.5D game-world workbench with four featured live pages: the model sandbox, the Playground scene builder (playground.html), Terrain Layers, and Beach Camp. Static HTML, CSS, and vanilla JavaScript; GitHub Pages deploys the repository root. The related Sprites model-to-sprite workshop is hosted at sprites.livive.net.",
       "thumb": "thumbnails/oblique-livive-net.webp",
+      "updated_at": "2026-10-16T01:03:24Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 178,
       "live_final_url": "https://oblique.livive.net/",
-      "live_error": null,
-      "updated_at": "2026-10-16T01:03:24Z"
+      "live_error": null
     },
     {
       "key": "robot-motion-studio",
@@ -1658,13 +1757,13 @@
         }
       ],
       "thumb": "thumbnails/robot-motion-studio.webp",
+      "updated_at": "2026-09-08T08:38:27Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 119,
       "live_final_url": "https://jpeckenpaugh.github.io/robot-motion-studio/",
-      "live_error": null,
-      "updated_at": "2026-09-08T08:38:27Z"
+      "live_error": null
     },
     {
       "key": "vid-factory",
@@ -1709,13 +1808,13 @@
         }
       ],
       "thumb": "thumbnails/vid-factory.webp",
+      "updated_at": "2026-09-08T17:49:59Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 121,
       "live_final_url": "https://jpeckenpaugh.github.io/vid-factory/",
-      "live_error": null,
-      "updated_at": "2026-09-08T17:49:59Z"
+      "live_error": null
     },
     {
       "key": "tech-livive-net",
@@ -1754,13 +1853,13 @@
         }
       ],
       "thumb": "thumbnails/tech-livive-net.webp",
+      "updated_at": "2026-10-04T20:51:18Z",
       "live_ok": true,
       "live_status": 200,
       "live_checked_at": "2026-10-16T01:31:58Z",
       "live_latency_ms": 240,
       "live_final_url": "https://tech.livive.net/",
-      "live_error": null,
-      "updated_at": "2026-10-04T20:51:18Z"
+      "live_error": null
     }
   ],
   "groups": [
@@ -1803,13 +1902,13 @@
             }
           ],
           "thumb": "thumbnails/aom.webp",
+          "updated_at": "2026-10-10T11:25:52Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 377,
           "live_final_url": "https://aom.livive.net/",
-          "live_error": null,
-          "updated_at": "2026-10-10T11:25:52Z"
+          "live_error": null
         },
         {
           "key": "chk-livive-net",
@@ -1850,13 +1949,13 @@
             }
           ],
           "thumb": "thumbnails/chk-livive-net.webp",
+          "updated_at": "2026-10-11T17:17:55Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 307,
           "live_final_url": "https://chk.livive.net/",
-          "live_error": null,
-          "updated_at": "2026-10-11T17:17:55Z"
+          "live_error": null
         },
         {
           "key": "EuchreGame",
@@ -1898,13 +1997,13 @@
           "confidence": "high",
           "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/EuchreGame/ (HTTP 200), serving the Pyodide browser sandbox; previously repo-only. The bundled html/vendor/pyodide/package.json belongs to the vendored Pyodide runtime, not this project. No license declared.",
           "thumb": "thumbnails/EuchreGame.webp",
+          "updated_at": "2026-10-15T05:47:04Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 273,
           "live_final_url": "https://jpeckenpaugh.github.io/EuchreGame/",
-          "live_error": null,
-          "updated_at": "2026-10-15T05:47:04Z"
+          "live_error": null
         },
         {
           "key": "game-pending",
@@ -1943,13 +2042,13 @@
           "confidence": "high",
           "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/game-pending/ (HTTP 200); previously repo-only. Described as a gaming prototype designed to be extended via AI/ML tooling. Also runs locally via python3 -m http.server 8000 -d html or docker-compose.",
           "thumb": "thumbnails/game-pending.webp",
+          "updated_at": "2026-10-15T05:35:21Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 262,
           "live_final_url": "https://jpeckenpaugh.github.io/game-pending/",
-          "live_error": null,
-          "updated_at": "2026-10-15T05:35:21Z"
+          "live_error": null
         },
         {
           "key": "lokarta",
@@ -2010,13 +2109,13 @@
           "confidence": "high",
           "notes": "Four-repo lineage of one game. lokarta (Python, created 2026-01-26) is the original local terminal/BBS-style ASCII RPG proof of concept, no GitHub Pages, no live demo. lokarta-v2 (TypeScript browser edition, created 2026-09-08) splits a Vite frontend from a FastAPI+SQLite backend and has a live GitHub Pages demo. lokarta-v3 (JavaScript, created 2026-09-27) drops the backend for a fully client-side edition using Web Workers/IndexedDB/Web Audio, adding vocations and a tower ascent. lokarta-v4 (JavaScript, created 2026-10-06, pushed 2026-10-11) is the primary repo: the largest and most complete (528 files, ~16.9 MB, most recent commits), with an overworld, quest chain, NPCs, and expanded sprite/data catalogs. All of v2/v3/v4 have Pages enabled and probed HTTP 200; v4's probe redirected to the custom domain https://lk.livive.net/, used as the best working live URL. Repos have no license and 0 stars.",
           "thumb": "thumbnails/lokarta.webp",
+          "updated_at": "2026-10-15T18:10:26Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 393,
           "live_final_url": "https://lk.livive.net/",
-          "live_error": null,
-          "updated_at": "2026-10-15T18:10:26Z"
+          "live_error": null
         },
         {
           "key": "rl-livive-net",
@@ -2061,13 +2160,54 @@
             }
           ],
           "thumb": "thumbnails/rl-livive-net.webp",
+          "updated_at": "2026-10-15T17:51:37Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 371,
           "live_final_url": "https://lunar.livive.net/",
-          "live_error": null,
-          "updated_at": "2026-10-15T17:51:37Z"
+          "live_error": null
+        },
+        {
+          "key": "mines-livive-net",
+          "repo": "mines-livive-net",
+          "display_title": "Minesweeper RL Arcade",
+          "tagline": "Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper",
+          "short_description": "An in-browser retro arcade cabinet running ONNX-exported reinforcement-learning policies on a deterministic 8x8 Minesweeper engine. Play a seeded board, watch the AI reason with a live action mask and confidence heatmap, race a checkpoint on the same seed, or run the whole nine-model library in CONCURRENT mode.",
+          "long_description": "Minesweeper RL Arcade is an in-browser retro arcade cabinet built around a deterministic 8x8 Minesweeper engine and a library of ONNX-exported reinforcement-learning policies. It has five modes: PLAY, where you clear a seeded board with a guaranteed-safe first click; AI, where a selected checkpoint plays the same seed with live confidence, per-cell distributions, and a legal-action mask; RACE, a side-by-side human-vs-policy comparison on an identical seed; CONCURRENT, where every checkpoint in the library steps through one board in lockstep with a CLEARED/DETONATED/STUCK scoreboard and points-sorted leaderboard; and MODELS, a details panel for each manifest checkpoint (family, method, architecture, training recipe, file size, and fixed-seed evaluation). The v2 library ships nine documented checkpoints across four families \u2014 a uniform baseline, solver-imitation behaviour clones, REINFORCE policy-gradient models, and kernel/single-conv ablations \u2014 evaluated from 0% to 61.4% win rate. The app is a static ES-module bundle that fetches models/manifest.json and runs inference through the pinned onnxruntime-web CDN; the engine, featurization, and action-mask contract stay frozen so scores remain comparable across checkpoints. It deploys to GitHub Pages from main at mines.livive.net, guarded by a smoke workflow that asserts the app, the manifest, and every model file are served live.",
+          "tags": [
+            "arcade-cabinet",
+            "browser-game",
+            "minesweeper",
+            "onnx",
+            "onnxruntime",
+            "policy-imitation",
+            "reinforcement-learning"
+          ],
+          "tech": [
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "ONNX Runtime Web",
+            "Python",
+            "PyTorch",
+            "Stable-Baselines3"
+          ],
+          "category": "Games",
+          "live_url": "https://mines.livive.net/",
+          "demos": [
+            {
+              "label": "Play the arcade",
+              "url": "https://mines.livive.net/"
+            }
+          ],
+          "repo_url": "https://github.com/jpeckenpaugh/mines-livive-net",
+          "has_live_demo": true,
+          "featured": true,
+          "status": "active",
+          "confidence": "high",
+          "notes": "Repo mines-livive-net uses the GitHub Pages legacy build from main (`/`) with CNAME mines.livive.net. Live probe returns HTTP 200, title 'mines.livive.net \u2014 RL Minesweeper arcade cabinet'. The v2 manifest (version 2) ships nine ONNX checkpoints documented in docs/checkpoints.md and the in-app MODELS tab. Built by the Paperclip team across AIA-10 through AIA-19; deterministic boards support a `?seed=` query string.",
+          "thumb": "thumbnails/mines-livive-net.webp"
         },
         {
           "key": "p2p-ttt",
@@ -2109,13 +2249,13 @@
             }
           ],
           "thumb": "thumbnails/p2p-ttt.webp",
+          "updated_at": "2026-09-07T22:47:22Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 279,
           "live_final_url": "https://jpeckenpaugh.github.io/p2p-ttt/",
-          "live_error": null,
-          "updated_at": "2026-09-07T22:47:22Z"
+          "live_error": null
         },
         {
           "key": "threat-sweep",
@@ -2159,13 +2299,13 @@
             }
           ],
           "thumb": "thumbnails/threat-sweep.webp",
+          "updated_at": "2026-09-08T15:55:20Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 338,
           "live_final_url": "https://jpeckenpaugh.github.io/threat-sweep/",
-          "live_error": null,
-          "updated_at": "2026-09-08T15:55:20Z"
+          "live_error": null
         },
         {
           "key": "vibe-tic-tac-toe",
@@ -2202,13 +2342,13 @@
           "confidence": "high",
           "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/vibe-tic-tac-toe/ (HTTP 200); previously repo-only. run.sh still launches a local Python HTTP server. README reports the project was built in one OpenCode session with DeepSeek V4 Flash.",
           "thumb": "thumbnails/vibe-tic-tac-toe.webp",
+          "updated_at": "2026-08-18T22:00:01Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 137,
           "live_final_url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
-          "live_error": null,
-          "updated_at": "2026-08-18T22:00:01Z"
+          "live_error": null
         }
       ]
     },
@@ -2255,13 +2395,13 @@
             }
           ],
           "thumb": "thumbnails/rag-poc.webp",
+          "updated_at": "2026-10-08T20:55:49Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 145,
           "live_final_url": "https://jpeckenpaugh.github.io/rag-poc/",
-          "live_error": null,
-          "updated_at": "2026-10-08T20:55:49Z"
+          "live_error": null
         },
         {
           "key": "sm3",
@@ -2300,13 +2440,13 @@
             }
           ],
           "thumb": "thumbnails/sm3.webp",
+          "updated_at": "2026-07-10T10:30:49Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 212,
           "live_final_url": "https://seekdepth.net/",
-          "live_error": null,
-          "updated_at": "2026-07-10T10:30:49Z"
+          "live_error": null
         },
         {
           "key": "seekdepth.org",
@@ -2342,13 +2482,13 @@
             }
           ],
           "thumb": "thumbnails/seekdepth.org.webp",
+          "updated_at": "2026-07-05T06:37:26Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 385,
           "live_final_url": "https://seekdepth.org/",
-          "live_error": null,
-          "updated_at": "2026-07-05T06:37:26Z"
+          "live_error": null
         },
         {
           "key": "ai_chat_distil_01",
@@ -2387,13 +2527,13 @@
           "notes": "No GitHub Pages and no CNAME, so no live URL. Description and README self-describe this as an experimental proof-of-concept. Single initial commit window (created and last pushed 2026-01-11); 0 stars.",
           "demos": [],
           "thumb": "thumbnails/ai_chat_distil_01.webp",
+          "updated_at": "2026-01-11T12:06:52Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-01-11T12:06:52Z"
+          "live_error": null
         },
         {
           "key": "cde",
@@ -2429,13 +2569,13 @@
           "notes": "Dossier live probe list is empty; GitHub Pages disabled and homepage null, so no live demo. Primary artifact is an architectural specification (README) plus an algebra EKC workbench with a FastAPI/SQLAlchemy backend and React/Vite/Tailwind frontend. Apache-2.0 licensed, 0 stars, last pushed 2026-09-20.",
           "demos": [],
           "thumb": "thumbnails/cde.webp",
+          "updated_at": "2026-09-20T18:01:52Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-09-20T18:01:52Z"
+          "live_error": null
         },
         {
           "key": "qsbc",
@@ -2471,13 +2611,13 @@
           "notes": "No live probe results (dossier live: []); has_pages false and homepage null, so no live_url. Runs locally via docker compose on http://localhost:8000.",
           "demos": [],
           "thumb": "thumbnails/qsbc.webp",
+          "updated_at": "2026-09-11T02:05:01Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-09-11T02:05:01Z"
+          "live_error": null
         },
         {
           "key": "rag-data-synthesizer",
@@ -2512,13 +2652,13 @@
           "notes": "No GitHub Pages, homepage, or live probe results in dossier; no CNAME observed. Category chosen as AI/ML Experiments since it is a data-synthesis toolset for RAG development. Single scenario completed; reusability and evaluation artifacts remain future work.",
           "demos": [],
           "thumb": "thumbnails/rag-data-synthesizer.webp",
+          "updated_at": "2026-10-08T08:36:14Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-10-08T08:36:14Z"
+          "live_error": null
         }
       ]
     },
@@ -2565,13 +2705,13 @@
           "confidence": "high",
           "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/hebrew-language-tutor/ (HTTP 200); previously repo-only. GitHub Pages is static, so the live demo serves the static SPA proof-of-concept (hardcoded vocab) rather than the full FastAPI + SQLite client/server app. Repo frames itself as two experiments; 0 stars. Frontend verified by static review rather than browser automation.",
           "thumb": "thumbnails/hebrew-language-tutor.webp",
+          "updated_at": "2026-10-15T05:56:09Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 138,
           "live_final_url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/",
-          "live_error": null,
-          "updated_at": "2026-10-15T05:56:09Z"
+          "live_error": null
         },
         {
           "key": "vibe-hindi-language-tutor",
@@ -2611,13 +2751,13 @@
             }
           ],
           "thumb": "thumbnails/vibe-hindi-language-tutor.webp",
+          "updated_at": "2026-08-19T07:06:38Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 142,
           "live_final_url": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/",
-          "live_error": null,
-          "updated_at": "2026-08-19T07:06:38Z"
+          "live_error": null
         },
         {
           "key": "nexttext",
@@ -2654,13 +2794,13 @@
           "confidence": "high",
           "notes": "Published to GitHub Pages at https://jpeckenpaugh.github.io/nexttext/ (HTTP 200); previously repo-only. Also a reusable pip-installable library (pyproject name=nexttext, v0.1.0) with MIT license.",
           "thumb": "thumbnails/nexttext.webp",
+          "updated_at": "2026-10-15T06:04:39Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 153,
           "live_final_url": "https://jpeckenpaugh.github.io/nexttext/",
-          "live_error": null,
-          "updated_at": "2026-10-15T06:04:39Z"
+          "live_error": null
         },
         {
           "key": "apertiasm-en-es",
@@ -2697,13 +2837,13 @@
           "notes": "Description calls it experimental. No GitHub Pages (has_pages false) and no CNAME, so no live URL; demo is served locally via scripts/stage4/serve-demo.sh. Repo has 0 stars and no license.",
           "demos": [],
           "thumb": "thumbnails/apertiasm-en-es.webp",
+          "updated_at": "2026-03-03T02:50:51Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-03-03T02:50:51Z"
+          "live_error": null
         },
         {
           "key": "c3pa-sentence-label-parser",
@@ -2737,19 +2877,74 @@
           "notes": "No homepage, no GitHub Pages, no CNAME. Language is Python; requirements.txt lists beautifulsoup4>=4.12.0 and spacy>=3.7.0. Ships install.sh and parse.sh plus a committed output/ directory of generated CSVs. Created and last pushed 2026-09-18 (single-day, 0 stars, no license).",
           "demos": [],
           "thumb": "thumbnails/c3pa-sentence-label-parser.webp",
+          "updated_at": "2026-09-18T21:15:58Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-09-18T21:15:58Z"
+          "live_error": null
         }
       ]
     },
     {
       "category": "Dev Tools",
       "projects": [
+        {
+          "key": "snow-compliance-demo",
+          "repo": "snow-compliance-demo",
+          "display_title": "Snowflake Compliance Demo",
+          "tagline": "Board-review plan and working POC for a Snowflake legal-compliance platform",
+          "short_description": "A board-review site and working offline proof of concept for a Snowflake legal-compliance platform built on the public CUAD contract dataset plus synthetic law-firm records, covering the data model, row-access policies, column masking, risk views, and audit queries.",
+          "long_description": "The Snowflake Compliance Demo stages a proposed Snowflake integration for legal contract review. It pairs a board-facing static site \u2014 purpose, ten recommendations, delivery phases, architecture, data foundation, confidentiality model, risk analysis, audit verification, and a Snowflake-options comparison \u2014 with a working Python + SQLite proof of concept that enforces matter-level access control and records an audit log, designed to port directly to Snowflake. Contract data comes from the public Contract Understanding Atticus Dataset (CUAD, CC BY 4.0), normalized into RAW CSVs by ingest/load_cuad.py; clients, matters, staff, assignments, and approvals are synthetic data generated with Faker. The POC simulates Snowflake role context, row-access policies, masking, and query history offline (poc/snowflake_sim.py), so no Snowflake account is required. The repository also ships the target Snowflake DDL (sql/01-05: database and roles, data model, row access and masking, risk views, audit queries), a Python offline-SQL portability harness with CI, and a clickable interactive demo (demo/index.html) with role-based login. The Snowflake component is simulated for now: offline emulators run SQL but do not enforce governance, so row-access-policy and masking validation is deferred to a free trial. The contract-risk rubric is simulated and is not legal advice.",
+          "tags": [
+            "audit",
+            "cuad",
+            "data-governance",
+            "legal-tech",
+            "proof-of-concept",
+            "row-access-policy",
+            "snowflake"
+          ],
+          "tech": [
+            "Python",
+            "Snowflake",
+            "SQL",
+            "SQLite",
+            "Faker",
+            "HTML",
+            "CSS",
+            "GitHub Pages",
+            "GitHub Actions"
+          ],
+          "category": "Dev Tools",
+          "live_url": "https://jpeckenpaugh.github.io/snow-compliance-demo/",
+          "demos": [
+            {
+              "label": "Overview",
+              "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/"
+            },
+            {
+              "label": "Architecture",
+              "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/architecture.html"
+            },
+            {
+              "label": "POC & findings",
+              "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/poc.html"
+            },
+            {
+              "label": "Interactive demo",
+              "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/demo/index.html"
+            }
+          ],
+          "repo_url": "https://github.com/jpeckenpaugh/snow-compliance-demo",
+          "has_live_demo": true,
+          "featured": true,
+          "status": "board review",
+          "confidence": "high",
+          "notes": "Repo snow-compliance-demo auto-publishes to GitHub Pages (legacy build from `/`) on every push to main; live at jpeckenpaugh.github.io/snow-compliance-demo/. Live probe returns HTTP 200 with title 'Overview \u00b7 Snow Compliance Demo'. CUAD is CC BY 4.0 with attribution retained; all firm records are synthetic; the risk rubric is simulated, not legal advice. Built by the Paperclip team across AIA-21, AIA-22, and AIA-23.",
+          "thumb": "thumbnails/snow-compliance-demo.webp"
+        },
         {
           "key": "sprites-livive-net",
           "repo": "sprites-livive-net",
@@ -2790,13 +2985,13 @@
           "confidence": "high",
           "notes": "Live site title is 'Model Browser \u00b7 Turntable'. README describes a browser-based 3D-to-sprite workshop and links to the companion Oblique sandbox. Static site; Three.js is loaded from jsDelivr.",
           "thumb": "thumbnails/sprites-livive-net.webp",
+          "updated_at": "2026-10-15T16:47:11Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 250,
           "live_final_url": "https://sprites.livive.net/",
-          "live_error": null,
-          "updated_at": "2026-10-15T16:47:11Z"
+          "live_error": null
         },
         {
           "key": "roblox-api-database",
@@ -2830,13 +3025,13 @@
           "notes": "No live probe results and no GitHub Pages/CNAME, so no live demo. Reusable CLI tooling and git-submodule design; recently pushed, not archived.",
           "demos": [],
           "thumb": "thumbnails/roblox-api-database.webp",
+          "updated_at": "2026-06-26T15:17:00Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-06-26T15:17:00Z"
+          "live_error": null
         },
         {
           "key": "gemini_bootstrap",
@@ -2868,13 +3063,13 @@
           "notes": "No live probe results in dossier (live: []) and has_pages is false, so no live demo. Pure Markdown repo (5 .md files, no manifests); tech inferred from README references to Markdown, Gemini CLI and Git. MIT licensed, 0 stars.",
           "demos": [],
           "thumb": "thumbnails/gemini_bootstrap.webp",
+          "updated_at": "2025-10-12T05:27:42Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2025-10-12T05:27:42Z"
+          "live_error": null
         },
         {
           "key": "open-code-workflows",
@@ -2909,13 +3104,13 @@
           "notes": "No homepage, no GitHub Pages, and empty live probe; no live demo. Repo is Markdown-only (37 .md files) with no manifests. License: MIT. Model- and agent-agnostic instructions validated in OpenCode; notable but not a library and has no live demo, so featured is false.",
           "demos": [],
           "thumb": "thumbnails/open-code-workflows.webp",
+          "updated_at": "2026-08-30T19:09:41Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-08-30T19:09:41Z"
+          "live_error": null
         }
       ]
     },
@@ -2958,13 +3153,13 @@
             }
           ],
           "thumb": "thumbnails/tc-livive-org.webp",
+          "updated_at": "2026-10-07T09:56:05Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 506,
           "live_final_url": "https://tc.livive.org/",
-          "live_error": null,
-          "updated_at": "2026-10-07T09:56:05Z"
+          "live_error": null
         },
         {
           "key": "docker-sql-lessons",
@@ -3000,13 +3195,13 @@
           "notes": "No description or homepage set on GitHub; no CNAME and Pages disabled, so no live URL. 18 files across two lessons; top-level docker-compose.yml runs the Lesson 1 monitor service. Uses psutil==6.1.0 pinned, other deps unpinned.",
           "demos": [],
           "thumb": "thumbnails/docker-sql-lessons.webp",
+          "updated_at": "2026-08-16T20:55:37Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-08-16T20:55:37Z"
+          "live_error": null
         },
         {
           "key": "fast-ttt",
@@ -3043,13 +3238,13 @@
           "notes": "No GitHub Pages and no CNAME, so live_url is null. Positioned by the README as a teaching tool for client/server concepts rather than a standalone game, hence Education & Teaching. Local-only server at 0.0.0.0:8000.",
           "demos": [],
           "thumb": "thumbnails/fast-ttt.webp",
+          "updated_at": "2026-08-18T20:31:40Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-08-18T20:31:40Z"
+          "live_error": null
         },
         {
           "key": "python_classes",
@@ -3079,13 +3274,13 @@
           "notes": "Dossier live probe list is empty and has_pages is false, so no live demo exists and live_url is null. No license declared and no manifests. Content is 11 Python files plus README.md (13 files total), a self-contained command-line teaching demo with no dependencies.",
           "demos": [],
           "thumb": "thumbnails/python_classes.webp",
+          "updated_at": "2026-02-08T02:42:39Z",
           "live_ok": null,
           "live_status": null,
           "live_checked_at": null,
           "live_latency_ms": null,
           "live_final_url": null,
-          "live_error": null,
-          "updated_at": "2026-02-08T02:42:39Z"
+          "live_error": null
         }
       ]
     },
@@ -3132,13 +3327,13 @@
             }
           ],
           "thumb": "thumbnails/c3pa-explorer.webp",
+          "updated_at": "2026-09-22T02:24:58Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 133,
           "live_final_url": "https://jpeckenpaugh.github.io/c3pa-explorer/",
-          "live_error": null,
-          "updated_at": "2026-09-22T02:24:58Z"
+          "live_error": null
         },
         {
           "key": "company-hub",
@@ -3193,13 +3388,13 @@
             }
           ],
           "thumb": "thumbnails/company-hub.webp",
+          "updated_at": "2026-09-07T19:56:28Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 133,
           "live_final_url": "https://jpeckenpaugh.github.io/ch/",
-          "live_error": null,
-          "updated_at": "2026-09-07T19:56:28Z"
+          "live_error": null
         },
         {
           "key": "driver-hub-prototype",
@@ -3244,13 +3439,13 @@
             }
           ],
           "thumb": "thumbnails/driver-hub-prototype.webp",
+          "updated_at": "2026-10-07T16:52:13Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 138,
           "live_final_url": "https://jpeckenpaugh.github.io/driver-hub-prototype/",
-          "live_error": null,
-          "updated_at": "2026-10-07T16:52:13Z"
+          "live_error": null
         },
         {
           "key": "executive-assistant",
@@ -3293,13 +3488,13 @@
             }
           ],
           "thumb": "thumbnails/executive-assistant.webp",
+          "updated_at": "2026-09-08T05:47:32Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 143,
           "live_final_url": "https://jpeckenpaugh.github.io/executive-assistant/",
-          "live_error": null,
-          "updated_at": "2026-09-08T05:47:32Z"
+          "live_error": null
         },
         {
           "key": "herons-fountain",
@@ -3335,21 +3530,21 @@
             }
           ],
           "thumb": "thumbnails/herons-fountain.webp",
+          "updated_at": "2026-08-31T11:34:46Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 133,
           "live_final_url": "https://jpeckenpaugh.github.io/herons-fountain/",
-          "live_error": null,
-          "updated_at": "2026-08-31T11:34:46Z"
+          "live_error": null
         },
         {
           "key": "oblique-livive-net",
           "repo": "oblique-livive-net",
           "display_title": "Oblique \u00b7 2.5D World Sandbox",
           "tagline": "A browser-based workbench for building and exploring layered 2.5D game worlds",
-          "short_description": "A collection of browser-based experiments for testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.",
-          "long_description": "Oblique is a static, browser-based workbench for exploring 2.5D game worlds on an orthogonal square grid. Its standalone experiments include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.",
+          "short_description": "A collection of browser-based experiments for building scenes and testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.",
+          "long_description": "Oblique is a static, browser-based workbench for exploring and building 2.5D game worlds on an orthogonal square grid. Its standalone pages include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a Playground scene builder for composing 16x16 scenes with terrain and sprite painting, per-sprite scaling, NPC behavior, ordered events, and local save/import/export; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.",
           "tags": [
             "2.5d",
             "game-assets",
@@ -3361,8 +3556,7 @@
             "JavaScript",
             "HTML",
             "CSS",
-            "Canvas",
-            "Web Audio API"
+            "Canvas"
           ],
           "category": "Web Apps & Prototypes",
           "live_url": "https://oblique.livive.net/",
@@ -3374,6 +3568,10 @@
             {
               "label": "2.5D Model Sandbox",
               "url": "https://oblique.livive.net/sandbox.html"
+            },
+            {
+              "label": "Playground",
+              "url": "https://oblique.livive.net/playground.html"
             },
             {
               "label": "Terrain Layers",
@@ -3389,15 +3587,15 @@
           "featured": true,
           "status": "active experiments",
           "confidence": "high",
-          "notes": "Repository README describes a browser-based 2.5D game-world workbench with three featured live prototypes. Static HTML, CSS, and vanilla JavaScript; GitHub Pages deploys the repository root. The related Sprites model-to-sprite workshop is hosted at sprites.livive.net.",
+          "notes": "Repository README describes a browser-based 2.5D game-world workbench with four featured live pages: the model sandbox, the Playground scene builder (playground.html), Terrain Layers, and Beach Camp. Static HTML, CSS, and vanilla JavaScript; GitHub Pages deploys the repository root. The related Sprites model-to-sprite workshop is hosted at sprites.livive.net.",
           "thumb": "thumbnails/oblique-livive-net.webp",
+          "updated_at": "2026-10-16T01:03:24Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 178,
           "live_final_url": "https://oblique.livive.net/",
-          "live_error": null,
-          "updated_at": "2026-10-16T01:03:24Z"
+          "live_error": null
         },
         {
           "key": "robot-motion-studio",
@@ -3438,13 +3636,13 @@
             }
           ],
           "thumb": "thumbnails/robot-motion-studio.webp",
+          "updated_at": "2026-09-08T08:38:27Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 119,
           "live_final_url": "https://jpeckenpaugh.github.io/robot-motion-studio/",
-          "live_error": null,
-          "updated_at": "2026-09-08T08:38:27Z"
+          "live_error": null
         },
         {
           "key": "vid-factory",
@@ -3489,13 +3687,13 @@
             }
           ],
           "thumb": "thumbnails/vid-factory.webp",
+          "updated_at": "2026-09-08T17:49:59Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 121,
           "live_final_url": "https://jpeckenpaugh.github.io/vid-factory/",
-          "live_error": null,
-          "updated_at": "2026-09-08T17:49:59Z"
+          "live_error": null
         },
         {
           "key": "tech-livive-net",
@@ -3534,13 +3732,13 @@
             }
           ],
           "thumb": "thumbnails/tech-livive-net.webp",
+          "updated_at": "2026-10-04T20:51:18Z",
           "live_ok": true,
           "live_status": 200,
           "live_checked_at": "2026-10-16T01:31:58Z",
           "live_latency_ms": 240,
           "live_final_url": "https://tech.livive.net/",
-          "live_error": null,
-          "updated_at": "2026-10-04T20:51:18Z"
+          "live_error": null
         }
       ]
     }

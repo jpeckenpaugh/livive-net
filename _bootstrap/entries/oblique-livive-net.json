@@ -3,8 +3,8 @@
   "repo": "oblique-livive-net",
   "display_title": "Oblique · 2.5D World Sandbox",
   "tagline": "A browser-based workbench for building and exploring layered 2.5D game worlds",
-  "short_description": "A collection of browser-based experiments for testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.",
-  "long_description": "Oblique is a static, browser-based workbench for exploring 2.5D game worlds on an orthogonal square grid. Its standalone experiments include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.",
+  "short_description": "A collection of browser-based experiments for building scenes and testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.",
+  "long_description": "Oblique is a static, browser-based workbench for exploring and building 2.5D game worlds on an orthogonal square grid. Its standalone pages include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a Playground scene builder for composing 16x16 scenes with terrain and sprite painting, per-sprite scaling, NPC behavior, ordered events, and local save/import/export; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.",
   "tags": [
     "2.5d",
     "game-assets",
@@ -30,6 +30,10 @@
       "url": "https://oblique.livive.net/sandbox.html"
     },
     {
+      "label": "Playground",
+      "url": "https://oblique.livive.net/playground.html"
+    },
+    {
       "label": "Terrain Layers",
       "url": "https://oblique.livive.net/terrain-layers.html"
     },
@@ -43,5 +47,5 @@
   "featured": true,
   "status": "active experiments",
   "confidence": "high",
-  "notes": "Repository README describes a browser-based 2.5D game-world workbench with three featured live prototypes. Static HTML, CSS, and vanilla JavaScript; GitHub Pages deploys the repository root. The related Sprites model-to-sprite workshop is hosted at sprites.livive.net."
+  "notes": "Repository README describes a browser-based 2.5D game-world workbench with four featured live pages: the model sandbox, the Playground scene builder (playground.html), Terrain Layers, and Beach Camp. Static HTML, CSS, and vanilla JavaScript; GitHub Pages deploys the repository root. The related Sprites model-to-sprite workshop is hosted at sprites.livive.net."
 }

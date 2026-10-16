@@ -1,0 +1,40 @@
+{
+  "key": "mines-livive-net",
+  "repo": "mines-livive-net",
+  "display_title": "Minesweeper RL Arcade",
+  "tagline": "Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper",
+  "short_description": "An in-browser retro arcade cabinet running ONNX-exported reinforcement-learning policies on a deterministic 8x8 Minesweeper engine. Play a seeded board, watch the AI reason with a live action mask and confidence heatmap, race a checkpoint on the same seed, or run the whole nine-model library in CONCURRENT mode.",
+  "long_description": "Minesweeper RL Arcade is an in-browser retro arcade cabinet built around a deterministic 8x8 Minesweeper engine and a library of ONNX-exported reinforcement-learning policies. It has five modes: PLAY, where you clear a seeded board with a guaranteed-safe first click; AI, where a selected checkpoint plays the same seed with live confidence, per-cell distributions, and a legal-action mask; RACE, a side-by-side human-vs-policy comparison on an identical seed; CONCURRENT, where every checkpoint in the library steps through one board in lockstep with a CLEARED/DETONATED/STUCK scoreboard and points-sorted leaderboard; and MODELS, a details panel for each manifest checkpoint (family, method, architecture, training recipe, file size, and fixed-seed evaluation). The v2 library ships nine documented checkpoints across four families — a uniform baseline, solver-imitation behaviour clones, REINFORCE policy-gradient models, and kernel/single-conv ablations — evaluated from 0% to 61.4% win rate. The app is a static ES-module bundle that fetches models/manifest.json and runs inference through the pinned onnxruntime-web CDN; the engine, featurization, and action-mask contract stay frozen so scores remain comparable across checkpoints. It deploys to GitHub Pages from main at mines.livive.net, guarded by a smoke workflow that asserts the app, the manifest, and every model file are served live.",
+  "tags": [
+    "minesweeper",
+    "reinforcement-learning",
+    "onnx",
+    "browser-game",
+    "arcade-cabinet",
+    "policy-imitation",
+    "onnxruntime"
+  ],
+  "tech": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "ONNX Runtime Web",
+    "Python",
+    "PyTorch",
+    "Stable-Baselines3"
+  ],
+  "category": "Games",
+  "live_url": "https://mines.livive.net/",
+  "demos": [
+    {
+      "label": "Play the arcade",
+      "url": "https://mines.livive.net/"
+    }
+  ],
+  "repo_url": "https://github.com/jpeckenpaugh/mines-livive-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Repo mines-livive-net uses the GitHub Pages legacy build from main (`/`) with CNAME mines.livive.net. Live probe returns HTTP 200, title 'mines.livive.net — RL Minesweeper arcade cabinet'. The v2 manifest (version 2) ships nine ONNX checkpoints documented in docs/checkpoints.md and the in-app MODELS tab. Built by the Paperclip team across AIA-10 through AIA-19; deterministic boards support a `?seed=` query string."
+}
