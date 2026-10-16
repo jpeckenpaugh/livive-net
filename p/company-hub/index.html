@@ -31,7 +31,9 @@
   "name": "Company Hub",
   "description": "Internal web app to view and maintain company profiles",
   "url": "https://www.livive.net/p/company-hub/",
-  "image": "https://www.livive.net/thumbnails/company-hub.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/company-hub.webp"
+  ],
   "genre": "Web Apps & Prototypes",
   "keywords": "Docker, fpdf2, FastAPI, aiosqlite, fastapi-users, Python, SQLAlchemy, SQLite, Bootstrap, Alembic, JavaScript",
   "isPartOf": {
@@ -52,7 +54,8 @@
   "video": {
     "@type": "VideoObject",
     "contentUrl": "https://www.livive.net/previews/company-hub.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/company-hub.webp"
+    "thumbnailUrl": "https://www.livive.net/previews/company-hub.webp",
+    "duration": "PT30S"
   }
 }
 </script>
@@ -98,7 +101,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -111,7 +118,7 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/company-hub.webm" poster="/thumbnails/company-hub.webp"></video></div></div>
+    <div class="hero"><div class="media"><img src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/company-hub.webm" poster="/previews/company-hub.webp"></video></div></div>
     <h1 class="title">Company Hub</h1>
     <div class="meta">
       
@@ -130,6 +137,7 @@
       <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/ch/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/ch/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
+    
     <div class="section"><h3>About</h3><p>Company Hub is a self-contained internal web app for a small, globally distributed firm to view and maintain information about the companies it works with. It distinguishes structured company data (stored in a relational database) from files and generated artifacts (stored as object-like files on disk), and is meant as a lightweight backbone for other internal workflows rather than a full CRM. Features include browsing and searching companies, country filtering, editable company profiles, standardized industries and locations, per-company references, news and logos, file/artifact upload and download, and one-page PDF summary generation. Sprint 03 added role-based access (guest, read-only, user, admin), admin user management, and optional Google SSO. The backend is FastAPI on async SQLAlchemy 2.0 with SQLite and versioned Alembic migrations, auth via fastapi-users with cookie sessions, and a static Bootstrap SPA frontend served by the app. It also ships OpenCode tools and agents that use the same authenticated API.</p></div>
     <div class="section"><h3>Summary</h3><p>A lightweight internal web app for a small firm to browse, view and edit profiles of the companies it works with, manage related files, and generate PDF summaries.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Docker</li><li>fpdf2</li><li>FastAPI</li><li>aiosqlite</li><li>fastapi-users</li><li>Python</li><li>SQLAlchemy</li><li>SQLite</li><li>Bootstrap</li><li>Alembic</li><li>JavaScript</li></ul></div>
@@ -140,7 +148,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

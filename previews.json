@@ -36,14 +36,23 @@
     },
     "game-pending": {
       "video": "previews/game-pending.webm",
-      "poster": "thumbnails/game-pending.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
-      "width": 640,
-      "height": 400,
-      "bytes": 154882,
-      "captured_at": "2026-10-16T02:01:45.731Z",
-      "source": "https://jpeckenpaugh.github.io/game-pending/"
+      "poster": "previews/game-pending.webp",
+      "mode": "demo",
+      "duration_ms": 30000,
+      "width": 960,
+      "height": 600,
+      "bytes": 2070791,
+      "captured_at": "2026-10-16T22:23:00.000Z",
+      "source": "https://jpeckenpaugh.github.io/game-pending/",
+      "gallery": [
+        { "src": "previews/game-pending/01-title.webp", "label": "Title screen", "alt": "Game Pending title screen in the original black-and-white style" },
+        { "src": "previews/game-pending/02-options.webp", "label": "Customize and options", "alt": "Customize screen with Robot template, Arcade colors, Wand, and starting power-ups" },
+        { "src": "previews/game-pending/03-choose-power.webp", "label": "Choose Power", "alt": "Choose Power screen with three power-up cards over a sunset arena" },
+        { "src": "previews/game-pending/04-original.webp", "label": "Original · Classic / Classic", "alt": "Classic black-and-white stick-figure gameplay in the original style" },
+        { "src": "previews/game-pending/05-emoji.webp", "label": "Emoji · Emoji Color / Pastel", "alt": "Emoji Color character jumping through a pastel arena" },
+        { "src": "previews/game-pending/06-farm.webp", "label": "Farm · Farm / Natural", "alt": "Farm character preset moving across a naturally colored arena" },
+        { "src": "previews/game-pending/07-robot.webp", "label": "Robot · Robot / Arcade", "alt": "Robot character in the Arcade palette with active power-ups" }
+      ]
     },
     "EuchreGame": {
       "video": "previews/EuchreGame.webm",

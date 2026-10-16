@@ -31,7 +31,9 @@
   "name": "RAG Data Synthesizer",
   "description": "Build realistic fictional document corpora for RAG development and testing",
   "url": "https://www.livive.net/p/rag-data-synthesizer/",
-  "image": "https://www.livive.net/thumbnails/rag-data-synthesizer.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/rag-data-synthesizer.webp"
+  ],
   "genre": "AI/ML Experiments",
   "keywords": "Python, WeasyPrint, mistune, PyYAML, pypdf, Pillow",
   "isPartOf": {
@@ -92,7 +94,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -120,6 +126,7 @@
       <a class="btn btn-ghost" href="/#project=rag-data-synthesizer">Open interactive view &rarr;</a>
     </div>
     
+    
     <div class="section"><h3>About</h3><p>RAG Data Synthesizer is a workflow and toolset for building realistic fictional document collections for retrieval-augmented generation development and evaluation. It supports collection planning, staff-authored source documents, fact and relationship tracking, visual assets, PDF rendering, and release review. The repository does not automatically generate document prose; a coordinator uses bounded author and reviewer agents to draft and reconcile content, while scripts generate scenario visuals and render approved Markdown to searchable PDFs. Its first scenario is the Northstar Urgent Care Cooperative, a fictional three-site clinic network, with 21 approved Markdown documents, rendered PDFs totaling 64 pages, a staff registry, corpus plan, shared-fact ledger, visual assets, a generated PDF index, and rendering provenance. The Python tools are scenario-neutral enough to render another Markdown collection and generate configured visuals; a second scenario, validated evaluation set, full ingestion manifest, and automated corpus-wide validator remain future work. All organizations, people, policies, events, and records are fictional and intended as educational test material.</p></div>
     <div class="section"><h3>Summary</h3><p>An agentic workflow and Python toolset to draft, reconcile, visualize, and render realistic fictional document collections for developing and evaluating RAG pipelines.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Python</li><li>WeasyPrint</li><li>mistune</li><li>PyYAML</li><li>pypdf</li><li>Pillow</li></ul></div>
@@ -130,7 +137,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

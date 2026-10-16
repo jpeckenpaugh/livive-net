@@ -31,7 +31,9 @@
   "name": "Video Content Factory",
   "description": "Organize video content ideas and draft AI scripts with browser-native TTS",
   "url": "https://www.livive.net/p/vid-factory/",
-  "image": "https://www.livive.net/thumbnails/vid-factory.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/vid-factory.webp"
+  ],
   "genre": "Web Apps & Prototypes",
   "keywords": "JavaScript, Python, FastAPI, SQLite, sql.js, WebAssembly, kokoro-js, OPFS, WebGPU, Bootstrap 5, HTML/CSS",
   "isPartOf": {
@@ -52,7 +54,8 @@
   "video": {
     "@type": "VideoObject",
     "contentUrl": "https://www.livive.net/previews/vid-factory.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/vid-factory.webp"
+    "thumbnailUrl": "https://www.livive.net/previews/vid-factory.webp",
+    "duration": "PT30S"
   }
 }
 </script>
@@ -98,7 +101,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -111,7 +118,7 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/vid-factory.webm" poster="/thumbnails/vid-factory.webp"></video></div></div>
+    <div class="hero"><div class="media"><img src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/vid-factory.webm" poster="/previews/vid-factory.webp"></video></div></div>
     <h1 class="title">Video Content Factory</h1>
     <div class="meta">
       
@@ -130,6 +137,7 @@
       <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/vid-factory/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/vid-factory/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
+    
     <div class="section"><h3>About</h3><p>Video Content Factory is a web application for organizing early-stage content ideas and drafts. Its primary local runtime is a browser-native standalone application (browser-edition/) that runs entirely client-side with no backend server: a dedicated Web Worker database layer uses vendored sql.js (SQLite compiled to WebAssembly) with persistence in the Origin Private File System (OPFS), communicating through an RPC message-passing protocol between the UI (app.js) and db-worker.js. It manages catalogs for applications (YouTube, TikTok, Instagram) and companies (Acme Studio, Northstar Media, Pine &amp; Peak), content projects with optional application/company links, and one persisted script/prompt draft per project. Workspace settings store AI provider credentials (Gemini, OpenAI, Ollama) in a local SQLite ai_settings table with custom endpoint URLs and connectivity tests; API keys are stripped during export. A client-side AI script generator formulates formatted drafts from user prompts and confirms before overwriting manual drafts. A dedicated TTS worker (tts-worker.js) runs kokoro-js speech synthesis in WebAssembly/WebGPU, exposing voice selection (af_heart, af_bella, am_adam, am_michael), a 0.75x-1.25x speed slider, an inline HTML5 audio preview player, and local audio track persistence with metadata (voice_id, speed, script_snapshot, duration). Workspaces are portable via JSON export/import with structural validation and seed reset. The original FastAPI JSON API and Bootstrap browser UI (backend/ and frontend/, pinned fastapi==0.115.12 and uvicorn[standard]==0.34.0) remain available unchanged as a parity reference and fallback runtime, serving a seeded local SQLite database (backend/data/vid_factory.db). Multi-speaker timeline synchronization, cloud rendering pipelines, server-side audio processing, and cloud sync are explicitly deferred. Status: Sprint 02 complete (client-side AI &amp; dialogue TTS), verified pass with sandbox environment limitations.</p></div>
     <div class="section"><h3>Summary</h3><p>A browser-centric web application for organizing early-stage video content ideas, managing catalogs of applications and companies, drafting scripts with client-side AI providers, and synthesizing dialogue with in-browser text-to-speech.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>Python</li><li>FastAPI</li><li>SQLite</li><li>sql.js</li><li>WebAssembly</li><li>kokoro-js</li><li>OPFS</li><li>WebGPU</li><li>Bootstrap 5</li><li>HTML/CSS</li></ul></div>
@@ -140,7 +148,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

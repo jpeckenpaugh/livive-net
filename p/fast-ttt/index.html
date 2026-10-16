@@ -31,7 +31,9 @@
   "name": "fast-ttt",
   "description": "ASCII tic-tac-toe over HTTP, played with curl to teach client/server",
   "url": "https://www.livive.net/p/fast-ttt/",
-  "image": "https://www.livive.net/thumbnails/fast-ttt.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/fast-ttt.webp"
+  ],
   "genre": "Education & Teaching",
   "keywords": "Python, FastAPI, uvicorn, SQLAlchemy, SQLite, pydantic, pytest, httpx",
   "isPartOf": {
@@ -92,7 +94,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -120,6 +126,7 @@
       <a class="btn btn-ghost" href="/#project=fast-ttt">Open interactive view &rarr;</a>
     </div>
     
+    
     <div class="section"><h3>About</h3><p>fast-ttt is a minimal teaching tool that demonstrates client/server principles using a game of tic-tac-toe. Two players interact over plain HTTP with curl or a web browser, and the FastAPI server replies with ASCII boards and text only — no HTML, JavaScript, CSS, or JSON (the sole exception being FastAPI&#39;s auto-generated Swagger UI at /docs). It supports creating games, viewing boards, playing numbered moves, random auto-moves, per-game move history, and home-page statistics, with winning lines highlighted. Game state is persisted in SQLite via SQLAlchemy, and moves commit atomically across board, turn, status, and history. Docs (OVERVIEW.md and FAST-API.md) are served by the app itself to explain how clients and servers communicate.</p></div>
     <div class="section"><h3>Summary</h3><p>A text-based tic-tac-toe game served by FastAPI that responds in pure plain text, playable by two players using curl or a browser.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>uvicorn</li><li>SQLAlchemy</li><li>SQLite</li><li>pydantic</li><li>pytest</li><li>httpx</li></ul></div>
@@ -130,7 +137,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

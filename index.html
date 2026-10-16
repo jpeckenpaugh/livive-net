@@ -824,6 +824,11 @@
   .episode .ep-body span { color: var(--muted); font-size: .85rem; }
   .episode .ep-go { flex: 0 0 auto; }
 
+  .shots { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 18px; padding: 0; margin: 0; }
+  .shot { margin: 0; background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .shot img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: #000; }
+  .shot figcaption { padding: 10px 12px; font-size: .85rem; color: var(--muted); font-weight: 700; }
+
   footer.site {
     border-top: 1px solid var(--border); margin-top: 40px; padding: 30px 20px 60px;
     color: var(--muted); font-size: .88rem; text-align: center;
@@ -862,22 +867,22 @@
 
 <main id="main"><!-- projects:start -->
 <section class="billboard" aria-labelledby="hero-title">
-    <div class="billboard-backdrop" style="background-image:url('/thumbnails/oblique-livive-net.webp')" aria-hidden="true"></div>
+    <div class="billboard-backdrop" style="background-image:url('/thumbnails/game-pending.webp')" aria-hidden="true"></div>
     <div class="billboard-fade" aria-hidden="true"></div>
     <div class="billboard-inner">
       <p class="flag"><span class="mark" aria-hidden="true">L</span> Livive original · New this week</p>
-      <h1 id="hero-title">Oblique · 2.5D World Sandbox</h1>
+      <h1 id="hero-title">Game Pending</h1>
       <div class="meta">
-        <span class="badge">Web Apps &amp; Prototypes</span>
+        <span class="badge">Games</span>
         <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
         <span class="badge">Updated today</span>
-        <span class="badge status">active experiments</span>
+        <span class="badge status">prototype</span>
       </div>
-      <p class="tagline">A browser-based workbench for building and exploring layered 2.5D game worlds</p>
+      <p class="tagline">Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling</p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://oblique.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Explore Oblique<span class="sr-only"> (opens in a new tab)</span></a>
-        <a class="btn btn-ghost" href="p/oblique-livive-net/">&#9432; More info</a>
-        <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/oblique-livive-net" target="_blank" rel="noopener noreferrer">Source<span class="sr-only"> (opens in a new tab)</span></a>
+        <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/game-pending/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+        <a class="btn btn-ghost" href="p/game-pending/">&#9432; More info</a>
+        <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/game-pending" target="_blank" rel="noopener noreferrer">Source<span class="sr-only"> (opens in a new tab)</span></a>
       </div>
     </div>
   </section>
@@ -887,8 +892,24 @@
       <span class="rail-sub">freshly shipped</span>
     </div>
     <div class="track" tabindex="0" role="group" aria-label="New this week, scroll horizontally"><article class="card">
+      <a class="card-link" href="p/game-pending/" aria-label="Game Pending — open details">
+        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/previews/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
+        <span class="scrim" aria-hidden="true"></span>
+        <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
+        <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
+        <span class="caption"><h3>Game Pending</h3><span class="tagline">Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling</span></span>
+      </a>
+    </article><article class="card">
+      <a class="card-link" href="p/snow-compliance-demo/" aria-label="Snowflake Compliance Demo — open details">
+        <div class="poster has-preview" data-preview="/previews/snow-compliance-demo.webm" data-poster="/thumbnails/snow-compliance-demo.webp"><img loading="lazy" src="/thumbnails/snow-compliance-demo.webp" alt="Snowflake Compliance Demo — Board-review plan and working POC for a Snowflake legal-compliance platform">
+        <span class="scrim" aria-hidden="true"></span>
+        <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
+        <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
+        <span class="caption"><h3>Snowflake Compliance Demo</h3><span class="tagline">Board-review plan and working POC for a Snowflake legal-compliance platform</span></span>
+      </a>
+    </article><article class="card">
       <a class="card-link" href="p/oblique-livive-net/" aria-label="Oblique · 2.5D World Sandbox — open details">
-        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/thumbnails/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
+        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/previews/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -901,14 +922,6 @@
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
         <span class="caption"><h3>Minesweeper RL Arcade</h3><span class="tagline">Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper</span></span>
-      </a>
-    </article><article class="card">
-      <a class="card-link" href="p/snow-compliance-demo/" aria-label="Snowflake Compliance Demo — open details">
-        <div class="poster has-preview" data-preview="/previews/snow-compliance-demo.webm" data-poster="/thumbnails/snow-compliance-demo.webp"><img loading="lazy" src="/thumbnails/snow-compliance-demo.webp" alt="Snowflake Compliance Demo — Board-review plan and working POC for a Snowflake legal-compliance platform">
-        <span class="scrim" aria-hidden="true"></span>
-        <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
-        <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
-        <span class="caption"><h3>Snowflake Compliance Demo</h3><span class="tagline">Board-review plan and working POC for a Snowflake legal-compliance platform</span></span>
       </a>
     </article><article class="card">
       <a class="card-link" href="p/lokarta/" aria-label="Lokarta — open details">
@@ -959,14 +972,6 @@
         <span class="caption"><h3>EuchreGame</h3><span class="tagline">Headless Python Euchre engine with AI data factory and browser sandbox</span></span>
       </a>
     </article><article class="card">
-      <a class="card-link" href="p/game-pending/" aria-label="Game Pending — open details">
-        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/thumbnails/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
-        <span class="scrim" aria-hidden="true"></span>
-        <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
-        <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
-        <span class="caption"><h3>Game Pending</h3><span class="tagline">Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling</span></span>
-      </a>
-    </article><article class="card">
       <a class="card-link" href="p/chk-livive-net/" aria-label="Classic Checkers &amp; AI Arena — open details">
         <div class="poster has-preview" data-preview="/previews/chk-livive-net.webm" data-poster="/thumbnails/chk-livive-net.webp"><img loading="lazy" src="/thumbnails/chk-livive-net.webp" alt="Classic Checkers &amp; AI Arena — English Draughts with in-browser WebLLM AI, persona banter, and a spectator arena">
         <span class="scrim" aria-hidden="true"></span>
@@ -1015,7 +1020,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/game-pending/" aria-label="Game Pending — open details">
-        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/thumbnails/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
+        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/previews/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1143,7 +1148,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/c3pa-explorer/" aria-label="C3PA Explorer — open details">
-        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/thumbnails/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
+        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/previews/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1151,7 +1156,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/company-hub/" aria-label="Company Hub — open details">
-        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/thumbnails/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
+        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/previews/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1159,7 +1164,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/driver-hub-prototype/" aria-label="Driver Hub Prototype — open details">
-        <div class="poster has-preview" data-preview="/previews/driver-hub-prototype.webm" data-poster="/thumbnails/driver-hub-prototype.webp"><img loading="lazy" src="/thumbnails/driver-hub-prototype.webp" alt="Driver Hub Prototype — Uber-style ride-hailing prototype connecting drivers and passengers in real time">
+        <div class="poster has-preview" data-preview="/previews/driver-hub-prototype.webm" data-poster="/previews/driver-hub-prototype.webp"><img loading="lazy" src="/thumbnails/driver-hub-prototype.webp" alt="Driver Hub Prototype — Uber-style ride-hailing prototype connecting drivers and passengers in real time">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1167,7 +1172,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/executive-assistant/" aria-label="Executive Assistant — open details">
-        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/thumbnails/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
+        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/previews/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1175,7 +1180,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/herons-fountain/" aria-label="Heron&#39;s Fountain — 2D Simulation — open details">
-        <div class="poster has-preview" data-preview="/previews/herons-fountain.webm" data-poster="/thumbnails/herons-fountain.webp"><img loading="lazy" src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain">
+        <div class="poster has-preview" data-preview="/previews/herons-fountain.webm" data-poster="/previews/herons-fountain.webp"><img loading="lazy" src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1183,7 +1188,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/oblique-livive-net/" aria-label="Oblique · 2.5D World Sandbox — open details">
-        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/thumbnails/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
+        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/previews/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1191,7 +1196,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/robot-motion-studio/" aria-label="Robot Motion Studio — open details">
-        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/thumbnails/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
+        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/previews/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1199,7 +1204,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/vid-factory/" aria-label="Video Content Factory — open details">
-        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/thumbnails/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
+        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/previews/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1207,7 +1212,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/tech-livive-net/" aria-label="tech.livive.net — open details">
-        <div class="poster has-preview" data-preview="/previews/tech-livive-net.webm" data-poster="/thumbnails/tech-livive-net.webp"><img loading="lazy" src="/thumbnails/tech-livive-net.webp" alt="tech.livive.net — A small static technical notebook on software, systems, and the web">
+        <div class="poster has-preview" data-preview="/previews/tech-livive-net.webm" data-poster="/previews/tech-livive-net.webp"><img loading="lazy" src="/thumbnails/tech-livive-net.webp" alt="tech.livive.net — A small static technical notebook on software, systems, and the web">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1221,8 +1226,24 @@
       <span class="rail-sub">latest work first</span>
     </div>
     <div class="track" tabindex="0" role="group" aria-label="Recently updated, scroll horizontally"><article class="card">
+      <a class="card-link" href="p/game-pending/" aria-label="Game Pending — open details">
+        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/previews/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
+        <span class="scrim" aria-hidden="true"></span>
+        <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
+        <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
+        <span class="caption"><h3>Game Pending</h3><span class="tagline">Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling</span></span>
+      </a>
+    </article><article class="card">
+      <a class="card-link" href="p/snow-compliance-demo/" aria-label="Snowflake Compliance Demo — open details">
+        <div class="poster has-preview" data-preview="/previews/snow-compliance-demo.webm" data-poster="/thumbnails/snow-compliance-demo.webp"><img loading="lazy" src="/thumbnails/snow-compliance-demo.webp" alt="Snowflake Compliance Demo — Board-review plan and working POC for a Snowflake legal-compliance platform">
+        <span class="scrim" aria-hidden="true"></span>
+        <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
+        <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
+        <span class="caption"><h3>Snowflake Compliance Demo</h3><span class="tagline">Board-review plan and working POC for a Snowflake legal-compliance platform</span></span>
+      </a>
+    </article><article class="card">
       <a class="card-link" href="p/oblique-livive-net/" aria-label="Oblique · 2.5D World Sandbox — open details">
-        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/thumbnails/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
+        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/previews/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1235,14 +1256,6 @@
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
         <span class="caption"><h3>Minesweeper RL Arcade</h3><span class="tagline">Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper</span></span>
-      </a>
-    </article><article class="card">
-      <a class="card-link" href="p/snow-compliance-demo/" aria-label="Snowflake Compliance Demo — open details">
-        <div class="poster has-preview" data-preview="/previews/snow-compliance-demo.webm" data-poster="/thumbnails/snow-compliance-demo.webp"><img loading="lazy" src="/thumbnails/snow-compliance-demo.webp" alt="Snowflake Compliance Demo — Board-review plan and working POC for a Snowflake legal-compliance platform">
-        <span class="scrim" aria-hidden="true"></span>
-        <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
-        <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
-        <span class="caption"><h3>Snowflake Compliance Demo</h3><span class="tagline">Board-review plan and working POC for a Snowflake legal-compliance platform</span></span>
       </a>
     </article><article class="card">
       <a class="card-link" href="p/lokarta/" aria-label="Lokarta — open details">
@@ -1291,14 +1304,6 @@
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
         <span class="caption"><h3>EuchreGame</h3><span class="tagline">Headless Python Euchre engine with AI data factory and browser sandbox</span></span>
-      </a>
-    </article><article class="card">
-      <a class="card-link" href="p/game-pending/" aria-label="Game Pending — open details">
-        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/thumbnails/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
-        <span class="scrim" aria-hidden="true"></span>
-        <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
-        <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
-        <span class="caption"><h3>Game Pending</h3><span class="tagline">Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling</span></span>
       </a>
     </article><article class="card">
       <a class="card-link" href="p/chk-livive-net/" aria-label="Classic Checkers &amp; AI Arena — open details">
@@ -1365,7 +1370,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/game-pending/" aria-label="Game Pending — open details">
-        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/thumbnails/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
+        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/previews/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1493,7 +1498,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/c3pa-explorer/" aria-label="C3PA Explorer — open details">
-        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/thumbnails/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
+        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/previews/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1501,7 +1506,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/company-hub/" aria-label="Company Hub — open details">
-        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/thumbnails/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
+        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/previews/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1509,7 +1514,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/driver-hub-prototype/" aria-label="Driver Hub Prototype — open details">
-        <div class="poster has-preview" data-preview="/previews/driver-hub-prototype.webm" data-poster="/thumbnails/driver-hub-prototype.webp"><img loading="lazy" src="/thumbnails/driver-hub-prototype.webp" alt="Driver Hub Prototype — Uber-style ride-hailing prototype connecting drivers and passengers in real time">
+        <div class="poster has-preview" data-preview="/previews/driver-hub-prototype.webm" data-poster="/previews/driver-hub-prototype.webp"><img loading="lazy" src="/thumbnails/driver-hub-prototype.webp" alt="Driver Hub Prototype — Uber-style ride-hailing prototype connecting drivers and passengers in real time">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1517,7 +1522,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/executive-assistant/" aria-label="Executive Assistant — open details">
-        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/thumbnails/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
+        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/previews/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1525,7 +1530,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/herons-fountain/" aria-label="Heron&#39;s Fountain — 2D Simulation — open details">
-        <div class="poster has-preview" data-preview="/previews/herons-fountain.webm" data-poster="/thumbnails/herons-fountain.webp"><img loading="lazy" src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain">
+        <div class="poster has-preview" data-preview="/previews/herons-fountain.webm" data-poster="/previews/herons-fountain.webp"><img loading="lazy" src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1533,7 +1538,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/oblique-livive-net/" aria-label="Oblique · 2.5D World Sandbox — open details">
-        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/thumbnails/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
+        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/previews/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1541,7 +1546,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/robot-motion-studio/" aria-label="Robot Motion Studio — open details">
-        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/thumbnails/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
+        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/previews/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1549,7 +1554,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/vid-factory/" aria-label="Video Content Factory — open details">
-        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/thumbnails/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
+        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/previews/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1588,7 +1593,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/game-pending/" aria-label="Game Pending — open details">
-        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/thumbnails/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
+        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/previews/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1847,7 +1852,7 @@
     </div>
     <div class="track" tabindex="0" role="group" aria-label="Web Apps &amp; Prototypes, scroll horizontally"><article class="card">
       <a class="card-link" href="p/c3pa-explorer/" aria-label="C3PA Explorer — open details">
-        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/thumbnails/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
+        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/previews/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1855,7 +1860,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/company-hub/" aria-label="Company Hub — open details">
-        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/thumbnails/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
+        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/previews/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1863,7 +1868,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/driver-hub-prototype/" aria-label="Driver Hub Prototype — open details">
-        <div class="poster has-preview" data-preview="/previews/driver-hub-prototype.webm" data-poster="/thumbnails/driver-hub-prototype.webp"><img loading="lazy" src="/thumbnails/driver-hub-prototype.webp" alt="Driver Hub Prototype — Uber-style ride-hailing prototype connecting drivers and passengers in real time">
+        <div class="poster has-preview" data-preview="/previews/driver-hub-prototype.webm" data-poster="/previews/driver-hub-prototype.webp"><img loading="lazy" src="/thumbnails/driver-hub-prototype.webp" alt="Driver Hub Prototype — Uber-style ride-hailing prototype connecting drivers and passengers in real time">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1871,7 +1876,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/executive-assistant/" aria-label="Executive Assistant — open details">
-        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/thumbnails/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
+        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/previews/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1879,7 +1884,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/herons-fountain/" aria-label="Heron&#39;s Fountain — 2D Simulation — open details">
-        <div class="poster has-preview" data-preview="/previews/herons-fountain.webm" data-poster="/thumbnails/herons-fountain.webp"><img loading="lazy" src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain">
+        <div class="poster has-preview" data-preview="/previews/herons-fountain.webm" data-poster="/previews/herons-fountain.webp"><img loading="lazy" src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1887,7 +1892,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/oblique-livive-net/" aria-label="Oblique · 2.5D World Sandbox — open details">
-        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/thumbnails/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
+        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/previews/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1895,7 +1900,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/robot-motion-studio/" aria-label="Robot Motion Studio — open details">
-        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/thumbnails/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
+        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/previews/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1903,7 +1908,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/vid-factory/" aria-label="Video Content Factory — open details">
-        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/thumbnails/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
+        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/previews/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -1911,7 +1916,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/tech-livive-net/" aria-label="tech.livive.net — open details">
-        <div class="poster has-preview" data-preview="/previews/tech-livive-net.webm" data-poster="/thumbnails/tech-livive-net.webp"><img loading="lazy" src="/thumbnails/tech-livive-net.webp" alt="tech.livive.net — A small static technical notebook on software, systems, and the web">
+        <div class="poster has-preview" data-preview="/previews/tech-livive-net.webm" data-poster="/previews/tech-livive-net.webp"><img loading="lazy" src="/thumbnails/tech-livive-net.webp" alt="tech.livive.net — A small static technical notebook on software, systems, and the web">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2070,7 +2075,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/c3pa-explorer/" aria-label="C3PA Explorer — open details">
-        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/thumbnails/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
+        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/previews/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2078,7 +2083,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/company-hub/" aria-label="Company Hub — open details">
-        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/thumbnails/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
+        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/previews/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2086,7 +2091,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/executive-assistant/" aria-label="Executive Assistant — open details">
-        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/thumbnails/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
+        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/previews/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2094,7 +2099,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/robot-motion-studio/" aria-label="Robot Motion Studio — open details">
-        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/thumbnails/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
+        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/previews/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2102,7 +2107,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/vid-factory/" aria-label="Video Content Factory — open details">
-        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/thumbnails/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
+        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/previews/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2133,7 +2138,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/game-pending/" aria-label="Game Pending — open details">
-        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/thumbnails/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
+        <div class="poster has-preview" data-preview="/previews/game-pending.webm" data-poster="/previews/game-pending.webp"><img loading="lazy" src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2237,7 +2242,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/c3pa-explorer/" aria-label="C3PA Explorer — open details">
-        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/thumbnails/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
+        <div class="poster has-preview" data-preview="/previews/c3pa-explorer.webm" data-poster="/previews/c3pa-explorer.webp"><img loading="lazy" src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2245,7 +2250,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/company-hub/" aria-label="Company Hub — open details">
-        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/thumbnails/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
+        <div class="poster has-preview" data-preview="/previews/company-hub.webm" data-poster="/previews/company-hub.webp"><img loading="lazy" src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2253,7 +2258,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/executive-assistant/" aria-label="Executive Assistant — open details">
-        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/thumbnails/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
+        <div class="poster has-preview" data-preview="/previews/executive-assistant.webm" data-poster="/previews/executive-assistant.webp"><img loading="lazy" src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2261,7 +2266,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/herons-fountain/" aria-label="Heron&#39;s Fountain — 2D Simulation — open details">
-        <div class="poster has-preview" data-preview="/previews/herons-fountain.webm" data-poster="/thumbnails/herons-fountain.webp"><img loading="lazy" src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain">
+        <div class="poster has-preview" data-preview="/previews/herons-fountain.webm" data-poster="/previews/herons-fountain.webp"><img loading="lazy" src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2269,7 +2274,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/oblique-livive-net/" aria-label="Oblique · 2.5D World Sandbox — open details">
-        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/thumbnails/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
+        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/previews/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2277,7 +2282,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/robot-motion-studio/" aria-label="Robot Motion Studio — open details">
-        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/thumbnails/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
+        <div class="poster has-preview" data-preview="/previews/robot-motion-studio.webm" data-poster="/previews/robot-motion-studio.webp"><img loading="lazy" src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2285,7 +2290,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/vid-factory/" aria-label="Video Content Factory — open details">
-        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/thumbnails/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
+        <div class="poster has-preview" data-preview="/previews/vid-factory.webm" data-poster="/previews/vid-factory.webp"><img loading="lazy" src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2293,7 +2298,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/tech-livive-net/" aria-label="tech.livive.net — open details">
-        <div class="poster has-preview" data-preview="/previews/tech-livive-net.webm" data-poster="/thumbnails/tech-livive-net.webp"><img loading="lazy" src="/thumbnails/tech-livive-net.webp" alt="tech.livive.net — A small static technical notebook on software, systems, and the web">
+        <div class="poster has-preview" data-preview="/previews/tech-livive-net.webm" data-poster="/previews/tech-livive-net.webp"><img loading="lazy" src="/thumbnails/tech-livive-net.webp" alt="tech.livive.net — A small static technical notebook on software, systems, and the web">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2388,7 +2393,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/oblique-livive-net/" aria-label="Oblique · 2.5D World Sandbox — open details">
-        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/thumbnails/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
+        <div class="poster has-preview" data-preview="/previews/oblique-livive-net.webm" data-poster="/previews/oblique-livive-net.webp"><img loading="lazy" src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge new">New</span><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2396,7 +2401,7 @@
       </a>
     </article><article class="card">
       <a class="card-link" href="p/tech-livive-net/" aria-label="tech.livive.net — open details">
-        <div class="poster has-preview" data-preview="/previews/tech-livive-net.webm" data-poster="/thumbnails/tech-livive-net.webp"><img loading="lazy" src="/thumbnails/tech-livive-net.webp" alt="tech.livive.net — A small static technical notebook on software, systems, and the web">
+        <div class="poster has-preview" data-preview="/previews/tech-livive-net.webm" data-poster="/previews/tech-livive-net.webp"><img loading="lazy" src="/thumbnails/tech-livive-net.webp" alt="tech.livive.net — A small static technical notebook on software, systems, and the web">
         <span class="scrim" aria-hidden="true"></span>
         <span class="ribbons"><span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span></span>
         <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>
@@ -2682,6 +2687,11 @@ function renderDetail(rawKey) {
     </li>`).join("");
 
   const related = relatedTo(p);
+  const gallery = (pv && Array.isArray(pv.gallery)) ? pv.gallery : [];
+  const shots = gallery.map((g) => `<figure class="shot">
+      <img loading="lazy" src="/${esc(g.src)}" alt="${esc(g.alt || g.label || p.display_title)}" width="960" height="720">
+      ${g.label ? `<figcaption>${esc(g.label)}</figcaption>` : ""}
+    </figure>`).join("");
   const relatedHtml = related.length ? `
     <section class="detail-section" aria-labelledby="more-like">
       <h3 id="more-like">More like this</h3>
@@ -2707,6 +2717,7 @@ function renderDetail(rawKey) {
         <a class="btn btn-ghost" href="p/${encodeURIComponent(p.key)}/">Static page &rarr;</a>
       </div>
       ${episodes ? `<section class="detail-section" aria-labelledby="eps"><h3 id="eps">Episodes &amp; demos</h3><ul class="episodes">${episodes}</ul></section>` : ""}
+      ${shots ? `<section class="detail-section" aria-labelledby="shots"><h3 id="shots">Screenshots</h3><div class="shots">${shots}</div></section>` : ""}
       ${about ? `<section class="detail-section"><h3>About</h3><p>${esc(about)}</p></section>` : ""}
       ${p.short_description && p.long_description ? `<section class="detail-section"><h3>Summary</h3><p>${esc(p.short_description)}</p></section>` : ""}
       ${tech ? `<section class="detail-section"><h3>Tech</h3>${tech}</section>` : ""}
@@ -2714,7 +2725,11 @@ function renderDetail(rawKey) {
       ${relatedHtml}
     </div>`;
   const dv = main.querySelector(".media video[data-src]");
-  if (dv) { dv.src = dv.dataset.src; const pr = dv.play(); if (pr && pr.catch) pr.catch(() => {}); }
+  if (dv) {
+    dv.src = dv.dataset.src;
+    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) { const pr = dv.play(); if (pr && pr.catch) pr.catch(() => {}); }
+  }
   const h = document.querySelector(".detail-title");
   if (h) h.focus({ preventScroll: true });
   window.scrollTo(0, 0);

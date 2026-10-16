@@ -31,7 +31,9 @@
   "name": "Executive Assistant",
   "description": "Local, single-user web app for tasks, meetings, reminders, and follow-ups",
   "url": "https://www.livive.net/p/executive-assistant/",
-  "image": "https://www.livive.net/thumbnails/executive-assistant.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/executive-assistant.webp"
+  ],
   "genre": "Web Apps & Prototypes",
   "keywords": "Python, FastAPI, SQLAlchemy, SQLite, Jinja2, Bootstrap, JavaScript, SQL.js, Uvicorn",
   "isPartOf": {
@@ -52,7 +54,8 @@
   "video": {
     "@type": "VideoObject",
     "contentUrl": "https://www.livive.net/previews/executive-assistant.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/executive-assistant.webp"
+    "thumbnailUrl": "https://www.livive.net/previews/executive-assistant.webp",
+    "duration": "PT30S"
   }
 }
 </script>
@@ -98,7 +101,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -111,7 +118,7 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/executive-assistant.webm" poster="/thumbnails/executive-assistant.webp"></video></div></div>
+    <div class="hero"><div class="media"><img src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/executive-assistant.webm" poster="/previews/executive-assistant.webp"></video></div></div>
     <h1 class="title">Executive Assistant</h1>
     <div class="meta">
       
@@ -130,6 +137,7 @@
       <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/executive-assistant/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/executive-assistant/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
+    
     <div class="section"><h3>About</h3><p>Executive Assistant is a local, single-user web app for organizing daily responsibilities, priorities, commitments, meetings, follow-ups, contacts, notes, reminders, and quick-capture items in one place. It offers a daily dashboard with priorities, overdue work, upcoming commitments, reminders, and quick actions; task management with low/medium/high priority, due dates, postponement, completion, and daily/weekly/monthly recurrence; meeting and commitment tracking with cancellation, completion, and advisory overlap warnings; meeting preparation and follow-up notes; contact and relationship tracking; a quick-capture inbox processed into tasks, notes, or reminders; unified case-insensitive search with record-type filtering; and in-app reminders with acknowledge, snooze, and dismiss actions. The backend is FastAPI with SQLAlchemy and SQLite, and the interface is server-rendered with Jinja2 and Bootstrap from a CDN. A separate browser proof-of-concept under poc-browser uses sql.js and includes an AI command bar. The app stores data in a local SQLite database and is designed for one local user; authentication, external calendar sync, email delivery, push notifications, and background workers are out of scope. The initial build is complete across the concept, feature, environment, architecture, backend, and frontend stages, but formal verification has not completed yet.</p></div>
     <div class="section"><h3>Summary</h3><p>A local, single-user web app for organizing daily responsibilities, priorities, commitments, meetings, follow-ups, contacts, notes, reminders, and quick-capture items in one place.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>SQLAlchemy</li><li>SQLite</li><li>Jinja2</li><li>Bootstrap</li><li>JavaScript</li><li>SQL.js</li><li>Uvicorn</li></ul></div>
@@ -140,7 +148,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

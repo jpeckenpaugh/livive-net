@@ -285,7 +285,11 @@ const PAGE_CSS = `
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 `;
 
@@ -297,6 +301,7 @@ function detailPage(p, previews) {
   const about = p.long_description || p.short_description || p.tagline || "";
   const summary = (p.short_description && p.long_description) ? p.short_description : "";
   const pv = previewFor(p, previews);
+  const gallery = (pv && Array.isArray(pv.gallery)) ? pv.gallery : [];
   const tech = (p.tech || []).length
     ? `<ul class="chips">${p.tech.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : "";
   const tags = (p.tags || []).length
@@ -320,19 +325,26 @@ function detailPage(p, previews) {
       <span class="ep-go"><a class="btn btn-ghost" href="${esc(dm.url)}"${EXT}>&#9658; Watch${NEWTAB}</a></span>
     </li>`).join("");
 
+  const shots = gallery.map((g) => `<figure class="shot">
+      <img loading="lazy" src="/${esc(g.src)}" alt="${esc(g.alt || g.label || title)}" width="960" height="720">
+      ${g.label ? `<figcaption>${esc(g.label)}</figcaption>` : ""}
+    </figure>`).join("");
+  const screenshots = shots
+    ? `<div class="section"><h3>Screenshots</h3><div class="shots">${shots}</div></div>` : "";
+
   const ld = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: title,
     description: desc,
     url: pageUrl,
-    image,
+    image: [image, ...gallery.map((g) => `${SITE}/${g.src}`)],
     ...(p.category ? { genre: p.category } : {}),
     ...(p.tech && p.tech.length ? { keywords: p.tech.join(", ") } : {}),
     isPartOf: { "@type": "WebSite", "@id": `${SITE}/#website`, name: SITE_NAME, url: `${SITE}/` },
     author: { "@type": "Person", name: AUTHOR.name, url: AUTHOR.url },
     ...(sameAs.length ? { sameAs } : {}),
-    ...(pv && pv.video ? { video: { "@type": "VideoObject", contentUrl: `${SITE}/${pv.video}`, thumbnailUrl: `${SITE}/${pv.poster || p.thumb}` } } : {}),
+    ...(pv && pv.video ? { video: { "@type": "VideoObject", contentUrl: `${SITE}/${pv.video}`, thumbnailUrl: `${SITE}/${pv.poster || p.thumb}`, ...(pv.duration_ms ? { duration: `PT${Math.round(pv.duration_ms / 1000)}S` } : {}) } } : {}),
   };
 
   return `<!doctype html>
@@ -388,6 +400,7 @@ ${backdrop}
       <a class="btn btn-ghost" href="/#project=${encodeURIComponent(p.key)}">Open interactive view &rarr;</a>
     </div>
     ${episodes ? `<div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes">${episodes}</ul></div>` : ""}
+    ${screenshots}
     ${about ? `<div class="section"><h3>About</h3><p>${esc(about)}</p></div>` : ""}
     ${summary ? `<div class="section"><h3>Summary</h3><p>${esc(summary)}</p></div>` : ""}
     ${tech ? `<div class="section"><h3>Tech</h3>${tech}</div>` : ""}
@@ -398,7 +411,10 @@ ${backdrop}
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

@@ -31,7 +31,9 @@
   "name": "Open Code Workflows",
   "description": "Role-based agent pipelines that turn a seed concept into a web app",
   "url": "https://www.livive.net/p/open-code-workflows/",
-  "image": "https://www.livive.net/thumbnails/open-code-workflows.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/open-code-workflows.webp"
+  ],
   "genre": "Dev Tools",
   "keywords": "Markdown, OpenCode, DeepSeek V4 Flash, FastAPI, SQLite, Bootstrap",
   "isPartOf": {
@@ -92,7 +94,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -120,6 +126,7 @@
       <a class="btn btn-ghost" href="/#project=open-code-workflows">Open interactive view &rarr;</a>
     </div>
     
+    
     <div class="section"><h3>About</h3><p>Open Code Workflows is a reusable set of role-based pipelines for building web apps with an agentic coding assistant. Given a short seed concept, the workflows drive a staged build with human checkpoints through clearly separated roles: concept (human-supplied), feature decomposition, feature briefs, system engineering, architecture, backend, frontend, verification, and documentation. Three pipelines are provided: build (stages 01-09), enhancements (stages 01-10), and debug (stages 01-03). A meta Stage Manager role sequences, dispatches, gates, and audits each stage, spawning and resuming sub-agents per role. The repo includes ready-made seed concepts such as a language tutor, job tracker, client project tracker, sales/inventory tracker, plant nursery, and capstone project tracker. Each generation follows a fixed artifact chain (concept to features to briefs to env scripts to architecture to backend to frontend to verification to README); stages commit and push as their final step. It was designed and validated in OpenCode with DeepSeek V4 Flash but is model- and agent-agnostic, written as plain Markdown instructions.</p></div>
     <div class="section"><h3>Summary</h3><p>Reusable Markdown-defined agent pipelines (build, enhancements, debug) that drive a staged, human-checkpointed build of a web app from a seed concept via stage-managed sub-agents.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Markdown</li><li>OpenCode</li><li>DeepSeek V4 Flash</li><li>FastAPI</li><li>SQLite</li><li>Bootstrap</li></ul></div>
@@ -130,7 +137,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

@@ -31,7 +31,9 @@
   "name": "Oblique · 2.5D World Sandbox",
   "description": "A browser-based workbench for building and exploring layered 2.5D game worlds",
   "url": "https://www.livive.net/p/oblique-livive-net/",
-  "image": "https://www.livive.net/thumbnails/oblique-livive-net.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/oblique-livive-net.webp"
+  ],
   "genre": "Web Apps & Prototypes",
   "keywords": "JavaScript, HTML, CSS, Canvas",
   "isPartOf": {
@@ -52,7 +54,8 @@
   "video": {
     "@type": "VideoObject",
     "contentUrl": "https://www.livive.net/previews/oblique-livive-net.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/oblique-livive-net.webp"
+    "thumbnailUrl": "https://www.livive.net/previews/oblique-livive-net.webp",
+    "duration": "PT30S"
   }
 }
 </script>
@@ -98,7 +101,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -111,13 +118,13 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/oblique-livive-net.webm" poster="/thumbnails/oblique-livive-net.webp"></video></div></div>
+    <div class="hero"><div class="media"><img src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/oblique-livive-net.webm" poster="/previews/oblique-livive-net.webp"></video></div></div>
     <h1 class="title">Oblique · 2.5D World Sandbox</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
       <span>Web Apps &amp; Prototypes</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated today</span>
+      <span>Updated yesterday</span>
     </div>
     <p class="lead">A browser-based workbench for building and exploring layered 2.5D game worlds</p>
     <div class="actions">
@@ -146,6 +153,7 @@
       <span class="ep-body"><strong>Beach Camp</strong><span>https://oblique.livive.net/beach-camp.html</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://oblique.livive.net/beach-camp.html" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
+    
     <div class="section"><h3>About</h3><p>Oblique is a static, browser-based workbench for exploring and building 2.5D game worlds on an orthogonal square grid. Its standalone pages include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a Playground scene builder for composing 16x16 scenes with terrain and sprite painting, per-sprite scaling, NPC behavior, ordered events, and local save/import/export; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.</p></div>
     <div class="section"><h3>Summary</h3><p>A collection of browser-based experiments for building scenes and testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Canvas</li></ul></div>
@@ -156,7 +164,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

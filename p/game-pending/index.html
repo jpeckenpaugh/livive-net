@@ -31,7 +31,16 @@
   "name": "Game Pending",
   "description": "Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling",
   "url": "https://www.livive.net/p/game-pending/",
-  "image": "https://www.livive.net/thumbnails/game-pending.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/game-pending.webp",
+    "https://www.livive.net/previews/game-pending/01-title.webp",
+    "https://www.livive.net/previews/game-pending/02-options.webp",
+    "https://www.livive.net/previews/game-pending/03-choose-power.webp",
+    "https://www.livive.net/previews/game-pending/04-original.webp",
+    "https://www.livive.net/previews/game-pending/05-emoji.webp",
+    "https://www.livive.net/previews/game-pending/06-farm.webp",
+    "https://www.livive.net/previews/game-pending/07-robot.webp"
+  ],
   "genre": "Games",
   "keywords": "JavaScript, HTML5 Canvas, ES Modules, Docker, nginx",
   "isPartOf": {
@@ -52,7 +61,8 @@
   "video": {
     "@type": "VideoObject",
     "contentUrl": "https://www.livive.net/previews/game-pending.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/game-pending.webp"
+    "thumbnailUrl": "https://www.livive.net/previews/game-pending.webp",
+    "duration": "PT30S"
   }
 }
 </script>
@@ -98,7 +108,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -111,13 +125,13 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/game-pending.webm" poster="/thumbnails/game-pending.webp"></video></div></div>
+    <div class="hero"><div class="media"><img src="/thumbnails/game-pending.webp" alt="Game Pending — Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/game-pending.webm" poster="/previews/game-pending.webp"></video></div></div>
     <h1 class="title">Game Pending</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
       <span>Games</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated yesterday</span>
+      <span>Updated today</span>
     </div>
     <p class="lead">Vanilla JS Canvas side-scroller gaming prototype built to be extended by AI/ML tooling</p>
     <div class="actions">
@@ -130,6 +144,28 @@
       <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/game-pending/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/game-pending/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="/previews/game-pending/01-title.webp" alt="Game Pending title screen in the original black-and-white style" width="960" height="720">
+      <figcaption>Title screen</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="/previews/game-pending/02-options.webp" alt="Customize screen with Robot template, Arcade colors, Wand, and starting power-ups" width="960" height="720">
+      <figcaption>Customize and options</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="/previews/game-pending/03-choose-power.webp" alt="Choose Power screen with three power-up cards over a sunset arena" width="960" height="720">
+      <figcaption>Choose Power</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="/previews/game-pending/04-original.webp" alt="Classic black-and-white stick-figure gameplay in the original style" width="960" height="720">
+      <figcaption>Original · Classic / Classic</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="/previews/game-pending/05-emoji.webp" alt="Emoji Color character jumping through a pastel arena" width="960" height="720">
+      <figcaption>Emoji · Emoji Color / Pastel</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="/previews/game-pending/06-farm.webp" alt="Farm character preset moving across a naturally colored arena" width="960" height="720">
+      <figcaption>Farm · Farm / Natural</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="/previews/game-pending/07-robot.webp" alt="Robot character in the Arcade palette with active power-ups" width="960" height="720">
+      <figcaption>Robot · Robot / Arcade</figcaption>
+    </figure></div></div>
     <div class="section"><h3>About</h3><p>Game Pending is a browser-based side-scroller built with vanilla JavaScript and ES modules on an HTML5 Canvas, with no build step or runtime package dependency. It defaults to a black-and-white line-art Classic presentation with optional color themes applied to the sky, terrain, opponents, gear, weapons, attacks, and drone. Gameplay includes multi-area levels with platforms, underground cave routes, ladders, and left/right wrap portals, plus power-ups such as Boots (mid-air jumps and rocket glide), Shield (hit-blocking and kinetic discharge), Drone strikes, Specs auto-aim, and Radar. A Customize menu adjusts the game name, tagline, starting level, target FPS, weapon (Gun, Club, Wand), opponent behavior, spawning, and world generation, along with template presets, color themes, drone styles, player and opponent head/face options, and starting power-up levels. The project is described as a prototype designed to be extended via AI/ML tooling, and ships a Docker/nginx setup plus OpenCode integration for development.</p></div>
     <div class="section"><h3>Summary</h3><p>A small HTML5 Canvas side-scroller built with vanilla JavaScript and ES modules, featuring black-and-white line art, optional color themes, power-ups, and a Customize menu.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>HTML5 Canvas</li><li>ES Modules</li><li>Docker</li><li>nginx</li></ul></div>
@@ -140,7 +176,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

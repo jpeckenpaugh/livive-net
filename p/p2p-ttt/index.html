@@ -31,7 +31,9 @@
   "name": "Peer-to-peer Tic-Tac-Toe",
   "description": "Serverless browser Tic-Tac-Toe played directly between two peers",
   "url": "https://www.livive.net/p/p2p-ttt/",
-  "image": "https://www.livive.net/thumbnails/p2p-ttt.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/p2p-ttt.webp"
+  ],
   "genre": "Games",
   "keywords": "JavaScript, WebRTC, HTML, CSS, Web Workers, SQLite (sql.js/WASM), jsQR, qrcode-generator, Python",
   "isPartOf": {
@@ -52,7 +54,8 @@
   "video": {
     "@type": "VideoObject",
     "contentUrl": "https://www.livive.net/previews/p2p-ttt.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/p2p-ttt.webp"
+    "thumbnailUrl": "https://www.livive.net/thumbnails/p2p-ttt.webp",
+    "duration": "PT4S"
   }
 }
 </script>
@@ -98,7 +101,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -130,6 +137,7 @@
       <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/p2p-ttt/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/p2p-ttt/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
+    
     <div class="section"><h3>About</h3><p>p2p-ttt is a proof of concept for a local-first, peer-to-peer browser game. Two people start and play Tic-Tac-Toe without an application backend, account system, signaling service, or shared database. A host opens the static site, picks X or O, and shares an invitation link (or QR code); the friend opens it and returns a reply link; the two browsers then establish a direct WebRTC data-channel connection for live play. Each browser runs its own durable local workspace backed by a Web Worker, using sql.js (SQLite compiled to WebAssembly) to persist series, matches, ordered moves, outcomes, and replay history. QR codes are generated with qrcode-generator and scanned with jsQR via the camera. The project is documented with concept, architecture, plan, devops, backlog, and design specs, and includes a small Python static server for local development.</p></div>
     <div class="section"><h3>Summary</h3><p>A local-first, static-web Tic-Tac-Toe proof of concept where two browsers connect directly over WebRTC after exchanging ordinary invitation and reply links, with no backend, accounts, or signaling service.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>WebRTC</li><li>HTML</li><li>CSS</li><li>Web Workers</li><li>SQLite (sql.js/WASM)</li><li>jsQR</li><li>qrcode-generator</li><li>Python</li></ul></div>
@@ -140,7 +148,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>

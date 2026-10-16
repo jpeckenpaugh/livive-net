@@ -31,7 +31,9 @@
   "name": "Heron's Fountain — 2D Simulation",
   "description": "Interactive browser simulation of a pump-less Heron's fountain",
   "url": "https://www.livive.net/p/herons-fountain/",
-  "image": "https://www.livive.net/thumbnails/herons-fountain.webp",
+  "image": [
+    "https://www.livive.net/thumbnails/herons-fountain.webp"
+  ],
   "genre": "Web Apps & Prototypes",
   "keywords": "JavaScript, HTML5, Canvas",
   "isPartOf": {
@@ -52,7 +54,8 @@
   "video": {
     "@type": "VideoObject",
     "contentUrl": "https://www.livive.net/previews/herons-fountain.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/herons-fountain.webp"
+    "thumbnailUrl": "https://www.livive.net/previews/herons-fountain.webp",
+    "duration": "PT30S"
   }
 }
 </script>
@@ -98,7 +101,11 @@
   .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
   .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
   .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
-  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .episode .ep-body{flex:1 1 auto;min-width:0}  .episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  .shots{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding:0;margin:0}
+  .shot{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+  .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#000}
+  .shot figcaption{padding:10px 12px;font-size:.85rem;color:var(--muted);font-weight:700}
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 </style>
 </head>
@@ -111,7 +118,7 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/herons-fountain.webm" poster="/thumbnails/herons-fountain.webp"></video></div></div>
+    <div class="hero"><div class="media"><img src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/herons-fountain.webm" poster="/previews/herons-fountain.webp"></video></div></div>
     <h1 class="title">Heron&#39;s Fountain — 2D Simulation</h1>
     <div class="meta">
       
@@ -130,6 +137,7 @@
       <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/herons-fountain/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/herons-fountain/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
+    
     <div class="section"><h3>About</h3><p>Heron&#39;s Fountain is a zero-dependency, browser-based 2D simulation of a Heron&#39;s fountain. It models three water regions (a fixed top Basin, sealed Chamber A, and sealed Chamber B) connected by pipes P1, P2, and P3, treating the two sealed air spaces as one shared volume at a single pressure. Physics uses a polytropic pressure-volume relation (P = P0 (V0 / V)^k, default isothermal k = 1) and an orifice flow approximation (Q = Cd A sqrt(2 dP / rho)) accounting for hydrostatic head, with water conserved as transferred volumes. The animated side view draws the apparatus, liquid flow, airflow, and a horizontal particle jet, with live readouts of elapsed time, jet velocity, flow rate, vessel volumes, and fill percentages. Controls include Invert (exchanging chamber elevations and reversing flow), Auto Invert with selectable triggers (jet speed, flow rate, chamber fill, elapsed cycle time, or settled condition) plus threshold and dwell, simulation Speed of 1x-16x, and Reset. It is a deliberate lumped approximation that omits turbulence, surface tension, viscosity, temperature change, and detailed inversion mechanics. No build step or external dependency is required; serve the directory as static files.</p></div>
     <div class="section"><h3>Summary</h3><p>An interactive, browser-based 2D approximation of a Heron&#39;s fountain that shows how falling water compresses trapped air to drive a fountain jet without a pump.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>HTML5</li><li>Canvas</li></ul></div>
@@ -140,7 +148,10 @@
 <script>
 (function(){
   var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if(v){v.src=v.dataset.src;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  }
 })();
 </script>
 </body>
