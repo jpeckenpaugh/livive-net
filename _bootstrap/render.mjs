@@ -266,6 +266,29 @@ const PAGE_CSS = `
   .media img,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
   .media video{z-index:1}
   .media.ph{display:grid;place-items:center;font-size:3rem;font-weight:900;color:#fff;background:linear-gradient(135deg,hsl(var(--h) 66% 40%),hsl(calc(var(--h) + 42) 62% 22%))}
+  .carousel{position:relative;aspect-ratio:16/9;background:#000}
+  .carousel .slides{position:absolute;inset:0}
+  .carousel .slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s ease}
+  .carousel .slide.is-active{opacity:1;visibility:visible}
+  .carousel .slide img,.carousel .slide video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .carousel .slide video{z-index:1}
+  .carousel .slide-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;padding:18px 22px 40px;background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.4) 62%,transparent);text-shadow:0 2px 12px rgba(0,0,0,.7)}
+  .carousel .cap-index{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:3px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
+  .carousel .cap-text{font-size:clamp(1rem,2vw,1.4rem);font-weight:800;letter-spacing:-.01em;color:#fff}
+  .carousel .nav-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.45);color:#fff;cursor:pointer;display:grid;place-items:center;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background .18s}
+  .carousel .nav-arrow:hover{background:rgba(0,0,0,.75)}
+  .carousel .nav-arrow.prev{left:14px}.carousel .nav-arrow.next{right:14px}
+  .carousel .nav-arrow svg,.carousel .video-replay svg,.carousel .video-toggle svg{display:block}
+  .carousel .video-toggle{position:absolute;top:14px;right:14px;z-index:6;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;cursor:pointer;font:inherit;font-size:.82rem;font-weight:700;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.3);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .2s}
+  .carousel:hover .video-toggle,.carousel .video-toggle:focus-visible{opacity:1}
+  .carousel:not(.is-video) .video-toggle{display:none}
+  .carousel .video-replay{position:absolute;inset:0;z-index:4;margin:auto;width:86px;height:86px;padding:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;color:#fff;background:rgba(0,0,0,.45);border:2px solid rgba(255,255,255,.7);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transform:scale(.9);transition:opacity .5s ease,visibility .5s,transform .5s ease}
+  .carousel .video-replay.show{opacity:1;visibility:visible;transform:scale(1)}
+  .carousel .video-replay:hover{background:rgba(0,0,0,.7);transform:scale(1.06)}
+  .carousel .dots{position:absolute;left:0;right:0;bottom:12px;z-index:6;display:flex;justify-content:center;gap:8px}
+  .carousel .dots button{width:9px;height:9px;padding:0;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.4);transition:background .18s,transform .18s}
+  .carousel .dots button.is-active{background:#fff;transform:scale(1.25)}
+  @media (hover:none){.carousel .video-toggle{opacity:1}}
   h1.title{margin:26px 0 10px;font-size:clamp(1.8rem,4.4vw,3rem);letter-spacing:-.03em;outline:none}
   .meta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;color:var(--muted);font-size:.92rem;margin-bottom:14px}
   .lead{font-size:clamp(1rem,1.6vw,1.2rem);color:#e2e2e8;max-width:68ch;margin:0 0 20px}
@@ -293,6 +316,40 @@ const PAGE_CSS = `
   footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 `;
 
+const CAR_ICON = {
+  prev: `<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  next: `<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  replay: `<svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg>`,
+  pause: `<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>`,
+};
+
+function carouselHtml(p, pv, gallery) {
+  const total = gallery.length;
+  const poster = `/${esc(pv.poster || p.thumb)}`;
+  const secs = pv.duration_ms ? ` · ${Math.round(pv.duration_ms / 1000)}s` : "";
+  const videoSlide = `<figure class="slide is-active" data-kind="video">
+      <img src="${poster}" alt="${esc(thumbAlt(p))}">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="/${esc(pv.video)}" poster="${poster}"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo">${CAR_ICON.replay}</button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo${secs}</span></figcaption>
+    </figure>`;
+  const imageSlides = gallery.map((g, i) => `<figure class="slide" data-kind="image">
+      <img loading="lazy" src="/${esc(g.src)}" alt="${esc(g.alt || g.label || p.display_title)}" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">${String(i + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}</span><span class="cap-text">${esc(g.label || "")}</span></figcaption>
+    </figure>`).join("");
+  const dots = `<div class="dots" role="group" aria-label="Slide navigation">${Array.from(
+    { length: total + 1 },
+    (_, i) => `<button type="button" aria-label="Slide ${i + 1}${i === 0 ? " (demo)" : ""}"${i === 0 ? ' class="is-active" aria-current="true"' : ""}></button>`
+  ).join("")}</div>`;
+  return `<div class="carousel is-video" data-carousel>
+      <div class="slides">${videoSlide}${imageSlides}</div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide">${CAR_ICON.prev}</button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide">${CAR_ICON.next}</button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true">${CAR_ICON.pause}</span><span class="lbl">Pause</span></button>
+      ${dots}
+    </div>`;
+}
+
 function detailPage(p, previews) {
   const title = p.display_title;
   const desc = (p.tagline || p.short_description || SITE_DESC).slice(0, 300);
@@ -312,7 +369,9 @@ function detailPage(p, previews) {
     ? `<div class="detail-backdrop" style="background-image:url('/${esc(p.thumb)}')" aria-hidden="true"></div>` : "";
 
   const media = p.thumb
-    ? `<div class="media"><img src="/${esc(p.thumb)}" alt="${esc(thumbAlt(p))}"${thumbDims(p)}>${
+    ? (pv && pv.video && gallery.length)
+      ? carouselHtml(p, pv, gallery)
+      : `<div class="media"><img src="/${esc(p.thumb)}" alt="${esc(thumbAlt(p))}"${thumbDims(p)}>${
         pv && pv.video ? `<video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/${esc(pv.video)}" poster="/${esc(pv.poster || p.thumb)}"></video>` : ""
       }</div>`
     : `<div class="media ph" style="--h:${hue(p.key)}" aria-hidden="true">${esc(initials(p.display_title))}</div>`;
@@ -410,10 +469,56 @@ ${backdrop}
 </div>
 <script>
 (function(){
-  var v=document.querySelector(".media video[data-src]");
-  if(v){v.src=v.dataset.src;
-    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  var ICON={
+    play:'<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg>',
+    pause:'<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>'
+  };
+  function initCarousel(root){
+    var slides=[].slice.call(root.querySelectorAll('.slide'));
+    if(!slides.length)return;
+    var prev=root.querySelector('.nav-arrow.prev'),next=root.querySelector('.nav-arrow.next');
+    var dots=[].slice.call(root.querySelectorAll('.dots button'));
+    var video=root.querySelector('video'),toggle=root.querySelector('.video-toggle'),replay=root.querySelector('.video-replay');
+    var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    var i=0,autoStarted=false,timer=null;
+    if(video&&video.dataset.src)video.src=video.dataset.src;
+    function setToggle(playing){if(!toggle)return;toggle.querySelector('.lbl').textContent=playing?'Pause':'Play';toggle.querySelector('.ic').innerHTML=playing?ICON.pause:ICON.play;toggle.setAttribute('aria-label',playing?'Pause demo':'Play demo');}
+    function showReplay(on){if(replay)replay.classList.toggle('show',on);}
+    function playVideo(){if(!video)return;autoStarted=true;clearTimeout(timer);showReplay(false);var p=video.play();if(p&&p.catch)p.catch(function(){});}
+    function armAutoStart(){if(!video||reduce){showReplay(!!video);return;}clearTimeout(timer);timer=setTimeout(playVideo,2000);}
+    if(video){
+      video.addEventListener('play',function(){showReplay(false);setToggle(true);});
+      video.addEventListener('pause',function(){setToggle(false);});
+      video.addEventListener('ended',function(){video.pause();try{video.currentTime=0;}catch(e){}showReplay(true);setToggle(false);});
+    }
+    function go(n){
+      i=(n+slides.length)%slides.length;
+      slides.forEach(function(s,k){s.classList.toggle('is-active',k===i);});
+      dots.forEach(function(d,k){d.classList.toggle('is-active',k===i);if(k===i)d.setAttribute('aria-current','true');else d.removeAttribute('aria-current');});
+      root.classList.toggle('is-video',i===0);
+      if(video){
+        if(i===0){video.pause();try{video.currentTime=0;}catch(e){}if(autoStarted)showReplay(true);else armAutoStart();}
+        else{clearTimeout(timer);video.pause();showReplay(false);}
+      }
+    }
+    if(prev)prev.addEventListener('click',function(){go(i-1);});
+    if(next)next.addEventListener('click',function(){go(i+1);});
+    dots.forEach(function(d,k){d.addEventListener('click',function(){go(k);});});
+    if(toggle)toggle.addEventListener('click',function(){if(!video)return;if(video.paused)playVideo();else video.pause();});
+    if(replay)replay.addEventListener('click',playVideo);
+    var vs=video?video.closest('.slide'):null;
+    if(vs)vs.addEventListener('click',function(e){if(e.target.closest('button'))return;if(!video)return;if(video.paused)playVideo();else video.pause();});
+    root.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){e.preventDefault();go(i-1);}else if(e.key==='ArrowRight'){e.preventDefault();go(i+1);}});
+    armAutoStart();
+  }
+  var root=document.querySelector('.carousel[data-carousel]');
+  if(root){initCarousel(root);}
+  else{
+    var v=document.querySelector('.media video[data-src]');
+    if(v){v.src=v.dataset.src;
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(!reduce){var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});}
+    }
   }
 })();
 </script>
