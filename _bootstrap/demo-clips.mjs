@@ -46,6 +46,11 @@ const CHROME_EXECUTABLE =
   process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ||
   null;
 
+// A full ffmpeg (e.g. /usr/bin/ffmpeg on CI) can decode Playwright's vp9
+// recording and re-encode it to a smaller, broadly-compatible vp8 webm.
+// Without one, the raw recording is kept as-is.
+const FFMPEG_OVERRIDE = process.env.LIVIVE_FFMPEG || null;
+
 /* ------------------------------------------------------------------ */
 /* Curated interaction scripts (best-effort; every step is non-fatal)   */
 /* ------------------------------------------------------------------ */
@@ -153,6 +158,7 @@ async function launchBrowser() {
 }
 
 async function findFfmpeg() {
+  if (FFMPEG_OVERRIDE && existsSync(FFMPEG_OVERRIDE)) return FFMPEG_OVERRIDE;
   const base = process.env.PLAYWRIGHT_BROWSERS_PATH || path.join(os.homedir(), ".cache", "ms-playwright");
   if (!existsSync(base)) return null;
   const dirs = await readdir(base).catch(() => []);
@@ -374,7 +380,8 @@ async function main() {
           const small = path.join(videoDir, `${key}.small.webm`);
           const okFf = await run(ffmpeg, [
             "-y", "-i", rawVideo, "-an",
-            "-c:v", "libvpx", "-b:v", "650k", "-crf", "34",
+            "-c:v", "libvpx", "-b:v", "480k", "-crf", "37",
+            "-cpu-used", "4", "-deadline", "good", "-auto-alt-ref", "0",
             "-vf", `scale=${OUT.width}:${OUT.height}`,
             small,
           ]);

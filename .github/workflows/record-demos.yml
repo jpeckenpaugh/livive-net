@@ -57,12 +57,16 @@ jobs:
           PW_VERSION="$(node -p "require('playwright-core/package.json').version")"
           echo "playwright-core $PW_VERSION"
           npx -y playwright@"$PW_VERSION" install --with-deps chromium
+          # System ffmpeg decodes the vp9 recording and re-encodes a light vp8 clip.
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
 
       - name: Record demo clips
         working-directory: _bootstrap
         env:
           LIVIVE_DEMO_MS: ${{ inputs.ms }}
           LIVIVE_DEMO_CONCURRENCY: "2"
+          LIVIVE_FFMPEG: /usr/bin/ffmpeg
           IN_KEYS: ${{ inputs.keys }}
           IN_CATEGORY: ${{ inputs.category }}
           IN_FORCE: ${{ inputs.force }}
