@@ -803,7 +803,7 @@
   .detail-hero video { z-index: 1; }
   .detail-hero .media.ph { display: grid; place-items: center; font-size: 3rem; font-weight: 900; color: #fff; background: linear-gradient(135deg, hsl(var(--h) 66% 40%), hsl(calc(var(--h) + 42) 62% 22%)); }
   /* ---- detail media carousel ---- */
-  .detail-hero .carousel { position: relative; aspect-ratio: 16 / 9; background: #000; }
+  .detail-hero .carousel { position: relative; aspect-ratio: 4 / 3; background: #000; }
   .carousel .slides { position: absolute; inset: 0; }
   .carousel .slide {
     position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden;
@@ -811,7 +811,7 @@
   }
   .carousel .slide.is-active { opacity: 1; visibility: visible; }
   .carousel .slide img, .carousel .slide video {
-    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block;
   }
   .carousel .slide video { z-index: 1; }
   .carousel .slide-cap {
@@ -2750,6 +2750,9 @@ function initCarousel(root) {
   let i = 0;
   let autoStarted = false;
   let timer = null;
+  let tour = false;
+  let tourTimer = null;
+  const TOUR_MS = 3000;
 
   if (video && video.dataset.src) video.src = video.dataset.src;
 
@@ -2775,15 +2778,33 @@ function initCarousel(root) {
     clearTimeout(timer);
     timer = setTimeout(playVideo, 2000);
   }
+  function stopTour() {
+    tour = false;
+    if (tourTimer) { clearTimeout(tourTimer); tourTimer = null; }
+  }
+  function tourStep() {
+    if (!tour) return;
+    const next = i + 1;
+    if (next >= slides.length) { stopTour(); go(0); return; }
+    go(next);
+    tourTimer = setTimeout(tourStep, TOUR_MS);
+  }
+  function startTour() {
+    if (tour || reduce || slides.length < 2) return;
+    tour = true;
+    tourStep();
+  }
 
   if (video) {
     video.addEventListener("play", () => { showReplay(false); setToggle(true); });
     video.addEventListener("pause", () => setToggle(false));
     video.addEventListener("ended", () => {
+      autoStarted = true;
       video.pause();
       try { video.currentTime = 0; } catch (e) {}
       showReplay(true);
       setToggle(false);
+      startTour();
     });
   }
 
@@ -2808,23 +2829,26 @@ function initCarousel(root) {
     }
   }
 
-  if (prevBtn) prevBtn.addEventListener("click", () => go(i - 1));
-  if (nextBtn) nextBtn.addEventListener("click", () => go(i + 1));
-  dots.forEach((d, k) => d.addEventListener("click", () => go(k)));
+  if (prevBtn) prevBtn.addEventListener("click", () => { stopTour(); go(i - 1); });
+  if (nextBtn) nextBtn.addEventListener("click", () => { stopTour(); go(i + 1); });
+  dots.forEach((d, k) => d.addEventListener("click", () => { stopTour(); go(k); }));
   if (toggle) toggle.addEventListener("click", () => {
+    stopTour();
     if (!video) return;
     if (video.paused) playVideo(); else video.pause();
   });
-  if (replay) replay.addEventListener("click", playVideo);
+  if (replay) replay.addEventListener("click", () => { stopTour(); playVideo(); });
   const videoSlideEl = video ? video.closest(".slide") : null;
   if (videoSlideEl) videoSlideEl.addEventListener("click", (e) => {
     if (e.target.closest("button")) return;
+    stopTour();
     if (!video) return;
     if (video.paused) playVideo(); else video.pause();
   });
+  root.addEventListener("pointerdown", stopTour);
   root.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") { e.preventDefault(); go(i - 1); }
-    else if (e.key === "ArrowRight") { e.preventDefault(); go(i + 1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); stopTour(); go(i - 1); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); stopTour(); go(i + 1); }
   });
 
   armAutoStart();
