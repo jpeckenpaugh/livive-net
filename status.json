@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-10-16T01:31:58Z",
+  "checked_at": "2026-10-16T02:02:20Z",
   "status": "ok",
-  "live_total": 26,
-  "live_ok": 26,
+  "live_total": 28,
+  "live_ok": 28,
   "live_down": 0,
   "down_keys": [],
   "failed": [],
@@ -12,7 +12,7 @@
       "url": "https://aom.livive.net/",
       "ok": true,
       "status": 200,
-      "latency_ms": 377,
+      "latency_ms": 704,
       "final_url": "https://aom.livive.net/",
       "error": null,
       "demos": []
@@ -22,7 +22,7 @@
       "url": "https://chk.livive.net/",
       "ok": true,
       "status": 200,
-      "latency_ms": 307,
+      "latency_ms": 442,
       "final_url": "https://chk.livive.net/",
       "error": null,
       "demos": []
@@ -32,7 +32,7 @@
       "url": "https://jpeckenpaugh.github.io/EuchreGame/",
       "ok": true,
       "status": 200,
-      "latency_ms": 273,
+      "latency_ms": 368,
       "final_url": "https://jpeckenpaugh.github.io/EuchreGame/",
       "error": null,
       "demos": []
@@ -42,7 +42,7 @@
       "url": "https://jpeckenpaugh.github.io/game-pending/",
       "ok": true,
       "status": 200,
-      "latency_ms": 262,
+      "latency_ms": 342,
       "final_url": "https://jpeckenpaugh.github.io/game-pending/",
       "error": null,
       "demos": []
@@ -52,7 +52,7 @@
       "url": "https://lk.livive.net/",
       "ok": true,
       "status": 200,
-      "latency_ms": 393,
+      "latency_ms": 291,
       "final_url": "https://lk.livive.net/",
       "error": null,
       "demos": [
@@ -61,7 +61,7 @@
           "status": 200,
           "ok": true,
           "final_url": "https://jpeckenpaugh.github.io/lokarta-v3/",
-          "latency_ms": 136,
+          "latency_ms": 139,
           "error": null,
           "role": "demo"
         },
@@ -70,7 +70,7 @@
           "status": 200,
           "ok": true,
           "final_url": "https://jpeckenpaugh.github.io/lokarta-v2/",
-          "latency_ms": 133,
+          "latency_ms": 117,
           "error": null,
           "role": "demo"
         }
@@ -81,8 +81,18 @@
       "url": "https://lunar.livive.net/",
       "ok": true,
       "status": 200,
-      "latency_ms": 371,
+      "latency_ms": 448,
       "final_url": "https://lunar.livive.net/",
+      "error": null,
+      "demos": []
+    },
+    "mines-livive-net": {
+      "title": "Minesweeper RL Arcade",
+      "url": "https://mines.livive.net/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 421,
+      "final_url": "https://mines.livive.net/",
       "error": null,
       "demos": []
     },
@@ -91,7 +101,7 @@
       "url": "https://jpeckenpaugh.github.io/p2p-ttt/",
       "ok": true,
       "status": 200,
-      "latency_ms": 279,
+      "latency_ms": 342,
       "final_url": "https://jpeckenpaugh.github.io/p2p-ttt/",
       "error": null,
       "demos": []
@@ -111,7 +121,7 @@
       "url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
       "ok": true,
       "status": 200,
-      "latency_ms": 137,
+      "latency_ms": 289,
       "final_url": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
       "error": null,
       "demos": []
@@ -121,7 +131,7 @@
       "url": "https://jpeckenpaugh.github.io/rag-poc/",
       "ok": true,
       "status": 200,
-      "latency_ms": 145,
+      "latency_ms": 128,
       "final_url": "https://jpeckenpaugh.github.io/rag-poc/",
       "error": null,
       "demos": []
@@ -131,7 +141,7 @@
       "url": "https://seekdepth.net/",
       "ok": true,
       "status": 200,
-      "latency_ms": 212,
+      "latency_ms": 325,
       "final_url": "https://seekdepth.net/",
       "error": null,
       "demos": []
@@ -141,7 +151,7 @@
       "url": "https://seekdepth.org/",
       "ok": true,
       "status": 200,
-      "latency_ms": 385,
+      "latency_ms": 393,
       "final_url": "https://seekdepth.org/",
       "error": null,
       "demos": []
@@ -151,7 +161,7 @@
       "url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/",
       "ok": true,
       "status": 200,
-      "latency_ms": 138,
+      "latency_ms": 291,
       "final_url": "https://jpeckenpaugh.github.io/hebrew-language-tutor/",
       "error": null,
       "demos": []
@@ -161,7 +171,7 @@
       "url": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/",
       "ok": true,
       "status": 200,
-      "latency_ms": 142,
+      "latency_ms": 82,
       "final_url": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/",
       "error": null,
       "demos": []
@@ -171,17 +181,55 @@
       "url": "https://jpeckenpaugh.github.io/nexttext/",
       "ok": true,
       "status": 200,
-      "latency_ms": 153,
+      "latency_ms": 160,
       "final_url": "https://jpeckenpaugh.github.io/nexttext/",
       "error": null,
       "demos": []
+    },
+    "snow-compliance-demo": {
+      "title": "Snowflake Compliance Demo",
+      "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 135,
+      "final_url": "https://jpeckenpaugh.github.io/snow-compliance-demo/",
+      "error": null,
+      "demos": [
+        {
+          "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/architecture.html",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://jpeckenpaugh.github.io/snow-compliance-demo/architecture.html",
+          "latency_ms": 123,
+          "error": null,
+          "role": "demo"
+        },
+        {
+          "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/poc.html",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://jpeckenpaugh.github.io/snow-compliance-demo/poc.html",
+          "latency_ms": 97,
+          "error": null,
+          "role": "demo"
+        },
+        {
+          "url": "https://jpeckenpaugh.github.io/snow-compliance-demo/demo/index.html",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://jpeckenpaugh.github.io/snow-compliance-demo/demo/index.html",
+          "latency_ms": 96,
+          "error": null,
+          "role": "demo"
+        }
+      ]
     },
     "sprites-livive-net": {
       "title": "Sprites \u00b7 Model-to-Sprite Workshop",
       "url": "https://sprites.livive.net/",
       "ok": true,
       "status": 200,
-      "latency_ms": 250,
+      "latency_ms": 197,
       "final_url": "https://sprites.livive.net/",
       "error": null,
       "demos": [
@@ -190,7 +238,7 @@
           "status": 200,
           "ok": true,
           "final_url": "https://oblique.livive.net/",
-          "latency_ms": 157,
+          "latency_ms": 203,
           "error": null,
           "role": "demo"
         }
@@ -201,7 +249,7 @@
       "url": "https://tc.livive.org/",
       "ok": true,
       "status": 200,
-      "latency_ms": 506,
+      "latency_ms": 329,
       "final_url": "https://tc.livive.org/",
       "error": null,
       "demos": []
@@ -211,7 +259,7 @@
       "url": "https://jpeckenpaugh.github.io/c3pa-explorer/",
       "ok": true,
       "status": 200,
-      "latency_ms": 133,
+      "latency_ms": 131,
       "final_url": "https://jpeckenpaugh.github.io/c3pa-explorer/",
       "error": null,
       "demos": []
@@ -221,7 +269,7 @@
       "url": "https://jpeckenpaugh.github.io/ch/",
       "ok": true,
       "status": 200,
-      "latency_ms": 133,
+      "latency_ms": 141,
       "final_url": "https://jpeckenpaugh.github.io/ch/",
       "error": null,
       "demos": []
@@ -231,7 +279,7 @@
       "url": "https://jpeckenpaugh.github.io/driver-hub-prototype/",
       "ok": true,
       "status": 200,
-      "latency_ms": 138,
+      "latency_ms": 128,
       "final_url": "https://jpeckenpaugh.github.io/driver-hub-prototype/",
       "error": null,
       "demos": []
@@ -241,7 +289,7 @@
       "url": "https://jpeckenpaugh.github.io/executive-assistant/",
       "ok": true,
       "status": 200,
-      "latency_ms": 143,
+      "latency_ms": 94,
       "final_url": "https://jpeckenpaugh.github.io/executive-assistant/",
       "error": null,
       "demos": []
@@ -251,7 +299,7 @@
       "url": "https://jpeckenpaugh.github.io/herons-fountain/",
       "ok": true,
       "status": 200,
-      "latency_ms": 133,
+      "latency_ms": 79,
       "final_url": "https://jpeckenpaugh.github.io/herons-fountain/",
       "error": null,
       "demos": []
@@ -261,7 +309,7 @@
       "url": "https://oblique.livive.net/",
       "ok": true,
       "status": 200,
-      "latency_ms": 178,
+      "latency_ms": 203,
       "final_url": "https://oblique.livive.net/",
       "error": null,
       "demos": [
@@ -270,7 +318,16 @@
           "status": 200,
           "ok": true,
           "final_url": "https://oblique.livive.net/sandbox.html",
-          "latency_ms": 131,
+          "latency_ms": 146,
+          "error": null,
+          "role": "demo"
+        },
+        {
+          "url": "https://oblique.livive.net/playground.html",
+          "status": 200,
+          "ok": true,
+          "final_url": "https://oblique.livive.net/playground.html",
+          "latency_ms": 267,
           "error": null,
           "role": "demo"
         },
@@ -279,7 +336,7 @@
           "status": 200,
           "ok": true,
           "final_url": "https://oblique.livive.net/terrain-layers.html",
-          "latency_ms": 137,
+          "latency_ms": 219,
           "error": null,
           "role": "demo"
         },
@@ -288,7 +345,7 @@
           "status": 200,
           "ok": true,
           "final_url": "https://oblique.livive.net/beach-camp.html",
-          "latency_ms": 130,
+          "latency_ms": 280,
           "error": null,
           "role": "demo"
         }
@@ -299,7 +356,7 @@
       "url": "https://jpeckenpaugh.github.io/robot-motion-studio/",
       "ok": true,
       "status": 200,
-      "latency_ms": 119,
+      "latency_ms": 270,
       "final_url": "https://jpeckenpaugh.github.io/robot-motion-studio/",
       "error": null,
       "demos": []
@@ -309,7 +366,7 @@
       "url": "https://jpeckenpaugh.github.io/vid-factory/",
       "ok": true,
       "status": 200,
-      "latency_ms": 121,
+      "latency_ms": 124,
       "final_url": "https://jpeckenpaugh.github.io/vid-factory/",
       "error": null,
       "demos": []
@@ -319,7 +376,7 @@
       "url": "https://tech.livive.net/",
       "ok": true,
       "status": 200,
-      "latency_ms": 240,
+      "latency_ms": 261,
       "final_url": "https://tech.livive.net/",
       "error": null,
       "demos": []
