@@ -2,18 +2,19 @@
 /*
  * Static SEO renderer for livive.net.
  *
- * Reads projects.json and writes, in place:
- *   - index.html            -> prerendered project listing + JSON-LD (markers)
- *   - p/<key>/index.html    -> static per-project landing pages (OG + JSON-LD)
+ * Reads projects.json (+ optional previews.json) and writes, in place:
+ *   - index.html            -> prerendered Netflix-style catalogue + JSON-LD
+ *   - p/<key>/index.html    -> static per-project "title" pages (OG + JSON-LD)
  *   - sitemap.xml           -> crawlable URL list (home + project pages)
  *   - robots.txt            -> crawl policy + sitemap pointer
  *
- * The prerendered listing links to the static per-project pages so non-JS
- * crawlers and social scrapers get real project content and per-project
- * Open Graph metadata. The client-side hash detail view in index.html remains
- * the interactive experience for JS users.
+ * The prerendered catalogue mirrors the client-side rails (billboard + genre
+ * rows + signal rows) so non-JS crawlers and social scrapers get real project
+ * content, per-project Open Graph metadata, and preview videos when present.
+ * The client-side hash detail view in index.html remains the interactive
+ * experience for JS users.
  *
- * Run after merge.py / thumbs.mjs:  node _bootstrap/render.mjs
+ * Run after merge.py / thumbs.mjs / previews.mjs:  node _bootstrap/render.mjs
  */
 
 import { mkdir, readFile, writeFile } from "node:fs/promises";
@@ -32,11 +33,14 @@ const INDEX = path.join(ROOT, "index.html");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
 const ROBOTS = path.join(ROOT, "robots.txt");
 const PAGES = path.join(ROOT, "p");
+const PREVIEWS = path.join(ROOT, "previews.json");
 
 const MAIN_START = "<!-- projects:start -->";
 const MAIN_END = "<!-- projects:end -->";
 const JSONLD_START = "<!-- seo:jsonld:start -->";
 const JSONLD_END = "<!-- seo:jsonld:end -->";
+
+const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
 
 const esc = (s) =>
   String(s ?? "").replace(/[&<>"']/g, (c) => (
@@ -52,11 +56,24 @@ const hue = (s) => {
   return h;
 };
 
+const slug = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "x";
+const safeDate = (s) => { const t = Date.parse(s || ""); return Number.isFinite(t) ? t : 0; };
+const isNew = (p) => safeDate(p.updated_at) > 0 && (Date.now() - safeDate(p.updated_at)) < WEEK_MS;
+const relDate = (s) => {
+  const t = safeDate(s); if (!t) return "";
+  const days = Math.round((Date.now() - t) / 86400000);
+  if (days <= 0) return "today";
+  if (days === 1) return "yesterday";
+  if (days < 7) return days + " days ago";
+  if (days < 30) return Math.round(days / 7) + "w ago";
+  if (days < 365) return Math.round(days / 30) + "mo ago";
+  return Math.round(days / 365) + "y ago";
+};
+
 const EXT = ` target="_blank" rel="noopener noreferrer"`;
 const NEWTAB = `<span class="sr-only"> (opens in a new tab)</span>`;
 const pageHref = (p) => `p/${encodeURIComponent(p.key)}/`;
 const absPage = (p) => `${SITE}/${pageHref(p)}`;
-const primaryUrl = (p) => p.has_live_demo ? p.live_url : p.repo_url;
 
 const thumbAlt = (p) => {
   const bits = [p.display_title];
@@ -68,43 +85,117 @@ const thumbAlt = (p) => {
 const thumbDims = (p) => (p.thumb_width && p.thumb_height)
   ? ` width="${Number(p.thumb_width)}" height="${Number(p.thumb_height)}"` : "";
 
-const thumbHtml = (p) => p.thumb
-  ? `<div class="thumb"><img loading="lazy" src="/${esc(p.thumb)}" alt="${esc(thumbAlt(p))}"${thumbDims(p)}></div>`
-  : `<div class="thumb ph" style="--h:${hue(p.key)}" aria-hidden="true">${esc(initials(p.display_title))}</div>`;
+const demosOf = (p) => (p.demos && p.demos.length) ? p.demos
+  : (p.has_live_demo ? [{ label: "Play", url: p.live_url }] : []);
 
-function statusChip(p) {
-  const dot = p.has_live_demo ? `<span class="dot" aria-hidden="true"></span>` : "";
-  const label = esc(p.status || "unknown");
-  return `<span class="badge status" title="Status: ${label}">${dot}${label}</span>`;
+const previewFor = (p, previews) => (previews && previews[p.key]) || null;
+
+function posterMedia(p, previews) {
+  if (!p.thumb) return { html: esc(initials(p.display_title)), ph: true, attrs: "", hasPreview: false };
+  const pv = previewFor(p, previews);
+  const img = `<img loading="lazy" src="/${esc(p.thumb)}" alt="${esc(thumbAlt(p))}"${thumbDims(p)}>`;
+  // Preview <video> is created on demand client-side; the static page stays image-only.
+  const attrs = pv && pv.video
+    ? ` data-preview="/${esc(pv.video)}" data-poster="/${esc(pv.poster || p.thumb)}"`
+    : "";
+  return { html: img, ph: false, attrs, hasPreview: !!(pv && pv.video) };
 }
 
-function demoLinks(p) {
-  const demos = (p.demos && p.demos.length) ? p.demos
-    : (p.has_live_demo ? [{ label: "Play", url: p.live_url }] : []);
-  return demos.map((dm) => `<a href="${esc(dm.url)}"${EXT}>${esc(dm.label)} &rarr;${NEWTAB}</a>`).join("");
-}
-
-// ---- index listing card ----------------------------------------------------
-function card(p) {
+function card(p, previews) {
   const title = esc(p.display_title);
   const href = pageHref(p);
-  const tags = (p.tags || []).slice(0, 5).map((t) => `<li>${esc(t)}</li>`).join("");
+  const media = posterMedia(p, previews);
+  const ribbons = [];
+  if (isNew(p)) ribbons.push(`<span class="badge new">New</span>`);
+  if (p.has_live_demo) ribbons.push(`<span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>`);
+  const poster = media.ph
+    ? `<div class="poster ph" style="--h:${hue(p.key)}" aria-hidden="true">${media.html}</div>`
+    : `<div class="poster${media.hasPreview ? " has-preview" : ""}"${media.attrs}>${media.html}
+        <span class="scrim" aria-hidden="true"></span>
+        <span class="ribbons">${ribbons.join("")}</span>
+        <span class="play" aria-hidden="true"><span>&#9658;</span></span></div>`;
   return `<article class="card">
-      <a class="thumb-link" href="${href}" aria-hidden="true" tabindex="-1">${thumbHtml(p)}</a>
-      <div class="body">
-        <div class="top"><h3><a href="${href}">${title}</a></h3><div class="badges">${statusChip(p)}</div></div>
-        <p class="tagline">${esc(p.tagline)}</p>
-        ${tags ? `<ul class="tags">${tags}</ul>` : ""}
-        <div class="links"><a class="details" href="${href}">Details</a>${demoLinks(p)}<a href="${esc(p.repo_url)}"${EXT}>GitHub${NEWTAB}</a></div>
-      </div>
+      <a class="card-link" href="${href}" aria-label="${title} — open details">
+        ${poster}
+        <span class="caption"><h3>${title}</h3><span class="tagline">${esc(p.tagline || p.category || "")}</span></span>
+      </a>
     </article>`;
 }
 
-function listing(data) {
-  return data.groups.map((g) => `  <section class="cat">
-    <h2>${esc(g.category)} <span class="count">${g.projects.length}</span></h2>
-    <div class="grid">${g.projects.map(card).join("")}</div>
+function buildRails(data) {
+  const projects = data.projects.slice();
+  const byUpdated = projects.slice().sort((a, b) => safeDate(b.updated_at) - safeDate(a.updated_at));
+  const rails = [];
+  const fresh = byUpdated.filter(isNew);
+  if (fresh.length) rails.push({ id: "new", title: "New this week", sub: "freshly shipped", items: fresh });
+  const playable = projects.filter((p) => p.has_live_demo || (p.demos && p.demos.length));
+  if (playable.length) rails.push({ id: "playable", title: "Playable right now", sub: "no install, just a browser", items: playable });
+  rails.push({ id: "updated", title: "Recently updated", sub: "latest work first", items: byUpdated.slice(0, 14) });
+  const featured = projects.filter((p) => p.featured);
+  if (featured.length) rails.push({ id: "featured", title: "Featured picks", sub: "the ones worth a look", items: featured });
+  const order = data.category_order || [];
+  const cats = [...new Set([...order, ...projects.map((p) => p.category).filter(Boolean)])];
+  for (const c of cats) {
+    const items = projects.filter((p) => p.category === c);
+    if (items.length) rails.push({ id: "cat-" + c, title: c, sub: "", items });
+  }
+  const techCount = {};
+  for (const p of projects) for (const t of (p.tech || [])) techCount[t] = (techCount[t] || 0) + 1;
+  const topTech = Object.entries(techCount).filter(([, n]) => n >= 4).sort((a, b) => b[1] - a[1]).slice(0, 3);
+  for (const [t] of topTech) {
+    rails.push({ id: "tech-" + t, title: "Built with " + t, sub: "", items: projects.filter((p) => (p.tech || []).includes(t)) });
+  }
+  return rails;
+}
+
+function pickHero(data, previews) {
+  const projects = data.projects;
+  const withPreview = projects.filter((p) => previewFor(p, previews) && p.has_live_demo);
+  const pool = withPreview.length ? withPreview : projects.filter((p) => p.featured && p.has_live_demo);
+  const pool2 = pool.length ? pool : projects.filter((p) => p.has_live_demo);
+  const pool3 = pool2.length ? pool2 : projects;
+  const fresh = pool3.filter(isNew);
+  return (fresh.length ? fresh : pool3).sort((a, b) => safeDate(b.updated_at) - safeDate(a.updated_at))[0];
+}
+
+function billboardHtml(p) {
+  const demo = demosOf(p)[0];
+  const backdrop = p.thumb
+    ? `<div class="billboard-backdrop" style="background-image:url('/${esc(p.thumb)}')" aria-hidden="true"></div>` : "";
+  const play = demo
+    ? `<a class="btn btn-primary" href="${esc(demo.url)}"${EXT}>&#9658; ${esc(demo.label || "Play")}${NEWTAB}</a>` : "";
+  return `<section class="billboard" aria-labelledby="hero-title">
+    ${backdrop}
+    <div class="billboard-fade" aria-hidden="true"></div>
+    <div class="billboard-inner">
+      <p class="flag"><span class="mark" aria-hidden="true">L</span> Livive original${isNew(p) ? " · New this week" : ""}</p>
+      <h1 id="hero-title">${esc(p.display_title)}</h1>
+      <div class="meta">
+        ${p.category ? `<span class="badge">${esc(p.category)}</span>` : ""}
+        ${p.has_live_demo ? `<span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>` : ""}
+        ${p.updated_at ? `<span class="badge">Updated ${esc(relDate(p.updated_at))}</span>` : ""}
+        ${p.status ? `<span class="badge status">${esc(p.status)}</span>` : ""}
+      </div>
+      <p class="tagline">${esc(p.tagline || p.short_description || "")}</p>
+      <div class="actions">
+        ${play}
+        <a class="btn btn-ghost" href="${pageHref(p)}">&#9432; More info</a>
+        ${p.repo_url ? `<a class="btn btn-ghost" href="${esc(p.repo_url)}"${EXT}>Source${NEWTAB}</a>` : ""}
+      </div>
+    </div>
+  </section>`;
+}
+
+function listing(data, previews) {
+  const hero = pickHero(data, previews);
+  const rails = buildRails(data).map((rail) => `  <section class="rail" id="rail-${slug(rail.id)}" aria-labelledby="railh-${slug(rail.id)}">
+    <div class="rail-head">
+      <h2 id="railh-${slug(rail.id)}">${esc(rail.title)}</h2>
+      ${rail.sub ? `<span class="rail-sub">${esc(rail.sub)}</span>` : ""}
+    </div>
+    <div class="track" tabindex="0" role="group" aria-label="${esc(rail.title)}, scroll horizontally">${rail.items.map((p) => card(p, previews)).join("")}</div>
   </section>`).join("\n");
+  return billboardHtml(hero) + "\n" + rails;
 }
 
 // ---- index JSON-LD ---------------------------------------------------------
@@ -151,46 +242,83 @@ function indexJsonLd(data) {
 const ldScript = (doc) =>
   `<script type="application/ld+json">\n${JSON.stringify(doc, null, 2).replace(/<\//g, "<\\/")}\n</script>`;
 
-// ---- per-project page ------------------------------------------------------
+// ---- per-project "title" page ----------------------------------------------
 const PAGE_CSS = `
-  :root{--bg:#f7f7f5;--fg:#1a1a1a;--muted:#6b6b6b;--card:#fff;--border:#e4e4df;--accent:#2563eb;--live:#166534;--live-bg:#e7f6ec;--chip:#f0f0ec;--shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px rgba(0,0,0,.05)}
-  @media (prefers-color-scheme:dark){:root{--bg:#101014;--fg:#ececec;--muted:#9a9aa2;--card:#17171c;--border:#26262e;--accent:#7aa2ff;--live:#7ee2a3;--live-bg:#123321;--chip:#22222a;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35)}}
-  *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-  a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+  :root{color-scheme:dark;--bg:#0b0b0e;--bg2:#101014;--surface:#17171c;--surface2:#202027;--fg:#f6f6f7;--muted:#b6b6bf;--border:#2b2b34;--accent:#e50914;--accent-fg:#fff;--link:#ff9ea2;--live:#6ee7a4;--live-bg:rgba(110,231,164,.14);--new:#ffd166;--new-bg:rgba(255,209,102,.15);--shadow:0 6px 24px rgba(0,0,0,.55);--shadow-lg:0 24px 80px rgba(0,0,0,.7)}
+  *{box-sizing:border-box}body{margin:0;background:var(--bg2);color:var(--fg);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;min-height:100vh}
+  img,video{max-width:100%}a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .wrap{max-width:820px;margin:0 auto;padding:0 20px}
-  header.site{padding:40px 0 8px}header.site h1{margin:0;font-size:1.15rem;letter-spacing:-.01em}header.site h1 a{color:var(--fg)}
-  .back{display:inline-flex;align-items:center;gap:6px;font-weight:600;margin:24px 0 18px}
-  .top{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
-  h2{margin:0;font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.02em}
-  .lead{font-size:1.1rem;color:var(--muted);margin:10px 0 0;max-width:65ch}
-  .badge{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--chip);border-radius:999px;padding:3px 9px}
-  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--live)}
-  .hero{margin:22px 0 0;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
-  .thumb{display:block;aspect-ratio:16/10;background:var(--card);overflow:hidden}
-  .thumb img{width:100%;height:100%;object-fit:contain;display:block}
-  .thumb.ph{display:grid;place-items:center;color:#0b0b0b;font-weight:800;font-size:2.4rem;background:linear-gradient(135deg,hsl(var(--h) 70% 78%),hsl(calc(var(--h) + 40) 65% 68%))}
-  .section{margin-top:30px}.section>h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:0 0 10px}
-  .section p{margin:0;max-width:72ch}
-  .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0}.chips li{background:var(--chip);color:var(--fg);font-size:.82rem;padding:5px 11px;border-radius:999px}
-  .links{display:flex;flex-wrap:wrap;gap:10px 20px;font-weight:600}
-  .meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:8px;color:var(--muted);font-size:.9rem}.meta strong{color:var(--fg);font-weight:600}
-  footer.site{margin-top:56px;border-top:1px solid var(--border);padding:28px 0 56px;color:var(--muted);font-size:.9rem}
+  .skip-link{position:absolute;left:-9999px;top:8px;z-index:200;background:var(--fg);color:var(--bg);font-weight:700;padding:10px 14px;border-radius:10px}
+  .skip-link:focus{left:12px}
+  :focus-visible{outline:2px solid var(--link);outline-offset:3px;border-radius:4px}
+  header.topbar{position:sticky;top:0;z-index:60;background:linear-gradient(180deg,rgba(11,11,14,.96),rgba(11,11,14,.7) 70%,rgba(11,11,14,0))}
+  .topbar-inner{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px}
+  .brand{display:inline-flex;align-items:center;gap:10px;color:var(--fg);font-weight:900;letter-spacing:-.02em}
+  .brand:hover{text-decoration:none}
+  .brand-mark{display:grid;place-items:center;width:30px;height:30px;border-radius:7px;background:var(--accent);color:#fff;font-weight:900;font-size:18px}
+  .brand-word{font-size:1.24rem;letter-spacing:.14em}
+  .detail-backdrop{position:absolute;inset:0;height:58vh;background-size:cover;background-position:center 30%;opacity:.45;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent);mask-image:linear-gradient(180deg,#000 55%,transparent)}
+  .wrap{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:0 20px}
+  .back{display:inline-flex;align-items:center;gap:8px;font-weight:700;margin:18px 0 22px;color:var(--fg);background:rgba(0,0,0,.4);padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.16)}
+  .back:hover{text-decoration:none}
+  .hero{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border);background:#000}
+  .media{position:relative;aspect-ratio:16/9}
+  .media img,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .media video{z-index:1}
+  .media.ph{display:grid;place-items:center;font-size:3rem;font-weight:900;color:#fff;background:linear-gradient(135deg,hsl(var(--h) 66% 40%),hsl(calc(var(--h) + 42) 62% 22%))}
+  h1.title{margin:26px 0 10px;font-size:clamp(1.8rem,4.4vw,3rem);letter-spacing:-.03em;outline:none}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:12px;color:var(--muted);font-size:.92rem;margin-bottom:14px}
+  .lead{font-size:clamp(1rem,1.6vw,1.2rem);color:#e2e2e8;max-width:68ch;margin:0 0 20px}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:9px;font:inherit;font-weight:700;padding:11px 22px;border-radius:8px;border:1px solid transparent;cursor:pointer}
+  .btn:hover{text-decoration:none}
+  .btn-primary{background:var(--accent);color:var(--accent-fg)}
+  .btn-ghost{background:rgba(255,255,255,.16);color:#fff;border-color:rgba(255,255,255,.22)}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;border-radius:999px;padding:3px 8px;background:var(--surface2);color:var(--fg);border:1px solid rgba(255,255,255,.14)}
+  .badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+  .badge.status{color:var(--muted)}.badge.status .dot{background:var(--live)}
+  .badge.live{background:var(--live-bg);color:var(--live);border-color:transparent}
+  .badge.new{background:var(--new-bg);color:var(--new);border-color:transparent}
+  .section{margin-top:34px}.section>h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:0 0 12px}
+  .section p{margin:0 0 10px;max-width:74ch;color:#dcdce2}
+  .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0}.chips li{background:var(--surface2);color:var(--fg);font-size:.82rem;padding:5px 12px;border-radius:999px;border:1px solid var(--border)}
+  .episodes{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
+  .episode{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--border)}
+  .episode .no{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;width:3.4rem}
+  .episode .ep-body{flex:1 1 auto;min-width:0}.episode .ep-body strong{display:block}.episode .ep-body span{color:var(--muted);font-size:.85rem;word-break:break-all}
+  footer.site{border-top:1px solid var(--border);margin-top:40px;padding:30px 20px 60px;color:var(--muted);font-size:.88rem;text-align:center}footer.site a{color:var(--muted)}
 `;
 
-function detailPage(p) {
+function detailPage(p, previews) {
   const title = p.display_title;
   const desc = (p.tagline || p.short_description || SITE_DESC).slice(0, 300);
   const pageUrl = absPage(p);
   const image = p.thumb ? `${SITE}/${p.thumb}` : `${SITE}/og.png`;
   const about = p.long_description || p.short_description || p.tagline || "";
   const summary = (p.short_description && p.long_description) ? p.short_description : "";
+  const pv = previewFor(p, previews);
   const tech = (p.tech || []).length
     ? `<ul class="chips">${p.tech.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : "";
   const tags = (p.tags || []).length
     ? `<ul class="chips">${p.tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : "";
   const sameAs = [p.live_url, p.repo_url].filter(Boolean);
+  const demos = demosOf(p);
+  const backdrop = p.thumb
+    ? `<div class="detail-backdrop" style="background-image:url('/${esc(p.thumb)}')" aria-hidden="true"></div>` : "";
+
+  const media = p.thumb
+    ? `<div class="media"><img src="/${esc(p.thumb)}" alt="${esc(thumbAlt(p))}"${thumbDims(p)}>${
+        pv && pv.video ? `<video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/${esc(pv.video)}" poster="/${esc(pv.poster || p.thumb)}"></video>` : ""
+      }</div>`
+    : `<div class="media ph" style="--h:${hue(p.key)}" aria-hidden="true">${esc(initials(p.display_title))}</div>`;
+
+  const play = demos[0]
+    ? `<a class="btn btn-primary" href="${esc(demos[0].url)}"${EXT}>&#9658; ${esc(demos[0].label || "Play")}${NEWTAB}</a>` : "";
+  const episodes = demos.map((dm, i) => `<li class="episode">
+      <span class="no">S01E${String(i + 1).padStart(2, "0")}</span>
+      <span class="ep-body"><strong>${esc(dm.label || "Demo " + (i + 1))}</strong><span>${esc(dm.url)}</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="${esc(dm.url)}"${EXT}>&#9658; Watch${NEWTAB}</a></span>
+    </li>`).join("");
 
   const ld = {
     "@context": "https://schema.org",
@@ -204,6 +332,7 @@ function detailPage(p) {
     isPartOf: { "@type": "WebSite", "@id": `${SITE}/#website`, name: SITE_NAME, url: `${SITE}/` },
     author: { "@type": "Person", name: AUTHOR.name, url: AUTHOR.url },
     ...(sameAs.length ? { sameAs } : {}),
+    ...(pv && pv.video ? { video: { "@type": "VideoObject", contentUrl: `${SITE}/${pv.video}`, thumbnailUrl: `${SITE}/${pv.poster || p.thumb}` } } : {}),
   };
 
   return `<!doctype html>
@@ -213,9 +342,11 @@ function detailPage(p) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
-<title>${esc(title)} — Livive Projects</title>
+<title>${esc(title)} — Livive</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${pageUrl}">
+<meta name="theme-color" content="#0b0b0e">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="${esc(title)}">
@@ -234,35 +365,42 @@ ${ldScript(ld)}
 <style>${PAGE_CSS}</style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to details</a>
+${backdrop}
 <div class="wrap">
-  <header class="site"><h1><a href="/">Livive Projects</a></h1></header>
-  <article>
-    <a class="back" href="/">&larr; All projects</a>
-    <div class="top">
-      <h2>${esc(title)}</h2>
-      <div>${statusChip(p)}</div>
+  <header class="topbar"><div class="topbar-inner">
+    <a class="brand" href="/" aria-label="Livive home"><span class="brand-mark" aria-hidden="true">L</span><span class="brand-word">LIVIVE</span></a>
+  </div></header>
+  <main id="main">
+    <a class="back" href="/">&larr; Browse all</a>
+    <div class="hero">${media}</div>
+    <h1 class="title">${esc(title)}</h1>
+    <div class="meta">
+      ${isNew(p) ? `<span class="badge new">New this week</span>` : ""}
+      ${p.category ? `<span>${esc(p.category)}</span>` : ""}
+      ${p.has_live_demo ? `<span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>` : ""}
+      ${p.updated_at ? `<span>Updated ${esc(relDate(p.updated_at))}</span>` : ""}
     </div>
     <p class="lead">${esc(p.tagline || "")}</p>
-    <div class="hero">${thumbHtml(p)}</div>
+    <div class="actions">
+      ${play}
+      <a class="btn btn-ghost" href="${esc(p.repo_url)}"${EXT}>GitHub repository &rarr;${NEWTAB}</a>
+      <a class="btn btn-ghost" href="/#project=${encodeURIComponent(p.key)}">Open interactive view &rarr;</a>
+    </div>
+    ${episodes ? `<div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes">${episodes}</ul></div>` : ""}
     ${about ? `<div class="section"><h3>About</h3><p>${esc(about)}</p></div>` : ""}
     ${summary ? `<div class="section"><h3>Summary</h3><p>${esc(summary)}</p></div>` : ""}
     ${tech ? `<div class="section"><h3>Tech</h3>${tech}</div>` : ""}
     ${tags ? `<div class="section"><h3>Tags</h3>${tags}</div>` : ""}
-    <div class="section">
-      <h3>Links</h3>
-      <div class="links">
-        ${demoLinks(p)}
-        <a href="${esc(p.repo_url)}"${EXT}>GitHub repository &rarr;${NEWTAB}</a>
-        <a href="/#project=${encodeURIComponent(p.key)}">Open interactive view &rarr;</a>
-      </div>
-    </div>
-    <div class="meta">
-      <span>Category: <strong>${esc(p.category || "—")}</strong></span>
-      <span>Status: <strong>${esc(p.status || "—")}</strong></span>
-    </div>
-  </article>
+  </main>
   <footer class="site"><a href="https://github.com/jpeckenpaugh" target="_blank" rel="noopener noreferrer">More on GitHub &rarr;${NEWTAB}</a></footer>
 </div>
+<script>
+(function(){
+  var v=document.querySelector(".media video[data-src]");
+  if(v){v.src=v.dataset.src;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+})();
+</script>
 </body>
 </html>
 `;
@@ -304,29 +442,41 @@ Allow: /
 Sitemap: ${SITE}/sitemap.xml
 `;
 
+async function loadPreviews() {
+  try {
+    const raw = await readFile(PREVIEWS, "utf8");
+    const doc = JSON.parse(raw);
+    return doc.previews || {};
+  } catch {
+    return {};
+  }
+}
+
 async function main() {
   const data = JSON.parse(await readFile(path.join(ROOT, "projects.json"), "utf8"));
+  const previews = await loadPreviews();
   const lastmod = (process.env.LIVIVE_LASTMOD || new Date().toISOString()).slice(0, 10);
 
-  // index.html: prerendered listing + JSON-LD
+  // index.html: prerendered catalogue + JSON-LD
   let html = await readFile(INDEX, "utf8");
   const before = html;
-  html = replaceBetween(html, MAIN_START, MAIN_END, listing(data));
+  html = replaceBetween(html, MAIN_START, MAIN_END, listing(data, previews));
   html = replaceBetween(html, JSONLD_START, JSONLD_END, indexJsonLd(data));
   if (html !== before) await writeFile(INDEX, html);
 
-  // per-project static landing pages
+  // per-project static title pages
   for (const p of data.projects) {
     const dir = path.join(PAGES, p.key);
     await mkdir(dir, { recursive: true });
-    await writeFile(path.join(dir, "index.html"), detailPage(p));
+    await writeFile(path.join(dir, "index.html"), detailPage(p, previews));
   }
 
   await writeFile(SITEMAP, sitemap(data, lastmod));
   await writeFile(ROBOTS, ROBOTS_TXT);
 
   console.log(
-    `rendered ${data.projects.length} projects -> index.html, p/<key>/index.html, sitemap.xml, robots.txt`,
+    `rendered ${data.projects.length} projects -> index.html, p/<key>/index.html, sitemap.xml, robots.txt ` +
+      `(${Object.keys(previews).length} previews)`,
   );
 }
 

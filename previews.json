@@ -1,0 +1,313 @@
+{
+  "generated_at": "2026-10-16T02:02:34.396Z",
+  "previews": {
+    "lokarta": {
+      "video": "previews/lokarta.webm",
+      "poster": "thumbnails/lokarta.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 120576,
+      "captured_at": "2026-10-16T02:01:35.747Z",
+      "source": "https://lk.livive.net/"
+    },
+    "aom": {
+      "video": "previews/aom.webm",
+      "poster": "thumbnails/aom.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 146080,
+      "captured_at": "2026-10-16T02:01:36.284Z",
+      "source": "https://aom.livive.net/"
+    },
+    "chk-livive-net": {
+      "video": "previews/chk-livive-net.webm",
+      "poster": "thumbnails/chk-livive-net.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 134118,
+      "captured_at": "2026-10-16T02:01:45.456Z",
+      "source": "https://chk.livive.net/"
+    },
+    "game-pending": {
+      "video": "previews/game-pending.webm",
+      "poster": "thumbnails/game-pending.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 154882,
+      "captured_at": "2026-10-16T02:01:45.731Z",
+      "source": "https://jpeckenpaugh.github.io/game-pending/"
+    },
+    "EuchreGame": {
+      "video": "previews/EuchreGame.webm",
+      "poster": "thumbnails/EuchreGame.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 147082,
+      "captured_at": "2026-10-16T02:01:47.147Z",
+      "source": "https://jpeckenpaugh.github.io/EuchreGame/"
+    },
+    "rl-livive-net": {
+      "video": "previews/rl-livive-net.webm",
+      "poster": "thumbnails/rl-livive-net.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 113050,
+      "captured_at": "2026-10-16T02:01:50.431Z",
+      "source": "https://lunar.livive.net/"
+    },
+    "mines-livive-net": {
+      "video": "previews/mines-livive-net.webm",
+      "poster": "thumbnails/mines-livive-net.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 141699,
+      "captured_at": "2026-10-16T02:01:51.603Z",
+      "source": "https://mines.livive.net/"
+    },
+    "p2p-ttt": {
+      "video": "previews/p2p-ttt.webm",
+      "poster": "thumbnails/p2p-ttt.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 124647,
+      "captured_at": "2026-10-16T02:01:52.086Z",
+      "source": "https://jpeckenpaugh.github.io/p2p-ttt/"
+    },
+    "threat-sweep": {
+      "video": "previews/threat-sweep.webm",
+      "poster": "thumbnails/threat-sweep.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 116654,
+      "captured_at": "2026-10-16T02:01:54.956Z",
+      "source": "https://jpeckenpaugh.github.io/threat-sweep/"
+    },
+    "vibe-tic-tac-toe": {
+      "video": "previews/vibe-tic-tac-toe.webm",
+      "poster": "thumbnails/vibe-tic-tac-toe.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 109114,
+      "captured_at": "2026-10-16T02:01:56.138Z",
+      "source": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/"
+    },
+    "rag-poc": {
+      "video": "previews/rag-poc.webm",
+      "poster": "thumbnails/rag-poc.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 139394,
+      "captured_at": "2026-10-16T02:02:00.662Z",
+      "source": "https://jpeckenpaugh.github.io/rag-poc/"
+    },
+    "sm3": {
+      "video": "previews/sm3.webm",
+      "poster": "thumbnails/sm3.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 142732,
+      "captured_at": "2026-10-16T02:02:04.176Z",
+      "source": "https://seekdepth.net/"
+    },
+    "seekdepth.org": {
+      "video": "previews/seekdepth.org.webm",
+      "poster": "thumbnails/seekdepth.org.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 145341,
+      "captured_at": "2026-10-16T02:02:04.837Z",
+      "source": "https://seekdepth.org/"
+    },
+    "hebrew-language-tutor": {
+      "video": "previews/hebrew-language-tutor.webm",
+      "poster": "thumbnails/hebrew-language-tutor.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 137309,
+      "captured_at": "2026-10-16T02:02:05.450Z",
+      "source": "https://jpeckenpaugh.github.io/hebrew-language-tutor/"
+    },
+    "vibe-hindi-language-tutor": {
+      "video": "previews/vibe-hindi-language-tutor.webm",
+      "poster": "thumbnails/vibe-hindi-language-tutor.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 116965,
+      "captured_at": "2026-10-16T02:02:09.374Z",
+      "source": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/"
+    },
+    "nexttext": {
+      "video": "previews/nexttext.webm",
+      "poster": "thumbnails/nexttext.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 138978,
+      "captured_at": "2026-10-16T02:02:12.059Z",
+      "source": "https://jpeckenpaugh.github.io/nexttext/"
+    },
+    "snow-compliance-demo": {
+      "video": "previews/snow-compliance-demo.webm",
+      "poster": "thumbnails/snow-compliance-demo.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 139351,
+      "captured_at": "2026-10-16T02:02:13.320Z",
+      "source": "https://jpeckenpaugh.github.io/snow-compliance-demo/"
+    },
+    "sprites-livive-net": {
+      "video": "previews/sprites-livive-net.webm",
+      "poster": "thumbnails/sprites-livive-net.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 147768,
+      "captured_at": "2026-10-16T02:02:17.212Z",
+      "source": "https://sprites.livive.net/"
+    },
+    "tc-livive-org": {
+      "video": "previews/tc-livive-org.webm",
+      "poster": "thumbnails/tc-livive-org.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 132213,
+      "captured_at": "2026-10-16T02:02:19.050Z",
+      "source": "https://tc.livive.org/"
+    },
+    "c3pa-explorer": {
+      "video": "previews/c3pa-explorer.webm",
+      "poster": "thumbnails/c3pa-explorer.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 151276,
+      "captured_at": "2026-10-16T02:02:22.706Z",
+      "source": "https://jpeckenpaugh.github.io/c3pa-explorer/"
+    },
+    "company-hub": {
+      "video": "previews/company-hub.webm",
+      "poster": "thumbnails/company-hub.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 144651,
+      "captured_at": "2026-10-16T02:02:22.784Z",
+      "source": "https://jpeckenpaugh.github.io/ch/"
+    },
+    "driver-hub-prototype": {
+      "video": "previews/driver-hub-prototype.webm",
+      "poster": "thumbnails/driver-hub-prototype.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 137282,
+      "captured_at": "2026-10-16T02:02:24.540Z",
+      "source": "https://jpeckenpaugh.github.io/driver-hub-prototype/"
+    },
+    "herons-fountain": {
+      "video": "previews/herons-fountain.webm",
+      "poster": "thumbnails/herons-fountain.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 119562,
+      "captured_at": "2026-10-16T02:02:27.989Z",
+      "source": "https://jpeckenpaugh.github.io/herons-fountain/"
+    },
+    "executive-assistant": {
+      "video": "previews/executive-assistant.webm",
+      "poster": "thumbnails/executive-assistant.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 134259,
+      "captured_at": "2026-10-16T02:02:29.009Z",
+      "source": "https://jpeckenpaugh.github.io/executive-assistant/"
+    },
+    "oblique-livive-net": {
+      "video": "previews/oblique-livive-net.webm",
+      "poster": "thumbnails/oblique-livive-net.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 136614,
+      "captured_at": "2026-10-16T02:02:30.406Z",
+      "source": "https://oblique.livive.net/"
+    },
+    "robot-motion-studio": {
+      "video": "previews/robot-motion-studio.webm",
+      "poster": "thumbnails/robot-motion-studio.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 144460,
+      "captured_at": "2026-10-16T02:02:32.912Z",
+      "source": "https://jpeckenpaugh.github.io/robot-motion-studio/"
+    },
+    "vid-factory": {
+      "video": "previews/vid-factory.webm",
+      "poster": "thumbnails/vid-factory.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 124489,
+      "captured_at": "2026-10-16T02:02:33.606Z",
+      "source": "https://jpeckenpaugh.github.io/vid-factory/"
+    },
+    "tech-livive-net": {
+      "video": "previews/tech-livive-net.webm",
+      "poster": "thumbnails/tech-livive-net.webp",
+      "mode": "motion",
+      "duration_ms": 4400,
+      "width": 640,
+      "height": 400,
+      "bytes": 142820,
+      "captured_at": "2026-10-16T02:02:34.395Z",
+      "source": "https://tech.livive.net/"
+    }
+  }
+}

@@ -11,6 +11,8 @@ on:
     paths:
       - "index.html"
       - "projects.json"
+      - "previews.json"
+      - "previews/**"
       - "thumbnails/**"
       - "qa/**"
       - ".github/workflows/qa-smoke.yml"
@@ -18,6 +20,8 @@ on:
     paths:
       - "index.html"
       - "projects.json"
+      - "previews.json"
+      - "previews/**"
       - "thumbnails/**"
       - "qa/**"
   schedule:
