@@ -266,11 +266,13 @@ const PAGE_CSS = `
   .media img,.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
   .media video{z-index:1}
   .media.ph{display:grid;place-items:center;font-size:3rem;font-weight:900;color:#fff;background:linear-gradient(135deg,hsl(var(--h) 66% 40%),hsl(calc(var(--h) + 42) 62% 22%))}
-  .carousel{position:relative;aspect-ratio:4/3;background:#000}
+  .carousel{position:relative;aspect-ratio:16/10;background:#000}
   .carousel .slides{position:absolute;inset:0}
   .carousel .slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s ease}
   .carousel .slide.is-active{opacity:1;visibility:visible}
-  .carousel .slide img,.carousel .slide video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+  .carousel .slide img,.carousel .slide video{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .carousel .slide img{object-fit:cover}
+  .carousel .slide video{object-fit:contain}
   .carousel .slide video{z-index:1}
   .carousel .slide-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;padding:18px 22px 40px;background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.4) 62%,transparent);text-shadow:0 2px 12px rgba(0,0,0,.7)}
   .carousel .cap-index{font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:3px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
