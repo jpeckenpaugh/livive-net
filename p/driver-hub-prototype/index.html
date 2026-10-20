@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Driver Hub Prototype — Livive</title>
-<meta name="description" content="Uber-style ride-hailing prototype connecting drivers and passengers in real time">
+<meta name="description" content="Dual-device smartphone simulator with in-browser WebSocket virtual hub and live OSRM Madrid route telemetry.">
 <link rel="canonical" href="https://www.livive.net/p/driver-hub-prototype/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Driver Hub Prototype">
-<meta property="og:description" content="Uber-style ride-hailing prototype connecting drivers and passengers in real time">
+<meta property="og:description" content="Dual-device smartphone simulator with in-browser WebSocket virtual hub and live OSRM Madrid route telemetry.">
 <meta property="og:url" content="https://www.livive.net/p/driver-hub-prototype/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/driver-hub-prototype.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Driver Hub Prototype — Uber-style ride-hailing prototype connecting drivers and passengers in real time">
+<meta property="og:image:alt" content="Driver Hub Prototype — Dual-device smartphone simulator with in-browser WebSocket virtual hub and live OSRM Madrid route telemetry.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Driver Hub Prototype">
-<meta name="twitter:description" content="Uber-style ride-hailing prototype connecting drivers and passengers in real time">
+<meta name="twitter:description" content="Dual-device smartphone simulator with in-browser WebSocket virtual hub and live OSRM Madrid route telemetry.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/driver-hub-prototype.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Driver Hub Prototype",
-  "description": "Uber-style ride-hailing prototype connecting drivers and passengers in real time",
+  "description": "Dual-device smartphone simulator with in-browser WebSocket virtual hub and live OSRM Madrid route telemetry.",
   "url": "https://www.livive.net/p/driver-hub-prototype/",
   "image": [
-    "https://www.livive.net/thumbnails/driver-hub-prototype.webp"
+    "https://www.livive.net/thumbnails/driver-hub-prototype.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/01-split-view-dual-device-overview.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/02-rider-tier-selection-fare-estimate.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/03-driver-incoming-offer-modal.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/04-live-pickup-telemetry-tracking.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/05-trip-in-progress-route-simulation.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/06-trip-completion-earnings-summary.png"
   ],
   "genre": "Web Apps & Prototypes",
   "keywords": "TypeScript, React 19, Vite, Tailwind CSS, Leaflet, React-Leaflet, OpenStreetMap, Node.js, Express, Socket.io, npm workspaces",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/driver-hub-prototype/",
+    "https://driver.livive.net/",
     "https://github.com/jpeckenpaugh/driver-hub-prototype"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/driver-hub-prototype.webm",
-    "thumbnailUrl": "https://www.livive.net/previews/driver-hub-prototype.webp",
-    "duration": "PT30S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/01-split-view-dual-device-overview.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/driver-hub-prototype.webp" alt="Driver Hub Prototype — Uber-style ride-hailing prototype connecting drivers and passengers in real time"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/driver-hub-prototype.webm" poster="/previews/driver-hub-prototype.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/01-split-view-dual-device-overview.png" alt="Driver Hub Prototype — Dual-device smartphone simulator with in-browser WebSocket virtual hub and live OSRM Madrid route telemetry.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/01-split-view-dual-device-overview.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/01-split-view-dual-device-overview.png" alt="Side-by-Side Dual Smartphone Demonstration &amp; Map View" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Side-by-Side Dual Smartphone Demonstration &amp; Map View</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/02-rider-tier-selection-fare-estimate.png" alt="Rider Booking Interface &amp; Vehicle Tier Selection" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Rider Booking Interface &amp; Vehicle Tier Selection</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/03-driver-incoming-offer-modal.png" alt="Real-Time Dispatch &amp; Incoming Ride Offer Dialog" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Real-Time Dispatch &amp; Incoming Ride Offer Dialog</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/04-live-pickup-telemetry-tracking.png" alt="Live Vehicle Telemetry &amp; Navigation to Pickup Point" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Live Vehicle Telemetry &amp; Navigation to Pickup Point</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/05-trip-in-progress-route-simulation.png" alt="En-Route Transit Simulation &amp; Dual-State Synchronization" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">En-Route Transit Simulation &amp; Dual-State Synchronization</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/06-trip-completion-earnings-summary.png" alt="Trip Completion, Driver Earnings HUD &amp; Passenger Rating" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Trip Completion, Driver Earnings HUD &amp; Passenger Rating</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Driver Hub Prototype</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Web Apps &amp; Prototypes</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 1w ago</span>
+      <span>Updated yesterday</span>
     </div>
-    <p class="lead">Uber-style ride-hailing prototype connecting drivers and passengers in real time</p>
+    <p class="lead">Dual-device smartphone simulator with in-browser WebSocket virtual hub and live OSRM Madrid route telemetry.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/driver-hub-prototype/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://driver.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/driver-hub-prototype" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=driver-hub-prototype">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/driver-hub-prototype/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/driver-hub-prototype/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://driver.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://driver.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Driver Hub Prototype is a functional, modern prototype of a ride-sharing platform connecting Drivers and Passengers in real time. It demonstrates the essential passenger-driver interaction: requesting a trip on an interactive map, real-time notification and acceptance by the driver, visual route tracking, and reactive trip status updates. The interface is designed for side-by-side demos (split screen or two devices). The stack is React 19 + TypeScript + Vite + Tailwind CSS on the frontend, Leaflet / React-Leaflet with OpenStreetMap for maps (no API keys needed), and Node.js + Express + Socket.io for real-time communication across browsers or devices on the same local network. The repository is an npm workspaces monorepo with shared, server, and client packages, and GitHub Pages workflows for deployment.</p></div>
-    <div class="section"><h3>Summary</h3><p>A lightweight full-stack prototype of a ride-hailing platform (Uber/Cabify style) that pairs drivers and passengers in real time over an interactive map.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/01-split-view-dual-device-overview.png" alt="Side-by-Side Dual Smartphone Demonstration &amp; Map View" width="960" height="720">
+      <figcaption>Side-by-Side Dual Smartphone Demonstration &amp; Map View</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/02-rider-tier-selection-fare-estimate.png" alt="Rider Booking Interface &amp; Vehicle Tier Selection" width="960" height="720">
+      <figcaption>Rider Booking Interface &amp; Vehicle Tier Selection</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/03-driver-incoming-offer-modal.png" alt="Real-Time Dispatch &amp; Incoming Ride Offer Dialog" width="960" height="720">
+      <figcaption>Real-Time Dispatch &amp; Incoming Ride Offer Dialog</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/04-live-pickup-telemetry-tracking.png" alt="Live Vehicle Telemetry &amp; Navigation to Pickup Point" width="960" height="720">
+      <figcaption>Live Vehicle Telemetry &amp; Navigation to Pickup Point</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/05-trip-in-progress-route-simulation.png" alt="En-Route Transit Simulation &amp; Dual-State Synchronization" width="960" height="720">
+      <figcaption>En-Route Transit Simulation &amp; Dual-State Synchronization</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/06-trip-completion-earnings-summary.png" alt="Trip Completion, Driver Earnings HUD &amp; Passenger Rating" width="960" height="720">
+      <figcaption>Trip Completion, Driver Earnings HUD &amp; Passenger Rating</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Driver Hub Prototype is a dual-device interactive mobility simulation platform featuring synchronized Rider and Driver smartphone interfaces running side-by-side in Split Demo mode. Driven by an in-memory VirtualSocket emulator that mirrors full-duplex WebSocket communication, the application coordinates ride requests, driver dispatch offers with 15s countdown timers, fare calculations across Standard/Comfort/XL vehicle tiers, and smooth vehicle telemetry animated over Leaflet maps with real-world Madrid OSRM road geometry. Users can test complete ride lifecycles from initial request to pickup arrival, en-route transit, trip completion, and driver earnings settlement.</p></div>
+    <div class="section"><h3>Summary</h3><p>A split-screen interactive ride-hailing prototype demonstrating real-time rider booking, driver dispatch, audio chimes, and smooth vehicle telemetry without an external backend.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>TypeScript</li><li>React 19</li><li>Vite</li><li>Tailwind CSS</li><li>Leaflet</li><li>React-Leaflet</li><li>OpenStreetMap</li><li>Node.js</li><li>Express</li><li>Socket.io</li><li>npm workspaces</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>maps</li><li>prototype</li><li>react</li><li>real-time</li><li>ride-hailing</li><li>socket-io</li></ul></div>
   </main>

@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>nexttext — Livive</title>
-<meta name="description" content="Lightweight Python toolkit for neutralizing gendered language in AI text.">
+<meta name="description" content="In-browser Pyodide NLP toolkit for neutralizing gendered skew and testing bias in AI training labels.">
 <link rel="canonical" href="https://www.livive.net/p/nexttext/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="nexttext">
-<meta property="og:description" content="Lightweight Python toolkit for neutralizing gendered language in AI text.">
+<meta property="og:description" content="In-browser Pyodide NLP toolkit for neutralizing gendered skew and testing bias in AI training labels.">
 <meta property="og:url" content="https://www.livive.net/p/nexttext/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/nexttext.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="nexttext — Lightweight Python toolkit for neutralizing gendered language in AI text.">
+<meta property="og:image:alt" content="nexttext — In-browser Pyodide NLP toolkit for neutralizing gendered skew and testing bias in AI training labels.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="nexttext">
-<meta name="twitter:description" content="Lightweight Python toolkit for neutralizing gendered language in AI text.">
+<meta name="twitter:description" content="In-browser Pyodide NLP toolkit for neutralizing gendered skew and testing bias in AI training labels.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/nexttext.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "nexttext",
-  "description": "Lightweight Python toolkit for neutralizing gendered language in AI text.",
+  "description": "In-browser Pyodide NLP toolkit for neutralizing gendered skew and testing bias in AI training labels.",
   "url": "https://www.livive.net/p/nexttext/",
   "image": [
-    "https://www.livive.net/thumbnails/nexttext.webp"
+    "https://www.livive.net/thumbnails/nexttext.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/01-pyodide-runtime-ready.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/02-debias-basics.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/03-rebias-contextual-male.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/04-rebias-contextual-female.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/05-roundtrip-validation.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/06-token-frequencies-metadata.png"
   ],
   "genre": "Language Tools",
   "keywords": "Python, hatchling, pytest",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/nexttext/",
+    "https://nexttext.livive.net/",
     "https://github.com/jpeckenpaugh/nexttext"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/nexttext.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/nexttext.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/02-debias-basics.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/nexttext.webp" alt="nexttext — Lightweight Python toolkit for neutralizing gendered language in AI text."><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/nexttext.webm" poster="/thumbnails/nexttext.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/02-debias-basics.png" alt="nexttext — In-browser Pyodide NLP toolkit for neutralizing gendered skew and testing bias in AI training labels.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/02-debias-basics.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/01-pyodide-runtime-ready.png" alt="Pyodide Runtime Initialization: In-Browser Python 3.9+ Virtual Environment" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Pyodide Runtime Initialization: In-Browser Python 3.9+ Virtual Environment</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/02-debias-basics.png" alt="Multi-Label Gender Neutralization: Training Data Bias Elimination" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Multi-Label Gender Neutralization: Training Data Bias Elimination</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/03-rebias-contextual-male.png" alt="Contextual Rebiasing: Associative Cue Extraction &amp; Male Feature Injection" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Contextual Rebiasing: Associative Cue Extraction &amp; Male Feature Injection</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/04-rebias-contextual-female.png" alt="Contextual Rebiasing: Associative Semantic Analysis &amp; Female Cues" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Contextual Rebiasing: Associative Semantic Analysis &amp; Female Cues</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/05-roundtrip-validation.png" alt="Round-Trip Verification: Neutralize &amp; Contextual Re-Framing Pipeline" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Round-Trip Verification: Neutralize &amp; Contextual Re-Framing Pipeline</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/06-token-frequencies-metadata.png" alt="Token Diagnostics &amp; Lightweight Pip Package Specification" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Token Diagnostics &amp; Lightweight Pip Package Specification</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">nexttext</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
       <span>Language Tools</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 2 days ago</span>
+      <span>Updated yesterday</span>
     </div>
-    <p class="lead">Lightweight Python toolkit for neutralizing gendered language in AI text.</p>
+    <p class="lead">In-browser Pyodide NLP toolkit for neutralizing gendered skew and testing bias in AI training labels.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/nexttext/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://nexttext.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/nexttext" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=nexttext">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/nexttext/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/nexttext/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://nexttext.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://nexttext.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>nexttext is a lightweight Python toolkit for neutralizing and re-framing text to reduce noise, hidden skew, and unwanted artifacts in AI pipelines. It works on both human-annotated input labels and model-generated labels, using simple, fast heuristics to neutralise gendered or stereotypical language (debias) and optionally reintroduce controlled skew for testing and validation (rebias), including a context-aware strategy. It ships with no heavy dependencies, requires Python 3.9+, and is released under the MIT license, targeting tasks like training data cleanup, inference filtering, and standardization of labels across datasets.</p></div>
-    <div class="section"><h3>Summary</h3><p>A dependency-free Python library that debiases and rebias gendered terms in text labels using fast heuristics, for cleaning training data and filtering model outputs.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/01-pyodide-runtime-ready.png" alt="Pyodide Runtime Initialization: In-Browser Python 3.9+ Virtual Environment" width="960" height="720">
+      <figcaption>Pyodide Runtime Initialization: In-Browser Python 3.9+ Virtual Environment</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/02-debias-basics.png" alt="Multi-Label Gender Neutralization: Training Data Bias Elimination" width="960" height="720">
+      <figcaption>Multi-Label Gender Neutralization: Training Data Bias Elimination</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/03-rebias-contextual-male.png" alt="Contextual Rebiasing: Associative Cue Extraction &amp; Male Feature Injection" width="960" height="720">
+      <figcaption>Contextual Rebiasing: Associative Cue Extraction &amp; Male Feature Injection</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/04-rebias-contextual-female.png" alt="Contextual Rebiasing: Associative Semantic Analysis &amp; Female Cues" width="960" height="720">
+      <figcaption>Contextual Rebiasing: Associative Semantic Analysis &amp; Female Cues</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/05-roundtrip-validation.png" alt="Round-Trip Verification: Neutralize &amp; Contextual Re-Framing Pipeline" width="960" height="720">
+      <figcaption>Round-Trip Verification: Neutralize &amp; Contextual Re-Framing Pipeline</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/06-token-frequencies-metadata.png" alt="Token Diagnostics &amp; Lightweight Pip Package Specification" width="960" height="720">
+      <figcaption>Token Diagnostics &amp; Lightweight Pip Package Specification</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>nexttext is a lightweight, dependency-free Python toolkit for neutralizing and re-framing text to reduce noise, hidden skew, and unwanted artifacts in modern AI pipelines. Running entirely client-side inside the browser via Pyodide (Python 3.9+ / WebAssembly), nexttext operates on both human-annotated training labels and model-generated predictions. It utilizes fast, robust heuristic pipelines to neutralize gendered or stereotypical language (debiasing) and optionally reintroduce controlled skew with context-aware semantic cue extraction (rebiasing). It includes round-trip pipeline validation, token frequency analyzers, and whitespace normalization utilities under the MIT license.</p></div>
+    <div class="section"><h3>Summary</h3><p>A lightweight Python NLP toolkit running client-side via Pyodide that neutralizes and contextually re-frames gendered terms across AI training labels and model outputs.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Python</li><li>hatchling</li><li>pytest</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>ai-ethics</li><li>data-cleaning</li><li>debias</li><li>nlp</li><li>python-library</li><li>text-processing</li></ul></div>
   </main>

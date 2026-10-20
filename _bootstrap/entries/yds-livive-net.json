@@ -1,0 +1,58 @@
+{
+  "key": "yds-livive-net",
+  "repo": "yds-livive-net",
+  "display_title": "You Don't Say",
+  "tagline": "An offline, listen-first conversation reader where your choices bend the dialogue.",
+  "short_description": "A browser-only language-learning reader with branching conversations, synchronized L1/L2 audio and text, hover glosses, and replay-one-decision mode—no server, no API keys.",
+  "long_description": "You Don't Say is an interactive, listen-first conversation reader for language learners. You hear two people talking; at decision points the audio pauses and you choose what one speaker says next, guiding a linear timeline that interpolates your choices into later lines. Read and Hear are independent axes—L1, L2, both, or neither—and a third channel supplies author-written hints rather than literal translation. Hovering any word or phrase reveals an on-demand gloss. The four decisions produce eight authored lines instead of sixteen forked scripts, and afterward a one-decision replay shows how the same conversation resolves differently. Everything is a static single-page app: Supertonic TTS voices both languages with one voice identity, OPUS-MT translation runs client-side, and no network call is needed after first load. The current catalog is Spanish/English.",
+  "tags": [
+    "language-learning",
+    "listening",
+    "conversation",
+    "branching-dialogue",
+    "tts",
+    "offline",
+    "spanish",
+    "translation"
+  ],
+  "tech": [
+    "TypeScript",
+    "Preact",
+    "Vite",
+    "WebAssembly",
+    "Supertonic TTS",
+    "OPUS-MT"
+  ],
+  "category": "Language Tools",
+  "live_url": "https://yds.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/yds-livive-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "prototype",
+  "confidence": "high",
+  "notes": "Custom domain yds.livive.net from CNAME; GitHub Pages deploy workflow included. The README is explicitly a concept narrative and defers to docs/design D1-D7. Current authored content is Spanish/English (cafe, clothes shopping, getting there, not feeling well), delivered by a Vite + Preact + TypeScript SPA with client-side models.",
+  "demos": [
+    {
+      "label": "Listen & Choose",
+      "url": "https://yds.livive.net/"
+    },
+    {
+      "label": "Source",
+      "url": "https://github.com/jpeckenpaugh/yds-livive-net"
+    }
+  ],
+  "how_to_play": [
+    {
+      "title": "1. Pick a conversation",
+      "body": "Choose a scene and set your language pair. Read and Hear can each be L1, L2, both, or off, so you can listen first and reveal text only when needed."
+    },
+    {
+      "title": "2. Guide the dialogue",
+      "body": "At each decision point two option cards appear. Your pick plays, joins the transcript, and sets a variable that later lines interpolate—so the story bends without forking into separate scripts."
+    },
+    {
+      "title": "3. Replay the road not taken",
+      "body": "Hover any phrase for a gloss, toggle hints off for a harder listen, and afterwards swap a single decision to hear the same conversation arrive somewhere else."
+    }
+  ]
+}

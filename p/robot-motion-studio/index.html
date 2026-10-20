@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Robot Motion Studio — Livive</title>
-<meta name="description" content="Design, simulate, and export PWM servo motion sequences for Arduino robots">
+<meta name="description" content="Design, simulate, and export PWM servo motion sequences for Arduino robots with forward kinematics and easing curves.">
 <link rel="canonical" href="https://www.livive.net/p/robot-motion-studio/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Robot Motion Studio">
-<meta property="og:description" content="Design, simulate, and export PWM servo motion sequences for Arduino robots">
+<meta property="og:description" content="Design, simulate, and export PWM servo motion sequences for Arduino robots with forward kinematics and easing curves.">
 <meta property="og:url" content="https://www.livive.net/p/robot-motion-studio/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/robot-motion-studio.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots">
+<meta property="og:image:alt" content="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots with forward kinematics and easing curves.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Robot Motion Studio">
-<meta name="twitter:description" content="Design, simulate, and export PWM servo motion sequences for Arduino robots">
+<meta name="twitter:description" content="Design, simulate, and export PWM servo motion sequences for Arduino robots with forward kinematics and easing curves.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/robot-motion-studio.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Robot Motion Studio",
-  "description": "Design, simulate, and export PWM servo motion sequences for Arduino robots",
+  "description": "Design, simulate, and export PWM servo motion sequences for Arduino robots with forward kinematics and easing curves.",
   "url": "https://www.livive.net/p/robot-motion-studio/",
   "image": [
-    "https://www.livive.net/thumbnails/robot-motion-studio.webp"
+    "https://www.livive.net/thumbnails/robot-motion-studio.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/01-canvas-simulator-door-cycle.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/02-timeline-trajectory-editor.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/03-joint-pose-scrubbers.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/04-pick-place-6dof-kinematics.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/05-motion-document-preview.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/06-schema2-arduino-export.png"
   ],
   "genre": "Web Apps & Prototypes",
   "keywords": "JavaScript, Python, FastAPI, SQLite, Bootstrap 5, sql.js, WebAssembly, HTML/CSS",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/robot-motion-studio/",
+    "https://motion.livive.net/",
     "https://github.com/jpeckenpaugh/robot-motion-studio"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/robot-motion-studio.webm",
-    "thumbnailUrl": "https://www.livive.net/previews/robot-motion-studio.webp",
-    "duration": "PT30S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/01-canvas-simulator-door-cycle.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/robot-motion-studio.webp" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/robot-motion-studio.webm" poster="/previews/robot-motion-studio.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/01-canvas-simulator-door-cycle.png" alt="Robot Motion Studio — Design, simulate, and export PWM servo motion sequences for Arduino robots with forward kinematics and easing curves.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/01-canvas-simulator-door-cycle.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/01-canvas-simulator-door-cycle.png" alt="Forward Kinematics Simulator &amp; Door Rig Interaction" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Forward Kinematics Simulator &amp; Door Rig Interaction</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/02-timeline-trajectory-editor.png" alt="Visual Timeline Choreography &amp; Easing Curves" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Visual Timeline Choreography &amp; Easing Curves</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/03-joint-pose-scrubbers.png" alt="Reusable Pose Authoring &amp; Joint Angle Scrubbers" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Reusable Pose Authoring &amp; Joint Angle Scrubbers</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/04-pick-place-6dof-kinematics.png" alt="6-DOF Articulated Arm Configuration (PickPlaceArm)" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">6-DOF Articulated Arm Configuration (PickPlaceArm)</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/05-motion-document-preview.png" alt="Deterministic Motion Interpolation &amp; Keyframe Telemetry" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Deterministic Motion Interpolation &amp; Keyframe Telemetry</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/06-schema2-arduino-export.png" alt="Schema v2 JSON &amp; Arduino Firmware Export" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Schema v2 JSON &amp; Arduino Firmware Export</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Robot Motion Studio</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Web Apps &amp; Prototypes</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 1mo ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Design, simulate, and export PWM servo motion sequences for Arduino robots</p>
+    <p class="lead">Design, simulate, and export PWM servo motion sequences for Arduino robots with forward kinematics and easing curves.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/robot-motion-studio/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://motion.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/robot-motion-studio" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=robot-motion-studio">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/robot-motion-studio/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/robot-motion-studio/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://motion.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://motion.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Robot Motion Studio (Robot Servo Sequence Designer) is a local, single-user multi-robot motion designer for PWM servo robots. Users configure servo motors (PWM pin, angle limits, neutral angle, pulse calibration), create reusable poses, author ordered/timed motion sequences through a visual timeline editor (add/reorder/edit/duplicate steps, play/pause/scrub, per-step speed and easing), inspect resolved motion in a preview, watch it in a dependency-free browser Canvas simulator, and export robot-scoped JSON (schema_version 2) for Arduino firmware or other robot-control software. Motion timing supports easing curves, finite/forever sequence repeat, and contiguous step-group loops. A fresh database seeds a door-durability-tester rig (shoulder/elbow/wrist/gripper servos) plus demo robots: PickPlaceArm (6-DOF arm), QuadTrotter (quadruped), BipedWalker (biped), and GimbalCam (pan/tilt). The original edition pairs a FastAPI + SQLite backend with a static Bootstrap 5 SPA (no build toolchain); a browser-only edition replaces the backend with sql.js WebAssembly SQLite running in a Web Worker and OPFS persistence, making it fully static for GitHub Pages. It is a proof-of-concept and does not communicate with physical Arduino hardware or perform real-time control.</p></div>
-    <div class="section"><h3>Summary</h3><p>A web app for designing and managing PWM servo motor control sequences for Arduino-based robots, with configuration, reusable poses, a timeline editor, a Canvas simulator, and structured JSON export.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/01-canvas-simulator-door-cycle.png" alt="Forward Kinematics Simulator &amp; Door Rig Interaction" width="960" height="720">
+      <figcaption>Forward Kinematics Simulator &amp; Door Rig Interaction</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/02-timeline-trajectory-editor.png" alt="Visual Timeline Choreography &amp; Easing Curves" width="960" height="720">
+      <figcaption>Visual Timeline Choreography &amp; Easing Curves</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/03-joint-pose-scrubbers.png" alt="Reusable Pose Authoring &amp; Joint Angle Scrubbers" width="960" height="720">
+      <figcaption>Reusable Pose Authoring &amp; Joint Angle Scrubbers</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/04-pick-place-6dof-kinematics.png" alt="6-DOF Articulated Arm Configuration (PickPlaceArm)" width="960" height="720">
+      <figcaption>6-DOF Articulated Arm Configuration (PickPlaceArm)</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/05-motion-document-preview.png" alt="Deterministic Motion Interpolation &amp; Keyframe Telemetry" width="960" height="720">
+      <figcaption>Deterministic Motion Interpolation &amp; Keyframe Telemetry</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/06-schema2-arduino-export.png" alt="Schema v2 JSON &amp; Arduino Firmware Export" width="960" height="720">
+      <figcaption>Schema v2 JSON &amp; Arduino Firmware Export</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Robot Motion Studio is a local-first multi-robot motion designer and forward kinematics simulation studio for PWM servo robotics. Built entirely in browser-side WebAssembly SQLite (sql.js + OPFS) with zero server dependencies, it enables roboticists to calibrate servo microsecond pulse widths, author reusable joint angle poses, and choreograph multi-step motion sequences through a visual timeline editor. The platform features cubic easing interpolation (ease-in, ease-out, ease-in-out), step-group repeat loops, and continuous sequence replay. A real-time 2D Canvas kinematics simulator models articulated arm chains and interactive environmental coupling (such as wall, door latch, and frame geometry for durability testing rigs). It supports multiple kinematic configurations—from 4-DOF durability testing arms and 6-DOF pick-and-place manipulators to quadruped walkers and pan-tilt gimbals—and exports deterministic Schema Version 2 JSON payloads directly compatible with Arduino firmware and PWM servo driver shields.</p></div>
+    <div class="section"><h3>Summary</h3><p>A browser-based motion choreography studio for PWM servo robots with forward kinematics simulation, timeline easing curves, and Arduino firmware export.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>Python</li><li>FastAPI</li><li>SQLite</li><li>Bootstrap 5</li><li>sql.js</li><li>WebAssembly</li><li>HTML/CSS</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>arduino</li><li>motion-sequencing</li><li>robotics</li><li>servo</li><li>web-app</li></ul></div>
   </main>

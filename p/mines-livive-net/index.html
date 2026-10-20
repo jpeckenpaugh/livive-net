@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Minesweeper RL Arcade — Livive</title>
-<meta name="description" content="Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper">
+<meta name="description" content="Human intuition vs. 9 ONNX neural policies on deterministic 8×8 Minesweeper boards with live confidence heatmaps and 9-model lockstep races.">
 <link rel="canonical" href="https://www.livive.net/p/mines-livive-net/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Minesweeper RL Arcade">
-<meta property="og:description" content="Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper">
+<meta property="og:description" content="Human intuition vs. 9 ONNX neural policies on deterministic 8×8 Minesweeper boards with live confidence heatmaps and 9-model lockstep races.">
 <meta property="og:url" content="https://www.livive.net/p/mines-livive-net/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/mines-livive-net.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Minesweeper RL Arcade — Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper">
+<meta property="og:image:alt" content="Minesweeper RL Arcade — Human intuition vs. 9 ONNX neural policies on deterministic 8×8 Minesweeper boards with live confidence heatmaps and 9-model lockstep races.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Minesweeper RL Arcade">
-<meta name="twitter:description" content="Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper">
+<meta name="twitter:description" content="Human intuition vs. 9 ONNX neural policies on deterministic 8×8 Minesweeper boards with live confidence heatmaps and 9-model lockstep races.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/mines-livive-net.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Minesweeper RL Arcade",
-  "description": "Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper",
+  "description": "Human intuition vs. 9 ONNX neural policies on deterministic 8×8 Minesweeper boards with live confidence heatmaps and 9-model lockstep races.",
   "url": "https://www.livive.net/p/mines-livive-net/",
   "image": [
-    "https://www.livive.net/thumbnails/mines-livive-net.webp"
+    "https://www.livive.net/thumbnails/mines-livive-net.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/01-play-cabinet.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/02-ai-heatmap-step.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/03-ai-autoplay.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/04-human-vs-ai-race.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/05-concurrent-9-models.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/06-model-checkpoints.png"
   ],
   "genre": "Games",
   "keywords": "JavaScript, HTML, CSS, ONNX Runtime Web, Python, PyTorch, Stable-Baselines3",
@@ -53,9 +59,9 @@
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/mines-livive-net.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/mines-livive-net.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/02-ai-heatmap-step.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/mines-livive-net.webp" alt="Minesweeper RL Arcade — Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/mines-livive-net.webm" poster="/thumbnails/mines-livive-net.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:640 / 400">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/02-ai-heatmap-step.png" alt="Minesweeper RL Arcade — Human intuition vs. 9 ONNX neural policies on deterministic 8×8 Minesweeper boards with live confidence heatmaps and 9-model lockstep races.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/02-ai-heatmap-step.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/01-play-cabinet.png" alt="PLAY Cabinet — Deterministic 8×8 Seed" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">PLAY Cabinet — Deterministic 8×8 Seed</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/02-ai-heatmap-step.png" alt="AI Inspector — Live Cyan P(reveal) Heatmap &amp; Top Moves" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">AI Inspector — Live Cyan P(reveal) Heatmap &amp; Top Moves</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/03-ai-autoplay.png" alt="AI Autoplay — Stepping ONNX Policy Inference" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">AI Autoplay — Stepping ONNX Policy Inference</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/04-human-vs-ai-race.png" alt="RACE Mode — Human vs. ONNX Policy Side-by-Side" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">RACE Mode — Human vs. ONNX Policy Side-by-Side</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/05-concurrent-9-models.png" alt="CONCURRENT Mode — All 9 Checkpoints Racing in Lockstep" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">CONCURRENT Mode — All 9 Checkpoints Racing in Lockstep</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/06-model-checkpoints.png" alt="MODELS Tab — Checkpoint Architecture &amp; Win-Rate Cards" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">MODELS Tab — Checkpoint Architecture &amp; Win-Rate Cards</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Minesweeper RL Arcade</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
       <span>Games</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated yesterday</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Retro arcade cabinet where you race reinforcement-learning policies on 8x8 Minesweeper</p>
+    <p class="lead">Human intuition vs. 9 ONNX neural policies on deterministic 8×8 Minesweeper boards with live confidence heatmaps and 9-model lockstep races.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://mines.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play the arcade<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://mines.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/mines-livive-net" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=mines-livive-net">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play the arcade</strong><span>https://mines.livive.net/</span></span>
+      <span class="ep-body"><strong>Play</strong><span>https://mines.livive.net/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://mines.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Minesweeper RL Arcade is an in-browser retro arcade cabinet built around a deterministic 8x8 Minesweeper engine and a library of ONNX-exported reinforcement-learning policies. It has five modes: PLAY, where you clear a seeded board with a guaranteed-safe first click; AI, where a selected checkpoint plays the same seed with live confidence, per-cell distributions, and a legal-action mask; RACE, a side-by-side human-vs-policy comparison on an identical seed; CONCURRENT, where every checkpoint in the library steps through one board in lockstep with a CLEARED/DETONATED/STUCK scoreboard and points-sorted leaderboard; and MODELS, a details panel for each manifest checkpoint (family, method, architecture, training recipe, file size, and fixed-seed evaluation). The v2 library ships nine documented checkpoints across four families — a uniform baseline, solver-imitation behaviour clones, REINFORCE policy-gradient models, and kernel/single-conv ablations — evaluated from 0% to 61.4% win rate. The app is a static ES-module bundle that fetches models/manifest.json and runs inference through the pinned onnxruntime-web CDN; the engine, featurization, and action-mask contract stay frozen so scores remain comparable across checkpoints. It deploys to GitHub Pages from main at mines.livive.net, guarded by a smoke workflow that asserts the app, the manifest, and every model file are served live.</p></div>
-    <div class="section"><h3>Summary</h3><p>An in-browser retro arcade cabinet running ONNX-exported reinforcement-learning policies on a deterministic 8x8 Minesweeper engine. Play a seeded board, watch the AI reason with a live action mask and confidence heatmap, race a checkpoint on the same seed, or run the whole nine-model library in CONCURRENT mode.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/01-play-cabinet.png" alt="PLAY Cabinet — Deterministic 8×8 Seed" width="960" height="720">
+      <figcaption>PLAY Cabinet — Deterministic 8×8 Seed</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/02-ai-heatmap-step.png" alt="AI Inspector — Live Cyan P(reveal) Heatmap &amp; Top Moves" width="960" height="720">
+      <figcaption>AI Inspector — Live Cyan P(reveal) Heatmap &amp; Top Moves</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/03-ai-autoplay.png" alt="AI Autoplay — Stepping ONNX Policy Inference" width="960" height="720">
+      <figcaption>AI Autoplay — Stepping ONNX Policy Inference</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/04-human-vs-ai-race.png" alt="RACE Mode — Human vs. ONNX Policy Side-by-Side" width="960" height="720">
+      <figcaption>RACE Mode — Human vs. ONNX Policy Side-by-Side</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/05-concurrent-9-models.png" alt="CONCURRENT Mode — All 9 Checkpoints Racing in Lockstep" width="960" height="720">
+      <figcaption>CONCURRENT Mode — All 9 Checkpoints Racing in Lockstep</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/06-model-checkpoints.png" alt="MODELS Tab — Checkpoint Architecture &amp; Win-Rate Cards" width="960" height="720">
+      <figcaption>MODELS Tab — Checkpoint Architecture &amp; Win-Rate Cards</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>MINES.livive.net turns 8×8 (10-mine) Minesweeper into an interactive reinforcement-learning laboratory. Every board is generated from a shareable deterministic seed (?seed=42) with a guaranteed first-click safe opening. Play manually, step through any of 9 trained ONNX neural checkpoints while inspecting live P(reveal) cyan heatmaps and action masks, race an AI side-by-side on the exact same seed, or watch all 9 checkpoints run concurrently in lockstep.</p></div>
+    <div class="section"><h3>Summary</h3><p>Retro arcade cabinet where you play deterministic 8×8 Minesweeper seeds, inspect live ONNX probability heatmaps, race an RL policy side-by-side, or watch all 9 checkpoints compete simultaneously.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>ONNX Runtime Web</li><li>Python</li><li>PyTorch</li><li>Stable-Baselines3</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>arcade-cabinet</li><li>browser-game</li><li>minesweeper</li><li>onnx</li><li>onnxruntime</li><li>policy-imitation</li><li>reinforcement-learning</li></ul></div>
   </main>

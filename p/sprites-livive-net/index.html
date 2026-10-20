@@ -32,10 +32,16 @@
   "description": "Turn 3D GLB/glTF models into sprite sheets and single sprites in your browser",
   "url": "https://www.livive.net/p/sprites-livive-net/",
   "image": [
-    "https://www.livive.net/thumbnails/sprites-livive-net.webp"
+    "https://www.livive.net/thumbnails/sprites-livive-net.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/01-workbench-overview.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/02-multi-directional-playback.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/03-derived-diagonal-matrix.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/04-camera-pitch-and-views.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/05-single-sprite-crop-tool.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/06-sheet-export-and-asset-metrics.png"
   ],
   "genre": "Dev Tools",
-  "keywords": "JavaScript, HTML, CSS, Three.js, WebGL",
+  "keywords": "JavaScript, HTML, CSS, Three.js, WebGL, Canvas",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://www.livive.net/#website",
@@ -53,9 +59,9 @@
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/sprites-livive-net.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/sprites-livive-net.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/01-workbench-overview.png",
+    "duration": "PT30S"
   }
 }
 </script>
@@ -143,13 +149,42 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/sprites-livive-net.webp" alt="Sprites · Model-to-Sprite Workshop — Turn 3D GLB/glTF models into sprite sheets and single sprites in your browser"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/sprites-livive-net.webm" poster="/thumbnails/sprites-livive-net.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/01-workbench-overview.png" alt="Sprites · Model-to-Sprite Workshop — Turn 3D GLB/glTF models into sprite sheets and single sprites in your browser">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/01-workbench-overview.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 30s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/01-workbench-overview.png" alt="Workshop Overview &amp; Turntable Setup" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Workshop Overview &amp; Turntable Setup</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/02-multi-directional-playback.png" alt="Simultaneous Multi-Directional Playback" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Simultaneous Multi-Directional Playback</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/03-derived-diagonal-matrix.png" alt="Algorithmic Diagonal Warping Matrix" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Algorithmic Diagonal Warping Matrix</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/04-camera-pitch-and-views.png" alt="Orthographic Pitch &amp; Multi-View Tuning" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Orthographic Pitch &amp; Multi-View Tuning</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/05-single-sprite-crop-tool.png" alt="Single Sprite Angle Capture &amp; Auto-Crop" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Single Sprite Angle Capture &amp; Auto-Crop</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/06-sheet-export-and-asset-metrics.png" alt="Adaptive Palette WebP Export &amp; Asset Metrics" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Adaptive Palette WebP Export &amp; Asset Metrics</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Sprites · Model-to-Sprite Workshop</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
       <span>Dev Tools</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated yesterday</span>
+      <span>Updated 2 days ago</span>
     </div>
     <p class="lead">Turn 3D GLB/glTF models into sprite sheets and single sprites in your browser</p>
     <div class="actions">
@@ -166,11 +201,29 @@
       <span class="ep-body"><strong>Oblique Sandbox</strong><span>https://oblique.livive.net/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://oblique.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Sprites is a static, browser-based 3D-to-sprite workshop. Select a GLB/glTF model and animation clip, preview sampled views and frames, configure camera pitch, view count, output dimensions, and background, then render and export a row-major PNG or adaptive-palette WebP sprite sheet. It also supports capturing a single angle with automatic bounds cropping, optional JSON metadata, and optional derived diagonal animation directions. The project is a companion asset-preparation tool for the Oblique 2.5D scene sandbox.</p></div>
-    <div class="section"><h3>Summary</h3><p>A browser-based 3D-to-sprite workshop for previewing turntable views and animation frames, then exporting sprite sheets or cropped single sprites.</p></div>
-    <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Three.js</li><li>WebGL</li></ul></div>
-    <div class="section"><h3>Tags</h3><ul class="chips"><li>3d-models</li><li>game-assets</li><li>glb</li><li>sprite-sheets</li><li>web-tool</li></ul></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/01-workbench-overview.png" alt="Workshop Overview &amp; Turntable Setup" width="960" height="720">
+      <figcaption>Workshop Overview &amp; Turntable Setup</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/02-multi-directional-playback.png" alt="Simultaneous Multi-Directional Playback" width="960" height="720">
+      <figcaption>Simultaneous Multi-Directional Playback</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/03-derived-diagonal-matrix.png" alt="Algorithmic Diagonal Warping Matrix" width="960" height="720">
+      <figcaption>Algorithmic Diagonal Warping Matrix</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/04-camera-pitch-and-views.png" alt="Orthographic Pitch &amp; Multi-View Tuning" width="960" height="720">
+      <figcaption>Orthographic Pitch &amp; Multi-View Tuning</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/05-single-sprite-crop-tool.png" alt="Single Sprite Angle Capture &amp; Auto-Crop" width="960" height="720">
+      <figcaption>Single Sprite Angle Capture &amp; Auto-Crop</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/06-sheet-export-and-asset-metrics.png" alt="Adaptive Palette WebP Export &amp; Asset Metrics" width="960" height="720">
+      <figcaption>Adaptive Palette WebP Export &amp; Asset Metrics</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Sprites is a static, browser-based 3D-to-sprite workshop companion tool for the Oblique 2.5D engine. Load GLB/glTF models with Three.js, preview turntable multi-angle views and animated walk cycles, configure camera pitch (0° to 80°), view count, and output dimensions, and inspect live 16-direction matrices with runtime shear/rotational warping. Export row-major PNG or adaptive-palette WebP sprite sheets with embedded XMP metadata, or capture single angles cropped to pixel bounding boxes.</p></div>
+    <div class="section"><h3>Summary</h3><p>A browser-based 3D-to-sprite workshop for previewing turntable views and animation frames, deriving 8 diagonal directional angles with shear/rotation warping, and exporting adaptive-palette WebP or PNG sprite sheets.</p></div>
+    <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Three.js</li><li>WebGL</li><li>Canvas</li></ul></div>
+    <div class="section"><h3>Tags</h3><ul class="chips"><li>3d-models</li><li>game-assets</li><li>glb</li><li>gltf</li><li>sprite-sheets</li><li>threejs</li><li>webgl</li><li>dev-tools</li></ul></div>
   </main>
   <footer class="site"><a href="https://github.com/jpeckenpaugh" target="_blank" rel="noopener noreferrer">More on GitHub &rarr;<span class="sr-only"> (opens in a new tab)</span></a></footer>
 </div>

@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Executive Assistant — Livive</title>
-<meta name="description" content="Local, single-user web app for tasks, meetings, reminders, and follow-ups">
+<meta name="description" content="In-browser executive productivity suite with client-side SQLite, OPFS persistence, and natural language AI command bar.">
 <link rel="canonical" href="https://www.livive.net/p/executive-assistant/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Executive Assistant">
-<meta property="og:description" content="Local, single-user web app for tasks, meetings, reminders, and follow-ups">
+<meta property="og:description" content="In-browser executive productivity suite with client-side SQLite, OPFS persistence, and natural language AI command bar.">
 <meta property="og:url" content="https://www.livive.net/p/executive-assistant/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/executive-assistant.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups">
+<meta property="og:image:alt" content="Executive Assistant — In-browser executive productivity suite with client-side SQLite, OPFS persistence, and natural language AI command bar.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Executive Assistant">
-<meta name="twitter:description" content="Local, single-user web app for tasks, meetings, reminders, and follow-ups">
+<meta name="twitter:description" content="In-browser executive productivity suite with client-side SQLite, OPFS persistence, and natural language AI command bar.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/executive-assistant.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Executive Assistant",
-  "description": "Local, single-user web app for tasks, meetings, reminders, and follow-ups",
+  "description": "In-browser executive productivity suite with client-side SQLite, OPFS persistence, and natural language AI command bar.",
   "url": "https://www.livive.net/p/executive-assistant/",
   "image": [
-    "https://www.livive.net/thumbnails/executive-assistant.webp"
+    "https://www.livive.net/thumbnails/executive-assistant.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/01-daily-briefing-cockpit.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/02-calendar-conflict-detection.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/03-atomic-inbox-triage.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/04-task-delegation-recurrence.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/05-ai-command-preview-modal.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/06-opfs-sqlite-workspace.png"
   ],
   "genre": "Web Apps & Prototypes",
   "keywords": "Python, FastAPI, SQLAlchemy, SQLite, Jinja2, Bootstrap, JavaScript, SQL.js, Uvicorn",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/executive-assistant/",
+    "https://ea.livive.net/",
     "https://github.com/jpeckenpaugh/executive-assistant"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/executive-assistant.webm",
-    "thumbnailUrl": "https://www.livive.net/previews/executive-assistant.webp",
-    "duration": "PT30S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/01-daily-briefing-cockpit.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/executive-assistant.webp" alt="Executive Assistant — Local, single-user web app for tasks, meetings, reminders, and follow-ups"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/executive-assistant.webm" poster="/previews/executive-assistant.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/01-daily-briefing-cockpit.png" alt="Executive Assistant — In-browser executive productivity suite with client-side SQLite, OPFS persistence, and natural language AI command bar.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/01-daily-briefing-cockpit.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/01-daily-briefing-cockpit.png" alt="Daily Briefing Dashboard &amp; Executive Priority Cockpit" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Daily Briefing Dashboard &amp; Executive Priority Cockpit</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/02-calendar-conflict-detection.png" alt="Conflict-Aware Calendar Scheduling &amp; Overlap Warnings" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Conflict-Aware Calendar Scheduling &amp; Overlap Warnings</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/03-atomic-inbox-triage.png" alt="Quick-Capture Inbox &amp; Atomic Triage Processing" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Quick-Capture Inbox &amp; Atomic Triage Processing</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/04-task-delegation-recurrence.png" alt="Priority Task Delegation &amp; Recurrence Rules" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Priority Task Delegation &amp; Recurrence Rules</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/05-ai-command-preview-modal.png" alt="Natural Language AI Command Parser &amp; Action Preview" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Natural Language AI Command Parser &amp; Action Preview</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/06-opfs-sqlite-workspace.png" alt="Client-Side SQLite Engine &amp; OPFS Workspace Management" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Client-Side SQLite Engine &amp; OPFS Workspace Management</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Executive Assistant</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Web Apps &amp; Prototypes</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 1mo ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Local, single-user web app for tasks, meetings, reminders, and follow-ups</p>
+    <p class="lead">In-browser executive productivity suite with client-side SQLite, OPFS persistence, and natural language AI command bar.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/executive-assistant/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://ea.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/executive-assistant" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=executive-assistant">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/executive-assistant/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/executive-assistant/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://ea.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://ea.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Executive Assistant is a local, single-user web app for organizing daily responsibilities, priorities, commitments, meetings, follow-ups, contacts, notes, reminders, and quick-capture items in one place. It offers a daily dashboard with priorities, overdue work, upcoming commitments, reminders, and quick actions; task management with low/medium/high priority, due dates, postponement, completion, and daily/weekly/monthly recurrence; meeting and commitment tracking with cancellation, completion, and advisory overlap warnings; meeting preparation and follow-up notes; contact and relationship tracking; a quick-capture inbox processed into tasks, notes, or reminders; unified case-insensitive search with record-type filtering; and in-app reminders with acknowledge, snooze, and dismiss actions. The backend is FastAPI with SQLAlchemy and SQLite, and the interface is server-rendered with Jinja2 and Bootstrap from a CDN. A separate browser proof-of-concept under poc-browser uses sql.js and includes an AI command bar. The app stores data in a local SQLite database and is designed for one local user; authentication, external calendar sync, email delivery, push notifications, and background workers are out of scope. The initial build is complete across the concept, feature, environment, architecture, backend, and frontend stages, but formal verification has not completed yet.</p></div>
-    <div class="section"><h3>Summary</h3><p>A local, single-user web app for organizing daily responsibilities, priorities, commitments, meetings, follow-ups, contacts, notes, reminders, and quick-capture items in one place.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/01-daily-briefing-cockpit.png" alt="Daily Briefing Dashboard &amp; Executive Priority Cockpit" width="960" height="720">
+      <figcaption>Daily Briefing Dashboard &amp; Executive Priority Cockpit</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/02-calendar-conflict-detection.png" alt="Conflict-Aware Calendar Scheduling &amp; Overlap Warnings" width="960" height="720">
+      <figcaption>Conflict-Aware Calendar Scheduling &amp; Overlap Warnings</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/03-atomic-inbox-triage.png" alt="Quick-Capture Inbox &amp; Atomic Triage Processing" width="960" height="720">
+      <figcaption>Quick-Capture Inbox &amp; Atomic Triage Processing</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/04-task-delegation-recurrence.png" alt="Priority Task Delegation &amp; Recurrence Rules" width="960" height="720">
+      <figcaption>Priority Task Delegation &amp; Recurrence Rules</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/05-ai-command-preview-modal.png" alt="Natural Language AI Command Parser &amp; Action Preview" width="960" height="720">
+      <figcaption>Natural Language AI Command Parser &amp; Action Preview</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/06-opfs-sqlite-workspace.png" alt="Client-Side SQLite Engine &amp; OPFS Workspace Management" width="960" height="720">
+      <figcaption>Client-Side SQLite Engine &amp; OPFS Workspace Management</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Executive Assistant is a local-first, privacy-centric operations platform designed to organize executive priorities, commitments, contacts, notes, and quick-capture items in a single client-side workspace. Powered by SQLite compiled to WebAssembly (sql.js) and persisting directly to the browser&#39;s Origin Private File System (OPFS), the application guarantees zero-latency, offline operation with standard .db database backup and import capabilities. Core capabilities include an executive briefing dashboard with pending inbox and overdue alerts; conflict-aware commitment scheduling with automated schedule overlap detection; atomic inbox processing that rapidly triages brain dumps into high-priority tasks, contextual notes, or time-locked reminders; and an omnipresent natural language AI command bar capable of parsing complex scheduling instructions into multi-action confirmation previews before database commit.</p></div>
+    <div class="section"><h3>Summary</h3><p>A privacy-first personal executive assistant running entirely in the browser using WebAssembly SQLite and OPFS for conflict-aware scheduling, atomic inbox triage, and task execution.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>SQLAlchemy</li><li>SQLite</li><li>Jinja2</li><li>Bootstrap</li><li>JavaScript</li><li>SQL.js</li><li>Uvicorn</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>fastapi</li><li>productivity</li><li>single-user</li><li>sqlite</li><li>task-management</li><li>web-app</li></ul></div>
   </main>

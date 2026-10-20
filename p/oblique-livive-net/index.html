@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Oblique · 2.5D World Sandbox — Livive</title>
-<meta name="description" content="A browser-based workbench for building and exploring layered 2.5D game worlds">
+<meta name="description" content="Interactive 2.5D game-world workbench for dynamic Y-depth sorting, procedural terrain layers, and scene composition.">
 <link rel="canonical" href="https://www.livive.net/p/oblique-livive-net/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Oblique · 2.5D World Sandbox">
-<meta property="og:description" content="A browser-based workbench for building and exploring layered 2.5D game worlds">
+<meta property="og:description" content="Interactive 2.5D game-world workbench for dynamic Y-depth sorting, procedural terrain layers, and scene composition.">
 <meta property="og:url" content="https://www.livive.net/p/oblique-livive-net/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/oblique-livive-net.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds">
+<meta property="og:image:alt" content="Oblique · 2.5D World Sandbox — Interactive 2.5D game-world workbench for dynamic Y-depth sorting, procedural terrain layers, and scene composition.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Oblique · 2.5D World Sandbox">
-<meta name="twitter:description" content="A browser-based workbench for building and exploring layered 2.5D game worlds">
+<meta name="twitter:description" content="Interactive 2.5D game-world workbench for dynamic Y-depth sorting, procedural terrain layers, and scene composition.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/oblique-livive-net.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Oblique · 2.5D World Sandbox",
-  "description": "A browser-based workbench for building and exploring layered 2.5D game worlds",
+  "description": "Interactive 2.5D game-world workbench for dynamic Y-depth sorting, procedural terrain layers, and scene composition.",
   "url": "https://www.livive.net/p/oblique-livive-net/",
   "image": [
-    "https://www.livive.net/thumbnails/oblique-livive-net.webp"
+    "https://www.livive.net/thumbnails/oblique-livive-net.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/01-sandbox-depth-and-shadows.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/02-debug-overlays-and-hitboxes.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/03-sprite-editor-turntable-tuning.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/04-five-layer-substrate-matrix.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/05-playground-scene-builder-sequencer.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/06-coastal-beach-camp-study.png"
   ],
   "genre": "Web Apps & Prototypes",
   "keywords": "JavaScript, HTML, CSS, Canvas",
@@ -53,8 +59,8 @@
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/oblique-livive-net.webm",
-    "thumbnailUrl": "https://www.livive.net/previews/oblique-livive-net.webp",
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/01-sandbox-depth-and-shadows.png",
     "duration": "PT30S"
   }
 }
@@ -143,15 +149,44 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/oblique-livive-net.webp" alt="Oblique · 2.5D World Sandbox — A browser-based workbench for building and exploring layered 2.5D game worlds"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/oblique-livive-net.webm" poster="/previews/oblique-livive-net.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/01-sandbox-depth-and-shadows.png" alt="Oblique · 2.5D World Sandbox — Interactive 2.5D game-world workbench for dynamic Y-depth sorting, procedural terrain layers, and scene composition.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/01-sandbox-depth-and-shadows.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 30s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/01-sandbox-depth-and-shadows.png" alt="Dynamic Y-Depth Sorting &amp; Directional Silhouette Shadows" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Dynamic Y-Depth Sorting &amp; Directional Silhouette Shadows</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/02-debug-overlays-and-hitboxes.png" alt="Diagnostic Overlays: Footprint Hitboxes, Anchors &amp; Bounding Geometry" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Diagnostic Overlays: Footprint Hitboxes, Anchors &amp; Bounding Geometry</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/03-sprite-editor-turntable-tuning.png" alt="Real-Time Sprite &amp; Prop Editor: Frame Turntable &amp; Anchor Registration" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Real-Time Sprite &amp; Prop Editor: Frame Turntable &amp; Anchor Registration</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/04-five-layer-substrate-matrix.png" alt="Five-Layer Terrain Substrate: Bedrock to Animated Shoreline Foam" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Five-Layer Terrain Substrate: Bedrock to Animated Shoreline Foam</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/05-playground-scene-builder-sequencer.png" alt="Playground Scene Builder: Terrain Brushes &amp; Event Sequencer" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Playground Scene Builder: Terrain Brushes &amp; Event Sequencer</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/06-coastal-beach-camp-study.png" alt="Beach Camp Scene Study: Coastal Waterways, Shallows &amp; Pier Props" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Beach Camp Scene Study: Coastal Waterways, Shallows &amp; Pier Props</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Oblique · 2.5D World Sandbox</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
       <span>Web Apps &amp; Prototypes</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated yesterday</span>
+      <span>Updated today</span>
     </div>
-    <p class="lead">A browser-based workbench for building and exploring layered 2.5D game worlds</p>
+    <p class="lead">Interactive 2.5D game-world workbench for dynamic Y-depth sorting, procedural terrain layers, and scene composition.</p>
     <div class="actions">
       <a class="btn btn-primary" href="https://oblique.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Explore Oblique<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/oblique-livive-net" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
@@ -167,20 +202,38 @@
       <span class="ep-go"><a class="btn btn-ghost" href="https://oblique.livive.net/sandbox.html" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li><li class="episode">
       <span class="no">S01E03</span>
-      <span class="ep-body"><strong>Playground</strong><span>https://oblique.livive.net/playground.html</span></span>
+      <span class="ep-body"><strong>Playground Scene Builder</strong><span>https://oblique.livive.net/playground.html</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://oblique.livive.net/playground.html" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li><li class="episode">
       <span class="no">S01E04</span>
-      <span class="ep-body"><strong>Terrain Layers</strong><span>https://oblique.livive.net/terrain-layers.html</span></span>
+      <span class="ep-body"><strong>5-Layer Terrain POC</strong><span>https://oblique.livive.net/terrain-layers.html</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://oblique.livive.net/terrain-layers.html" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li><li class="episode">
       <span class="no">S01E05</span>
-      <span class="ep-body"><strong>Beach Camp</strong><span>https://oblique.livive.net/beach-camp.html</span></span>
+      <span class="ep-body"><strong>Beach Camp Scene Study</strong><span>https://oblique.livive.net/beach-camp.html</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://oblique.livive.net/beach-camp.html" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Oblique is a static, browser-based workbench for exploring and building 2.5D game worlds on an orthogonal square grid. Its standalone pages include a model sandbox for editing sprites and anchors, inspecting Y-depth sorting and collisions, painting terrain, and exploring a scene; a Playground scene builder for composing 16x16 scenes with terrain and sprite painting, per-sprite scaling, NPC behavior, ordered events, and local save/import/export; a terrain-layer prototype for procedural substrates, water, and shoreline foam; and a larger Beach Camp coastal scene. The sandbox includes player movement, wandering NPCs, shadows, camera controls, and debug overlays. A companion Sprites workshop previews GLB/glTF turntable views and animation frames and exports sprite sheets or cropped sprites for use in scenes.</p></div>
-    <div class="section"><h3>Summary</h3><p>A collection of browser-based experiments for building scenes and testing sprites, depth sorting, terrain layers, water, and interactive coastal scenes on an orthogonal grid.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/01-sandbox-depth-and-shadows.png" alt="Dynamic Y-Depth Sorting &amp; Directional Silhouette Shadows" width="960" height="720">
+      <figcaption>Dynamic Y-Depth Sorting &amp; Directional Silhouette Shadows</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/02-debug-overlays-and-hitboxes.png" alt="Diagnostic Overlays: Footprint Hitboxes, Anchors &amp; Bounding Geometry" width="960" height="720">
+      <figcaption>Diagnostic Overlays: Footprint Hitboxes, Anchors &amp; Bounding Geometry</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/03-sprite-editor-turntable-tuning.png" alt="Real-Time Sprite &amp; Prop Editor: Frame Turntable &amp; Anchor Registration" width="960" height="720">
+      <figcaption>Real-Time Sprite &amp; Prop Editor: Frame Turntable &amp; Anchor Registration</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/04-five-layer-substrate-matrix.png" alt="Five-Layer Terrain Substrate: Bedrock to Animated Shoreline Foam" width="960" height="720">
+      <figcaption>Five-Layer Terrain Substrate: Bedrock to Animated Shoreline Foam</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/05-playground-scene-builder-sequencer.png" alt="Playground Scene Builder: Terrain Brushes &amp; Event Sequencer" width="960" height="720">
+      <figcaption>Playground Scene Builder: Terrain Brushes &amp; Event Sequencer</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/06-coastal-beach-camp-study.png" alt="Beach Camp Scene Study: Coastal Waterways, Shallows &amp; Pier Props" width="960" height="720">
+      <figcaption>Beach Camp Scene Study: Coastal Waterways, Shallows &amp; Pier Props</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Oblique is an inspectable browser workbench exploring how layered terrain, water foam, dynamic Y-sorting, and directional silhouette shadows unite on an orthogonal 64×64 grid. Its modular applications include a 2.5D model sandbox with live sprite and anchor editing, solid obstacle collisions, and directional shadow feathering; a 5-layer procedural terrain engine with soloable Worley bedrock, Bayer-dithered turf, and translucent UV wave drift; a 16×16 scene-building Playground with terrain brush painting, sprite scaling, and event sequence scripting; and an atmospheric Beach Camp coastal scene study.</p></div>
+    <div class="section"><h3>Summary</h3><p>A browser-based game workbench for testing sprite depth sorting, 12-angle turntable anchors, procedural 5-layer terrain substrates, and scene event choreography on an orthogonal grid.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Canvas</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>2.5d</li><li>game-assets</li><li>game-development</li><li>procedural-terrain</li><li>sandbox</li></ul></div>
   </main>

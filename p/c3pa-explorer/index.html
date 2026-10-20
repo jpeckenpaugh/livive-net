@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>C3PA Explorer — Livive</title>
-<meta name="description" content="In-browser explorer for the C3PA privacy-policy dataset">
+<meta name="description" content="In-browser WASM SQLite corpus browser for CCPA privacy policies with cryptographic snapshot audits.">
 <link rel="canonical" href="https://www.livive.net/p/c3pa-explorer/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="C3PA Explorer">
-<meta property="og:description" content="In-browser explorer for the C3PA privacy-policy dataset">
+<meta property="og:description" content="In-browser WASM SQLite corpus browser for CCPA privacy policies with cryptographic snapshot audits.">
 <meta property="og:url" content="https://www.livive.net/p/c3pa-explorer/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/c3pa-explorer.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset">
+<meta property="og:image:alt" content="C3PA Explorer — In-browser WASM SQLite corpus browser for CCPA privacy policies with cryptographic snapshot audits.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="C3PA Explorer">
-<meta name="twitter:description" content="In-browser explorer for the C3PA privacy-policy dataset">
+<meta name="twitter:description" content="In-browser WASM SQLite corpus browser for CCPA privacy policies with cryptographic snapshot audits.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/c3pa-explorer.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "C3PA Explorer",
-  "description": "In-browser explorer for the C3PA privacy-policy dataset",
+  "description": "In-browser WASM SQLite corpus browser for CCPA privacy policies with cryptographic snapshot audits.",
   "url": "https://www.livive.net/p/c3pa-explorer/",
   "image": [
-    "https://www.livive.net/thumbnails/c3pa-explorer.webp"
+    "https://www.livive.net/thumbnails/c3pa-explorer.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/01-dashboard-corpus-metrics.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/02-cryptographic-snapshot-audit.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/03-document-library-browser.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/04-document-detail-sentences-view.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/05-annotation-alignment-provenance.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/06-downstream-data-slicer-export.png"
   ],
   "genre": "Web Apps & Prototypes",
   "keywords": "JavaScript, Python, FastAPI, sql.js, WebAssembly, Bootstrap 5, SQLite, Jupyter",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/c3pa-explorer/",
+    "https://c3pa.livive.net/",
     "https://github.com/jpeckenpaugh/c3pa-explorer"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/c3pa-explorer.webm",
-    "thumbnailUrl": "https://www.livive.net/previews/c3pa-explorer.webp",
-    "duration": "PT30S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/01-dashboard-corpus-metrics.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/c3pa-explorer.webp" alt="C3PA Explorer — In-browser explorer for the C3PA privacy-policy dataset"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/c3pa-explorer.webm" poster="/previews/c3pa-explorer.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/01-dashboard-corpus-metrics.png" alt="C3PA Explorer — In-browser WASM SQLite corpus browser for CCPA privacy policies with cryptographic snapshot audits.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/01-dashboard-corpus-metrics.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/01-dashboard-corpus-metrics.png" alt="Corpus Dashboard — 400 Privacy Policies &amp; 45k Annotations" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Corpus Dashboard — 400 Privacy Policies &amp; 45k Annotations</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/02-cryptographic-snapshot-audit.png" alt="Verified SQLite Snapshot &amp; Dual-Runtime Engine Modal" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Verified SQLite Snapshot &amp; Dual-Runtime Engine Modal</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/03-document-library-browser.png" alt="Policy Documents Library &amp; Crawl Inventory" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Policy Documents Library &amp; Crawl Inventory</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/04-document-detail-sentences-view.png" alt="Document Detail — Sentence Extraction &amp; Label Overlays" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Document Detail — Sentence Extraction &amp; Label Overlays</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/05-annotation-alignment-provenance.png" alt="Auditable 3-Tier Annotation-to-Sentence Alignment Modal" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Auditable 3-Tier Annotation-to-Sentence Alignment Modal</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/06-downstream-data-slicer-export.png" alt="Downstream Dataset Slicer &amp; Partition Export" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Downstream Dataset Slicer &amp; Partition Export</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">C3PA Explorer</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Web Apps &amp; Prototypes</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 4w ago</span>
+      <span>Updated yesterday</span>
     </div>
-    <p class="lead">In-browser explorer for the C3PA privacy-policy dataset</p>
+    <p class="lead">In-browser WASM SQLite corpus browser for CCPA privacy policies with cryptographic snapshot audits.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/c3pa-explorer/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://c3pa.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/c3pa-explorer" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=c3pa-explorer">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/c3pa-explorer/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/c3pa-explorer/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://c3pa.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://c3pa.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>C3PA Explorer is a proof-of-concept web app for exploring the C3PA Dataset (400 expert-annotated privacy policies, CCPA/CPRA) at both the source level (verbatim annotator spans) and the derived level (deterministically re-extracted text units). It ships two runtimes sharing one SPA and SQLite schema: a FastAPI edition with a Python backend over a normalized SQLite database, and a browser edition running entirely in-browser on sql.js (SQLite compiled to WebAssembly) against a prebuilt, signed snapshot. The derived layer is produced by backend/extract.py, a fully deterministic rule-based pipeline (no trained models) that drops chrome, extracts leaf text blocks, merges lead-ins with lists, splits sentences with abbreviation/URL/email guards, classifies units as sentence or typed fragment, and performs 3-tier annotation re-alignment. A dashboard shows corpus stats and label distributions; documents can be browsed and searched, document detail has Source/Sentences/Fragments tabs with clickable alignment provenance, and a unit explorer supports filtering and exporting timestamped ZIP archives with partition files and meta.json. The browser edition auto-loads a signed snapshot (verified against envelope and db hashes in builds.json) and runs queries in a Web Worker with no server or network calls after download; a nav modal can switch to a FastAPI backend. Snapshots can be rebuilt on Google Colab via the included notebook, and tests cover backend API, frontend units, and FastAPI/ sql.js parity.</p></div>
-    <div class="section"><h3>Summary</h3><p>A proof-of-concept web app for exploring the C3PA Dataset (400 expert-annotated CCPA/CPRA privacy policies) at both the source level (verbatim annotator spans) and the deterministically re-extracted derived level.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/01-dashboard-corpus-metrics.png" alt="Corpus Dashboard — 400 Privacy Policies &amp; 45k Annotations" width="960" height="720">
+      <figcaption>Corpus Dashboard — 400 Privacy Policies &amp; 45k Annotations</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/02-cryptographic-snapshot-audit.png" alt="Verified SQLite Snapshot &amp; Dual-Runtime Engine Modal" width="960" height="720">
+      <figcaption>Verified SQLite Snapshot &amp; Dual-Runtime Engine Modal</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/03-document-library-browser.png" alt="Policy Documents Library &amp; Crawl Inventory" width="960" height="720">
+      <figcaption>Policy Documents Library &amp; Crawl Inventory</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/04-document-detail-sentences-view.png" alt="Document Detail — Sentence Extraction &amp; Label Overlays" width="960" height="720">
+      <figcaption>Document Detail — Sentence Extraction &amp; Label Overlays</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/05-annotation-alignment-provenance.png" alt="Auditable 3-Tier Annotation-to-Sentence Alignment Modal" width="960" height="720">
+      <figcaption>Auditable 3-Tier Annotation-to-Sentence Alignment Modal</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/06-downstream-data-slicer-export.png" alt="Downstream Dataset Slicer &amp; Partition Export" width="960" height="720">
+      <figcaption>Downstream Dataset Slicer &amp; Partition Export</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>C3PA Explorer is an open-source privacy policy corpus explorer and data inspection workbench built for the EMNLP 2024 CCPA/CPRA dataset. Operating entirely client-side on SQLite compiled to WebAssembly (sql.js) inside a dedicated Web Worker, it loads signed snapshot archives verified against envelope hash and internal SQLite SHA256 integrity checks. Researchers can inspect 400 crawl policies across 45,121 raw annotator spans, review deterministic 3-tier sentence alignments, filter downstream dataset partitions by legal taxonomy categories and annotator consensus, and export timestamped ZIP bundles directly in the browser.</p></div>
+    <div class="section"><h3>Summary</h3><p>A zero-backend dataset explorer running on client-side sql.js WebAssembly to search 400 CCPA policies, verify 45k annotations, and audit cryptographic database snapshots.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>Python</li><li>FastAPI</li><li>sql.js</li><li>WebAssembly</li><li>Bootstrap 5</li><li>SQLite</li><li>Jupyter</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>annotation</li><li>dataset-explorer</li><li>fastapi</li><li>nlp</li><li>privacy-policies</li><li>sql.js</li></ul></div>
   </main>

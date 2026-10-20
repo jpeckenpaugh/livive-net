@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>LunarLander Policy Lab — Livive</title>
-<meta name="description" content="Playable LunarLander arcade with trained RL policy pilots in the browser">
+<meta name="description" content="9 trained ONNX policies and Pyodide physics inside a retro vector cabinet—fly solo, co-pilot with live softmax sparklines, or enter the 4-Pilot Cup.">
 <link rel="canonical" href="https://www.livive.net/p/rl-livive-net/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="LunarLander Policy Lab">
-<meta property="og:description" content="Playable LunarLander arcade with trained RL policy pilots in the browser">
+<meta property="og:description" content="9 trained ONNX policies and Pyodide physics inside a retro vector cabinet—fly solo, co-pilot with live softmax sparklines, or enter the 4-Pilot Cup.">
 <meta property="og:url" content="https://www.livive.net/p/rl-livive-net/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/rl-livive-net.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="LunarLander Policy Lab — Playable LunarLander arcade with trained RL policy pilots in the browser">
+<meta property="og:image:alt" content="LunarLander Policy Lab — 9 trained ONNX policies and Pyodide physics inside a retro vector cabinet—fly solo, co-pilot with live softmax sparklines, or enter the 4-Pilot Cup.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="LunarLander Policy Lab">
-<meta name="twitter:description" content="Playable LunarLander arcade with trained RL policy pilots in the browser">
+<meta name="twitter:description" content="9 trained ONNX policies and Pyodide physics inside a retro vector cabinet—fly solo, co-pilot with live softmax sparklines, or enter the 4-Pilot Cup.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/rl-livive-net.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "LunarLander Policy Lab",
-  "description": "Playable LunarLander arcade with trained RL policy pilots in the browser",
+  "description": "9 trained ONNX policies and Pyodide physics inside a retro vector cabinet—fly solo, co-pilot with live softmax sparklines, or enter the 4-Pilot Cup.",
   "url": "https://www.livive.net/p/rl-livive-net/",
   "image": [
-    "https://www.livive.net/thumbnails/rl-livive-net.webp"
+    "https://www.livive.net/thumbnails/rl-livive-net.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/01-attract-cabinet.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/02-cabinet-manual.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/03-solo-mode-select.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/04-choose-pilot.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/05-ai-pilot-policy-inspector.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/06-lunar-touchdown-telemetry.png"
   ],
   "genre": "Games",
   "keywords": "JavaScript, Python, Pyodide, ONNX Runtime Web, Stable-Baselines3, PyTorch, NumPy, Pygame, PyPyBox2D, HTML, CSS",
@@ -53,9 +59,9 @@
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/rl-livive-net.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/rl-livive-net.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/05-ai-pilot-policy-inspector.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,15 +149,44 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/rl-livive-net.webp" alt="LunarLander Policy Lab — Playable LunarLander arcade with trained RL policy pilots in the browser"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/rl-livive-net.webm" poster="/thumbnails/rl-livive-net.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:640 / 400">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/05-ai-pilot-policy-inspector.png" alt="LunarLander Policy Lab — 9 trained ONNX policies and Pyodide physics inside a retro vector cabinet—fly solo, co-pilot with live softmax sparklines, or enter the 4-Pilot Cup.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/05-ai-pilot-policy-inspector.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/01-attract-cabinet.png" alt="Tournament Edition Vector Cabinet &amp; Boot Sequence" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Tournament Edition Vector Cabinet &amp; Boot Sequence</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/02-cabinet-manual.png" alt="Cabinet Manual &amp; Controls Overview" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Cabinet Manual &amp; Controls Overview</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/03-solo-mode-select.png" alt="Solo Flight Mode Selector (Human, Co-Pilot, AI Pilot)" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Solo Flight Mode Selector (Human, Co-Pilot, AI Pilot)</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/04-choose-pilot.png" alt="Choose Your Pilot — 9 Trained ONNX RL Checkpoints" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Choose Your Pilot — 9 Trained ONNX RL Checkpoints</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/05-ai-pilot-policy-inspector.png" alt="Live Flight with Policy Inspector &amp; Softmax Sparkline" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Live Flight with Policy Inspector &amp; Softmax Sparkline</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/06-lunar-touchdown-telemetry.png" alt="Landing Zone Approach &amp; Flight Telemetry" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Landing Zone Approach &amp; Flight Telemetry</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">LunarLander Policy Lab</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
       <span>Games</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated yesterday</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Playable LunarLander arcade with trained RL policy pilots in the browser</p>
+    <p class="lead">9 trained ONNX policies and Pyodide physics inside a retro vector cabinet—fly solo, co-pilot with live softmax sparklines, or enter the 4-Pilot Cup.</p>
     <div class="actions">
       <a class="btn btn-primary" href="https://lunar.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/rl-livive-net" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
@@ -162,9 +197,27 @@
       <span class="ep-body"><strong>Play</strong><span>https://lunar.livive.net/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://lunar.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>LunarLander Policy Lab is a playable LunarLander environment POC with a selectable trained-policy controller. The static browser page runs the Python environment in Pyodide 0.23.4 and renders on a JavaScript canvas inside an arcade-cabinet UI, offering Solo Flight and Tournament modes plus a 4 AI Simulations mode. A Stable-Baselines3 policy runs as a small ONNX actor via ONNX Runtime Web&#39;s WASM CPU backend, with Human Pilot, AI Pilot, and Autopilot with Override choices, and optional Sensor Fault and Thruster Fault controls. The project includes a deliberately small Gymnasium compatibility shim (not the full package) supporting gymnasium.make(&quot;LunarLander-v2&quot;), using PyPyBox2D for pure-Python physics. A terminal launcher supports local play and environment work using numpy and pygame, and a local exporter reproduces the ONNX model from the published Hugging Face PPO checkpoint.</p></div>
-    <div class="section"><h3>Summary</h3><p>A browser-based LunarLander game and reinforcement-learning policy lab. Race against trained PPO pilots, or pilot solo, in a Pyodide-powered arcade cabinet, with an optional terminal launcher for local play.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/01-attract-cabinet.png" alt="Tournament Edition Vector Cabinet &amp; Boot Sequence" width="960" height="720">
+      <figcaption>Tournament Edition Vector Cabinet &amp; Boot Sequence</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/02-cabinet-manual.png" alt="Cabinet Manual &amp; Controls Overview" width="960" height="720">
+      <figcaption>Cabinet Manual &amp; Controls Overview</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/03-solo-mode-select.png" alt="Solo Flight Mode Selector (Human, Co-Pilot, AI Pilot)" width="960" height="720">
+      <figcaption>Solo Flight Mode Selector (Human, Co-Pilot, AI Pilot)</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/04-choose-pilot.png" alt="Choose Your Pilot — 9 Trained ONNX RL Checkpoints" width="960" height="720">
+      <figcaption>Choose Your Pilot — 9 Trained ONNX RL Checkpoints</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/05-ai-pilot-policy-inspector.png" alt="Live Flight with Policy Inspector &amp; Softmax Sparkline" width="960" height="720">
+      <figcaption>Live Flight with Policy Inspector &amp; Softmax Sparkline</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/06-lunar-touchdown-telemetry.png" alt="Landing Zone Approach &amp; Flight Telemetry" width="960" height="720">
+      <figcaption>Landing Zone Approach &amp; Flight Telemetry</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>LunarLander Policy Lab brings Gymnasium&#39;s classic LunarLander-v2 physics and 9 trained reinforcement-learning checkpoints (PPO, DQN, Dueling DDQN, n-step DQN, Actor-Critic) into a retro vector arcade cabinet powered by Pyodide and ONNX Runtime Web. Fly manually, share the controls in Co-Piloting mode where human thruster input seamlessly overrides the neural pilot on the fly, inspect live action-probability bars and confidence sparklines, or pit 4 pilots against each other in a 10-round tournament with custom House Rules hazards.</p></div>
+    <div class="section"><h3>Summary</h3><p>Fly LunarLander-v2 yourself, co-pilot alongside a Stable-Baselines3 PPO policy with live softmax sparklines, or race 4 AI pilots across 10 seeded tournament rounds.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>Python</li><li>Pyodide</li><li>ONNX Runtime Web</li><li>Stable-Baselines3</li><li>PyTorch</li><li>NumPy</li><li>Pygame</li><li>PyPyBox2D</li><li>HTML</li><li>CSS</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>browser-game</li><li>gymnasium</li><li>lunar-lander</li><li>onnx</li><li>pyodide</li><li>reinforcement-learning</li></ul></div>
   </main>

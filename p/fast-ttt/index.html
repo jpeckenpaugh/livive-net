@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>fast-ttt — Livive</title>
-<meta name="description" content="ASCII tic-tac-toe over HTTP, played with curl to teach client/server">
+<meta name="description" content="&quot;Look Ma, No Browser!&quot; — Two-player ASCII Tic-Tac-Toe played entirely over curl and plain-text HTTP (Act II of the Tic-Tac-Toe Trilogy).">
 <link rel="canonical" href="https://www.livive.net/p/fast-ttt/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="fast-ttt">
-<meta property="og:description" content="ASCII tic-tac-toe over HTTP, played with curl to teach client/server">
+<meta property="og:description" content="&quot;Look Ma, No Browser!&quot; — Two-player ASCII Tic-Tac-Toe played entirely over curl and plain-text HTTP (Act II of the Tic-Tac-Toe Trilogy).">
 <meta property="og:url" content="https://www.livive.net/p/fast-ttt/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/fast-ttt.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="fast-ttt — ASCII tic-tac-toe over HTTP, played with curl to teach client/server">
+<meta property="og:image:alt" content="fast-ttt — &quot;Look Ma, No Browser!&quot; — Two-player ASCII Tic-Tac-Toe played entirely over curl and plain-text HTTP (Act II of the Tic-Tac-Toe Trilogy).">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="fast-ttt">
-<meta name="twitter:description" content="ASCII tic-tac-toe over HTTP, played with curl to teach client/server">
+<meta name="twitter:description" content="&quot;Look Ma, No Browser!&quot; — Two-player ASCII Tic-Tac-Toe played entirely over curl and plain-text HTTP (Act II of the Tic-Tac-Toe Trilogy).">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/fast-ttt.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "fast-ttt",
-  "description": "ASCII tic-tac-toe over HTTP, played with curl to teach client/server",
+  "description": "\"Look Ma, No Browser!\" — Two-player ASCII Tic-Tac-Toe played entirely over curl and plain-text HTTP (Act II of the Tic-Tac-Toe Trilogy).",
   "url": "https://www.livive.net/p/fast-ttt/",
   "image": [
-    "https://www.livive.net/thumbnails/fast-ttt.webp"
+    "https://www.livive.net/thumbnails/fast-ttt.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/01-create-game-and-board.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/02-opening-moves.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/03-http-409-validation.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/04-midgame-battle.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/05-ascii-victory-highlight.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/06-move-history-and-stats.png"
   ],
   "genre": "Education & Teaching",
   "keywords": "Python, FastAPI, uvicorn, SQLAlchemy, SQLite, pydantic, pytest, httpx",
@@ -49,7 +55,13 @@
   },
   "sameAs": [
     "https://github.com/jpeckenpaugh/fast-ttt"
-  ]
+  ],
+  "video": {
+    "@type": "VideoObject",
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/05-ascii-victory-highlight.png",
+    "duration": "PT31S"
+  }
 }
 </script>
 <style>
@@ -136,24 +148,71 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/fast-ttt.webp" alt="fast-ttt — ASCII tic-tac-toe over HTTP, played with curl to teach client/server"></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:16 / 10">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/05-ascii-victory-highlight.png" alt="fast-ttt — &quot;Look Ma, No Browser!&quot; — Two-player ASCII Tic-Tac-Toe played entirely over curl and plain-text HTTP (Act II of the Tic-Tac-Toe Trilogy).">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/05-ascii-victory-highlight.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/01-create-game-and-board.png" alt="Split-Terminal curl Clients &amp; FastAPI Server" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Split-Terminal curl Clients &amp; FastAPI Server</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/02-opening-moves.png" alt="Opening Moves Over Plain-Text HTTP" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Opening Moves Over Plain-Text HTTP</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/03-http-409-validation.png" alt="Server-Authoritative Validation (HTTP 409 Wrong Turn)" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Server-Authoritative Validation (HTTP 409 Wrong Turn)</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/04-midgame-battle.png" alt="Mid-Game ASCII Board Synchronization" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Mid-Game ASCII Board Synchronization</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/05-ascii-victory-highlight.png" alt="Diagonal Victory Highlight ([X] at 3, 5, 7)" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Diagonal Victory Highlight ([X] at 3, 5, 7)</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/06-move-history-and-stats.png" alt="SQLite Move History (/games/1/moves) &amp; Server Stats" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">SQLite Move History (/games/1/moves) &amp; Server Stats</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">fast-ttt</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Education &amp; Teaching</span>
       
-      <span>Updated 2mo ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">ASCII tic-tac-toe over HTTP, played with curl to teach client/server</p>
+    <p class="lead">&quot;Look Ma, No Browser!&quot; — Two-player ASCII Tic-Tac-Toe played entirely over curl and plain-text HTTP (Act II of the Tic-Tac-Toe Trilogy).</p>
     <div class="actions">
       
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/fast-ttt" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=fast-ttt">Open interactive view &rarr;</a>
     </div>
     
-    
-    <div class="section"><h3>About</h3><p>fast-ttt is a minimal teaching tool that demonstrates client/server principles using a game of tic-tac-toe. Two players interact over plain HTTP with curl or a web browser, and the FastAPI server replies with ASCII boards and text only — no HTML, JavaScript, CSS, or JSON (the sole exception being FastAPI&#39;s auto-generated Swagger UI at /docs). It supports creating games, viewing boards, playing numbered moves, random auto-moves, per-game move history, and home-page statistics, with winning lines highlighted. Game state is persisted in SQLite via SQLAlchemy, and moves commit atomically across board, turn, status, and history. Docs (OVERVIEW.md and FAST-API.md) are served by the app itself to explain how clients and servers communicate.</p></div>
-    <div class="section"><h3>Summary</h3><p>A text-based tic-tac-toe game served by FastAPI that responds in pure plain text, playable by two players using curl or a browser.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/01-create-game-and-board.png" alt="Split-Terminal curl Clients &amp; FastAPI Server" width="960" height="720">
+      <figcaption>Split-Terminal curl Clients &amp; FastAPI Server</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/02-opening-moves.png" alt="Opening Moves Over Plain-Text HTTP" width="960" height="720">
+      <figcaption>Opening Moves Over Plain-Text HTTP</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/03-http-409-validation.png" alt="Server-Authoritative Validation (HTTP 409 Wrong Turn)" width="960" height="720">
+      <figcaption>Server-Authoritative Validation (HTTP 409 Wrong Turn)</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/04-midgame-battle.png" alt="Mid-Game ASCII Board Synchronization" width="960" height="720">
+      <figcaption>Mid-Game ASCII Board Synchronization</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/05-ascii-victory-highlight.png" alt="Diagonal Victory Highlight ([X] at 3, 5, 7)" width="960" height="720">
+      <figcaption>Diagonal Victory Highlight ([X] at 3, 5, 7)</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/06-move-history-and-stats.png" alt="SQLite Move History (/games/1/moves) &amp; Server Stats" width="960" height="720">
+      <figcaption>SQLite Move History (/games/1/moves) &amp; Server Stats</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Act II of the Tic-Tac-Toe Architecture Trilogy strips away HTML, CSS, JavaScript, and even JSON to teach raw client-server fundamentals. Two players (or scripts) compete entirely via curl requests against a FastAPI + SQLAlchemy + SQLite backend that responds with plain-text ASCII boards, atomic move validation, and highlighted winning lines.</p></div>
+    <div class="section"><h3>Summary</h3><p>&quot;Look Ma, No Browser!&quot; — Play two-player ASCII Tic-Tac-Toe over curl and plain-text HTTP backed by FastAPI, SQLAlchemy, and SQLite.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>uvicorn</li><li>SQLAlchemy</li><li>SQLite</li><li>pydantic</li><li>pytest</li><li>httpx</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>cli</li><li>game</li><li>http</li><li>plain-text</li><li>teaching</li><li>tic-tac-toe</li></ul></div>
   </main>

@@ -19,3 +19,28 @@ The landing page is generated from `projects.json` by a small, manual pipeline:
 
 Run step 5 after any change to `projects.json` so crawlers and no-JS clients see
 the full project catalog.
+
+## Per-project showcase bundles
+
+Project repos can publish their own showcase media with a manual
+`.github/workflows/showcase.yml` run. It writes:
+
+```
+demos/latest/demo.webm      ~30s silent 16:10 recording
+demos/latest/thumb.webp     1280x800 card thumbnail
+demos/latest/poster.webp    960x600 poster
+demos/latest/manifest.json  labels + timings + git revision
+demos/latest/gallery/*.png  labeled stills
+```
+
+Fold a bundle into the catalogue with:
+
+```bash
+node _bootstrap/sync-showcase.mjs --keys trot-livive-net fourcast-livive-net
+node _bootstrap/sync-showcase.mjs --raw --keys trot-livive-net   # after push
+```
+
+Local mode copies the media into `previews/` and `thumbnails/` for staging;
+`--raw` points `previews.json` at `raw.githubusercontent.com` instead. Then copy
+`previews.json` to the netfix root (or run `node build_site.mjs` there) and
+re-run step 5.

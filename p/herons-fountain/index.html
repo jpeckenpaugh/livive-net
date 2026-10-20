@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Heron&#39;s Fountain — 2D Simulation — Livive</title>
-<meta name="description" content="Interactive browser simulation of a pump-less Heron&#39;s fountain">
+<meta name="description" content="Interactive 2D physics simulation of a pumpless Heron&#39;s fountain with shared-air compression and reversible siphons.">
 <link rel="canonical" href="https://www.livive.net/p/herons-fountain/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Heron&#39;s Fountain — 2D Simulation">
-<meta property="og:description" content="Interactive browser simulation of a pump-less Heron&#39;s fountain">
+<meta property="og:description" content="Interactive 2D physics simulation of a pumpless Heron&#39;s fountain with shared-air compression and reversible siphons.">
 <meta property="og:url" content="https://www.livive.net/p/herons-fountain/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/herons-fountain.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain">
+<meta property="og:image:alt" content="Heron&#39;s Fountain — 2D Simulation — Interactive 2D physics simulation of a pumpless Heron&#39;s fountain with shared-air compression and reversible siphons.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Heron&#39;s Fountain — 2D Simulation">
-<meta name="twitter:description" content="Interactive browser simulation of a pump-less Heron&#39;s fountain">
+<meta name="twitter:description" content="Interactive 2D physics simulation of a pumpless Heron&#39;s fountain with shared-air compression and reversible siphons.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/herons-fountain.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Heron's Fountain — 2D Simulation",
-  "description": "Interactive browser simulation of a pump-less Heron's fountain",
+  "description": "Interactive 2D physics simulation of a pumpless Heron's fountain with shared-air compression and reversible siphons.",
   "url": "https://www.livive.net/p/herons-fountain/",
   "image": [
-    "https://www.livive.net/thumbnails/herons-fountain.webp"
+    "https://www.livive.net/thumbnails/herons-fountain.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/01-herons-fountain-initial-flow.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/02-active-fountain-jet-ballistics.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/03-auto-invert-trigger-controls.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/04-chamber-inversion-transition.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/05-reversed-cycle-high-speed.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/06-physics-model-about-modal.png"
   ],
   "genre": "Web Apps & Prototypes",
   "keywords": "JavaScript, HTML5, Canvas",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/herons-fountain/",
+    "https://fountain.livive.net/",
     "https://github.com/jpeckenpaugh/herons-fountain"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/herons-fountain.webm",
-    "thumbnailUrl": "https://www.livive.net/previews/herons-fountain.webp",
-    "duration": "PT30S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/02-active-fountain-jet-ballistics.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/herons-fountain.webp" alt="Heron&#39;s Fountain — 2D Simulation — Interactive browser simulation of a pump-less Heron&#39;s fountain"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/herons-fountain.webm" poster="/previews/herons-fountain.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/02-active-fountain-jet-ballistics.png" alt="Heron&#39;s Fountain — 2D Simulation — Interactive 2D physics simulation of a pumpless Heron&#39;s fountain with shared-air compression and reversible siphons.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/02-active-fountain-jet-ballistics.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/01-herons-fountain-initial-flow.png" alt="Initial Hydraulic Flow: Basin Intake &amp; Shared-Air Compression" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Initial Hydraulic Flow: Basin Intake &amp; Shared-Air Compression</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/02-active-fountain-jet-ballistics.png" alt="Peak Jet Ballistics: Pressurized Nozzle Stream &amp; Droplet Arcs" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Peak Jet Ballistics: Pressurized Nozzle Stream &amp; Droplet Arcs</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/03-auto-invert-trigger-controls.png" alt="Siphon Automation Controls: Threshold, Dwell &amp; Trigger Modes" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Siphon Automation Controls: Threshold, Dwell &amp; Trigger Modes</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/04-chamber-inversion-transition.png" alt="Dynamic Inversion Swap: Mid-Transition Elevation Exchange" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Dynamic Inversion Swap: Mid-Transition Elevation Exchange</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/05-reversed-cycle-high-speed.png" alt="Reversed Flow Phase &amp; Multi-Speed Simulation (4× Acceleration)" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Reversed Flow Phase &amp; Multi-Speed Simulation (4× Acceleration)</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/06-physics-model-about-modal.png" alt="Lumped-Pressure Isothermal Model &amp; Technical Specification" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Lumped-Pressure Isothermal Model &amp; Technical Specification</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Heron&#39;s Fountain — 2D Simulation</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Web Apps &amp; Prototypes</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 2mo ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Interactive browser simulation of a pump-less Heron&#39;s fountain</p>
+    <p class="lead">Interactive 2D physics simulation of a pumpless Heron&#39;s fountain with shared-air compression and reversible siphons.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/herons-fountain/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://fountain.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/herons-fountain" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=herons-fountain">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/herons-fountain/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/herons-fountain/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://fountain.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://fountain.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Heron&#39;s Fountain is a zero-dependency, browser-based 2D simulation of a Heron&#39;s fountain. It models three water regions (a fixed top Basin, sealed Chamber A, and sealed Chamber B) connected by pipes P1, P2, and P3, treating the two sealed air spaces as one shared volume at a single pressure. Physics uses a polytropic pressure-volume relation (P = P0 (V0 / V)^k, default isothermal k = 1) and an orifice flow approximation (Q = Cd A sqrt(2 dP / rho)) accounting for hydrostatic head, with water conserved as transferred volumes. The animated side view draws the apparatus, liquid flow, airflow, and a horizontal particle jet, with live readouts of elapsed time, jet velocity, flow rate, vessel volumes, and fill percentages. Controls include Invert (exchanging chamber elevations and reversing flow), Auto Invert with selectable triggers (jet speed, flow rate, chamber fill, elapsed cycle time, or settled condition) plus threshold and dwell, simulation Speed of 1x-16x, and Reset. It is a deliberate lumped approximation that omits turbulence, surface tension, viscosity, temperature change, and detailed inversion mechanics. No build step or external dependency is required; serve the directory as static files.</p></div>
-    <div class="section"><h3>Summary</h3><p>An interactive, browser-based 2D approximation of a Heron&#39;s fountain that shows how falling water compresses trapped air to drive a fountain jet without a pump.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/01-herons-fountain-initial-flow.png" alt="Initial Hydraulic Flow: Basin Intake &amp; Shared-Air Compression" width="960" height="720">
+      <figcaption>Initial Hydraulic Flow: Basin Intake &amp; Shared-Air Compression</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/02-active-fountain-jet-ballistics.png" alt="Peak Jet Ballistics: Pressurized Nozzle Stream &amp; Droplet Arcs" width="960" height="720">
+      <figcaption>Peak Jet Ballistics: Pressurized Nozzle Stream &amp; Droplet Arcs</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/03-auto-invert-trigger-controls.png" alt="Siphon Automation Controls: Threshold, Dwell &amp; Trigger Modes" width="960" height="720">
+      <figcaption>Siphon Automation Controls: Threshold, Dwell &amp; Trigger Modes</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/04-chamber-inversion-transition.png" alt="Dynamic Inversion Swap: Mid-Transition Elevation Exchange" width="960" height="720">
+      <figcaption>Dynamic Inversion Swap: Mid-Transition Elevation Exchange</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/05-reversed-cycle-high-speed.png" alt="Reversed Flow Phase &amp; Multi-Speed Simulation (4× Acceleration)" width="960" height="720">
+      <figcaption>Reversed Flow Phase &amp; Multi-Speed Simulation (4× Acceleration)</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/06-physics-model-about-modal.png" alt="Lumped-Pressure Isothermal Model &amp; Technical Specification" width="960" height="720">
+      <figcaption>Lumped-Pressure Isothermal Model &amp; Technical Specification</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Heron&#39;s Fountain is an interactive, zero-dependency browser-based 2D simulation of the classical hydraulic apparatus described by Hero of Alexandria. It models three fluid vessels—a top open basin, an active lower compression chamber, and an elevated discharge chamber—interconnected by two liquid conduits and an isothermal shared-air tube (P2). As water drops through gravity intake P1, it seals the lower chamber and compresses the trapped gas volume according to polytropic PV relations. The resulting pneumatic head forces fluid through nozzle pipe P3, launching an arcing ballistic droplet stream into the basin. Features include dynamic chamber elevation inversion (swapping elevations and reversing flow paths), automated siphon triggers (jet velocity, flow rate, receiver fill percentage, cycle duration, and settled equilibrium), real-time gauge pressure telemetry (+kPa), and simulation time scaling up to 16×.</p></div>
+    <div class="section"><h3>Summary</h3><p>A browser-based 2D fluid simulation demonstrating how falling water compresses trapped isothermal air to power an elevated fountain jet without a pump.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>HTML5</li><li>Canvas</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>canvas</li><li>fluid-dynamics</li><li>interactive</li><li>physics</li><li>simulation</li></ul></div>
   </main>

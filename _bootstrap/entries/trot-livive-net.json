@@ -1,0 +1,58 @@
+{
+  "key": "trot-livive-net",
+  "repo": "trot-livive-net",
+  "display_title": "TROT — Transparent Rust ONNX Trainer",
+  "tagline": "A tiny neural network you can read, train in the browser, and export to ONNX.",
+  "short_description": "A hand-written Rust neural network compiled to WebAssembly: forward pass, backprop, SGD, and a ~200-line protobuf encoder that exports ONNX—with every weight, gradient, and loss step rendered on screen.",
+  "long_description": "TROT (Transparent Rust ONNX Trainer) is a small neural network built to be inspected rather than trusted. The model, backpropagation, loss, and weight updates are plain Rust loops in trot-core—no ndarray, no autodiff—compiled to WebAssembly so training runs entirely in the browser with no server, Python, or install. Six panels expose the whole pipeline: train with selectable activations and optional L2, export a hand-encoded ONNX graph and verify it with an in-place onnxruntime-web round-trip, browse the deterministic generated corpus (including intentionally flipped labels), inspect the full W1/b1/W2 weight grids, read the last minibatch's gradients cell by cell, and trace a single prediction through z1, activation, z2, and sigmoid. The corpus is a deterministic function of seed and size over a fixed 50-token grammar, so there is no dataset blob, and every number on the page is generated live.",
+  "tags": [
+    "neural-network",
+    "machine-learning",
+    "interpretability",
+    "rust",
+    "wasm",
+    "onnx",
+    "education",
+    "from-scratch"
+  ],
+  "tech": [
+    "Rust",
+    "WebAssembly",
+    "ONNX",
+    "JavaScript",
+    "HTML5",
+    "CSS3"
+  ],
+  "category": "AI/ML Experiments",
+  "live_url": "https://trot.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/trot-livive-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Custom domain trot.livive.net from CNAME; GitHub Pages also serves the repo path. The committed trot.wasm keeps the static site runnable without a Rust toolchain. CI covers unit/gradient/determinism tests, corpus audits, the activation x L2 matrix, a wasm ABI smoke test, and ONNX round-trip validation.",
+  "demos": [
+    {
+      "label": "Train & Trace",
+      "url": "https://trot.livive.net/"
+    },
+    {
+      "label": "Source",
+      "url": "https://github.com/jpeckenpaugh/trot-livive-net"
+    }
+  ],
+  "how_to_play": [
+    {
+      "title": "1. Train a network you can read",
+      "body": "Pick an activation, corpus size, learning rate, batch size, and label-noise rate. The page boots with a 300-step run, then shows the BCE + penalty decomposition and the loss curve as it trains."
+    },
+    {
+      "title": "2. Inspect every number",
+      "body": "Open the Weights and Gradients panels to see W1, b1, W2, and the last minibatch's dW1/db1/dW2/db2. Trace a prediction token by token through z1, h, z2, and sigmoid."
+    },
+    {
+      "title": "3. Export and verify ONNX",
+      "body": "The Export panel writes a four-node opset-13 ONNX graph with a hand-rolled protobuf encoder, then loads the bytes into onnxruntime-web and compares every test prediction against the in-browser model."
+    }
+  ]
+}

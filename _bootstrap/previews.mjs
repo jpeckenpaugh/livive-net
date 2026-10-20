@@ -64,6 +64,54 @@ const WAIT_OVERRIDES = {
 };
 const CLICK_OVERRIDES = {};
 
+// Per-project pre-capture steps for pages that boot into a modal or start screen.
+const PREPARE_OVERRIDES = {
+  "ocr-livive-net": async (page) => {
+    await page
+      .evaluate(() => document.querySelector(".close-modal-btn")?.click())
+      .catch(() => {});
+    await page.waitForTimeout(500);
+    await page
+      .evaluate(() => {
+        const tab = [...document.querySelectorAll("button, a")].find((b) =>
+          /Training & Analytics/i.test(b.textContent),
+        );
+        tab?.click();
+      })
+      .catch(() => {});
+    await page.waitForTimeout(1200);
+  },
+  "yds-livive-net": async (page) => {
+    await page
+      .evaluate(() => {
+        const start = [...document.querySelectorAll("button")].find(
+          (b) => b.textContent.trim() === "Start",
+        );
+        start?.click();
+      })
+      .catch(() => {});
+    await page.waitForTimeout(800);
+    await page
+      .evaluate(() => {
+        const el = [...document.querySelectorAll("*")].find(
+          (x) => x.children.length === 0 && x.textContent.trim() === "Making Plans",
+        );
+        (el?.closest("button, a, [role=button]") || el)?.click();
+      })
+      .catch(() => {});
+    await page.waitForTimeout(1200);
+    await page
+      .evaluate(() => {
+        const dismiss = [...document.querySelectorAll("button")].find((b) =>
+          /Dismiss/i.test(b.textContent),
+        );
+        dismiss?.click();
+      })
+      .catch(() => {});
+    await page.waitForTimeout(500);
+  },
+};
+
 async function loadChromium() {
   try {
     const mod = await import("playwright-core");
@@ -141,6 +189,9 @@ async function recordClip(browser, project, tmp) {
 
       const click = CLICK_OVERRIDES[key] || project.preview_click;
       if (click) await page.click(click, { timeout: 2500 }).catch(() => {});
+
+      const prepare = PREPARE_OVERRIDES[key];
+      if (prepare) await prepare(page);
 
       await page.waitForTimeout(WAIT_OVERRIDES[key] ?? 1200);
       await page.mouse.move(VIEW.width / 2, VIEW.height / 2).catch(() => {});

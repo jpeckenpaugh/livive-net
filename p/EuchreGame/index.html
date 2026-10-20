@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>EuchreGame — Livive</title>
-<meta name="description" content="Headless Python Euchre engine with AI data factory and browser sandbox">
+<meta name="description" content="Deterministic 24-card Python Euchre engine running client-side in Pyodide with God-View vs. Masked-Seat state inspection and an LLM data factory.">
 <link rel="canonical" href="https://www.livive.net/p/EuchreGame/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="EuchreGame">
-<meta property="og:description" content="Headless Python Euchre engine with AI data factory and browser sandbox">
+<meta property="og:description" content="Deterministic 24-card Python Euchre engine running client-side in Pyodide with God-View vs. Masked-Seat state inspection and an LLM data factory.">
 <meta property="og:url" content="https://www.livive.net/p/EuchreGame/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/EuchreGame.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="EuchreGame — Headless Python Euchre engine with AI data factory and browser sandbox">
+<meta property="og:image:alt" content="EuchreGame — Deterministic 24-card Python Euchre engine running client-side in Pyodide with God-View vs. Masked-Seat state inspection and an LLM data factory.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="EuchreGame">
-<meta name="twitter:description" content="Headless Python Euchre engine with AI data factory and browser sandbox">
+<meta name="twitter:description" content="Deterministic 24-card Python Euchre engine running client-side in Pyodide with God-View vs. Masked-Seat state inspection and an LLM data factory.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/EuchreGame.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "EuchreGame",
-  "description": "Headless Python Euchre engine with AI data factory and browser sandbox",
+  "description": "Deterministic 24-card Python Euchre engine running client-side in Pyodide with God-View vs. Masked-Seat state inspection and an LLM data factory.",
   "url": "https://www.livive.net/p/EuchreGame/",
   "image": [
-    "https://www.livive.net/thumbnails/EuchreGame.webp"
+    "https://www.livive.net/thumbnails/EuchreGame.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/01-pyodide-ready-god-view.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/02-bidding-and-upcard.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/03-trump-called-trick-play.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/04-masked-seat-view.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/05-fast-autoplay-tricks.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/06-hand-scoring-and-log.png"
   ],
   "genre": "Games",
   "keywords": "Python, FastAPI, uvicorn, Pyodide, WebLLM, JavaScript, TypeScript, pytest",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/EuchreGame/",
+    "https://euchre.livive.net/",
     "https://github.com/jpeckenpaugh/EuchreGame"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/EuchreGame.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/EuchreGame.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/03-trump-called-trick-play.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,7 +149,36 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/EuchreGame.webp" alt="EuchreGame — Headless Python Euchre engine with AI data factory and browser sandbox"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/EuchreGame.webm" poster="/thumbnails/EuchreGame.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:640 / 400">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/03-trump-called-trick-play.png" alt="EuchreGame — Deterministic 24-card Python Euchre engine running client-side in Pyodide with God-View vs. Masked-Seat state inspection and an LLM data factory.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/03-trump-called-trick-play.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/01-pyodide-ready-god-view.png" alt="Pyodide Browser Sandbox &amp; Match Controls" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Pyodide Browser Sandbox &amp; Match Controls</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/02-bidding-and-upcard.png" alt="Seeded Deal &amp; Round 1 Upcard Bidding" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Seeded Deal &amp; Round 1 Upcard Bidding</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/03-trump-called-trick-play.png" alt="4-Seat Table — Trump Ordered &amp; Trick Play (God View)" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">4-Seat Table — Trump Ordered &amp; Trick Play (God View)</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/04-masked-seat-view.png" alt="Information-Set Masking — North Seat Perspective" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Information-Set Masking — North Seat Perspective</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/05-fast-autoplay-tricks.png" alt="Fast Auto-Play Trick Resolution &amp; Scoring" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Fast Auto-Play Trick Resolution &amp; Scoring</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/06-hand-scoring-and-log.png" alt="Live JSON State Export &amp; Legal Action Inspector" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Live JSON State Export &amp; Legal Action Inspector</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">EuchreGame</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
@@ -151,20 +186,38 @@
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
       <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Headless Python Euchre engine with AI data factory and browser sandbox</p>
+    <p class="lead">Deterministic 24-card Python Euchre engine running client-side in Pyodide with God-View vs. Masked-Seat state inspection and an LLM data factory.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/EuchreGame/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://euchre.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play Sandbox<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/EuchreGame" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=EuchreGame">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/EuchreGame/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/EuchreGame/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play Sandbox</strong><span>https://euchre.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://euchre.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>EuchreGame is a deterministic, headless Python package for simulating partnership Euchre with AI/ML-friendly state export. It builds a 24-card deck with seeded shuffling, runs a stateful engine covering round-one order-up and round-two trump calling, dealer pickup/discard, trick play with left/right bower handling, and legal move generation with effective-suit follow rules. State is JSON-friendly via to_dict/from_dict, and masked per-player views support hidden-information workflows. Beyond the engine, the repo includes a local Data Factory for generating, validating, benchmarking, and reviewing synthetic Euchre decision data for student-model distillation, backed by a FastAPI dashboard over JSONL artifacts. A browser-based sandbox under html/ runs the Python engine through Pyodide (with optional local Gemma/WebLLM AI play) and supports god-view or masked player views.</p></div>
-    <div class="section"><h3>Summary</h3><p>A headless Python Euchre card game engine with deterministic simulation, AI/ML-friendly state export, a synthetic training-data factory, and a Pyodide browser sandbox.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/01-pyodide-ready-god-view.png" alt="Pyodide Browser Sandbox &amp; Match Controls" width="960" height="720">
+      <figcaption>Pyodide Browser Sandbox &amp; Match Controls</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/02-bidding-and-upcard.png" alt="Seeded Deal &amp; Round 1 Upcard Bidding" width="960" height="720">
+      <figcaption>Seeded Deal &amp; Round 1 Upcard Bidding</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/03-trump-called-trick-play.png" alt="4-Seat Table — Trump Ordered &amp; Trick Play (God View)" width="960" height="720">
+      <figcaption>4-Seat Table — Trump Ordered &amp; Trick Play (God View)</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/04-masked-seat-view.png" alt="Information-Set Masking — North Seat Perspective" width="960" height="720">
+      <figcaption>Information-Set Masking — North Seat Perspective</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/05-fast-autoplay-tricks.png" alt="Fast Auto-Play Trick Resolution &amp; Scoring" width="960" height="720">
+      <figcaption>Fast Auto-Play Trick Resolution &amp; Scoring</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/06-hand-scoring-and-log.png" alt="Live JSON State Export &amp; Legal Action Inspector" width="960" height="720">
+      <figcaption>Live JSON State Export &amp; Legal Action Inspector</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>EuchreGame pairs a strict, deterministic Python partnership Euchre engine (full 24-card deck, Round 1 upcard ordering,dealer discard, Round 2 suit calling, Left/Right Bower trump hierarchy, and 10-point partnership scoring) with an in-browser Pyodide sandbox and an offline synthetic data factory. Step trick-by-trick or auto-play seeded hands, switch between God View and single-player masked views to see the exact JSON observation sent to AI agents, or connect a local browser Gemma model.</p></div>
+    <div class="section"><h3>Summary</h3><p>Play or step through 4-player partnership Euchre in your browser via Pyodide, toggle between God View and masked AI seat perspectives, or distill synthetic LLM trajectories.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>uvicorn</li><li>Pyodide</li><li>WebLLM</li><li>JavaScript</li><li>TypeScript</li><li>pytest</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>card-game</li><li>euchre</li><li>game-engine</li><li>pyodide</li><li>reinforcement-learning</li><li>synthetic-data</li></ul></div>
   </main>

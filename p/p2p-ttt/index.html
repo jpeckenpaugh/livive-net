@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Peer-to-peer Tic-Tac-Toe — Livive</title>
-<meta name="description" content="Serverless browser Tic-Tac-Toe played directly between two peers">
+<meta name="description" content="&quot;Look Ma, No Backend!&quot; — Serverless peer-to-peer Tic-Tac-Toe over WebRTC DataChannels and in-browser WASM SQLite (Act III of the Tic-Tac-Toe Trilogy).">
 <link rel="canonical" href="https://www.livive.net/p/p2p-ttt/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Peer-to-peer Tic-Tac-Toe">
-<meta property="og:description" content="Serverless browser Tic-Tac-Toe played directly between two peers">
+<meta property="og:description" content="&quot;Look Ma, No Backend!&quot; — Serverless peer-to-peer Tic-Tac-Toe over WebRTC DataChannels and in-browser WASM SQLite (Act III of the Tic-Tac-Toe Trilogy).">
 <meta property="og:url" content="https://www.livive.net/p/p2p-ttt/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/p2p-ttt.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Peer-to-peer Tic-Tac-Toe — Serverless browser Tic-Tac-Toe played directly between two peers">
+<meta property="og:image:alt" content="Peer-to-peer Tic-Tac-Toe — &quot;Look Ma, No Backend!&quot; — Serverless peer-to-peer Tic-Tac-Toe over WebRTC DataChannels and in-browser WASM SQLite (Act III of the Tic-Tac-Toe Trilogy).">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Peer-to-peer Tic-Tac-Toe">
-<meta name="twitter:description" content="Serverless browser Tic-Tac-Toe played directly between two peers">
+<meta name="twitter:description" content="&quot;Look Ma, No Backend!&quot; — Serverless peer-to-peer Tic-Tac-Toe over WebRTC DataChannels and in-browser WASM SQLite (Act III of the Tic-Tac-Toe Trilogy).">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/p2p-ttt.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Peer-to-peer Tic-Tac-Toe",
-  "description": "Serverless browser Tic-Tac-Toe played directly between two peers",
+  "description": "\"Look Ma, No Backend!\" — Serverless peer-to-peer Tic-Tac-Toe over WebRTC DataChannels and in-browser WASM SQLite (Act III of the Tic-Tac-Toe Trilogy).",
   "url": "https://www.livive.net/p/p2p-ttt/",
   "image": [
-    "https://www.livive.net/thumbnails/p2p-ttt.webp"
+    "https://www.livive.net/thumbnails/p2p-ttt.webp",
+    "https://p2p-ttt.livive.net/demos/latest/gallery/01-side-by-side-start.png",
+    "https://p2p-ttt.livive.net/demos/latest/gallery/02-host-qr-invite.png",
+    "https://p2p-ttt.livive.net/demos/latest/gallery/03-guest-reply-qr.png",
+    "https://p2p-ttt.livive.net/demos/latest/gallery/04-live-p2p-match.png",
+    "https://p2p-ttt.livive.net/demos/latest/gallery/05-match1-win-and-rematch.png",
+    "https://p2p-ttt.livive.net/demos/latest/gallery/06-opfs-sqlite-history.png"
   ],
   "genre": "Games",
   "keywords": "JavaScript, WebRTC, HTML, CSS, Web Workers, SQLite (sql.js/WASM), jsQR, qrcode-generator, Python",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/p2p-ttt/",
+    "https://p2p-ttt.livive.net/",
     "https://github.com/jpeckenpaugh/p2p-ttt"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/p2p-ttt.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/p2p-ttt.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://p2p-ttt.livive.net/demos/latest/demo.webm",
+    "thumbnailUrl": "https://p2p-ttt.livive.net/demos/latest/gallery/04-live-p2p-match.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/p2p-ttt.webp" alt="Peer-to-peer Tic-Tac-Toe — Serverless browser Tic-Tac-Toe played directly between two peers"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/p2p-ttt.webm" poster="/thumbnails/p2p-ttt.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:640 / 400">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://p2p-ttt.livive.net/demos/latest/gallery/04-live-p2p-match.png" alt="Peer-to-peer Tic-Tac-Toe — &quot;Look Ma, No Backend!&quot; — Serverless peer-to-peer Tic-Tac-Toe over WebRTC DataChannels and in-browser WASM SQLite (Act III of the Tic-Tac-Toe Trilogy).">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://p2p-ttt.livive.net/demos/latest/demo.webm" poster="https://p2p-ttt.livive.net/demos/latest/gallery/04-live-p2p-match.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/01-side-by-side-start.png" alt="Dual-Browser Side-by-Side Workspace" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Dual-Browser Side-by-Side Workspace</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/02-host-qr-invite.png" alt="Host WebRTC Offer &amp; Full-Screen QR Invite" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Host WebRTC Offer &amp; Full-Screen QR Invite</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/03-guest-reply-qr.png" alt="Friend WebRTC Answer &amp; Reply QR Code" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Friend WebRTC Answer &amp; Reply QR Code</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/04-live-p2p-match.png" alt="Live P2P Match Over WebRTC DataChannel" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Live P2P Match Over WebRTC DataChannel</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/05-match1-win-and-rematch.png" alt="Match 1 Victory &amp; Mutual Rematch Prompt" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Match 1 Victory &amp; Mutual Rematch Prompt</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/06-opfs-sqlite-history.png" alt="Persistent OPFS WASM SQLite Match History" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Persistent OPFS WASM SQLite Match History</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Peer-to-peer Tic-Tac-Toe</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Games</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 1mo ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Serverless browser Tic-Tac-Toe played directly between two peers</p>
+    <p class="lead">&quot;Look Ma, No Backend!&quot; — Serverless peer-to-peer Tic-Tac-Toe over WebRTC DataChannels and in-browser WASM SQLite (Act III of the Tic-Tac-Toe Trilogy).</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/p2p-ttt/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://p2p-ttt.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/p2p-ttt" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=p2p-ttt">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/p2p-ttt/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/p2p-ttt/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://p2p-ttt.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://p2p-ttt.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>p2p-ttt is a proof of concept for a local-first, peer-to-peer browser game. Two people start and play Tic-Tac-Toe without an application backend, account system, signaling service, or shared database. A host opens the static site, picks X or O, and shares an invitation link (or QR code); the friend opens it and returns a reply link; the two browsers then establish a direct WebRTC data-channel connection for live play. Each browser runs its own durable local workspace backed by a Web Worker, using sql.js (SQLite compiled to WebAssembly) to persist series, matches, ordered moves, outcomes, and replay history. QR codes are generated with qrcode-generator and scanned with jsQR via the camera. The project is documented with concept, architecture, plan, devops, backlog, and design specs, and includes a small Python static server for local development.</p></div>
-    <div class="section"><h3>Summary</h3><p>A local-first, static-web Tic-Tac-Toe proof of concept where two browsers connect directly over WebRTC after exchanging ordinary invitation and reply links, with no backend, accounts, or signaling service.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/01-side-by-side-start.png" alt="Dual-Browser Side-by-Side Workspace" width="960" height="720">
+      <figcaption>Dual-Browser Side-by-Side Workspace</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/02-host-qr-invite.png" alt="Host WebRTC Offer &amp; Full-Screen QR Invite" width="960" height="720">
+      <figcaption>Host WebRTC Offer &amp; Full-Screen QR Invite</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/03-guest-reply-qr.png" alt="Friend WebRTC Answer &amp; Reply QR Code" width="960" height="720">
+      <figcaption>Friend WebRTC Answer &amp; Reply QR Code</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/04-live-p2p-match.png" alt="Live P2P Match Over WebRTC DataChannel" width="960" height="720">
+      <figcaption>Live P2P Match Over WebRTC DataChannel</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/05-match1-win-and-rematch.png" alt="Match 1 Victory &amp; Mutual Rematch Prompt" width="960" height="720">
+      <figcaption>Match 1 Victory &amp; Mutual Rematch Prompt</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://p2p-ttt.livive.net/demos/latest/gallery/06-opfs-sqlite-history.png" alt="Persistent OPFS WASM SQLite Match History" width="960" height="720">
+      <figcaption>Persistent OPFS WASM SQLite Match History</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Act III of the Tic-Tac-Toe Architecture Trilogy eliminates the backend server entirely. Two browsers pair by exchanging Deflate-compressed URL hashes or scanning full-screen QR codes, stream live moves directly peer-to-peer over WebRTC DataChannels with zero relay server, and persist full replayable match histories inside each browser&#39;s local WebAssembly SQLite (sql.js) database backed by the Origin Private File System (OPFS).</p></div>
+    <div class="section"><h3>Summary</h3><p>&quot;Look Ma, No Backend!&quot; — Play live browser-to-browser Tic-Tac-Toe over WebRTC DataChannels with QR/link pairing and persistent OPFS WASM SQLite.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>WebRTC</li><li>HTML</li><li>CSS</li><li>Web Workers</li><li>SQLite (sql.js/WASM)</li><li>jsQR</li><li>qrcode-generator</li><li>Python</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>browser-game</li><li>local-first</li><li>peer-to-peer</li><li>tic-tac-toe</li><li>webrtc</li></ul></div>
   </main>

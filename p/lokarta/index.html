@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Lokarta — Livive</title>
-<meta name="description" content="Come Into The Light — a retro 2D roguelike dungeon crawler in the browser">
+<meta name="description" content="Gothic 2D roguelike tower ascent with 4 vocations, Fate Grant card drafting, and a 10 Hz Web Worker simulation engine.">
 <link rel="canonical" href="https://www.livive.net/p/lokarta/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Lokarta">
-<meta property="og:description" content="Come Into The Light — a retro 2D roguelike dungeon crawler in the browser">
+<meta property="og:description" content="Gothic 2D roguelike tower ascent with 4 vocations, Fate Grant card drafting, and a 10 Hz Web Worker simulation engine.">
 <meta property="og:url" content="https://www.livive.net/p/lokarta/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/lokarta.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Lokarta — Come Into The Light — a retro 2D roguelike dungeon crawler in the browser">
+<meta property="og:image:alt" content="Lokarta — Gothic 2D roguelike tower ascent with 4 vocations, Fate Grant card drafting, and a 10 Hz Web Worker simulation engine.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lokarta">
-<meta name="twitter:description" content="Come Into The Light — a retro 2D roguelike dungeon crawler in the browser">
+<meta name="twitter:description" content="Gothic 2D roguelike tower ascent with 4 vocations, Fate Grant card drafting, and a 10 Hz Web Worker simulation engine.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/lokarta.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Lokarta",
-  "description": "Come Into The Light — a retro 2D roguelike dungeon crawler in the browser",
+  "description": "Gothic 2D roguelike tower ascent with 4 vocations, Fate Grant card drafting, and a 10 Hz Web Worker simulation engine.",
   "url": "https://www.livive.net/p/lokarta/",
   "image": [
-    "https://www.livive.net/thumbnails/lokarta.webp"
+    "https://www.livive.net/thumbnails/lokarta.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/01-title-screen.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/02-survival-guide.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/03-choose-vocation.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/04-fate-grant-draft.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/05-havenreach-and-overworld.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/06-tower-combat-and-hud.png"
   ],
   "genre": "Games",
   "keywords": "Python, TypeScript, JavaScript, Vite, HTML5 Canvas, Web Workers, IndexedDB, Web Audio API, ES Modules, FastAPI, SQLite, Pyodide, Vitest, pytest",
@@ -53,9 +59,9 @@
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/lokarta.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/lokarta.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/06-tower-combat-and-hud.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,36 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/lokarta.webp" alt="Lokarta — Come Into The Light — a retro 2D roguelike dungeon crawler in the browser"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/lokarta.webm" poster="/thumbnails/lokarta.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:640 / 400">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/06-tower-combat-and-hud.png" alt="Lokarta — Gothic 2D roguelike tower ascent with 4 vocations, Fate Grant card drafting, and a 10 Hz Web Worker simulation engine.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/06-tower-combat-and-hud.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/01-title-screen.png" alt="Title Screen — Come Into The Light" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Title Screen — Come Into The Light</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/02-survival-guide.png" alt="Survival Guide &amp; Action Controls" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Survival Guide &amp; Action Controls</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/03-choose-vocation.png" alt="Choose Your Vocation (Magician, Archer, Fighter, Paladin)" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Choose Your Vocation (Magician, Archer, Fighter, Paladin)</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/04-fate-grant-draft.png" alt="Fate Grant Roguelike Card Draft (Pick 2 of 5)" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Fate Grant Roguelike Card Draft (Pick 2 of 5)</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/05-havenreach-and-overworld.png" alt="Havenreach Dock &amp; Dawnreach Isle Overworld" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Havenreach Dock &amp; Dawnreach Isle Overworld</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/06-tower-combat-and-hud.png" alt="Active Hero HUD, Loadout &amp; Combat Log" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Active Hero HUD, Loadout &amp; Combat Log</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Lokarta</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
       <span>Games</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated yesterday</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Come Into The Light — a retro 2D roguelike dungeon crawler in the browser</p>
+    <p class="lead">Gothic 2D roguelike tower ascent with 4 vocations, Fate Grant card drafting, and a 10 Hz Web Worker simulation engine.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://lk.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play v4 (latest)<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://lk.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/lokarta-v4" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=lokarta">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play v4 (latest)</strong><span>https://lk.livive.net/</span></span>
+      <span class="ep-body"><strong>Play</strong><span>https://lk.livive.net/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://lk.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
-    </li><li class="episode">
-      <span class="no">S01E02</span>
-      <span class="ep-body"><strong>Play v3</strong><span>https://jpeckenpaugh.github.io/lokarta-v3/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/lokarta-v3/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
-    </li><li class="episode">
-      <span class="no">S01E03</span>
-      <span class="ep-body"><strong>Play v2</strong><span>https://jpeckenpaugh.github.io/lokarta-v2/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/lokarta-v2/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Lokarta: Come Into The Light is a retro-inspired, grid-based 2D roguelike RPG. The project exists as four iterations of the same game: the original lokarta is a local-first Python terminal proof of concept for a BBS-style ASCII RPG (fixed 100x30 screen, JSON-driven content packs, single-key input, engine/UI separation); lokarta-v2 is a browser edition built with TypeScript and Vite, rendered on an HTML5 2D Canvas with a companion FastAPI + SQLite backend for dungeon layout, loot seeding, and character state; lokarta-v3 rebuilds the game as a zero-backend, client-side application using native web standards (ES modules, Web Workers, Canvas 2D, Web Audio API, IndexedDB) with four vocations, a five-tier tower ascent, and a Havenreach town hub; lokarta-v4 is the most complete engine, adding a Dawnreach Isle overworld, an island quest chain, NPC actors, expanded sprite direction sets, and more Web Worker RPC handlers and data catalogs. Gameplay pillars include a light-versus-darkness mechanic where pitch-black chambers are only revealed within a torch or spell light radius, frictionless walkover auto-loot, a roguelike Fate Grant draft on level-up, and multi-modal inputs (tap, hold/charge, double-tap).</p></div>
-    <div class="section"><h3>Summary</h3><p>A zero-backend, client-side 2D roguelike RPG with a real-time 10 Hz tick, dynamic light-and-darkness line-of-sight, and four playable vocations, evolved across four repositories from a Python terminal prototype to a native browser game.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/01-title-screen.png" alt="Title Screen — Come Into The Light" width="960" height="720">
+      <figcaption>Title Screen — Come Into The Light</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/02-survival-guide.png" alt="Survival Guide &amp; Action Controls" width="960" height="720">
+      <figcaption>Survival Guide &amp; Action Controls</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/03-choose-vocation.png" alt="Choose Your Vocation (Magician, Archer, Fighter, Paladin)" width="960" height="720">
+      <figcaption>Choose Your Vocation (Magician, Archer, Fighter, Paladin)</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/04-fate-grant-draft.png" alt="Fate Grant Roguelike Card Draft (Pick 2 of 5)" width="960" height="720">
+      <figcaption>Fate Grant Roguelike Card Draft (Pick 2 of 5)</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/05-havenreach-and-overworld.png" alt="Havenreach Dock &amp; Dawnreach Isle Overworld" width="960" height="720">
+      <figcaption>Havenreach Dock &amp; Dawnreach Isle Overworld</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/06-tower-combat-and-hud.png" alt="Active Hero HUD, Loadout &amp; Combat Log" width="960" height="720">
+      <figcaption>Active Hero HUD, Loadout &amp; Combat Log</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Explore Dawnreach Isle, regroup in Havenreach Town, and ascend procedural multi-floor towers in a zero-backend Gothic roguelike RPG. Choose from 4 distinct vocations (Magician, Archer, Fighter, Paladin), draft 2 of 5 Fate Grant spells, weapons, and relics on every level-up, recruit companions after clearing towers, and hot-swap active party control on the fly while a dedicated 10 Hz Web Worker simulation engine drives combat and AI.</p></div>
+    <div class="section"><h3>Summary</h3><p>Zero-backend 2D roguelike RPG running at 60 FPS with a 10 Hz Web Worker simulation tick, 4 vocations, Fate Grant card drafting, and Havenreach town progression.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>Vite</li><li>HTML5 Canvas</li><li>Web Workers</li><li>IndexedDB</li><li>Web Audio API</li><li>ES Modules</li><li>FastAPI</li><li>SQLite</li><li>Pyodide</li><li>Vitest</li><li>pytest</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>ascii</li><li>browser-game</li><li>dungeon-crawler</li><li>pixel-art</li><li>retro</li><li>roguelike</li></ul></div>
   </main>

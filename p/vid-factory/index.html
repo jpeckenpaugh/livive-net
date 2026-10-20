@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Video Content Factory — Livive</title>
-<meta name="description" content="Organize video content ideas and draft AI scripts with browser-native TTS">
+<meta name="description" content="In-browser video planning studio with client-side AI script generation and neural Kokoro TTS audio synthesis.">
 <link rel="canonical" href="https://www.livive.net/p/vid-factory/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Video Content Factory">
-<meta property="og:description" content="Organize video content ideas and draft AI scripts with browser-native TTS">
+<meta property="og:description" content="In-browser video planning studio with client-side AI script generation and neural Kokoro TTS audio synthesis.">
 <meta property="og:url" content="https://www.livive.net/p/vid-factory/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/vid-factory.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS">
+<meta property="og:image:alt" content="Video Content Factory — In-browser video planning studio with client-side AI script generation and neural Kokoro TTS audio synthesis.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Video Content Factory">
-<meta name="twitter:description" content="Organize video content ideas and draft AI scripts with browser-native TTS">
+<meta name="twitter:description" content="In-browser video planning studio with client-side AI script generation and neural Kokoro TTS audio synthesis.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/vid-factory.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Video Content Factory",
-  "description": "Organize video content ideas and draft AI scripts with browser-native TTS",
+  "description": "In-browser video planning studio with client-side AI script generation and neural Kokoro TTS audio synthesis.",
   "url": "https://www.livive.net/p/vid-factory/",
   "image": [
-    "https://www.livive.net/thumbnails/vid-factory.webp"
+    "https://www.livive.net/thumbnails/vid-factory.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/01-content-projects-dashboard.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/02-catalog-metadata-management.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/03-ai-provider-settings.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/04-ai-script-generator.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/05-wasm-tts-studio.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/06-persisted-audio-library-export.png"
   ],
   "genre": "Web Apps & Prototypes",
   "keywords": "JavaScript, Python, FastAPI, SQLite, sql.js, WebAssembly, kokoro-js, OPFS, WebGPU, Bootstrap 5, HTML/CSS",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/vid-factory/",
+    "https://vid.livive.net/",
     "https://github.com/jpeckenpaugh/vid-factory"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/vid-factory.webm",
-    "thumbnailUrl": "https://www.livive.net/previews/vid-factory.webp",
-    "duration": "PT30S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/01-content-projects-dashboard.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/vid-factory.webp" alt="Video Content Factory — Organize video content ideas and draft AI scripts with browser-native TTS"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/vid-factory.webm" poster="/previews/vid-factory.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/01-content-projects-dashboard.png" alt="Video Content Factory — In-browser video planning studio with client-side AI script generation and neural Kokoro TTS audio synthesis.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/01-content-projects-dashboard.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/01-content-projects-dashboard.png" alt="Content Projects &amp; Workspace Dashboard" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Content Projects &amp; Workspace Dashboard</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/02-catalog-metadata-management.png" alt="Platform &amp; Sponsor Catalog Management" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Platform &amp; Sponsor Catalog Management</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/03-ai-provider-settings.png" alt="Client-Side AI Provider Settings &amp; Diagnostics" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Client-Side AI Provider Settings &amp; Diagnostics</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/04-ai-script-generator.png" alt="Interactive AI Video Script Generation" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Interactive AI Video Script Generation</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/05-wasm-tts-studio.png" alt="Browser-Native Kokoro TTS Audio Studio" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Browser-Native Kokoro TTS Audio Studio</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/06-persisted-audio-library-export.png" alt="Persisted Audio Track Library &amp; Workspace Export" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Persisted Audio Track Library &amp; Workspace Export</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Video Content Factory</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Web Apps &amp; Prototypes</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 1mo ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Organize video content ideas and draft AI scripts with browser-native TTS</p>
+    <p class="lead">In-browser video planning studio with client-side AI script generation and neural Kokoro TTS audio synthesis.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/vid-factory/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://vid.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/vid-factory" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=vid-factory">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/vid-factory/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/vid-factory/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://vid.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://vid.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Video Content Factory is a web application for organizing early-stage content ideas and drafts. Its primary local runtime is a browser-native standalone application (browser-edition/) that runs entirely client-side with no backend server: a dedicated Web Worker database layer uses vendored sql.js (SQLite compiled to WebAssembly) with persistence in the Origin Private File System (OPFS), communicating through an RPC message-passing protocol between the UI (app.js) and db-worker.js. It manages catalogs for applications (YouTube, TikTok, Instagram) and companies (Acme Studio, Northstar Media, Pine &amp; Peak), content projects with optional application/company links, and one persisted script/prompt draft per project. Workspace settings store AI provider credentials (Gemini, OpenAI, Ollama) in a local SQLite ai_settings table with custom endpoint URLs and connectivity tests; API keys are stripped during export. A client-side AI script generator formulates formatted drafts from user prompts and confirms before overwriting manual drafts. A dedicated TTS worker (tts-worker.js) runs kokoro-js speech synthesis in WebAssembly/WebGPU, exposing voice selection (af_heart, af_bella, am_adam, am_michael), a 0.75x-1.25x speed slider, an inline HTML5 audio preview player, and local audio track persistence with metadata (voice_id, speed, script_snapshot, duration). Workspaces are portable via JSON export/import with structural validation and seed reset. The original FastAPI JSON API and Bootstrap browser UI (backend/ and frontend/, pinned fastapi==0.115.12 and uvicorn[standard]==0.34.0) remain available unchanged as a parity reference and fallback runtime, serving a seeded local SQLite database (backend/data/vid_factory.db). Multi-speaker timeline synchronization, cloud rendering pipelines, server-side audio processing, and cloud sync are explicitly deferred. Status: Sprint 02 complete (client-side AI &amp; dialogue TTS), verified pass with sandbox environment limitations.</p></div>
-    <div class="section"><h3>Summary</h3><p>A browser-centric web application for organizing early-stage video content ideas, managing catalogs of applications and companies, drafting scripts with client-side AI providers, and synthesizing dialogue with in-browser text-to-speech.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/01-content-projects-dashboard.png" alt="Content Projects &amp; Workspace Dashboard" width="960" height="720">
+      <figcaption>Content Projects &amp; Workspace Dashboard</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/02-catalog-metadata-management.png" alt="Platform &amp; Sponsor Catalog Management" width="960" height="720">
+      <figcaption>Platform &amp; Sponsor Catalog Management</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/03-ai-provider-settings.png" alt="Client-Side AI Provider Settings &amp; Diagnostics" width="960" height="720">
+      <figcaption>Client-Side AI Provider Settings &amp; Diagnostics</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/04-ai-script-generator.png" alt="Interactive AI Video Script Generation" width="960" height="720">
+      <figcaption>Interactive AI Video Script Generation</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/05-wasm-tts-studio.png" alt="Browser-Native Kokoro TTS Audio Studio" width="960" height="720">
+      <figcaption>Browser-Native Kokoro TTS Audio Studio</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/06-persisted-audio-library-export.png" alt="Persisted Audio Track Library &amp; Workspace Export" width="960" height="720">
+      <figcaption>Persisted Audio Track Library &amp; Workspace Export</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Vid Factory (Video Content Factory) is a client-side video pre-production and speech synthesis workbench operating entirely in the browser with WebAssembly SQLite (sql.js) and Origin Private File System (OPFS) persistence. Creators can organize multi-platform video initiatives (YouTube, TikTok, Instagram), manage sponsor catalogs, formulate 30-second scripts via client-side AI providers (Gemini, OpenAI, Ollama), and synthesize multi-voice dialogue using in-browser neural Kokoro TTS with adjustable speech cadence, instant HTML5 waveform audio playback, and binary SQLite audio track archiving.</p></div>
+    <div class="section"><h3>Summary</h3><p>A browser-native video content factory running on WASM SQLite and OPFS for multi-platform video planning, AI script formulation, and in-browser neural dialogue speech synthesis.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>Python</li><li>FastAPI</li><li>SQLite</li><li>sql.js</li><li>WebAssembly</li><li>kokoro-js</li><li>OPFS</li><li>WebGPU</li><li>Bootstrap 5</li><li>HTML/CSS</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>ai-script-generation</li><li>content-creation</li><li>sqlite</li><li>text-to-speech</li><li>video</li><li>web-app</li></ul></div>
   </main>

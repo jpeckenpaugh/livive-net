@@ -8,7 +8,7 @@
   "tags": ["puzzle-game", "cybersecurity", "mobile-first", "offline", "browser-game", "grid"],
   "tech": ["JavaScript", "React", "Vite", "Bootstrap", "Python", "FastAPI", "SQLAlchemy", "SQLite", "IndexedDB", "Web Audio"],
   "category": "Games",
-  "live_url": "https://jpeckenpaugh.github.io/threat-sweep/",
+  "live_url": "https://t-sweep.livive.net/",
   "repo_url": "https://github.com/jpeckenpaugh/threat-sweep",
   "has_live_demo": true,
   "featured": true,

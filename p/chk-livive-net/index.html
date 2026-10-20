@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Classic Checkers &amp; AI Arena — Livive</title>
-<meta name="description" content="English Draughts with in-browser WebLLM AI, persona banter, and a spectator arena">
+<meta name="description" content="English Draughts meets in-browser neural intelligence: play instant Minimax, challenge WebGPU LLM personas with live banter, or switch to 3D Godot.">
 <link rel="canonical" href="https://www.livive.net/p/chk-livive-net/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Classic Checkers &amp; AI Arena">
-<meta property="og:description" content="English Draughts with in-browser WebLLM AI, persona banter, and a spectator arena">
+<meta property="og:description" content="English Draughts meets in-browser neural intelligence: play instant Minimax, challenge WebGPU LLM personas with live banter, or switch to 3D Godot.">
 <meta property="og:url" content="https://www.livive.net/p/chk-livive-net/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/chk-livive-net.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Classic Checkers &amp; AI Arena — English Draughts with in-browser WebLLM AI, persona banter, and a spectator arena">
+<meta property="og:image:alt" content="Classic Checkers &amp; AI Arena — English Draughts meets in-browser neural intelligence: play instant Minimax, challenge WebGPU LLM personas with live banter, or switch to 3D Godot.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Classic Checkers &amp; AI Arena">
-<meta name="twitter:description" content="English Draughts with in-browser WebLLM AI, persona banter, and a spectator arena">
+<meta name="twitter:description" content="English Draughts meets in-browser neural intelligence: play instant Minimax, challenge WebGPU LLM personas with live banter, or switch to 3D Godot.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/chk-livive-net.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Classic Checkers & AI Arena",
-  "description": "English Draughts with in-browser WebLLM AI, persona banter, and a spectator arena",
+  "description": "English Draughts meets in-browser neural intelligence: play instant Minimax, challenge WebGPU LLM personas with live banter, or switch to 3D Godot.",
   "url": "https://www.livive.net/p/chk-livive-net/",
   "image": [
-    "https://www.livive.net/thumbnails/chk-livive-net.webp"
+    "https://www.livive.net/thumbnails/chk-livive-net.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/01-title-minimax-setup.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/02-arena-matchup-setup.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/03-board-and-opening.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/04-midgame-minimax-battle.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/05-webgpu-llm-manager.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/06-ai-arena-spectator.png"
   ],
   "genre": "Games",
   "keywords": "JavaScript, WebGPU, WebLLM, HTML5, CSS, Godot 4, Web Workers",
@@ -53,9 +59,9 @@
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/chk-livive-net.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/chk-livive-net.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/04-midgame-minimax-battle.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,79 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/chk-livive-net.webp" alt="Classic Checkers &amp; AI Arena — English Draughts with in-browser WebLLM AI, persona banter, and a spectator arena"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/chk-livive-net.webm" poster="/thumbnails/chk-livive-net.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:640 / 400">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/04-midgame-minimax-battle.png" alt="Classic Checkers &amp; AI Arena — English Draughts meets in-browser neural intelligence: play instant Minimax, challenge WebGPU LLM personas with live banter, or switch to 3D Godot.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/04-midgame-minimax-battle.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/01-title-minimax-setup.png" alt="Title Screen &amp; Match Mode Selection" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Title Screen &amp; Match Mode Selection</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/02-arena-matchup-setup.png" alt="AI vs. AI Spectator Arena Matchup Builder" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">AI vs. AI Spectator Arena Matchup Builder</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/03-board-and-opening.png" alt="8×8 Board with 1–32 Draughts Notation" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">8×8 Board with 1–32 Draughts Notation</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/04-midgame-minimax-battle.png" alt="Legal Move Highlights &amp; Live Banter Feed" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Legal Move Highlights &amp; Live Banter Feed</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/05-webgpu-llm-manager.png" alt="In-Browser WebGPU LLM &amp; Model Manager" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">In-Browser WebGPU LLM &amp; Model Manager</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/06-ai-arena-spectator.png" alt="AI vs. AI Arena Spectator Mode" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">AI vs. AI Arena Spectator Mode</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Classic Checkers &amp; AI Arena</h1>
     <div class="meta">
       <span class="badge new">New this week</span>
       <span>Games</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 5 days ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">English Draughts with in-browser WebLLM AI, persona banter, and a spectator arena</p>
+    <p class="lead">English Draughts meets in-browser neural intelligence: play instant Minimax, challenge WebGPU LLM personas with live banter, or switch to 3D Godot.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://chk.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://chk.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play 2D Arena<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/chk-livive-net" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=chk-livive-net">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://chk.livive.net/</span></span>
+      <span class="ep-body"><strong>Play 2D Arena</strong><span>https://chk.livive.net/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://chk.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+    </li><li class="episode">
+      <span class="no">S01E02</span>
+      <span class="ep-body"><strong>Play 3D Godot</strong><span>https://chk.livive.net/godot/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://chk.livive.net/godot/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>A modern, zero-dependency, client-side implementation of English Draughts (Checkers) featuring on-device WebLLM AI (Llama 3.2, SmolLM2) running in the browser via WebGPU, persona banter streaming, an AI vs AI Spectator Arena, offline Minimax AI, and a full rules engine. It offers four modes: Player vs Minimax, Player vs LLM AI, AI vs AI Arena, and local Pass &amp; Play. The dual-session LLM architecture separates tactical move selection from personality banter, backed by a robust JSON move parser with corrective retries and heuristic fallbacks. It enforces strict English Draughts rules (mandatory captures, multi-jump locks, immediate crowning, 40-move draw) and includes a built-in prompt/engine debugger plus a preload hardware staging screen. A Godot 4 3D Web edition is also hosted under /godot/.</p></div>
-    <div class="section"><h3>Summary</h3><p>A zero-dependency, client-side Checkers (English Draughts) game with on-device WebLLM AI opponents, an alpha-beta Minimax engine, AI vs AI spectator arena, and pass-and-play.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/01-title-minimax-setup.png" alt="Title Screen &amp; Match Mode Selection" width="960" height="720">
+      <figcaption>Title Screen &amp; Match Mode Selection</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/02-arena-matchup-setup.png" alt="AI vs. AI Spectator Arena Matchup Builder" width="960" height="720">
+      <figcaption>AI vs. AI Spectator Arena Matchup Builder</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/03-board-and-opening.png" alt="8×8 Board with 1–32 Draughts Notation" width="960" height="720">
+      <figcaption>8×8 Board with 1–32 Draughts Notation</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/04-midgame-minimax-battle.png" alt="Legal Move Highlights &amp; Live Banter Feed" width="960" height="720">
+      <figcaption>Legal Move Highlights &amp; Live Banter Feed</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/05-webgpu-llm-manager.png" alt="In-Browser WebGPU LLM &amp; Model Manager" width="960" height="720">
+      <figcaption>In-Browser WebGPU LLM &amp; Model Manager</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/06-ai-arena-spectator.png" alt="AI vs. AI Arena Spectator Mode" width="960" height="720">
+      <figcaption>AI vs. AI Arena Spectator Mode</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Classic 8×8 English Draughts (mandatory jump captures, multi-jump chains, and king crowning) paired with both classical search and client-side WebGPU large language models. Jump straight into an instant game against Alpha-Beta Minimax (Depth 2/4/6), load a local WebLLM model to face 6 trash-talking AI personas streaming live commentary, pit any two controllers against each other in the AI vs. AI Spectator Arena, or switch to the 3D Godot 4 WebGL board.</p></div>
+    <div class="section"><h3>Summary</h3><p>Play English Draughts against instant alpha-beta Minimax, challenge in-browser WebGPU LLM personas with streaming banter, spectate AI vs. AI Arena matches, or launch the 3D Godot 4 client.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>JavaScript</li><li>WebGPU</li><li>WebLLM</li><li>HTML5</li><li>CSS</li><li>Godot 4</li><li>Web Workers</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>checkers</li><li>draughts</li><li>game</li><li>minimax</li><li>webgpu</li><li>webllm</li></ul></div>
   </main>

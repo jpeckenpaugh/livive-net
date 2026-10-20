@@ -14,6 +14,7 @@ OUT = ROOT.parent / "projects.json"
 CATEGORY_ORDER = [
     "Games",
     "AI/ML Experiments",
+    "Computer Vision",
     "Language Tools",
     "Dev Tools",
     "Education & Teaching",

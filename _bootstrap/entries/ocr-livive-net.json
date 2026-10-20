@@ -1,0 +1,60 @@
+{
+  "key": "ocr-livive-net",
+  "repo": "ocr-livive-net",
+  "display_title": "OCR · Four Classifiers from Scratch",
+  "tagline": "Browser-native handwriting recognition with every classifier built from first principles.",
+  "short_description": "MNIST OCR in WebAssembly with four transparent classifiers—centroid, k-NN, perceptron, and a hand-written MLP—trained in a Web Worker and scored live.",
+  "long_description": "ocr-livive-net is a browser-native optical character recognizer that hides nothing. Four classifiers are implemented from scratch in Rust and compiled to WebAssembly: nearest-centroid over ten mean digit images, k-NN (k=3) over the training set, a softmax perceptron trained with mini-batch SGD, and a 784-32-10 MLP with hand-written backprop. All four train in a Web Worker on 10,000 MNIST images and are scored on 1,000 held-out digits, reaching roughly 77%, 92%, 88%, and 93% respectively. Drawn input is normalized with MNIST's own preprocessing—integer grayscale, bounding box, box filter to 20x20, and center-of-mass placement in a 28x28 frame. There is no ML framework or cloud call; the arithmetic is inspectable end to end.",
+  "tags": [
+    "ocr",
+    "computer-vision",
+    "mnist",
+    "wasm",
+    "machine-learning",
+    "knn",
+    "perceptron",
+    "mlp",
+    "image-processing",
+    "from-scratch"
+  ],
+  "tech": [
+    "Rust",
+    "WebAssembly",
+    "JavaScript",
+    "Web Workers",
+    "HTML5",
+    "CSS3"
+  ],
+  "category": "Computer Vision",
+  "live_url": "https://ocr.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/ocr-livive-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Custom domain ocr.livive.net from CNAME; GitHub Pages deploys built pkg/ artifacts on every push to main. MNIST subsets are committed as raw .u8 files. No README claims for the ONNX path beyond src/onnx.rs; the four classifiers above are the documented benchmark.",
+  "demos": [
+    {
+      "label": "Draw & Recognize",
+      "url": "https://ocr.livive.net/"
+    },
+    {
+      "label": "Source",
+      "url": "https://github.com/jpeckenpaugh/ocr-livive-net"
+    }
+  ],
+  "how_to_play": [
+    {
+      "title": "1. Draw a digit",
+      "body": "Use the canvas to write a single digit. The stroke is converted to integer grayscale, cropped to its bounding box, downsampled to 20x20, and centered by mass in a 28x28 frame."
+    },
+    {
+      "title": "2. Compare four classifiers",
+      "body": "Centroid, k-NN, perceptron, and MLP each return a prediction with their own confidence. The live table shows how the simple baselines fail where the MLP succeeds."
+    },
+    {
+      "title": "3. Train in the browser",
+      "body": "Training runs in a Web Worker on committed MNIST subsets, so you can watch accuracy evolve and re-run the benchmark without a backend."
+    }
+  ]
+}

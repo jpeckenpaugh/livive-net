@@ -1,146 +1,464 @@
 {
-  "generated_at": "2026-10-16T04:35:22.164Z",
+  "generated_at": "2026-10-20T21:02:23.326Z",
   "previews": {
     "lokarta": {
-      "video": "previews/lokarta.webm",
-      "poster": "thumbnails/lokarta.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/06-tower-combat-and-hud.png",
+      "mode": "demo",
+      "duration_ms": 30500,
       "width": 640,
       "height": 400,
       "bytes": 120576,
       "captured_at": "2026-10-16T02:01:35.747Z",
-      "source": "https://lk.livive.net/"
+      "source": "https://lk.livive.net/",
+      "gallery": [
+        {
+          "label": "Title Screen — Come Into The Light",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/01-title-screen.png"
+        },
+        {
+          "label": "Survival Guide & Action Controls",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/02-survival-guide.png"
+        },
+        {
+          "label": "Choose Your Vocation (Magician, Archer, Fighter, Paladin)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/03-choose-vocation.png"
+        },
+        {
+          "label": "Fate Grant Roguelike Card Draft (Pick 2 of 5)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/04-fate-grant-draft.png"
+        },
+        {
+          "label": "Havenreach Dock & Dawnreach Isle Overworld",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/05-havenreach-and-overworld.png"
+        },
+        {
+          "label": "Active Hero HUD, Loadout & Combat Log",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/lokarta-v4/main/demos/latest/gallery/06-tower-combat-and-hud.png"
+        }
+      ]
     },
     "aom": {
-      "video": "previews/aom.webm",
-      "poster": "thumbnails/aom.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
-      "width": 640,
-      "height": 400,
-      "bytes": 146080,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/aom/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/aom/main/demos/latest/gallery/01-title-screen.png",
+      "mode": "demo",
+      "duration_ms": 30800,
+      "width": 1280,
+      "height": 720,
+      "bytes": 2338469,
       "captured_at": "2026-10-16T02:01:36.284Z",
-      "source": "https://aom.livive.net/"
+      "source": "https://aom.livive.net/",
+      "gallery": [
+        {
+          "label": "Title Screen — Subterranean Fungal Kingdom",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/aom/main/demos/latest/gallery/01-title-screen.png"
+        },
+        {
+          "label": "Options Menu, High-Res Framebuffer & Debug Tools",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/aom/main/demos/latest/gallery/02-options-and-graphics.png"
+        },
+        {
+          "label": "Cavern Exploration & Bioluminescent Lumen Harvesting",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/aom/main/demos/latest/gallery/03-cavern-exploration-lumens.png"
+        },
+        {
+          "label": "Carved Stone Build Menu & Civilization Structures",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/aom/main/demos/latest/gallery/04-stone-build-menu.png"
+        },
+        {
+          "label": "Substrate Grid Placement & Structural Footprint",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/aom/main/demos/latest/gallery/05-structure-placement-grid.png"
+        },
+        {
+          "label": "3D Item Inspection Drawer & Tactical Progression HUD",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/aom/main/demos/latest/gallery/06-item-drawer-and-economy.png"
+        }
+      ]
     },
     "chk-livive-net": {
-      "video": "previews/chk-livive-net.webm",
-      "poster": "thumbnails/chk-livive-net.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/04-midgame-minimax-battle.png",
+      "mode": "demo",
+      "duration_ms": 30500,
       "width": 640,
       "height": 400,
       "bytes": 134118,
       "captured_at": "2026-10-16T02:01:45.456Z",
-      "source": "https://chk.livive.net/"
+      "source": "https://chk.livive.net/",
+      "gallery": [
+        {
+          "label": "Title Screen & Match Mode Selection",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/01-title-minimax-setup.png"
+        },
+        {
+          "label": "AI vs. AI Spectator Arena Matchup Builder",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/02-arena-matchup-setup.png"
+        },
+        {
+          "label": "8×8 Board with 1–32 Draughts Notation",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/03-board-and-opening.png"
+        },
+        {
+          "label": "Legal Move Highlights & Live Banter Feed",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/04-midgame-minimax-battle.png"
+        },
+        {
+          "label": "In-Browser WebGPU LLM & Model Manager",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/05-webgpu-llm-manager.png"
+        },
+        {
+          "label": "AI vs. AI Arena Spectator Mode",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/chk-livive-net/main/demos/latest/gallery/06-ai-arena-spectator.png"
+        }
+      ]
     },
     "game-pending": {
-      "video": "https://jpeckenpaugh.github.io/game-pending/demos/latest/demo.webm",
-      "poster": "https://jpeckenpaugh.github.io/game-pending/demos/latest/gallery/title.png",
+      "video": "https://gp.livive.net/demos/latest/demo.webm",
+      "poster": "https://gp.livive.net/demos/latest/gallery/robot.png",
       "mode": "demo",
       "duration_ms": 30000,
       "width": 1024,
       "height": 768,
       "bytes": 3785858,
       "captured_at": "2026-10-16T22:23:00.000Z",
-      "source": "https://jpeckenpaugh.github.io/game-pending/",
+      "source": "https://gp.livive.net/",
       "gallery": [
-        { "src": "https://jpeckenpaugh.github.io/game-pending/demos/latest/gallery/title.png", "label": "Title screen", "alt": "Game Pending title screen in the original black-and-white style" },
-        { "src": "https://jpeckenpaugh.github.io/game-pending/demos/latest/gallery/options.png", "label": "Customize and options", "alt": "Customize screen with Robot template, Arcade colors, Wand, and starting power-ups" },
-        { "src": "https://jpeckenpaugh.github.io/game-pending/demos/latest/gallery/choose-power.png", "label": "Choose Power", "alt": "Choose Power screen with three power-up cards over a sunset arena" },
-        { "src": "https://jpeckenpaugh.github.io/game-pending/demos/latest/gallery/original.png", "label": "Original · Classic / Classic", "alt": "Classic black-and-white stick-figure gameplay in the original style" },
-        { "src": "https://jpeckenpaugh.github.io/game-pending/demos/latest/gallery/emoji.png", "label": "Emoji · Emoji Color / Pastel", "alt": "Emoji Color character jumping through a pastel arena" },
-        { "src": "https://jpeckenpaugh.github.io/game-pending/demos/latest/gallery/farm.png", "label": "Farm · Farm / Natural", "alt": "Farm character preset moving across a naturally colored arena" },
-        { "src": "https://jpeckenpaugh.github.io/game-pending/demos/latest/gallery/robot.png", "label": "Robot · Robot / Arcade", "alt": "Robot character in the Arcade palette with active power-ups" }
+        {
+          "src": "https://gp.livive.net/demos/latest/gallery/title.png",
+          "label": "Title Screen",
+          "alt": "Game Pending title screen in the original black-and-white style"
+        },
+        {
+          "src": "https://gp.livive.net/demos/latest/gallery/options.png",
+          "label": "Customize Loadout & Themes",
+          "alt": "Customize screen with Robot template, Arcade colors, Wand, and starting power-ups"
+        },
+        {
+          "src": "https://gp.livive.net/demos/latest/gallery/choose-power.png",
+          "label": "Power-Up Draft ('G' Sandbox)",
+          "alt": "Choose Power screen with three power-up cards over a sunset arena"
+        },
+        {
+          "src": "https://gp.livive.net/demos/latest/gallery/original.png",
+          "label": "Classic Line-Art Mode",
+          "alt": "Classic black-and-white stick-figure gameplay in the original style"
+        },
+        {
+          "src": "https://gp.livive.net/demos/latest/gallery/emoji.png",
+          "label": "Emoji Color Theme",
+          "alt": "Emoji Color character jumping through a pastel arena"
+        },
+        {
+          "src": "https://gp.livive.net/demos/latest/gallery/farm.png",
+          "label": "Farm Theme",
+          "alt": "Farm character preset moving across a naturally colored arena"
+        },
+        {
+          "src": "https://gp.livive.net/demos/latest/gallery/robot.png",
+          "label": "Robot & Arcade Theme",
+          "alt": "Robot character in the Arcade palette with active power-ups"
+        }
       ]
     },
     "EuchreGame": {
-      "video": "previews/EuchreGame.webm",
-      "poster": "thumbnails/EuchreGame.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/03-trump-called-trick-play.png",
+      "mode": "demo",
+      "duration_ms": 30500,
       "width": 640,
       "height": 400,
       "bytes": 147082,
       "captured_at": "2026-10-16T02:01:47.147Z",
-      "source": "https://jpeckenpaugh.github.io/EuchreGame/"
+      "source": "https://euchre.livive.net/",
+      "gallery": [
+        {
+          "label": "Pyodide Browser Sandbox & Match Controls",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/01-pyodide-ready-god-view.png"
+        },
+        {
+          "label": "Seeded Deal & Round 1 Upcard Bidding",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/02-bidding-and-upcard.png"
+        },
+        {
+          "label": "4-Seat Table — Trump Ordered & Trick Play (God View)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/03-trump-called-trick-play.png"
+        },
+        {
+          "label": "Information-Set Masking — North Seat Perspective",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/04-masked-seat-view.png"
+        },
+        {
+          "label": "Fast Auto-Play Trick Resolution & Scoring",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/05-fast-autoplay-tricks.png"
+        },
+        {
+          "label": "Live JSON State Export & Legal Action Inspector",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/EuchreGame/main/demos/latest/gallery/06-hand-scoring-and-log.png"
+        }
+      ]
     },
     "rl-livive-net": {
-      "video": "previews/rl-livive-net.webm",
-      "poster": "thumbnails/rl-livive-net.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/05-ai-pilot-policy-inspector.png",
+      "mode": "demo",
+      "duration_ms": 30500,
       "width": 640,
       "height": 400,
       "bytes": 113050,
       "captured_at": "2026-10-16T02:01:50.431Z",
-      "source": "https://lunar.livive.net/"
+      "source": "https://lunar.livive.net/",
+      "gallery": [
+        {
+          "label": "Tournament Edition Vector Cabinet & Boot Sequence",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/01-attract-cabinet.png"
+        },
+        {
+          "label": "Cabinet Manual & Controls Overview",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/02-cabinet-manual.png"
+        },
+        {
+          "label": "Solo Flight Mode Selector (Human, Co-Pilot, AI Pilot)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/03-solo-mode-select.png"
+        },
+        {
+          "label": "Choose Your Pilot — 9 Trained ONNX RL Checkpoints",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/04-choose-pilot.png"
+        },
+        {
+          "label": "Live Flight with Policy Inspector & Softmax Sparkline",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/05-ai-pilot-policy-inspector.png"
+        },
+        {
+          "label": "Landing Zone Approach & Flight Telemetry",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rl-livive-net/main/demos/latest/gallery/06-lunar-touchdown-telemetry.png"
+        }
+      ]
     },
     "mines-livive-net": {
-      "video": "previews/mines-livive-net.webm",
-      "poster": "thumbnails/mines-livive-net.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/02-ai-heatmap-step.png",
+      "mode": "demo",
+      "duration_ms": 30500,
       "width": 640,
       "height": 400,
       "bytes": 141699,
       "captured_at": "2026-10-16T02:01:51.603Z",
-      "source": "https://mines.livive.net/"
+      "source": "https://mines.livive.net/",
+      "gallery": [
+        {
+          "label": "PLAY Cabinet — Deterministic 8×8 Seed",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/01-play-cabinet.png"
+        },
+        {
+          "label": "AI Inspector — Live Cyan P(reveal) Heatmap & Top Moves",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/02-ai-heatmap-step.png"
+        },
+        {
+          "label": "AI Autoplay — Stepping ONNX Policy Inference",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/03-ai-autoplay.png"
+        },
+        {
+          "label": "RACE Mode — Human vs. ONNX Policy Side-by-Side",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/04-human-vs-ai-race.png"
+        },
+        {
+          "label": "CONCURRENT Mode — All 9 Checkpoints Racing in Lockstep",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/05-concurrent-9-models.png"
+        },
+        {
+          "label": "MODELS Tab — Checkpoint Architecture & Win-Rate Cards",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/mines-livive-net/main/demos/latest/gallery/06-model-checkpoints.png"
+        }
+      ]
     },
     "p2p-ttt": {
-      "video": "previews/p2p-ttt.webm",
-      "poster": "thumbnails/p2p-ttt.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
+      "video": "https://p2p-ttt.livive.net/demos/latest/demo.webm",
+      "poster": "https://p2p-ttt.livive.net/demos/latest/gallery/04-live-p2p-match.png",
+      "mode": "demo",
+      "duration_ms": 30800,
       "width": 640,
       "height": 400,
       "bytes": 124647,
       "captured_at": "2026-10-16T02:01:52.086Z",
-      "source": "https://jpeckenpaugh.github.io/p2p-ttt/"
+      "source": "https://p2p-ttt.livive.net/",
+      "gallery": [
+        {
+          "label": "Dual-Browser Side-by-Side Workspace",
+          "src": "https://p2p-ttt.livive.net/demos/latest/gallery/01-side-by-side-start.png"
+        },
+        {
+          "label": "Host WebRTC Offer & Full-Screen QR Invite",
+          "src": "https://p2p-ttt.livive.net/demos/latest/gallery/02-host-qr-invite.png"
+        },
+        {
+          "label": "Friend WebRTC Answer & Reply QR Code",
+          "src": "https://p2p-ttt.livive.net/demos/latest/gallery/03-guest-reply-qr.png"
+        },
+        {
+          "label": "Live P2P Match Over WebRTC DataChannel",
+          "src": "https://p2p-ttt.livive.net/demos/latest/gallery/04-live-p2p-match.png"
+        },
+        {
+          "label": "Match 1 Victory & Mutual Rematch Prompt",
+          "src": "https://p2p-ttt.livive.net/demos/latest/gallery/05-match1-win-and-rematch.png"
+        },
+        {
+          "label": "Persistent OPFS WASM SQLite Match History",
+          "src": "https://p2p-ttt.livive.net/demos/latest/gallery/06-opfs-sqlite-history.png"
+        }
+      ]
     },
     "threat-sweep": {
-      "video": "previews/threat-sweep.webm",
-      "poster": "thumbnails/threat-sweep.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/threat-sweep/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/threat-sweep/main/demos/latest/gallery/04-marking-threats.png",
+      "mode": "demo",
+      "duration_ms": 30500,
       "width": 640,
       "height": 400,
       "bytes": 116654,
       "captured_at": "2026-10-16T02:01:54.956Z",
-      "source": "https://jpeckenpaugh.github.io/threat-sweep/"
+      "source": "https://t-sweep.livive.net/",
+      "gallery": [
+        {
+          "label": "Campaign Mission Queue & Operation Briefing",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/threat-sweep/main/demos/latest/gallery/01-mission-queue.png"
+        },
+        {
+          "label": "Active Operation Console — Signal Breach",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/threat-sweep/main/demos/latest/gallery/02-operation-start-scan-mode.png"
+        },
+        {
+          "label": "Probing Sector Telemetry in SCAN Mode",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/threat-sweep/main/demos/latest/gallery/03-scanning-sectors.png"
+        },
+        {
+          "label": "Quarantining Compromised Nodes in MARK Mode",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/threat-sweep/main/demos/latest/gallery/04-marking-threats.png"
+        },
+        {
+          "label": "Securing Verified Sectors in CLEAR Mode",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/threat-sweep/main/demos/latest/gallery/05-clearing-grid.png"
+        },
+        {
+          "label": "Operation Debrief & Campaign Progression",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/threat-sweep/main/demos/latest/gallery/06-operation-results.png"
+        }
+      ]
     },
     "vibe-tic-tac-toe": {
-      "video": "previews/vibe-tic-tac-toe.webm",
-      "poster": "thumbnails/vibe-tic-tac-toe.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
+      "video": "https://v-ttt.livive.net/demos/latest/demo.webm",
+      "poster": "https://v-ttt.livive.net/demos/latest/gallery/swords.png",
+      "mode": "demo",
+      "duration_ms": 31640,
       "width": 640,
       "height": 400,
       "bytes": 109114,
       "captured_at": "2026-10-16T02:01:56.138Z",
-      "source": "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/"
+      "source": "https://v-ttt.livive.net/",
+      "gallery": [
+        {
+          "label": "Title Screen",
+          "src": "https://v-ttt.livive.net/demos/latest/gallery/title.png"
+        },
+        {
+          "label": "How to Play & Trilogy Backstory",
+          "src": "https://v-ttt.livive.net/demos/latest/gallery/about.png"
+        },
+        {
+          "label": "Options & 6 Emoji Piece Themes",
+          "src": "https://v-ttt.livive.net/demos/latest/gallery/options.png"
+        },
+        {
+          "label": "Swords & Shields Win + Confetti",
+          "src": "https://v-ttt.livive.net/demos/latest/gallery/swords.png"
+        },
+        {
+          "label": "Cats & Dogs Theme + Hover Preview",
+          "src": "https://v-ttt.livive.net/demos/latest/gallery/cats.png"
+        },
+        {
+          "label": "Persistent Leaderboard",
+          "src": "https://v-ttt.livive.net/demos/latest/gallery/leaderboard.png"
+        },
+        {
+          "label": "The $0.15 OpenCode / DeepSeek Receipt",
+          "src": "https://v-ttt.livive.net/docs/open-code-deep-seek-token-usage-cost-overview.png"
+        }
+      ]
     },
     "rag-poc": {
-      "video": "previews/rag-poc.webm",
-      "poster": "thumbnails/rag-poc.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
-      "width": 640,
-      "height": 400,
-      "bytes": 139394,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/03-devtools-vector-retrieval.png",
+      "mode": "demo",
+      "duration_ms": 30500,
+      "width": 1280,
+      "height": 720,
+      "bytes": 941577,
       "captured_at": "2026-10-16T02:02:00.662Z",
-      "source": "https://jpeckenpaugh.github.io/rag-poc/"
+      "source": "https://jpeckenpaugh.github.io/rag-poc/",
+      "gallery": [
+        {
+          "label": "Client-Side RAG Architecture & Pipeline Overview",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/01-architecture-overview.png"
+        },
+        {
+          "label": "Evaluation Benchmark & Streaming Citations",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/02-evaluation-benchmark-chat.png"
+        },
+        {
+          "label": "DevTools Vector Retrieval & 384-Dim Query Inspection",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/03-devtools-vector-retrieval.png"
+        },
+        {
+          "label": "Sliding-Window Chunk Inspector & Metadata Modal",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/04-chunk-modal-inspector.png"
+        },
+        {
+          "label": "Integrated Canvas PDF Viewer & Source Corpus",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/05-pdf-canvas-corpus-viewer.png"
+        },
+        {
+          "label": "Guardrail Abstention & Negative Evaluation Test",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/06-guardrail-abstention-refusal.png"
+        }
+      ]
     },
     "sm3": {
-      "video": "previews/sm3.webm",
-      "poster": "thumbnails/sm3.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
-      "width": 640,
-      "height": 400,
-      "bytes": 142732,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/sm3/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/sm3/main/demos/latest/gallery/01-operator-dashboard-overview.png",
+      "mode": "demo",
+      "duration_ms": 30000,
+      "width": 1280,
+      "height": 720,
+      "bytes": 3866687,
       "captured_at": "2026-10-16T02:02:04.176Z",
-      "source": "https://seekdepth.net/"
+      "source": "https://seekdepth.net/",
+      "gallery": [
+        {
+          "label": "System Status & Live Telemetry",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sm3/main/demos/latest/gallery/01-operator-dashboard-overview.png"
+        },
+        {
+          "label": "Trimurti Archetype Architecture",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sm3/main/demos/latest/gallery/02-tri-archetype-pantheon.png"
+        },
+        {
+          "label": "Phased State Machine Execution Log",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sm3/main/demos/latest/gallery/03-sprint-phase-pipeline.png"
+        },
+        {
+          "label": "Deep Event Inspection & Agent Dispatch Modal",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sm3/main/demos/latest/gallery/04-event-dispatch-inspector.png"
+        },
+        {
+          "label": "Agent Profiles & Permission Boundaries",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sm3/main/demos/latest/gallery/05-agent-profiles-permissions.png"
+        },
+        {
+          "label": "Sprint Overview & Historical Sprint Audit",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sm3/main/demos/latest/gallery/06-file-contracts-audit.png"
+        }
+      ]
     },
     "seekdepth.org": {
       "video": "previews/seekdepth.org.webm",
@@ -154,37 +472,115 @@
       "source": "https://seekdepth.org/"
     },
     "hebrew-language-tutor": {
-      "video": "previews/hebrew-language-tutor.webm",
-      "poster": "thumbnails/hebrew-language-tutor.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
-      "width": 640,
-      "height": 400,
-      "bytes": 137309,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/hebrew-language-tutor/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/hebrew-language-tutor/main/demos/latest/poster.webp",
+      "mode": "demo",
+      "duration_ms": 32400,
+      "width": 1280,
+      "height": 720,
+      "bytes": 967719,
       "captured_at": "2026-10-16T02:02:05.450Z",
-      "source": "https://jpeckenpaugh.github.io/hebrew-language-tutor/"
+      "source": "https://hebrew.livive.net/",
+      "gallery": [
+        {
+          "label": "Interactive Curriculum Hub & Lesson Modules",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/hebrew-language-tutor/main/demos/latest/gallery/01-curriculum-overview.png"
+        },
+        {
+          "label": "Bilingual Study Flashcard & Phonetic Transliteration",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/hebrew-language-tutor/main/demos/latest/gallery/02-study-flashcard-nikud-greetings.png"
+        },
+        {
+          "label": "Real-Time Quiz Drill with Emerald / Rose Validation",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/hebrew-language-tutor/main/demos/latest/gallery/03-quiz-mode-interactive-feedback.png"
+        },
+        {
+          "label": "Rigorous Vocabulary Exam & Question Counter",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/hebrew-language-tutor/main/demos/latest/gallery/04-exam-mode-numbers.png"
+        },
+        {
+          "label": "Performance & Exam Mastery Scorecard",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/hebrew-language-tutor/main/demos/latest/gallery/05-exam-results-mastery.png"
+        },
+        {
+          "label": "Colors & Daily Vocabulary Study Review",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/hebrew-language-tutor/main/demos/latest/gallery/06-food-and-drink-study-session.png"
+        }
+      ]
     },
     "vibe-hindi-language-tutor": {
-      "video": "previews/vibe-hindi-language-tutor.webm",
-      "poster": "thumbnails/vibe-hindi-language-tutor.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
-      "width": 640,
-      "height": 400,
-      "bytes": 116965,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/vibe-hindi-language-tutor/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/vibe-hindi-language-tutor/main/demos/latest/gallery/01_flashcard_hindi_devanagari.png",
+      "mode": "demo",
+      "duration_ms": 30000,
+      "width": 1280,
+      "height": 720,
+      "bytes": 806364,
       "captured_at": "2026-10-16T02:02:09.374Z",
-      "source": "https://jpeckenpaugh.github.io/vibe-hindi-language-tutor/"
+      "source": "https://hindi.livive.net/",
+      "gallery": [
+        {
+          "label": "Flashcards: Hindi Devanagari Script & Audio Pronunciation",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vibe-hindi-language-tutor/main/demos/latest/gallery/01_flashcard_hindi_devanagari.png"
+        },
+        {
+          "label": "Language Switch: Kannada Complex Conjuncts & Ligatures",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vibe-hindi-language-tutor/main/demos/latest/gallery/02_flashcard_kannada_script.png"
+        },
+        {
+          "label": "Multiple-Choice Quiz: Question Drill & Real-Time Feedback",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vibe-hindi-language-tutor/main/demos/latest/gallery/03_quiz_active_evaluation.png"
+        },
+        {
+          "label": "Quiz Completion: Scored Evaluation & Performance Report",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vibe-hindi-language-tutor/main/demos/latest/gallery/04_quiz_result_mastery.png"
+        },
+        {
+          "label": "Searchable Glossary: Filtered Vocabulary & Phonetic Matrix",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vibe-hindi-language-tutor/main/demos/latest/gallery/05_searchable_glossary.png"
+        },
+        {
+          "label": "Learner Dashboard: Daily Streaks, Chart & Word Mastery Grid",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vibe-hindi-language-tutor/main/demos/latest/gallery/06_learner_dashboard_matrix.png"
+        }
+      ]
     },
     "nexttext": {
-      "video": "previews/nexttext.webm",
-      "poster": "thumbnails/nexttext.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
-      "width": 640,
-      "height": 400,
-      "bytes": 138978,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/02-debias-basics.png",
+      "mode": "demo",
+      "duration_ms": 30500,
+      "width": 1280,
+      "height": 720,
+      "bytes": 451701,
       "captured_at": "2026-10-16T02:02:12.059Z",
-      "source": "https://jpeckenpaugh.github.io/nexttext/"
+      "source": "https://nexttext.livive.net/",
+      "gallery": [
+        {
+          "label": "Pyodide Runtime Initialization: In-Browser Python 3.9+ Virtual Environment",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/01-pyodide-runtime-ready.png"
+        },
+        {
+          "label": "Multi-Label Gender Neutralization: Training Data Bias Elimination",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/02-debias-basics.png"
+        },
+        {
+          "label": "Contextual Rebiasing: Associative Cue Extraction & Male Feature Injection",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/03-rebias-contextual-male.png"
+        },
+        {
+          "label": "Contextual Rebiasing: Associative Semantic Analysis & Female Cues",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/04-rebias-contextual-female.png"
+        },
+        {
+          "label": "Round-Trip Verification: Neutralize & Contextual Re-Framing Pipeline",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/05-roundtrip-validation.png"
+        },
+        {
+          "label": "Token Diagnostics & Lightweight Pip Package Specification",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/nexttext/main/demos/latest/gallery/06-token-frequencies-metadata.png"
+        }
+      ]
     },
     "snow-compliance-demo": {
       "video": "previews/snow-compliance-demo.webm",
@@ -198,125 +594,694 @@
       "source": "https://jpeckenpaugh.github.io/snow-compliance-demo/"
     },
     "sprites-livive-net": {
-      "video": "previews/sprites-livive-net.webm",
-      "poster": "thumbnails/sprites-livive-net.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
-      "width": 640,
-      "height": 400,
-      "bytes": 147768,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/01-workbench-overview.png",
+      "mode": "demo",
+      "duration_ms": 30000,
+      "width": 1280,
+      "height": 720,
+      "bytes": 1780435,
       "captured_at": "2026-10-16T02:02:17.212Z",
-      "source": "https://sprites.livive.net/"
+      "source": "https://sprites.livive.net/",
+      "gallery": [
+        {
+          "label": "Workshop Overview & Turntable Setup",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/01-workbench-overview.png"
+        },
+        {
+          "label": "Simultaneous Multi-Directional Playback",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/02-multi-directional-playback.png"
+        },
+        {
+          "label": "Algorithmic Diagonal Warping Matrix",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/03-derived-diagonal-matrix.png"
+        },
+        {
+          "label": "Orthographic Pitch & Multi-View Tuning",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/04-camera-pitch-and-views.png"
+        },
+        {
+          "label": "Single Sprite Angle Capture & Auto-Crop",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/05-single-sprite-crop-tool.png"
+        },
+        {
+          "label": "Adaptive Palette WebP Export & Asset Metrics",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/sprites-livive-net/main/demos/latest/gallery/06-sheet-export-and-asset-metrics.png"
+        }
+      ]
     },
     "tc-livive-org": {
-      "video": "previews/tc-livive-org.webm",
-      "poster": "thumbnails/tc-livive-org.webp",
-      "mode": "motion",
-      "duration_ms": 4400,
-      "width": 640,
-      "height": 400,
-      "bytes": 132213,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/06-live-math-inspector.png",
+      "mode": "demo",
+      "duration_ms": 29920,
+      "width": 1280,
+      "height": 720,
+      "bytes": 1406584,
       "captured_at": "2026-10-16T02:02:19.050Z",
-      "source": "https://tc.livive.org/"
+      "source": "https://tc.livive.org/",
+      "gallery": [
+        {
+          "label": "Orientation Deck: Distillation & Memory Architecture",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/01-orientation-architecture.png"
+        },
+        {
+          "label": "View 1: Blank Slate Baseline (50/50 Coin Toss)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/02-blank-slate-baseline.png"
+        },
+        {
+          "label": "View 2: Disk Compilation & RAM Lookup Table",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/03-train-and-load-pipeline.png"
+        },
+        {
+          "label": "View 2: Out-of-Vocabulary (OOV) Blind Spot Discovery",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/04-out-of-vocabulary-blind-spot.png"
+        },
+        {
+          "label": "View 3: Scaling Data & Expanding Token Coverage",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/05-scaling-memory-coverage.png"
+        },
+        {
+          "label": "View 4: Live Custom Sentence Evaluator & Laplace Smoothing",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/06-live-math-inspector.png"
+        }
+      ]
     },
     "c3pa-explorer": {
-      "video": "previews/c3pa-explorer.webm",
-      "poster": "previews/c3pa-explorer.webp",
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/01-dashboard-corpus-metrics.png",
       "mode": "demo",
-      "duration_ms": 30000,
-      "width": 960,
-      "height": 600,
-      "bytes": 1181971,
+      "duration_ms": 30500,
+      "width": 1280,
+      "height": 720,
+      "bytes": 870400,
       "captured_at": "2026-10-16T04:32:33.829Z",
-      "source": "https://jpeckenpaugh.github.io/c3pa-explorer/"
+      "source": "https://jpeckenpaugh.github.io/c3pa-explorer/",
+      "gallery": [
+        {
+          "label": "Corpus Dashboard — 400 Privacy Policies & 45k Annotations",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/01-dashboard-corpus-metrics.png"
+        },
+        {
+          "label": "Verified SQLite Snapshot & Dual-Runtime Engine Modal",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/02-cryptographic-snapshot-audit.png"
+        },
+        {
+          "label": "Policy Documents Library & Crawl Inventory",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/03-document-library-browser.png"
+        },
+        {
+          "label": "Document Detail — Sentence Extraction & Label Overlays",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/04-document-detail-sentences-view.png"
+        },
+        {
+          "label": "Auditable 3-Tier Annotation-to-Sentence Alignment Modal",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/05-annotation-alignment-provenance.png"
+        },
+        {
+          "label": "Downstream Dataset Slicer & Partition Export",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/c3pa-explorer/main/demos/latest/gallery/06-downstream-data-slicer-export.png"
+        }
+      ]
     },
     "company-hub": {
-      "video": "previews/company-hub.webm",
-      "poster": "previews/company-hub.webp",
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/01-companies-directory.png",
       "mode": "demo",
-      "duration_ms": 30000,
-      "width": 960,
-      "height": 600,
-      "bytes": 710635,
+      "duration_ms": 30500,
+      "width": 1280,
+      "height": 720,
+      "bytes": 650137,
       "captured_at": "2026-10-16T04:32:33.821Z",
-      "source": "https://jpeckenpaugh.github.io/ch/"
+      "source": "https://ch.livive.net/",
+      "gallery": [
+        {
+          "label": "Enterprise Companies Directory & Multi-Facet Filters",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/01-companies-directory.png"
+        },
+        {
+          "label": "Corporate Dossier & Multi-Facility Locations",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/02-company-profile-overview.png"
+        },
+        {
+          "label": "Market Intelligence & Reference Documentation",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/03-company-intel-news.png"
+        },
+        {
+          "label": "Structured Profile Editor & Verification",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/04-company-editor.png"
+        },
+        {
+          "label": "Industry Taxonomy Manager",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/05-controlled-industries.png"
+        },
+        {
+          "label": "Local LLM & Baseline News Ranking Engine",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/06-ai-news-ranking-benchmark.png"
+        }
+      ]
     },
     "driver-hub-prototype": {
-      "video": "previews/driver-hub-prototype.webm",
-      "poster": "previews/driver-hub-prototype.webp",
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/01-split-view-dual-device-overview.png",
       "mode": "demo",
-      "duration_ms": 30000,
-      "width": 960,
-      "height": 600,
-      "bytes": 1022906,
+      "duration_ms": 30500,
+      "width": 1280,
+      "height": 720,
+      "bytes": 1634018,
       "captured_at": "2026-10-16T04:33:29.364Z",
-      "source": "https://jpeckenpaugh.github.io/driver-hub-prototype/"
+      "source": "https://jpeckenpaugh.github.io/driver-hub-prototype/",
+      "gallery": [
+        {
+          "label": "Side-by-Side Dual Smartphone Demonstration & Map View",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/01-split-view-dual-device-overview.png"
+        },
+        {
+          "label": "Rider Booking Interface & Vehicle Tier Selection",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/02-rider-tier-selection-fare-estimate.png"
+        },
+        {
+          "label": "Real-Time Dispatch & Incoming Ride Offer Dialog",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/03-driver-incoming-offer-modal.png"
+        },
+        {
+          "label": "Live Vehicle Telemetry & Navigation to Pickup Point",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/04-live-pickup-telemetry-tracking.png"
+        },
+        {
+          "label": "En-Route Transit Simulation & Dual-State Synchronization",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/05-trip-in-progress-route-simulation.png"
+        },
+        {
+          "label": "Trip Completion, Driver Earnings HUD & Passenger Rating",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/driver-hub-prototype/main/demos/latest/gallery/06-trip-completion-earnings-summary.png"
+        }
+      ]
     },
     "herons-fountain": {
-      "video": "previews/herons-fountain.webm",
-      "poster": "previews/herons-fountain.webp",
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/02-active-fountain-jet-ballistics.png",
       "mode": "demo",
-      "duration_ms": 30000,
-      "width": 960,
-      "height": 600,
-      "bytes": 833504,
+      "duration_ms": 30500,
+      "width": 1280,
+      "height": 720,
+      "bytes": 602396,
       "captured_at": "2026-10-16T04:34:05.774Z",
-      "source": "https://jpeckenpaugh.github.io/herons-fountain/"
+      "source": "https://fountain.livive.net/",
+      "gallery": [
+        {
+          "label": "Initial Hydraulic Flow: Basin Intake & Shared-Air Compression",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/01-herons-fountain-initial-flow.png"
+        },
+        {
+          "label": "Peak Jet Ballistics: Pressurized Nozzle Stream & Droplet Arcs",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/02-active-fountain-jet-ballistics.png"
+        },
+        {
+          "label": "Siphon Automation Controls: Threshold, Dwell & Trigger Modes",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/03-auto-invert-trigger-controls.png"
+        },
+        {
+          "label": "Dynamic Inversion Swap: Mid-Transition Elevation Exchange",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/04-chamber-inversion-transition.png"
+        },
+        {
+          "label": "Reversed Flow Phase & Multi-Speed Simulation (4× Acceleration)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/05-reversed-cycle-high-speed.png"
+        },
+        {
+          "label": "Lumped-Pressure Isothermal Model & Technical Specification",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/herons-fountain/main/demos/latest/gallery/06-physics-model-about-modal.png"
+        }
+      ]
     },
     "executive-assistant": {
-      "video": "previews/executive-assistant.webm",
-      "poster": "previews/executive-assistant.webp",
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/01-daily-briefing-cockpit.png",
       "mode": "demo",
-      "duration_ms": 30000,
-      "width": 960,
-      "height": 600,
-      "bytes": 892510,
+      "duration_ms": 30500,
+      "width": 1280,
+      "height": 720,
+      "bytes": 836128,
       "captured_at": "2026-10-16T04:33:34.465Z",
-      "source": "https://jpeckenpaugh.github.io/executive-assistant/"
+      "source": "https://ea.livive.net/",
+      "gallery": [
+        {
+          "label": "Daily Briefing Dashboard & Executive Priority Cockpit",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/01-daily-briefing-cockpit.png"
+        },
+        {
+          "label": "Conflict-Aware Calendar Scheduling & Overlap Warnings",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/02-calendar-conflict-detection.png"
+        },
+        {
+          "label": "Quick-Capture Inbox & Atomic Triage Processing",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/03-atomic-inbox-triage.png"
+        },
+        {
+          "label": "Priority Task Delegation & Recurrence Rules",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/04-task-delegation-recurrence.png"
+        },
+        {
+          "label": "Natural Language AI Command Parser & Action Preview",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/05-ai-command-preview-modal.png"
+        },
+        {
+          "label": "Client-Side SQLite Engine & OPFS Workspace Management",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/executive-assistant/main/demos/latest/gallery/06-opfs-sqlite-workspace.png"
+        }
+      ]
     },
     "oblique-livive-net": {
-      "video": "previews/oblique-livive-net.webm",
-      "poster": "previews/oblique-livive-net.webp",
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/01-sandbox-depth-and-shadows.png",
       "mode": "demo",
       "duration_ms": 30000,
-      "width": 960,
-      "height": 600,
-      "bytes": 1339047,
+      "width": 1280,
+      "height": 720,
+      "bytes": 3790373,
       "captured_at": "2026-10-16T04:34:31.512Z",
-      "source": "https://oblique.livive.net/"
+      "source": "https://oblique.livive.net/",
+      "gallery": [
+        {
+          "label": "Dynamic Y-Depth Sorting & Directional Silhouette Shadows",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/01-sandbox-depth-and-shadows.png"
+        },
+        {
+          "label": "Diagnostic Overlays: Footprint Hitboxes, Anchors & Bounding Geometry",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/02-debug-overlays-and-hitboxes.png"
+        },
+        {
+          "label": "Real-Time Sprite & Prop Editor: Frame Turntable & Anchor Registration",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/03-sprite-editor-turntable-tuning.png"
+        },
+        {
+          "label": "Five-Layer Terrain Substrate: Bedrock to Animated Shoreline Foam",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/04-five-layer-substrate-matrix.png"
+        },
+        {
+          "label": "Playground Scene Builder: Terrain Brushes & Event Sequencer",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/05-playground-scene-builder-sequencer.png"
+        },
+        {
+          "label": "Beach Camp Scene Study: Coastal Waterways, Shallows & Pier Props",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/oblique-livive-net/main/demos/latest/gallery/06-coastal-beach-camp-study.png"
+        }
+      ]
     },
     "robot-motion-studio": {
-      "video": "previews/robot-motion-studio.webm",
-      "poster": "previews/robot-motion-studio.webp",
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/01-canvas-simulator-door-cycle.png",
       "mode": "demo",
-      "duration_ms": 30000,
-      "width": 960,
-      "height": 600,
-      "bytes": 922933,
+      "duration_ms": 30500,
+      "width": 1280,
+      "height": 720,
+      "bytes": 1095051,
       "captured_at": "2026-10-16T04:34:43.917Z",
-      "source": "https://jpeckenpaugh.github.io/robot-motion-studio/"
+      "source": "https://jpeckenpaugh.github.io/robot-motion-studio/",
+      "gallery": [
+        {
+          "label": "Forward Kinematics Simulator & Door Rig Interaction",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/01-canvas-simulator-door-cycle.png"
+        },
+        {
+          "label": "Visual Timeline Choreography & Easing Curves",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/02-timeline-trajectory-editor.png"
+        },
+        {
+          "label": "Reusable Pose Authoring & Joint Angle Scrubbers",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/03-joint-pose-scrubbers.png"
+        },
+        {
+          "label": "6-DOF Articulated Arm Configuration (PickPlaceArm)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/04-pick-place-6dof-kinematics.png"
+        },
+        {
+          "label": "Deterministic Motion Interpolation & Keyframe Telemetry",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/05-motion-document-preview.png"
+        },
+        {
+          "label": "Schema v2 JSON & Arduino Firmware Export",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/robot-motion-studio/main/demos/latest/gallery/06-schema2-arduino-export.png"
+        }
+      ]
     },
     "vid-factory": {
-      "video": "previews/vid-factory.webm",
-      "poster": "previews/vid-factory.webp",
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/01-content-projects-dashboard.png",
       "mode": "demo",
-      "duration_ms": 30000,
-      "width": 960,
-      "height": 600,
-      "bytes": 690028,
+      "duration_ms": 30500,
+      "width": 1280,
+      "height": 720,
+      "bytes": 1093262,
       "captured_at": "2026-10-16T04:35:12.451Z",
-      "source": "https://jpeckenpaugh.github.io/vid-factory/"
+      "source": "https://jpeckenpaugh.github.io/vid-factory/",
+      "gallery": [
+        {
+          "label": "Content Projects & Workspace Dashboard",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/01-content-projects-dashboard.png"
+        },
+        {
+          "label": "Platform & Sponsor Catalog Management",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/02-catalog-metadata-management.png"
+        },
+        {
+          "label": "Client-Side AI Provider Settings & Diagnostics",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/03-ai-provider-settings.png"
+        },
+        {
+          "label": "Interactive AI Video Script Generation",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/04-ai-script-generator.png"
+        },
+        {
+          "label": "Browser-Native Kokoro TTS Audio Studio",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/05-wasm-tts-studio.png"
+        },
+        {
+          "label": "Persisted Audio Track Library & Workspace Export",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/vid-factory/main/demos/latest/gallery/06-persisted-audio-library-export.png"
+        }
+      ]
     },
     "tech-livive-net": {
-      "video": "previews/tech-livive-net.webm",
-      "poster": "previews/tech-livive-net.webp",
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/tech-livive-net/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/tech-livive-net/main/demos/latest/gallery/02-hardware-schematic-power-path.png",
       "mode": "demo",
       "duration_ms": 30000,
-      "width": 960,
-      "height": 600,
-      "bytes": 851026,
+      "width": 1280,
+      "height": 720,
+      "bytes": 1645590,
       "captured_at": "2026-10-16T04:35:22.138Z",
-      "source": "https://tech.livive.net/"
+      "source": "https://tech.livive.net/",
+      "gallery": [
+        {
+          "label": "Publication Index & Dynamic Category Filtering",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tech-livive-net/main/demos/latest/gallery/01-publication-index-and-chips.png"
+        },
+        {
+          "label": "Hardware Architecture: Dual-SoC Battery & Power Path",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tech-livive-net/main/demos/latest/gallery/02-hardware-schematic-power-path.png"
+        },
+        {
+          "label": "Silicon Interconnects: CM5 Differential Lanes & DPI Timing",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tech-livive-net/main/demos/latest/gallery/03-high-speed-bus-routing.png"
+        },
+        {
+          "label": "Editorial Masthead: Multi-Agent AI Personas & Beats",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tech-livive-net/main/demos/latest/gallery/04-ai-persona-masthead.png"
+        },
+        {
+          "label": "Persona Architecture: Beats, Traits & Bench Toolkits",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tech-livive-net/main/demos/latest/gallery/05-persona-dossier-and-toolkit.png"
+        },
+        {
+          "label": "Zero-Build Philosophy: Primary Sources & Static Architecture",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/tech-livive-net/main/demos/latest/gallery/06-sources-and-static-philosophy.png"
+        }
+      ]
+    },
+    "snow-cuad": {
+      "mode": "demo",
+      "duration_ms": 57934,
+      "width": 1280,
+      "height": 720,
+      "bytes": 2319865,
+      "video": "https://snow-cuad.livive.net/docs/assets/demo-720p.mp4",
+      "poster": "https://snow-cuad.livive.net/docs/assets/02-clause-search.png",
+      "source": "https://snow-cuad.livive.net/",
+      "gallery": [
+        {
+          "label": "Side-by-Side Lawyer Sessions",
+          "src": "https://snow-cuad.livive.net/docs/assets/01-two-lawyers-signed-in.png"
+        },
+        {
+          "label": "Clause Search & Highlighting",
+          "src": "https://snow-cuad.livive.net/docs/assets/02-clause-search.png"
+        },
+        {
+          "label": "Document View & Related Contracts",
+          "src": "https://snow-cuad.livive.net/docs/assets/03-document-and-related.png"
+        },
+        {
+          "label": "Admin User Console",
+          "src": "https://snow-cuad.livive.net/docs/assets/04-admin-users.png"
+        },
+        {
+          "label": "Audit Log — User Logins",
+          "src": "https://snow-cuad.livive.net/docs/assets/05-audit-logins.png"
+        },
+        {
+          "label": "Audit Log — Clause Searches",
+          "src": "https://snow-cuad.livive.net/docs/assets/06-audit-searches.png"
+        },
+        {
+          "label": "Audit Log — Document Access",
+          "src": "https://snow-cuad.livive.net/docs/assets/07-audit-documents.png"
+        },
+        {
+          "label": "Audit Log — Aggregated Activity",
+          "src": "https://snow-cuad.livive.net/docs/assets/08-audit-activity.png"
+        }
+      ]
+    },
+    "fast-ttt": {
+      "mode": "demo",
+      "duration_ms": 30800,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/05-ascii-victory-highlight.png",
+      "source": "https://github.com/jpeckenpaugh/fast-ttt",
+      "gallery": [
+        {
+          "label": "Split-Terminal curl Clients & FastAPI Server",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/01-create-game-and-board.png"
+        },
+        {
+          "label": "Opening Moves Over Plain-Text HTTP",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/02-opening-moves.png"
+        },
+        {
+          "label": "Server-Authoritative Validation (HTTP 409 Wrong Turn)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/03-http-409-validation.png"
+        },
+        {
+          "label": "Mid-Game ASCII Board Synchronization",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/04-midgame-battle.png"
+        },
+        {
+          "label": "Diagonal Victory Highlight ([X] at 3, 5, 7)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/05-ascii-victory-highlight.png"
+        },
+        {
+          "label": "SQLite Move History (/games/1/moves) & Server Stats",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/fast-ttt/main/demos/latest/gallery/06-move-history-and-stats.png"
+        }
+      ]
+    },
+    "wasm-livive-net": {
+      "mode": "demo",
+      "duration_ms": 30000,
+      "video": "https://raw.githubusercontent.com/jpeckenpaugh/wasm-livive-net/main/demos/latest/demo.webm",
+      "poster": "https://raw.githubusercontent.com/jpeckenpaugh/wasm-livive-net/main/demos/latest/gallery/01-hero-and-overview.png",
+      "source": "https://github.com/jpeckenpaugh/wasm-livive-net",
+      "gallery": [
+        {
+          "label": "Hero & Research-Verified Architecture",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/wasm-livive-net/main/demos/latest/gallery/01-hero-and-overview.png"
+        },
+        {
+          "label": "Foundations: What WASM Is & What It Isn't",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/wasm-livive-net/main/demos/latest/gallery/02-foundations-what-it-is.png"
+        },
+        {
+          "label": "Architectural Matrix: WASM vs. Node.js & Alternatives",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/wasm-livive-net/main/demos/latest/gallery/03-architectural-matrix.png"
+        },
+        {
+          "label": "Verified Project Showcase (Pyodide, Pygbag, sql.js, ONNX)",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/wasm-livive-net/main/demos/latest/gallery/04-project-showcase.png"
+        },
+        {
+          "label": "Binary Footprint & Payload Trade-off Audits",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/wasm-livive-net/main/demos/latest/gallery/05-binary-footprint-tradeoffs.png"
+        },
+        {
+          "label": "Interactive Live Benchmark: WASM vs. V8 JavaScript",
+          "src": "https://raw.githubusercontent.com/jpeckenpaugh/wasm-livive-net/main/demos/latest/gallery/06-live-benchmark-demo.png"
+        }
+      ]
+    },
+    "chtbx-livive-net": {
+      "mode": "preview",
+      "duration_ms": 10000,
+      "poster": "thumbnails/chtbx-livive-net.webp",
+      "source": "https://chtbx.livive.net/",
+      "gallery": [
+        {
+          "label": "Zero-Shot Voice Cloning Workflow & Architecture",
+          "src": "thumbnails/chtbx-livive-net.webp"
+        }
+      ]
+    },
+    "mines-sm": {
+      "mode": "demo",
+      "duration_ms": 30096,
+      "width": 1280,
+      "height": 800,
+      "bytes": 1247849,
+      "captured_at": "2026-10-20T21:02:23.263Z",
+      "source": "https://mines-sm.livive.net/",
+      "gallery": [
+        {
+          "label": "Auto-play a winning line",
+          "src": "previews/mines-sm/01-winning-board.png"
+        },
+        {
+          "label": "Observation and action mask for an agent",
+          "src": "previews/mines-sm/02-observation-action-mask.png"
+        },
+        {
+          "label": "Auto-play a losing line",
+          "src": "previews/mines-sm/03-losing-board.png"
+        },
+        {
+          "label": "Conformance checks against the Rust engine",
+          "src": "previews/mines-sm/04-conformance-checks.png"
+        },
+        {
+          "label": "A fresh deterministic board",
+          "src": "previews/mines-sm/05-fresh-board.png"
+        }
+      ],
+      "video": "previews/mines-sm.webm",
+      "poster": "previews/mines-sm.webp"
+    },
+    "trot-livive-net": {
+      "mode": "demo",
+      "duration_ms": 30098,
+      "width": 1280,
+      "height": 800,
+      "bytes": 1243028,
+      "captured_at": "2026-10-20T21:02:23.240Z",
+      "source": "https://trot.livive.net/",
+      "gallery": [
+        {
+          "label": "Train a network you can read, 100 steps at a time",
+          "src": "previews/trot-livive-net/01-train-and-loss.png"
+        },
+        {
+          "label": "Export the hand-encoded ONNX graph",
+          "src": "previews/trot-livive-net/02-export-onnx.png"
+        },
+        {
+          "label": "Round-trip check against onnxruntime-web",
+          "src": "previews/trot-livive-net/03-roundtrip-check.png"
+        },
+        {
+          "label": "Inspect every weight in W1, b1, and W2",
+          "src": "previews/trot-livive-net/04-weights.png"
+        },
+        {
+          "label": "Trace a prediction token by token",
+          "src": "previews/trot-livive-net/05-trace-prediction.png"
+        }
+      ],
+      "video": "previews/trot-livive-net.webm",
+      "poster": "previews/trot-livive-net.webp"
+    },
+    "fourcast-livive-net": {
+      "mode": "demo",
+      "duration_ms": 30117,
+      "width": 1280,
+      "height": 800,
+      "bytes": 1439816,
+      "captured_at": "2026-10-20T21:02:23.281Z",
+      "source": "https://fourcast.livive.net/",
+      "gallery": [
+        {
+          "label": "Four paradigms on one holdout cat",
+          "src": "previews/fourcast-livive-net/01-four-paradigms.png"
+        },
+        {
+          "label": "HOG gradients and the pixel pipeline",
+          "src": "previews/fourcast-livive-net/02-hog-pipeline.png"
+        },
+        {
+          "label": "Filter the holdout gallery",
+          "src": "previews/fourcast-livive-net/03-holdout-gallery.png"
+        },
+        {
+          "label": "Benchmark table and holdout accuracy",
+          "src": "previews/fourcast-livive-net/04-benchmark-metrics.png"
+        },
+        {
+          "label": "The four paradigms explained",
+          "src": "previews/fourcast-livive-net/05-paradigm-theory.png"
+        }
+      ],
+      "video": "previews/fourcast-livive-net.webm",
+      "poster": "previews/fourcast-livive-net.webp"
+    },
+    "ocr-livive-net": {
+      "mode": "demo",
+      "duration_ms": 30633,
+      "width": 1280,
+      "height": 800,
+      "bytes": 1039004,
+      "captured_at": "2026-10-20T21:02:23.301Z",
+      "source": "https://ocr.livive.net/",
+      "gallery": [
+        {
+          "label": "Four classifiers agree on a handwritten digit",
+          "src": "previews/ocr-livive-net/01-trained-consensus.png"
+        },
+        {
+          "label": "Inspect the MLP arithmetic",
+          "src": "previews/ocr-livive-net/02-mlp-arithmetic.png"
+        },
+        {
+          "label": "Learning curve and sample efficiency",
+          "src": "previews/ocr-livive-net/03-learning-curve.png"
+        },
+        {
+          "label": "Export the transparent ONNX graphs",
+          "src": "previews/ocr-livive-net/04-onnx-export.png"
+        }
+      ],
+      "video": "previews/ocr-livive-net.webm",
+      "poster": "previews/ocr-livive-net.webp"
+    },
+    "yds-livive-net": {
+      "mode": "demo",
+      "duration_ms": 30096,
+      "width": 1280,
+      "height": 800,
+      "bytes": 584977,
+      "captured_at": "2026-10-20T21:02:23.315Z",
+      "source": "https://yds.livive.net/",
+      "gallery": [
+        {
+          "label": "Listen and follow the dialogue in both languages",
+          "src": "previews/yds-livive-net/01-reader.png"
+        },
+        {
+          "label": "Choose the next line and bend the story",
+          "src": "previews/yds-livive-net/02-branch-choice.png"
+        },
+        {
+          "label": "Hear the chosen branch resolve",
+          "src": "previews/yds-livive-net/03-branch-resolved.png"
+        },
+        {
+          "label": "Replay with one decision changed",
+          "src": "previews/yds-livive-net/04-replay.png"
+        },
+        {
+          "label": "Back to the conversation catalogue",
+          "src": "previews/yds-livive-net/05-catalogue.png"
+        }
+      ],
+      "video": "previews/yds-livive-net.webm",
+      "poster": "previews/yds-livive-net.webp"
     }
   }
 }

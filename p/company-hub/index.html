@@ -6,36 +6,42 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Company Hub — Livive</title>
-<meta name="description" content="Internal web app to view and maintain company profiles">
+<meta name="description" content="Enterprise corporate intelligence and mini-CRM workspace with client-side SQLite WASM and local AI news ranking.">
 <link rel="canonical" href="https://www.livive.net/p/company-hub/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Company Hub">
-<meta property="og:description" content="Internal web app to view and maintain company profiles">
+<meta property="og:description" content="Enterprise corporate intelligence and mini-CRM workspace with client-side SQLite WASM and local AI news ranking.">
 <meta property="og:url" content="https://www.livive.net/p/company-hub/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/company-hub.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Company Hub — Internal web app to view and maintain company profiles">
+<meta property="og:image:alt" content="Company Hub — Enterprise corporate intelligence and mini-CRM workspace with client-side SQLite WASM and local AI news ranking.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Company Hub">
-<meta name="twitter:description" content="Internal web app to view and maintain company profiles">
+<meta name="twitter:description" content="Enterprise corporate intelligence and mini-CRM workspace with client-side SQLite WASM and local AI news ranking.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/company-hub.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Company Hub",
-  "description": "Internal web app to view and maintain company profiles",
+  "description": "Enterprise corporate intelligence and mini-CRM workspace with client-side SQLite WASM and local AI news ranking.",
   "url": "https://www.livive.net/p/company-hub/",
   "image": [
-    "https://www.livive.net/thumbnails/company-hub.webp"
+    "https://www.livive.net/thumbnails/company-hub.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/01-companies-directory.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/02-company-profile-overview.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/03-company-intel-news.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/04-company-editor.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/05-controlled-industries.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/06-ai-news-ranking-benchmark.png"
   ],
   "genre": "Web Apps & Prototypes",
-  "keywords": "Docker, fpdf2, FastAPI, aiosqlite, fastapi-users, Python, SQLAlchemy, SQLite, Bootstrap, Alembic, JavaScript",
+  "keywords": "Alembic, Bootstrap, SQLAlchemy, Python, JavaScript, fpdf2, fastapi-users, FastAPI, aiosqlite, Docker, SQLite",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://www.livive.net/#website",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/ch/",
+    "https://ch.livive.net/",
     "https://github.com/jpeckenpaugh/company-hub"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/company-hub.webm",
-    "thumbnailUrl": "https://www.livive.net/previews/company-hub.webp",
-    "duration": "PT30S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/01-companies-directory.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,29 +149,76 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/company-hub.webp" alt="Company Hub — Internal web app to view and maintain company profiles"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/company-hub.webm" poster="/previews/company-hub.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/01-companies-directory.png" alt="Company Hub — Enterprise corporate intelligence and mini-CRM workspace with client-side SQLite WASM and local AI news ranking.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/01-companies-directory.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/01-companies-directory.png" alt="Enterprise Companies Directory &amp; Multi-Facet Filters" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Enterprise Companies Directory &amp; Multi-Facet Filters</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/02-company-profile-overview.png" alt="Corporate Dossier &amp; Multi-Facility Locations" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Corporate Dossier &amp; Multi-Facility Locations</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/03-company-intel-news.png" alt="Market Intelligence &amp; Reference Documentation" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">Market Intelligence &amp; Reference Documentation</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/04-company-editor.png" alt="Structured Profile Editor &amp; Verification" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Structured Profile Editor &amp; Verification</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/05-controlled-industries.png" alt="Industry Taxonomy Manager" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Industry Taxonomy Manager</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/06-ai-news-ranking-benchmark.png" alt="Local LLM &amp; Baseline News Ranking Engine" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Local LLM &amp; Baseline News Ranking Engine</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Company Hub</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Web Apps &amp; Prototypes</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 1mo ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Internal web app to view and maintain company profiles</p>
+    <p class="lead">Enterprise corporate intelligence and mini-CRM workspace with client-side SQLite WASM and local AI news ranking.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/ch/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://ch.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/company-hub" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=company-hub">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/ch/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/ch/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://ch.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://ch.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Company Hub is a self-contained internal web app for a small, globally distributed firm to view and maintain information about the companies it works with. It distinguishes structured company data (stored in a relational database) from files and generated artifacts (stored as object-like files on disk), and is meant as a lightweight backbone for other internal workflows rather than a full CRM. Features include browsing and searching companies, country filtering, editable company profiles, standardized industries and locations, per-company references, news and logos, file/artifact upload and download, and one-page PDF summary generation. Sprint 03 added role-based access (guest, read-only, user, admin), admin user management, and optional Google SSO. The backend is FastAPI on async SQLAlchemy 2.0 with SQLite and versioned Alembic migrations, auth via fastapi-users with cookie sessions, and a static Bootstrap SPA frontend served by the app. It also ships OpenCode tools and agents that use the same authenticated API.</p></div>
-    <div class="section"><h3>Summary</h3><p>A lightweight internal web app for a small firm to browse, view and edit profiles of the companies it works with, manage related files, and generate PDF summaries.</p></div>
-    <div class="section"><h3>Tech</h3><ul class="chips"><li>Docker</li><li>fpdf2</li><li>FastAPI</li><li>aiosqlite</li><li>fastapi-users</li><li>Python</li><li>SQLAlchemy</li><li>SQLite</li><li>Bootstrap</li><li>Alembic</li><li>JavaScript</li></ul></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/01-companies-directory.png" alt="Enterprise Companies Directory &amp; Multi-Facet Filters" width="960" height="720">
+      <figcaption>Enterprise Companies Directory &amp; Multi-Facet Filters</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/02-company-profile-overview.png" alt="Corporate Dossier &amp; Multi-Facility Locations" width="960" height="720">
+      <figcaption>Corporate Dossier &amp; Multi-Facility Locations</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/03-company-intel-news.png" alt="Market Intelligence &amp; Reference Documentation" width="960" height="720">
+      <figcaption>Market Intelligence &amp; Reference Documentation</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/04-company-editor.png" alt="Structured Profile Editor &amp; Verification" width="960" height="720">
+      <figcaption>Structured Profile Editor &amp; Verification</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/05-controlled-industries.png" alt="Industry Taxonomy Manager" width="960" height="720">
+      <figcaption>Industry Taxonomy Manager</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/ch/main/demos/latest/gallery/06-ai-news-ranking-benchmark.png" alt="Local LLM &amp; Baseline News Ranking Engine" width="960" height="720">
+      <figcaption>Local LLM &amp; Baseline News Ranking Engine</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Company Hub is an enterprise company management and corporate intelligence workspace operating fully in-browser with WebAssembly SQLite (sql.js) and IndexedDB persistence. Users can explore global accounts (Toyota, Samsung, Novartis, Shell), manage multi-facility locations (global headquarters, regional offices, manufacturing plants), maintain curated reference links, and track market intelligence news feeds. An integrated AI news ranking benchmark compares deterministic baseline scoring against local WebGPU-accelerated Gemma models for on-device relevance evaluation.</p></div>
+    <div class="section"><h3>Summary</h3><p>A local-first corporate directory and company dossier studio managing enterprise accounts, multi-facility locations, curated reference links, and on-device WebGPU news ranking.</p></div>
+    <div class="section"><h3>Tech</h3><ul class="chips"><li>Alembic</li><li>Bootstrap</li><li>SQLAlchemy</li><li>Python</li><li>JavaScript</li><li>fpdf2</li><li>fastapi-users</li><li>FastAPI</li><li>aiosqlite</li><li>Docker</li><li>SQLite</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>company-management</li><li>company-profiles</li><li>crm</li><li>document-generation</li><li>fastapi</li><li>internal-tool</li><li>internal-tools</li><li>spa</li><li>sqlite</li></ul></div>
   </main>
   <footer class="site"><a href="https://github.com/jpeckenpaugh" target="_blank" rel="noopener noreferrer">More on GitHub &rarr;<span class="sr-only"> (opens in a new tab)</span></a></footer>

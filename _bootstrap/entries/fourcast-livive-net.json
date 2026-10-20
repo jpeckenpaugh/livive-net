@@ -1,0 +1,60 @@
+{
+  "key": "fourcast-livive-net",
+  "repo": "fourcast-livive-net",
+  "display_title": "fourcast · Four Visual Paradigms",
+  "tagline": "Four computer-vision architectures, one cats-vs-dogs forecast—side by side in the browser.",
+  "short_description": "An interactive comparison of HOG+SVM, a from-scratch CNN, MobileNet transfer learning, and DINOv2 probes, running client-side on ONNX Runtime Web with live holdout metrics.",
+  "long_description": "fourcast puts four computer-vision paradigms on the same cats-vs-dogs task and lets you inspect where they agree and where they break. The Playground accepts a dragged or uploaded image (or a random holdout sample) and runs all four predictors in the browser: a HOG feature extractor with an SVM, a small convolutional network trained from scratch, a MobileNet transfer-learning head, and a linear probe over DINOv2 embeddings. Dedicated tabs expose the benchmark table and confusion behavior, the theory behind each paradigm, and the Rust/WASM inference code. Models are cached for instant startup, and the recorded holdout results show the expected spread—75% for the scratch CNN, 96.09% for MobileNet transfer learning, and 99.22% for the DINOv2 probe.",
+  "tags": [
+    "computer-vision",
+    "image-classification",
+    "onnx",
+    "wasm",
+    "webgpu",
+    "transfer-learning",
+    "dinov2",
+    "hog",
+    "svm",
+    "cnn"
+  ],
+  "tech": [
+    "Rust",
+    "WebAssembly",
+    "ONNX Runtime Web",
+    "WebGPU",
+    "JavaScript",
+    "Python"
+  ],
+  "category": "Computer Vision",
+  "live_url": "https://fourcast.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/fourcast-livive-net",
+  "has_live_demo": true,
+  "featured": true,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Custom domain fourcast.livive.net from CNAME; GitHub Pages also serves the repo path. Ships a committed cats-vs-dogs holdout set with recorded metrics in data/all_model_metrics.json. The README is only a one-line summary; the site itself carries the benchmark and paradigm documentation.",
+  "demos": [
+    {
+      "label": "Open Playground",
+      "url": "https://fourcast.livive.net/"
+    },
+    {
+      "label": "Source",
+      "url": "https://github.com/jpeckenpaugh/fourcast-livive-net"
+    }
+  ],
+  "how_to_play": [
+    {
+      "title": "1. Pick a sample",
+      "body": "Choose a holdout cat or dog, upload your own image, or hit Random Sample. The same pixels are fed to all four pipelines."
+    },
+    {
+      "title": "2. Compare the forecasts",
+      "body": "HOG+SVM, the scratch CNN, MobileNet transfer learning, and the DINOv2 probe each report a prediction and confidence. Watch the classical and foundation-model approaches diverge on hard crops."
+    },
+    {
+      "title": "3. Read the evidence",
+      "body": "Switch to Benchmarking & Metrics for the holdout table, Paradigm Theory for the trade-offs, and Rust / WASM Code to see the client-side inference implementation."
+    }
+  ]
+}

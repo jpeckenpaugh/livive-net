@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Northstar RAG POC — Livive</title>
-<meta name="description" content="Zero-backend, fully client-side browser RAG with local embeddings and WebGPU LLMs">
+<meta name="description" content="100% client-side in-browser RAG with Transformers.js ONNX embeddings, WebGPU LLM inference, and PDF grounding.">
 <link rel="canonical" href="https://www.livive.net/p/rag-poc/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Northstar RAG POC">
-<meta property="og:description" content="Zero-backend, fully client-side browser RAG with local embeddings and WebGPU LLMs">
+<meta property="og:description" content="100% client-side in-browser RAG with Transformers.js ONNX embeddings, WebGPU LLM inference, and PDF grounding.">
 <meta property="og:url" content="https://www.livive.net/p/rag-poc/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/rag-poc.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Northstar RAG POC — Zero-backend, fully client-side browser RAG with local embeddings and WebGPU LLMs">
+<meta property="og:image:alt" content="Northstar RAG POC — 100% client-side in-browser RAG with Transformers.js ONNX embeddings, WebGPU LLM inference, and PDF grounding.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Northstar RAG POC">
-<meta name="twitter:description" content="Zero-backend, fully client-side browser RAG with local embeddings and WebGPU LLMs">
+<meta name="twitter:description" content="100% client-side in-browser RAG with Transformers.js ONNX embeddings, WebGPU LLM inference, and PDF grounding.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/rag-poc.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Northstar RAG POC",
-  "description": "Zero-backend, fully client-side browser RAG with local embeddings and WebGPU LLMs",
+  "description": "100% client-side in-browser RAG with Transformers.js ONNX embeddings, WebGPU LLM inference, and PDF grounding.",
   "url": "https://www.livive.net/p/rag-poc/",
   "image": [
-    "https://www.livive.net/thumbnails/rag-poc.webp"
+    "https://www.livive.net/thumbnails/rag-poc.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/01-architecture-overview.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/02-evaluation-benchmark-chat.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/03-devtools-vector-retrieval.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/04-chunk-modal-inspector.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/05-pdf-canvas-corpus-viewer.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/06-guardrail-abstention-refusal.png"
   ],
   "genre": "AI/ML Experiments",
   "keywords": "TypeScript, React, Vite, Tailwind CSS, Transformers.js, WebLLM, PDF.js, WebGPU",
@@ -48,14 +54,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/rag-poc/",
+    "https://rag.livive.net/",
     "https://github.com/jpeckenpaugh/rag-poc"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/rag-poc.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/rag-poc.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/03-devtools-vector-retrieval.png",
+    "duration": "PT31S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/rag-poc.webp" alt="Northstar RAG POC — Zero-backend, fully client-side browser RAG with local embeddings and WebGPU LLMs"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/rag-poc.webm" poster="/thumbnails/rag-poc.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/03-devtools-vector-retrieval.png" alt="Northstar RAG POC — 100% client-side in-browser RAG with Transformers.js ONNX embeddings, WebGPU LLM inference, and PDF grounding.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/03-devtools-vector-retrieval.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 31s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/01-architecture-overview.png" alt="Client-Side RAG Architecture &amp; Pipeline Overview" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Client-Side RAG Architecture &amp; Pipeline Overview</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/02-evaluation-benchmark-chat.png" alt="Evaluation Benchmark &amp; Streaming Citations" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">Evaluation Benchmark &amp; Streaming Citations</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/03-devtools-vector-retrieval.png" alt="DevTools Vector Retrieval &amp; 384-Dim Query Inspection" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">DevTools Vector Retrieval &amp; 384-Dim Query Inspection</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/04-chunk-modal-inspector.png" alt="Sliding-Window Chunk Inspector &amp; Metadata Modal" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">Sliding-Window Chunk Inspector &amp; Metadata Modal</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/05-pdf-canvas-corpus-viewer.png" alt="Integrated Canvas PDF Viewer &amp; Source Corpus" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">Integrated Canvas PDF Viewer &amp; Source Corpus</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/06-guardrail-abstention-refusal.png" alt="Guardrail Abstention &amp; Negative Evaluation Test" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">Guardrail Abstention &amp; Negative Evaluation Test</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Northstar RAG POC</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>AI/ML Experiments</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 1w ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Zero-backend, fully client-side browser RAG with local embeddings and WebGPU LLMs</p>
+    <p class="lead">100% client-side in-browser RAG with Transformers.js ONNX embeddings, WebGPU LLM inference, and PDF grounding.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/rag-poc/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://rag.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/rag-poc" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=rag-poc">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/rag-poc/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/rag-poc/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://rag.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://rag.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Northstar RAG POC is a static single-page application demonstrating retrieval-augmented generation entirely inside the browser with zero backend and zero external API calls. It extracts per-page text from PDFs using PDF.js, splits documents with a sliding-window chunker, generates embeddings via Transformers.js ONNX models, and stores 367 chunk vectors as contiguous Float32Array buffers in JavaScript heap memory for linear dot-product similarity search. Answers are generated by WebLLM with WebGPU acceleration, hot-swapping between Llama-3.2-1B, SmolLM2-1.7B, Qwen2.5-0.5B, and Qwen2.5-1.5B, or by four ONNX embedding models. When WebGPU is unavailable it falls back to a semantic retrieval view showing ranked matches and cosine scores. The demo is preloaded with 21 fictional Northstar Urgent Care Cooperative operational policy PDFs (64 pages) plus a 15-query evaluation benchmark including guardrail abstention cases. Built-in developer tools include a canvas PDF viewer, chunk visualizer, vector math inspector, raw prompt preview, and hardware diagnostics. It is hosted on GitHub Pages as a fully static bundle.</p></div>
-    <div class="section"><h3>Summary</h3><p>A 100% client-side Retrieval-Augmented Generation proof-of-concept that parses PDFs, chunks text, generates ONNX embeddings, builds an in-memory vector index, and runs local WebGPU language models entirely in the browser with no backend or external APIs.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/01-architecture-overview.png" alt="Client-Side RAG Architecture &amp; Pipeline Overview" width="960" height="720">
+      <figcaption>Client-Side RAG Architecture &amp; Pipeline Overview</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/02-evaluation-benchmark-chat.png" alt="Evaluation Benchmark &amp; Streaming Citations" width="960" height="720">
+      <figcaption>Evaluation Benchmark &amp; Streaming Citations</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/03-devtools-vector-retrieval.png" alt="DevTools Vector Retrieval &amp; 384-Dim Query Inspection" width="960" height="720">
+      <figcaption>DevTools Vector Retrieval &amp; 384-Dim Query Inspection</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/04-chunk-modal-inspector.png" alt="Sliding-Window Chunk Inspector &amp; Metadata Modal" width="960" height="720">
+      <figcaption>Sliding-Window Chunk Inspector &amp; Metadata Modal</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/05-pdf-canvas-corpus-viewer.png" alt="Integrated Canvas PDF Viewer &amp; Source Corpus" width="960" height="720">
+      <figcaption>Integrated Canvas PDF Viewer &amp; Source Corpus</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/rag-poc/main/demos/latest/gallery/06-guardrail-abstention-refusal.png" alt="Guardrail Abstention &amp; Negative Evaluation Test" width="960" height="720">
+      <figcaption>Guardrail Abstention &amp; Negative Evaluation Test</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Northstar RAG POC is a client-side Retrieval-Augmented Generation application operating entirely within the user&#39;s browser with zero backend infrastructure and zero external API calls. Preloaded with 21 operational policy documents from the fictional Northstar Urgent Care Cooperative (64 pages), the application extracts per-page text via PDF.js, splits corpus documents into sliding-window text chunks, generates 384-dimensional vector embeddings using Transformers.js ONNX models, and stores chunk vectors directly in contiguous Float32Array buffers in heap memory for instant linear dot-product similarity search. Answers are streamed by WebLLM with hardware-accelerated WebGPU execution—supporting dynamic hot-swapping between Llama-3.2-1B, SmolLM2-1.7B, Qwen2.5-0.5B, and Qwen2.5-1.5B—with an integrated semantic retrieval fallback when WebGPU is unavailable. Built-in developer inspection tools provide a live PDF canvas viewer with bounding box highlights, chunk inspector modal, similarity ranking explorer, raw prompt preview, and a 15-query evaluation benchmark containing guardrail abstention tests.</p></div>
+    <div class="section"><h3>Summary</h3><p>A zero-backend client-side RAG application that extracts text from PDFs, builds an in-memory vector index, and generates cited answers using local WebGPU language models.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>TypeScript</li><li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Transformers.js</li><li>WebLLM</li><li>PDF.js</li><li>WebGPU</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>browser</li><li>embeddings</li><li>llm</li><li>on-device</li><li>rag</li><li>vector-search</li></ul></div>
   </main>

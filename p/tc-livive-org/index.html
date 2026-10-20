@@ -6,33 +6,39 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Training vs. Inference — Livive</title>
-<meta name="description" content="Interactive lab demystifying AI training vs. inference with zero black boxes.">
+<meta name="description" content="Interactive AI Learning Lab demystifying Training, Inference, and Hardware Memory with zero black boxes.">
 <link rel="canonical" href="https://www.livive.net/p/tc-livive-org/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Training vs. Inference">
-<meta property="og:description" content="Interactive lab demystifying AI training vs. inference with zero black boxes.">
+<meta property="og:description" content="Interactive AI Learning Lab demystifying Training, Inference, and Hardware Memory with zero black boxes.">
 <meta property="og:url" content="https://www.livive.net/p/tc-livive-org/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/tc-livive-org.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Training vs. Inference — Interactive lab demystifying AI training vs. inference with zero black boxes.">
+<meta property="og:image:alt" content="Training vs. Inference — Interactive AI Learning Lab demystifying Training, Inference, and Hardware Memory with zero black boxes.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Training vs. Inference">
-<meta name="twitter:description" content="Interactive lab demystifying AI training vs. inference with zero black boxes.">
+<meta name="twitter:description" content="Interactive AI Learning Lab demystifying Training, Inference, and Hardware Memory with zero black boxes.">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/tc-livive-org.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Training vs. Inference",
-  "description": "Interactive lab demystifying AI training vs. inference with zero black boxes.",
+  "description": "Interactive AI Learning Lab demystifying Training, Inference, and Hardware Memory with zero black boxes.",
   "url": "https://www.livive.net/p/tc-livive-org/",
   "image": [
-    "https://www.livive.net/thumbnails/tc-livive-org.webp"
+    "https://www.livive.net/thumbnails/tc-livive-org.webp",
+    "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/01-orientation-architecture.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/02-blank-slate-baseline.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/03-train-and-load-pipeline.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/04-out-of-vocabulary-blind-spot.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/05-scaling-memory-coverage.png",
+    "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/06-live-math-inspector.png"
   ],
   "genre": "Education & Teaching",
   "keywords": "HTML5, CSS3, JavaScript, GitHub Pages",
@@ -53,9 +59,9 @@
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/tc-livive-org.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/tc-livive-org.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/demo.webm",
+    "thumbnailUrl": "https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/06-live-math-inspector.png",
+    "duration": "PT30S"
   }
 }
 </script>
@@ -143,28 +149,75 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/tc-livive-org.webp" alt="Training vs. Inference — Interactive lab demystifying AI training vs. inference with zero black boxes."><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/tc-livive-org.webm" poster="/thumbnails/tc-livive-org.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:1280 / 720">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/06-live-math-inspector.png" alt="Training vs. Inference — Interactive AI Learning Lab demystifying Training, Inference, and Hardware Memory with zero black boxes.">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/demo.webm" poster="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/06-live-math-inspector.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 30s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/01-orientation-architecture.png" alt="Orientation Deck: Distillation &amp; Memory Architecture" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 06</span><span class="cap-text">Orientation Deck: Distillation &amp; Memory Architecture</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/02-blank-slate-baseline.png" alt="View 1: Blank Slate Baseline (50/50 Coin Toss)" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 06</span><span class="cap-text">View 1: Blank Slate Baseline (50/50 Coin Toss)</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/03-train-and-load-pipeline.png" alt="View 2: Disk Compilation &amp; RAM Lookup Table" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 06</span><span class="cap-text">View 2: Disk Compilation &amp; RAM Lookup Table</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/04-out-of-vocabulary-blind-spot.png" alt="View 2: Out-of-Vocabulary (OOV) Blind Spot Discovery" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 06</span><span class="cap-text">View 2: Out-of-Vocabulary (OOV) Blind Spot Discovery</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/05-scaling-memory-coverage.png" alt="View 3: Scaling Data &amp; Expanding Token Coverage" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 06</span><span class="cap-text">View 3: Scaling Data &amp; Expanding Token Coverage</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/06-live-math-inspector.png" alt="View 4: Live Custom Sentence Evaluator &amp; Laplace Smoothing" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 06</span><span class="cap-text">View 4: Live Custom Sentence Evaluator &amp; Laplace Smoothing</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button></div>
+    </div></div>
     <h1 class="title">Training vs. Inference</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Education &amp; Teaching</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 1w ago</span>
+      <span>Updated yesterday</span>
     </div>
-    <p class="lead">Interactive lab demystifying AI training vs. inference with zero black boxes.</p>
+    <p class="lead">Interactive AI Learning Lab demystifying Training, Inference, and Hardware Memory with zero black boxes.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://tc.livive.org/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://tc.livive.org/" target="_blank" rel="noopener noreferrer">&#9658; Launch Lab<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/tc-livive-org" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=tc-livive-org">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://tc.livive.org/</span></span>
+      <span class="ep-body"><strong>Launch Lab</strong><span>https://tc.livive.org/</span></span>
       <span class="ep-go"><a class="btn btn-ghost" href="https://tc.livive.org/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>Training vs. Inference is a static single-page app that demystifies how AI actually works for non-technical learners. It walks through a multi-module curriculum covering hardware and memory (storage, RAM, inference), a 1-neuron binary classifier, a 3-neuron positive/negative/neutral spectrum, and a multi-task enterprise router, plus a sentiment-classification demo. Built with a zero-black-box philosophy: every weight, bias, tally, and calculation is rendered directly in the DOM in human-readable numbers. Implemented in vanilla HTML5, CSS3, and ES6+ JavaScript with zero external dependencies or build tools, and hosted on GitHub Pages.</p></div>
-    <div class="section"><h3>Summary</h3><p>A browser-based interactive learning lab that teaches the difference between untrained inference, training, and trained inference through inspectable, hand-verifiable numbers.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/01-orientation-architecture.png" alt="Orientation Deck: Distillation &amp; Memory Architecture" width="960" height="720">
+      <figcaption>Orientation Deck: Distillation &amp; Memory Architecture</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/02-blank-slate-baseline.png" alt="View 1: Blank Slate Baseline (50/50 Coin Toss)" width="960" height="720">
+      <figcaption>View 1: Blank Slate Baseline (50/50 Coin Toss)</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/03-train-and-load-pipeline.png" alt="View 2: Disk Compilation &amp; RAM Lookup Table" width="960" height="720">
+      <figcaption>View 2: Disk Compilation &amp; RAM Lookup Table</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/04-out-of-vocabulary-blind-spot.png" alt="View 2: Out-of-Vocabulary (OOV) Blind Spot Discovery" width="960" height="720">
+      <figcaption>View 2: Out-of-Vocabulary (OOV) Blind Spot Discovery</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/05-scaling-memory-coverage.png" alt="View 3: Scaling Data &amp; Expanding Token Coverage" width="960" height="720">
+      <figcaption>View 3: Scaling Data &amp; Expanding Token Coverage</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://raw.githubusercontent.com/jpeckenpaugh/tc-livive-org/main/demos/latest/gallery/06-live-math-inspector.png" alt="View 4: Live Custom Sentence Evaluator &amp; Laplace Smoothing" width="960" height="720">
+      <figcaption>View 4: Live Custom Sentence Evaluator &amp; Laplace Smoothing</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Training vs. Inference is an inspectable single-page educational app built with a strict Zero-Black-Boxes philosophy. Designed to teach non-technical leaders and engineers how AI actually works at the hardware level, it contrasts dormant disk storage against active RAM lookups, walks through a two-step training compilation pipeline, and exposes model blind spots on out-of-vocabulary words. Every token tally, weight, smoothing calculation, and confidence score is rendered transparently in the live DOM with zero hidden libraries.</p></div>
+    <div class="section"><h3>Summary</h3><p>A browser-based interactive learning lab that demystifies how AI models learn and predict through inspectable hardware abstractions, disk-to-RAM compilation, and hand-verifiable math.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>GitHub Pages</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>ai</li><li>education</li><li>interactive</li><li>machine-learning</li><li>neural-networks</li><li>sentiment-analysis</li></ul></div>
   </main>

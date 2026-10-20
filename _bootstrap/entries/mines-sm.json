@@ -1,0 +1,56 @@
+{
+  "key": "mines-sm",
+  "repo": "mines-sm",
+  "display_title": "mine-sm — Minesweeper RL Environment",
+  "tagline": "A deterministic, no_std Minesweeper state machine shaped for reinforcement learning.",
+  "short_description": "An allocation-free 8x8 Minesweeper engine with seeded SplitMix64 boards, observation/action-mask tensors, configurable strikes, and a browser conformance harness.",
+  "long_description": "mine-sm packages Minesweeper as a tiny reinforcement-learning environment rather than a game. The no_std Rust crate uses a flat 64-cell bitboard with no heap and exposes a three-call API: build a board from a seed or an exact mine mask, apply Reveal/Flag actions, and read back a [f32; 64] observation plus a legal-action mask shaped for a neural network. Bomb placement uses a hand-rolled SplitMix64 PRNG and rejection sampling, so the same (seed, actions) sequence produces byte-identical games on Wasm and native x86/ARM. Rules are configurable between classic sudden death and multi-strike/shielded play, and the engine implements safe first reveal, zero-cell cascade, flag protection, and terminal-state masking. The live harness visualizes observations and masks, auto-plays winning and losing lines, and runs conformance checks against the Rust engine; the repo includes golden, proptest, and scenario suites plus a quickstart example and ONNX-policy-friendly tooling.",
+  "tags": [
+    "reinforcement-learning",
+    "minesweeper",
+    "rust",
+    "no-std",
+    "wasm",
+    "environment",
+    "onnx",
+    "deterministic"
+  ],
+  "tech": [
+    "Rust",
+    "WebAssembly",
+    "JavaScript",
+    "HTML5"
+  ],
+  "category": "AI/ML Experiments",
+  "live_url": "https://mines-sm.livive.net/",
+  "repo_url": "https://github.com/jpeckenpaugh/mines-sm",
+  "has_live_demo": true,
+  "featured": false,
+  "status": "active",
+  "confidence": "high",
+  "notes": "Custom domain mines-sm.livive.net from CNAME; GitHub Pages also serves the repo path. The importable crate is named mine-sm (module mine_sm), while the repo and listing key are mines-sm. Dual-licensed MIT/Apache-2.0. Distinct from the mines-livive-net arcade game: this is the headless RL environment and conformance harness.",
+  "demos": [
+    {
+      "label": "Open Harness",
+      "url": "https://mines-sm.livive.net/"
+    },
+    {
+      "label": "Source",
+      "url": "https://github.com/jpeckenpaugh/mines-sm"
+    }
+  ],
+  "how_to_play": [
+    {
+      "title": "1. Step the environment",
+      "body": "Reveal or flag cells on a seeded 8x8 board. The harness shows the engine's observation encoding (-1 hidden, -0.5 flagged, -2 detonated, 0.0-0.8 adjacency) and the action mask returned to an agent."
+    },
+    {
+      "title": "2. Change the rules",
+      "body": "Switch between classic sudden death and multi-strike shielded play, then auto-play a winning or losing line to see how strikes and terminal masking behave."
+    },
+    {
+      "title": "3. Verify determinism",
+      "body": "Run the built-in conformance checks against the Rust engine. Identical seeds and action sequences reproduce identical boards across Wasm and native targets."
+    }
+  ]
+}

@@ -6,33 +6,40 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/favicon.ico">
 <title>Vibe Tic-Tac-Toe — Livive</title>
-<meta name="description" content="Two-player tic-tac-toe in plain HTML, CSS, and JavaScript">
+<meta name="description" content="The Most Vanilla Game of Tic-Tac-Toe You Will Ever Play! (Built in 33 minutes for $0.15 of AI tokens.)">
 <link rel="canonical" href="https://www.livive.net/p/vibe-tic-tac-toe/">
 <meta name="theme-color" content="#0b0b0e">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livive">
 <meta property="og:title" content="Vibe Tic-Tac-Toe">
-<meta property="og:description" content="Two-player tic-tac-toe in plain HTML, CSS, and JavaScript">
+<meta property="og:description" content="The Most Vanilla Game of Tic-Tac-Toe You Will Ever Play! (Built in 33 minutes for $0.15 of AI tokens.)">
 <meta property="og:url" content="https://www.livive.net/p/vibe-tic-tac-toe/">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.livive.net/thumbnails/vibe-tic-tac-toe.webp">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
-<meta property="og:image:alt" content="Vibe Tic-Tac-Toe — Two-player tic-tac-toe in plain HTML, CSS, and JavaScript">
+<meta property="og:image:alt" content="Vibe Tic-Tac-Toe — The Most Vanilla Game of Tic-Tac-Toe You Will Ever Play! (Built in 33 minutes for $0.15 of AI tokens.)">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vibe Tic-Tac-Toe">
-<meta name="twitter:description" content="Two-player tic-tac-toe in plain HTML, CSS, and JavaScript">
+<meta name="twitter:description" content="The Most Vanilla Game of Tic-Tac-Toe You Will Ever Play! (Built in 33 minutes for $0.15 of AI tokens.)">
 <meta name="twitter:image" content="https://www.livive.net/thumbnails/vibe-tic-tac-toe.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   "name": "Vibe Tic-Tac-Toe",
-  "description": "Two-player tic-tac-toe in plain HTML, CSS, and JavaScript",
+  "description": "The Most Vanilla Game of Tic-Tac-Toe You Will Ever Play! (Built in 33 minutes for $0.15 of AI tokens.)",
   "url": "https://www.livive.net/p/vibe-tic-tac-toe/",
   "image": [
-    "https://www.livive.net/thumbnails/vibe-tic-tac-toe.webp"
+    "https://www.livive.net/thumbnails/vibe-tic-tac-toe.webp",
+    "https://v-ttt.livive.net/demos/latest/gallery/title.png",
+    "https://v-ttt.livive.net/demos/latest/gallery/about.png",
+    "https://v-ttt.livive.net/demos/latest/gallery/options.png",
+    "https://v-ttt.livive.net/demos/latest/gallery/swords.png",
+    "https://v-ttt.livive.net/demos/latest/gallery/cats.png",
+    "https://v-ttt.livive.net/demos/latest/gallery/leaderboard.png",
+    "https://v-ttt.livive.net/docs/open-code-deep-seek-token-usage-cost-overview.png"
   ],
   "genre": "Games",
   "keywords": "HTML, CSS, JavaScript, Python",
@@ -48,14 +55,14 @@
     "url": "https://github.com/jpeckenpaugh"
   },
   "sameAs": [
-    "https://jpeckenpaugh.github.io/vibe-tic-tac-toe/",
+    "https://v-ttt.livive.net/",
     "https://github.com/jpeckenpaugh/vibe-tic-tac-toe"
   ],
   "video": {
     "@type": "VideoObject",
-    "contentUrl": "https://www.livive.net/previews/vibe-tic-tac-toe.webm",
-    "thumbnailUrl": "https://www.livive.net/thumbnails/vibe-tic-tac-toe.webp",
-    "duration": "PT4S"
+    "contentUrl": "https://v-ttt.livive.net/demos/latest/demo.webm",
+    "thumbnailUrl": "https://v-ttt.livive.net/demos/latest/gallery/swords.png",
+    "duration": "PT32S"
   }
 }
 </script>
@@ -143,28 +150,81 @@
   </div></header>
   <main id="main">
     <a class="back" href="/">&larr; Browse all</a>
-    <div class="hero"><div class="media"><img src="/thumbnails/vibe-tic-tac-toe.webp" alt="Vibe Tic-Tac-Toe — Two-player tic-tac-toe in plain HTML, CSS, and JavaScript"><video muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" data-src="/previews/vibe-tic-tac-toe.webm" poster="/thumbnails/vibe-tic-tac-toe.webp"></video></div></div>
+    <div class="hero"><div class="carousel is-video" data-carousel style="aspect-ratio:640 / 400">
+      <div class="slides"><figure class="slide is-active" data-kind="video">
+      <img src="https://v-ttt.livive.net/demos/latest/gallery/swords.png" alt="Vibe Tic-Tac-Toe — The Most Vanilla Game of Tic-Tac-Toe You Will Ever Play! (Built in 33 minutes for $0.15 of AI tokens.)">
+      <video muted playsinline preload="metadata" aria-hidden="true" tabindex="-1" data-src="https://v-ttt.livive.net/demos/latest/demo.webm" poster="https://v-ttt.livive.net/demos/latest/gallery/swords.png"></video>
+      <button class="video-replay" type="button" aria-label="Replay the live-play demo"><svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false"><path d="M8 5l12 7-12 7z" fill="currentColor"/></svg></button>
+      <figcaption class="slide-cap"><span class="cap-index">Demo</span><span class="cap-text">Live-play demo · 32s</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/title.png" alt="Title Screen" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">01 / 07</span><span class="cap-text">Title Screen</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/about.png" alt="How to Play &amp; Trilogy Backstory" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">02 / 07</span><span class="cap-text">How to Play &amp; Trilogy Backstory</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/options.png" alt="Options &amp; 6 Emoji Piece Themes" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">03 / 07</span><span class="cap-text">Options &amp; 6 Emoji Piece Themes</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/swords.png" alt="Swords &amp; Shields Win + Confetti" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">04 / 07</span><span class="cap-text">Swords &amp; Shields Win + Confetti</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/cats.png" alt="Cats &amp; Dogs Theme + Hover Preview" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">05 / 07</span><span class="cap-text">Cats &amp; Dogs Theme + Hover Preview</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/leaderboard.png" alt="Persistent Leaderboard" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">06 / 07</span><span class="cap-text">Persistent Leaderboard</span></figcaption>
+    </figure><figure class="slide" data-kind="image">
+      <img loading="lazy" src="https://v-ttt.livive.net/docs/open-code-deep-seek-token-usage-cost-overview.png" alt="The $0.15 OpenCode / DeepSeek Receipt" width="960" height="720">
+      <figcaption class="slide-cap"><span class="cap-index">07 / 07</span><span class="cap-text">The $0.15 OpenCode / DeepSeek Receipt</span></figcaption>
+    </figure></div>
+      <button class="nav-arrow prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-arrow next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="video-toggle" type="button" aria-label="Pause demo"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg></span><span class="lbl">Pause</span></button>
+      <div class="dots" role="group" aria-label="Slide navigation"><button type="button" aria-label="Slide 1 (demo)" class="is-active" aria-current="true"></button><button type="button" aria-label="Slide 2"></button><button type="button" aria-label="Slide 3"></button><button type="button" aria-label="Slide 4"></button><button type="button" aria-label="Slide 5"></button><button type="button" aria-label="Slide 6"></button><button type="button" aria-label="Slide 7"></button><button type="button" aria-label="Slide 8"></button></div>
+    </div></div>
     <h1 class="title">Vibe Tic-Tac-Toe</h1>
     <div class="meta">
-      
+      <span class="badge new">New this week</span>
       <span>Games</span>
       <span class="badge live"><span class="dot" aria-hidden="true"></span>Playable</span>
-      <span>Updated 2mo ago</span>
+      <span>Updated 2 days ago</span>
     </div>
-    <p class="lead">Two-player tic-tac-toe in plain HTML, CSS, and JavaScript</p>
+    <p class="lead">The Most Vanilla Game of Tic-Tac-Toe You Will Ever Play! (Built in 33 minutes for $0.15 of AI tokens.)</p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://jpeckenpaugh.github.io/vibe-tic-tac-toe/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn btn-primary" href="https://v-ttt.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Play<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="https://github.com/jpeckenpaugh/vibe-tic-tac-toe" target="_blank" rel="noopener noreferrer">GitHub repository &rarr;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-ghost" href="/#project=vibe-tic-tac-toe">Open interactive view &rarr;</a>
     </div>
     <div class="section"><h3>Episodes &amp; demos</h3><ul class="episodes"><li class="episode">
       <span class="no">S01E01</span>
-      <span class="ep-body"><strong>Play</strong><span>https://jpeckenpaugh.github.io/vibe-tic-tac-toe/</span></span>
-      <span class="ep-go"><a class="btn btn-ghost" href="https://jpeckenpaugh.github.io/vibe-tic-tac-toe/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
+      <span class="ep-body"><strong>Play</strong><span>https://v-ttt.livive.net/</span></span>
+      <span class="ep-go"><a class="btn btn-ghost" href="https://v-ttt.livive.net/" target="_blank" rel="noopener noreferrer">&#9658; Watch<span class="sr-only"> (opens in a new tab)</span></a></span>
     </li></ul></div>
-    
-    <div class="section"><h3>About</h3><p>A simple single-page tic-tac-toe game built with plain HTML, CSS, and JavaScript and no frameworks or build tools. Two players take turns placing X or O on a 3x3 grid, trying to line up three in a row; if the board fills with no winner it is a draw. It includes a title screen with Start Game, Leaderboard, Options, and About, a responsive layout, a local-storage persistent leaderboard tracking X wins, O wins, and draws, win-line highlighting, hover move preview, a game-over overlay, confetti on a win, sound effects, and an options menu for piece themes (Classic, Cats &amp; Dogs, Stars &amp; Moon), symbol colors, and a sound toggle. The game is a static site and can be opened directly or served with the included run.sh, which starts a Python HTTP server on port 8080. The project was built in a single OpenCode coding session using DeepSeek V4 Flash.</p></div>
-    <div class="section"><h3>Summary</h3><p>A single-page two-player tic-tac-toe game built with plain HTML, CSS, and JavaScript, with themes, sound, and a persistent leaderboard.</p></div>
+    <div class="section"><h3>Screenshots</h3><div class="shots"><figure class="shot">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/title.png" alt="Title Screen" width="960" height="720">
+      <figcaption>Title Screen</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/about.png" alt="How to Play &amp; Trilogy Backstory" width="960" height="720">
+      <figcaption>How to Play &amp; Trilogy Backstory</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/options.png" alt="Options &amp; 6 Emoji Piece Themes" width="960" height="720">
+      <figcaption>Options &amp; 6 Emoji Piece Themes</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/swords.png" alt="Swords &amp; Shields Win + Confetti" width="960" height="720">
+      <figcaption>Swords &amp; Shields Win + Confetti</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/cats.png" alt="Cats &amp; Dogs Theme + Hover Preview" width="960" height="720">
+      <figcaption>Cats &amp; Dogs Theme + Hover Preview</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://v-ttt.livive.net/demos/latest/gallery/leaderboard.png" alt="Persistent Leaderboard" width="960" height="720">
+      <figcaption>Persistent Leaderboard</figcaption>
+    </figure><figure class="shot">
+      <img loading="lazy" src="https://v-ttt.livive.net/docs/open-code-deep-seek-token-usage-cost-overview.png" alt="The $0.15 OpenCode / DeepSeek Receipt" width="960" height="720">
+      <figcaption>The $0.15 OpenCode / DeepSeek Receipt</figcaption>
+    </figure></div></div>
+    <div class="section"><h3>About</h3><p>Yes, it is 3×3 local pass-and-play Tic-Tac-Toe—so if you click Play Live alone at your desk, your right hand is playing against your left hand (and if both hands are paying attention, it will end in a draw). Built in a single 33-minute OpenCode session for $0.15 of DeepSeek V4 Flash tokens—complete with 6 emoji piece themes, custom hex colors, Web Audio synth bleeps, and a 60-piece confetti burst—it serves as the pure client-side control group alongside two sibling architecture experiments: Fast TTT (played entirely over curl + ASCII with zero HTML/JS) and P2P TTT (serverless browser-to-browser WebRTC + in-browser WASM SQLite).</p></div>
+    <div class="section"><h3>Summary</h3><p>The Most Vanilla Game of Tic-Tac-Toe You Will Ever Play—built in 33 minutes for $0.15 of DeepSeek V4 Flash tokens as Act I of the Tic-Tac-Toe Architecture Trilogy.</p></div>
     <div class="section"><h3>Tech</h3><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li></ul></div>
     <div class="section"><h3>Tags</h3><ul class="chips"><li>browser-game</li><li>javascript</li><li>single-page</li><li>tic-tac-toe</li><li>vanilla-js</li></ul></div>
   </main>
