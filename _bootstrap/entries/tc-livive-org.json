@@ -20,11 +20,11 @@
     "GitHub Pages"
   ],
   "category": "Education & Teaching",
-  "live_url": "https://tc.livive.org/",
+  "live_url": "https://tc.livive.net/",
   "repo_url": "https://github.com/jpeckenpaugh/tc-livive-org",
   "has_live_demo": true,
   "featured": true,
   "status": "active",
   "confidence": "high",
-  "notes": "CNAME file points to tc.livive.org, so the custom https domain is preferred over the jpeckenpaugh.github.io/tc-livive-org/ Pages URL (live probe returned 200). No README; evidence drawn from index.html title and the three spec markdown files (concept_specification.md, reframed.md, spec_rev_2.md). Zero external dependencies per specs."
+  "notes": "CNAME file points to tc.livive.net, so the custom https domain is preferred over the jpeckenpaugh.github.io/tc-livive-org/ Pages URL (live probe returned 200). The repo now includes a README covering the four-module curriculum and the embedded TROT ONNX artifact. Zero external dependencies per specs."
 }
